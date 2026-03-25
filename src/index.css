@@ -1,0 +1,10 @@
+@theme {
+  --color-am-blue: #185CE3;
+  --color-am-light: #F8FAFE;
+  --color-am-navy: #0E1B3C;
+  --color-am-border: #E4E7EC;
+  --color-am-text: #344054;
+  --color-am-text-secondary: #667085;
+  --color-am-text-muted: #98A2B3;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
