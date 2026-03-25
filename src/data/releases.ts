@@ -231,7 +231,17 @@ export const releases: ReleaseItem[] = [
 
   // Feb 19 (Thu) — empty
 
-  // Feb 20 (Fri) — 1 release
+  // Feb 20 (Fri) — 2 releases
+  {
+    id: 'char-001',
+    title: 'Campaign goal progress redesign',
+    date: '2026-02-20',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'improvement',
+    summary: 'Redesigned campaign goal progress bars with animated fills, percentage labels, and milestone markers.',
+    tags: ['donations', 'ux'],
+  },
   {
     id: 'swp-002',
     title: 'PDF content indexing',
@@ -421,7 +431,17 @@ export const releases: ReleaseItem[] = [
     summary: 'Full site editing with custom header and footer templates for any WordPress theme.',
   },
 
-  // Mar 5 (Thu) — empty
+  // Mar 5 (Thu) — 1 release
+  {
+    id: 'char-002',
+    title: 'Donation form templates library',
+    date: '2026-03-05',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'feature',
+    summary: 'Pre-built donation form templates for nonprofits with customizable layouts and goal tracking widgets.',
+    tags: ['donations', 'templates'],
+  },
 
   // Mar 6 (Fri) — 2 releases
   {
@@ -495,7 +515,17 @@ export const releases: ReleaseItem[] = [
 
   // Mar 11 (Wed) — empty
 
-  // Mar 12 (Thu) — 2 releases
+  // Mar 12 (Thu) — 3 releases
+  {
+    id: 'char-003',
+    title: 'Recurring donations fix',
+    date: '2026-03-12',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'fix',
+    summary: 'Fixed recurring donation processing failures when PayPal subscription webhooks arrive out of order.',
+    tags: ['donations', 'payments'],
+  },
   {
     id: 'aio-005',
     title: 'Redirection regex pattern support',
@@ -629,6 +659,18 @@ export const releases: ReleaseItem[] = [
     brandSlug: 'aioseo',
     releaseType: 'fix',
     summary: 'Improved OpenGraph image resolution with fallback chain: custom → featured → first content image.',
+  },
+
+  // Mar 20 (Fri) — Charitable release added
+  {
+    id: 'char-004',
+    title: 'Donor management dashboard',
+    date: '2026-03-20',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'feature',
+    summary: 'Centralized donor management dashboard with lifetime value tracking, segmentation, and export tools.',
+    tags: ['donations', 'dashboard'],
   },
 
   // Mar 23 (Mon) — 2 releases

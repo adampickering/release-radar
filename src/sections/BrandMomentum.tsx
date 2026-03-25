@@ -107,10 +107,10 @@ export function BrandMomentum({ releases, onBrandClick }: BrandMomentumProps) {
               <p className="mb-2.5 text-[11px] text-am-text-secondary">releases this month</p>
 
               {/* Proportional bar */}
-              <div className="h-1 rounded-[2px] bg-[#F2F4F7]">
+              <div className="h-1.5 overflow-hidden rounded-full bg-[#F2F4F7]">
                 <div
-                  className="h-full rounded-[2px] bg-am-blue"
-                  style={{ width: `${barWidth}%` }}
+                  className="h-full rounded-full"
+                  style={{ width: `${barWidth}%`, backgroundColor: '#185CE3', minWidth: barWidth > 0 ? '4px' : '0' }}
                 />
               </div>
 

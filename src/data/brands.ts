@@ -12,6 +12,7 @@ export const brands: BrandInfo[] = [
   { name: 'SearchWP',              slug: 'searchwp',              domain: 'searchwp.com',              color: '#3A82D6' },
   { name: 'Smash Balloon',         slug: 'smash-balloon',         domain: 'smashballoon.com',          color: '#EB4141' },
   { name: 'Easy Digital Downloads', slug: 'easy-digital-downloads', domain: 'easydigitaldownloads.com', color: '#2794DA' },
+  { name: 'Charitable',             slug: 'charitable',             domain: 'wpcharitable.com',          color: '#F14D42' },
   { name: 'Awesome Motive',        slug: 'awesome-motive',        domain: 'awesomemotive.com',         color: '#185CE3' },
 ]
 

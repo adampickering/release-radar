@@ -213,7 +213,7 @@ function TypePills({ selected, onChange }: TypePillsProps) {
         onClick={() => onChange([])}
         className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
           isAllActive
-            ? 'bg-am-navy text-white shadow-sm'
+            ? 'bg-[#185CE3] text-white shadow-sm'
             : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-am-text'
         }`}
       >
@@ -301,7 +301,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
           placeholder="Search releases..."
           value={filters.search}
           onChange={(e) => setFilter('search', e.target.value)}
-          className="h-9 w-full rounded-lg border border-[#E4E7EC] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
+          className="h-9 w-full rounded-lg border border-[#D0D5DD] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
         />
       </div>
 

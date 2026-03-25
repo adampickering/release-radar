@@ -8,7 +8,7 @@ const viewOptions = [
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between bg-[#0E1B3C] px-6 py-3.5">
+    <header className="flex items-center justify-between bg-[#185CE3] px-6 py-3.5">
       {/* Left: Logo + Title */}
       <div className="flex items-center gap-3">
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15">
@@ -32,7 +32,7 @@ export function Header() {
               disabled={!opt.active}
               className={
                 opt.active
-                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-[#0E1B3C] shadow-sm outline-none focus:outline-none'
+                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-[#185CE3] shadow-sm outline-none focus:outline-none'
                   : 'flex cursor-not-allowed items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-white/50 outline-none focus:outline-none'
               }
             >
