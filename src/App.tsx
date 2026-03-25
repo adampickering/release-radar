@@ -10,6 +10,7 @@ import { FilterBar } from '@/sections/FilterBar'
 import { CalendarBoard } from '@/sections/CalendarBoard'
 import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
 import { DaySummaryModal } from '@/sections/DaySummaryModal'
+import { BrandMomentum } from '@/sections/BrandMomentum'
 
 function App() {
   const { filters, setFilter, clearFilters, activeFilterCount } = useFilterState()
@@ -44,6 +45,15 @@ function App() {
           onDayOverflowClick={(date) => setDayModalDate(date)}
         />
       </main>
+      <BrandMomentum
+        releases={filtered}
+        onBrandClick={(slug) => {
+          const current = filters.brand || []
+          if (!current.includes(slug)) {
+            setFilter('brand', [...current, slug])
+          }
+        }}
+      />
       <ReleaseDrawer
         release={selectedRelease}
         onClose={() => setFilter('release', null)}
