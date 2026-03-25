@@ -10,6 +10,7 @@ interface BrandMomentumProps {
   releases: ReleaseItem[]
   activeBrands: string[]
   onBrandClick: (slug: string) => void
+  layout?: 'scroll' | 'grid'
 }
 
 interface BrandStat {
@@ -54,7 +55,7 @@ function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
   return stats
 }
 
-export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMomentumProps) {
+export function BrandMomentum({ releases, activeBrands, onBrandClick, layout = 'scroll' }: BrandMomentumProps) {
   const hasActiveFilter = activeBrands.length > 0
   const stats = computeBrandStats(releases)
 
@@ -64,15 +65,25 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
 
   return (
     <section className="bg-secondary">
-      <div className="flex items-end justify-between px-4 pt-5 pb-4 md:px-8">
+      <div className={cx(
+        'flex items-end justify-between pt-5 pb-4',
+        layout === 'grid' ? 'px-4 md:px-6' : 'px-4 md:px-8',
+      )}>
         <div>
           <h2 className="text-sm font-bold text-secondary">Brand Momentum</h2>
           <p className="text-sm text-tertiary">Shipping velocity across Awesome Motive brands this month</p>
         </div>
-        <span className="hidden text-xs text-tertiary md:inline">Scroll for more &rarr;</span>
+        {layout === 'scroll' && (
+          <span className="hidden text-xs text-tertiary md:inline">Scroll for more &rarr;</span>
+        )}
       </div>
 
-      <div className="flex gap-4 overflow-x-auto px-4 pb-5 md:px-8">
+      <div className={cx(
+        'gap-4 pb-5',
+        layout === 'grid'
+          ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 md:px-6'
+          : 'flex overflow-x-auto px-4 md:px-8',
+      )}>
         {stats.map((brand, index) => {
           const barPct = maxCount > 0 ? Math.round((brand.count / maxCount) * 100) : 0
           const isActive = hasActiveFilter && activeBrands.includes(brand.slug)
@@ -83,7 +94,8 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
               key={brand.slug}
               onClick={() => onBrandClick(brand.slug)}
               className={cx(
-                'min-w-[200px] flex-shrink-0 cursor-pointer rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md',
+                'cursor-pointer rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md',
+                layout === 'scroll' && 'min-w-[200px] flex-shrink-0',
                 isActive
                   ? 'ring-brand-solid shadow-sm'
                   : isDimmed

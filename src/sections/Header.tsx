@@ -17,7 +17,7 @@ const viewOptions: { label: string; value: ViewMode; icon: typeof Calendar }[] =
 
 export function Header({ activeView, onViewChange }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between px-4 md:px-6 py-3.5" style={{ background: 'linear-gradient(135deg, #185CE3 0%, #1E6BF5 50%, #2D7AFF 100%)' }}>
+    <header className="flex items-center justify-between px-4 md:px-6 py-3.5 bg-brand-solid">
       {/* Left: Logo + Title */}
       <div className="flex items-center gap-3 min-w-0">
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 shrink-0">

@@ -13,7 +13,6 @@ import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
 import { DaySummaryModal } from '@/sections/DaySummaryModal'
 import { BrandMomentum } from '@/sections/BrandMomentum'
 import { TimelineView } from '@/sections/TimelineView'
-import { BrandsView } from '@/sections/BrandsView'
 import { Footer } from '@/sections/Footer'
 
 function App() {
@@ -60,13 +59,13 @@ function App() {
         />
       </div>
 
-      {/* Stats strip — below filter bar, scrolls with content */}
-      <StatsStrip stats={stats} isFiltered={isFiltered} />
-
       {/* Main content area — grows to fill, with fade transition */}
       <div key={viewKey} className="flex-1 transition-opacity duration-200" style={{ animation: 'fade-in 200ms ease-out' }}>
         {activeView === 'calendar' && (
           <>
+            {/* Stats strip — only on calendar view */}
+            <StatsStrip stats={stats} isFiltered={isFiltered} />
+
             {/* Brand momentum — visible right after filter bar */}
             <BrandMomentum
               releases={filtered}
@@ -99,18 +98,18 @@ function App() {
         )}
 
         {activeView === 'brands' && (
-          <BrandsView
+          <BrandMomentum
             releases={filtered}
+            activeBrands={filters.brand || []}
+            layout="grid"
             onBrandClick={(slug) => {
               const current = filters.brand || []
               if (current.includes(slug)) {
                 setFilter('brand', current.filter(s => s !== slug))
               } else {
-                setFilter('brand', [slug])
+                setFilter('brand', [...current, slug])
               }
-              setActiveView('calendar')
             }}
-            onReleaseClick={(id) => setFilter('release', id)}
           />
         )}
       </div>

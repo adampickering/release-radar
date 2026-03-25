@@ -47,10 +47,10 @@ export function CalendarBoard({
   if (releases.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
-        <p className="text-sm text-[#667085] mb-2">No releases match your filters</p>
+        <p className="text-sm text-tertiary mb-2">No releases match your filters</p>
         <button
           type="button"
-          className="text-sm font-medium text-[#185CE3] hover:underline cursor-pointer outline-none focus:outline-none"
+          className="text-sm font-medium text-brand-secondary hover:underline cursor-pointer outline-none focus:outline-none"
           onClick={() => {
             window.history.replaceState(null, '', window.location.pathname)
             window.location.reload()
