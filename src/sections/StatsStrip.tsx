@@ -46,13 +46,13 @@ export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
           key={metric.label}
           className={`relative px-6 py-4 ${i < metrics.length - 1 ? 'border-r border-am-border' : ''}`}
         >
-          <p className="text-xs font-medium uppercase tracking-wide text-am-text-secondary">
+          <p className="text-xs font-medium uppercase tracking-wide text-[#667085]">
             {metric.label}
             {filtered && (
               <span className="ml-1 normal-case tracking-normal text-am-text-muted">(filtered)</span>
             )}
           </p>
-          <p className="mt-1 text-[28px] font-bold leading-tight tracking-tight text-am-navy" style={{ letterSpacing: '-1px' }}>
+          <p className="mt-1 text-[28px] font-bold leading-tight tracking-tight text-am-blue" style={{ letterSpacing: '-1px' }}>
             {metric.value}
           </p>
           {metric.secondary && (

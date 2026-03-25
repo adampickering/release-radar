@@ -62,7 +62,7 @@ export function BrandMomentum({ releases, onBrandClick }: BrandMomentumProps) {
       {/* Section header */}
       <div className="flex items-end justify-between px-6 pt-5 pb-4">
         <div>
-          <h2 className="text-[15px] font-bold text-am-navy">Brand Momentum</h2>
+          <h2 className="text-[15px] font-bold text-[#344054]">Brand Momentum</h2>
           <p className="text-[13px] text-am-text-secondary">
             Shipping velocity across Awesome Motive brands this month
           </p>
@@ -95,11 +95,11 @@ export function BrandMomentum({ releases, onBrandClick }: BrandMomentumProps) {
                     target.style.display = 'none'
                   }}
                 />
-                <span className="text-[13px] font-semibold text-am-navy">{brand.name}</span>
+                <span className="text-[13px] font-semibold text-[#344054]">{brand.name}</span>
               </div>
 
               {/* Count */}
-              <p className="text-[28px] font-bold leading-tight text-am-navy" style={{ letterSpacing: '-1px' }}>
+              <p className="text-[28px] font-bold leading-tight text-am-blue" style={{ letterSpacing: '-1px' }}>
                 {brand.count}
               </p>
 

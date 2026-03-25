@@ -69,17 +69,17 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
       <button
         type="button"
         onClick={prev}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
+        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-[#344054]"
       >
         <ChevronLeft className="h-4 w-4" />
       </button>
-      <span className="min-w-[100px] text-center text-sm font-semibold text-am-navy">
+      <span className="min-w-[100px] text-center text-sm font-semibold text-[#344054]">
         {formatMonthLabel(month)}
       </span>
       <button
         type="button"
         onClick={next}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
+        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-[#344054]"
       >
         <ChevronRight className="h-4 w-4" />
       </button>
@@ -114,7 +114,7 @@ function TypePills({ selected, onChange }: TypePillsProps) {
         className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
           isAllActive
             ? 'bg-[#185CE3] text-white shadow-sm'
-            : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-am-text'
+            : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-[#344054]'
         }`}
       >
         All
@@ -135,7 +135,7 @@ function TypePills({ selected, onChange }: TypePillsProps) {
             className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
               isActive
                 ? 'border shadow-sm'
-                : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-am-text'
+                : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-[#344054]'
             }`}
           >
             {t.label}
@@ -221,7 +221,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
         <button
           type="button"
           onClick={clearFilters}
-          className="whitespace-nowrap text-sm font-medium text-am-text-secondary outline-none focus:outline-none transition-colors hover:text-am-text"
+          className="whitespace-nowrap text-sm font-medium text-am-text-secondary outline-none focus:outline-none transition-colors hover:text-[#344054]"
         >
           Clear all
         </button>
