@@ -1,15 +1,21 @@
 import { useState, useCallback } from 'react'
-import { SearchMd, ChevronDown, ChevronLeft, ChevronRight, XClose, Link01 } from '@untitledui/icons'
+import { SearchMd, ChevronLeft, ChevronRight, Link01, XClose } from '@untitledui/icons'
+import { toast } from 'sonner'
+import { Input } from '@/components/base/input/input'
+import { Button } from '@/components/base/buttons/button'
+import { ButtonUtility } from '@/components/base/buttons/button-utility'
+import { Badge, BadgeWithButton } from '@/components/base/badges/badges'
+import { FilterBar as UUIFilterBar } from '@/components/application/filter-bar/filter-bar'
 import type { FilterState } from '@/hooks/useFilterState'
 import type { ReleaseType } from '@/types/release'
-import { RELEASE_TYPE_COLORS } from '@/types/release'
+import type { BadgeColors } from '@/components/base/badges/badge-types'
 
-const RELEASE_TYPES: { value: ReleaseType; label: string }[] = [
-  { value: 'feature', label: 'Feature' },
-  { value: 'improvement', label: 'Improvement' },
-  { value: 'fix', label: 'Fix' },
-  { value: 'launch', label: 'Launch' },
-  { value: 'milestone', label: 'Milestone' },
+const RELEASE_TYPES: { value: ReleaseType; label: string; color: BadgeColors }[] = [
+  { value: 'feature', label: 'Feature', color: 'success' },
+  { value: 'improvement', label: 'Improvement', color: 'purple' },
+  { value: 'fix', label: 'Fix', color: 'orange' },
+  { value: 'launch', label: 'Launch', color: 'blue' },
+  { value: 'milestone', label: 'Milestone', color: 'gray' },
 ]
 
 const MONTH_NAMES = [
@@ -66,23 +72,23 @@ export function MonthPicker({ month, onChange }: MonthPickerProps) {
 
   return (
     <div className="flex items-center gap-2">
-      <button
-        type="button"
+      <ButtonUtility
+        size="sm"
+        color="secondary"
+        icon={ChevronLeft}
+        tooltip="Previous month"
         onClick={prev}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-[#344054]"
-      >
-        <ChevronLeft className="h-4 w-4" />
-      </button>
-      <span className="min-w-[120px] text-center text-base font-semibold text-[#344054]">
+      />
+      <span className="min-w-[120px] text-center text-base font-semibold text-secondary">
         {formatMonthLabel(month)}
       </span>
-      <button
-        type="button"
+      <ButtonUtility
+        size="sm"
+        color="secondary"
+        icon={ChevronRight}
+        tooltip="Next month"
         onClick={next}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-[#344054]"
-      >
-        <ChevronRight className="h-4 w-4" />
-      </button>
+      />
     </div>
   )
 }
@@ -111,34 +117,34 @@ function TypePills({ selected, onChange }: TypePillsProps) {
       <button
         type="button"
         onClick={() => onChange([])}
-        className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all shrink-0 ${
-          isAllActive
-            ? 'bg-[#185CE3] text-white shadow-sm'
-            : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-[#344054]'
-        }`}
+        className="outline-none focus:outline-none"
       >
-        All
+        <Badge
+          color={isAllActive ? 'brand' : 'gray'}
+          size="sm"
+          type="pill-color"
+          className={`cursor-pointer transition-all ${!isAllActive ? 'opacity-70 hover:opacity-100' : ''}`}
+        >
+          All
+        </Badge>
       </button>
       {RELEASE_TYPES.map((t) => {
         const isActive = selected.includes(t.value)
-        const colors = RELEASE_TYPE_COLORS[t.value]
         return (
           <button
             key={t.value}
             type="button"
             onClick={() => toggle(t.value)}
-            style={
-              isActive
-                ? { backgroundColor: colors.bg, color: colors.text, borderColor: colors.text + '30' }
-                : undefined
-            }
-            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all shrink-0 ${
-              isActive
-                ? 'border shadow-sm'
-                : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-[#344054]'
-            }`}
+            className="outline-none focus:outline-none"
           >
-            {t.label}
+            <Badge
+              color={isActive ? t.color : 'gray'}
+              size="sm"
+              type="pill-color"
+              className={`cursor-pointer transition-all ${!isActive ? 'opacity-70 hover:opacity-100' : ''}`}
+            >
+              {t.label}
+            </Badge>
           </button>
         )
       })}
@@ -155,83 +161,78 @@ interface FilterPillProps {
 
 function FilterPill({ label, onRemove }: FilterPillProps) {
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-[#EFF4FF] px-2.5 py-1 text-xs font-medium text-am-blue animate-pill-in">
+    <BadgeWithButton
+      color="brand"
+      size="sm"
+      type="pill-color"
+      buttonLabel={`Remove ${label} filter`}
+      onButtonClick={onRemove}
+    >
       {label}
-      <button
-        type="button"
-        onClick={onRemove}
-        className="flex h-4 w-4 items-center justify-center rounded-full text-am-blue/60 outline-none focus:outline-none transition-colors hover:bg-am-blue/10 hover:text-am-blue"
-      >
-        <XClose className="h-3 w-3" />
-      </button>
-    </span>
+    </BadgeWithButton>
   )
 }
 
 // --- Main FilterBar ---
 
 export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount }: FilterBarProps) {
-  const [copied, setCopied] = useState(false)
-
   const handleCopyLink = useCallback(() => {
     navigator.clipboard.writeText(window.location.href)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    toast.success('Link copied to clipboard')
   }, [])
 
   return (
-    <div className="flex flex-wrap items-end gap-3 border-b border-[#E4E7EC] bg-white px-4 md:px-6 py-2.5">
-      {/* Search input */}
-      <div className="relative w-full md:w-auto md:min-w-[200px]">
-        <SearchMd className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#667085]" />
-        <input
-          type="text"
-          placeholder="Search releases..."
-          value={filters.search}
-          onChange={(e) => setFilter('search', e.target.value)}
-          className="h-9 w-full rounded-lg border border-[#D0D5DD] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-[#667085] outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
-        />
-      </div>
+    <div className="border-b border-border-secondary bg-primary px-4 md:px-6 py-2.5">
+      <UUIFilterBar.Root>
+        <UUIFilterBar.Content>
+          {/* Search input */}
+          <div className="w-full md:w-auto md:min-w-[200px]">
+            <Input
+              size="sm"
+              icon={SearchMd}
+              placeholder="Search releases..."
+              value={filters.search}
+              onChange={(v) => setFilter('search', v)}
+              aria-label="Search releases"
+            />
+          </div>
 
-      {/* Vertical divider — hidden on mobile */}
-      <div className="hidden md:block h-6 w-px bg-[#E4E7EC]" />
+          {/* Vertical divider — hidden on mobile */}
+          <div className="hidden md:block h-6 w-px bg-border-secondary" />
 
-      {/* Release type pills */}
-      <div>
-        <TypePills
-          selected={filters.type}
-          onChange={(selected) => setFilter('type', selected)}
-        />
-      </div>
+          {/* Release type pills */}
+          <TypePills
+            selected={filters.type}
+            onChange={(selected) => setFilter('type', selected)}
+          />
+        </UUIFilterBar.Content>
 
-      {/* Flex spacer */}
-      <div className="flex-1" />
+        <UUIFilterBar.Actions>
+          {/* Clear all button */}
+          {activeFilterCount > 0 && (
+            <>
+              <div className="hidden md:block h-6 w-px bg-border-secondary" />
+              <Button
+                color="link-gray"
+                size="sm"
+                onClick={clearFilters}
+              >
+                Clear all
+              </Button>
+            </>
+          )}
 
-      {/* Vertical divider before actions */}
-      {activeFilterCount > 0 && (
-        <div className="hidden md:block h-6 w-px bg-[#E4E7EC]" />
-      )}
-
-      {/* Clear all button */}
-      {activeFilterCount > 0 && (
-        <button
-          type="button"
-          onClick={clearFilters}
-          className="whitespace-nowrap text-sm font-medium text-am-text-secondary outline-none focus:outline-none transition-colors hover:text-[#344054]"
-        >
-          Clear all
-        </button>
-      )}
-
-      {/* Copy link button — icon-only on mobile */}
-      <button
-        type="button"
-        onClick={handleCopyLink}
-        className="flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-am-blue px-3 py-2 text-sm font-medium text-white shadow-sm outline-none focus:outline-none transition-colors hover:bg-[#1450CC] shrink-0"
-      >
-        <Link01 className="h-4 w-4" />
-        <span className="max-md:hidden">{copied ? 'Copied!' : 'Copy link'}</span>
-      </button>
+          {/* Copy link button */}
+          <Button
+            color="primary"
+            size="sm"
+            iconLeading={Link01}
+            onClick={handleCopyLink}
+          >
+            <span className="max-md:hidden">Copy link</span>
+          </Button>
+        </UUIFilterBar.Actions>
+      </UUIFilterBar.Root>
     </div>
   )
 }

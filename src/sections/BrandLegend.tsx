@@ -1,6 +1,8 @@
 import { useMemo } from 'react'
 import type { ReleaseItem, BrandInfo } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
+import { BadgeWithImage } from '@/components/base/badges/badges'
+import { cx } from '@/utils/cx'
 
 interface BrandLegendProps {
   releases: ReleaseItem[]
@@ -27,7 +29,7 @@ export function BrandLegend({ releases, activeBrands, onBrandToggle }: BrandLege
   const hasActiveFilter = activeBrands.length > 0
 
   return (
-    <div className="flex flex-wrap items-center gap-2 border-b border-[#E4E7EC] bg-white px-4 md:px-6 py-2.5">
+    <div className="flex flex-wrap items-center gap-2 border-b border-border-secondary bg-primary px-4 md:px-6 py-2.5">
       {brandCounts.map(({ slug, count, brand }) => {
         if (!brand) return null
         const isActive = activeBrands.includes(slug)
@@ -38,37 +40,20 @@ export function BrandLegend({ releases, activeBrands, onBrandToggle }: BrandLege
             key={slug}
             type="button"
             onClick={() => onBrandToggle(slug)}
-            style={
-              isActive
-                ? {
-                    backgroundColor: brand.color + '12',
-                    borderColor: brand.color + '40',
-                  }
-                : undefined
-            }
-            className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
-              isActive
-                ? 'shadow-sm'
-                : isInactive
-                  ? 'border-[#E4E7EC] bg-white text-[#667085] opacity-60 hover:opacity-80'
-                  : 'border-[#E4E7EC] bg-white text-am-text hover:bg-gray-50'
-            }`}
+            className={cx(
+              'outline-none focus:outline-none cursor-pointer transition-all',
+              isActive ? 'ring-1 ring-brand/40 rounded-full' : '',
+              isInactive ? 'opacity-60 hover:opacity-80' : '',
+            )}
           >
-            {/* Favicon */}
-            <img
-              src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=32`}
-              width="14"
-              height="14"
-              className="shrink-0 rounded-sm"
-              loading="lazy"
-              alt=""
-            />
-            {/* Brand name */}
-            <span className={isActive ? '' : ''}>{brand.name}</span>
-            {/* Count */}
-            <span className={`tabular-nums ${isActive ? 'opacity-70' : 'text-[#667085]'}`}>
-              ({count})
-            </span>
+            <BadgeWithImage
+              imgSrc={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=32`}
+              color={isActive ? 'brand' : 'gray'}
+              size="sm"
+              type="pill-color"
+            >
+              {brand.name} ({count})
+            </BadgeWithImage>
           </button>
         )
       })}

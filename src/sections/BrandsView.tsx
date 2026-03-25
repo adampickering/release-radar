@@ -1,7 +1,10 @@
 import { useMemo, useState } from 'react'
 import type { ReleaseItem, ReleaseType } from '@/types/release'
-import { RELEASE_TYPE_COLORS } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
+import { Badge } from '@/components/base/badges/badges'
+import type { BadgeColors } from '@/components/base/badges/badge-types'
+import { Button } from '@/components/base/buttons/button'
+import { cx } from '@/utils/cx'
 
 interface BrandsViewProps {
   releases: ReleaseItem[]
@@ -17,6 +20,15 @@ interface BrandCardData {
   typeCounts: Partial<Record<ReleaseType, number>>
   lastThree: ReleaseItem[]
   pctOfMax: number
+}
+
+/** Map release type to UUI Badge color */
+const RELEASE_TYPE_BADGE_COLOR: Record<ReleaseType, BadgeColors> = {
+  feature: 'success',
+  improvement: 'purple',
+  fix: 'orange',
+  launch: 'blue',
+  milestone: 'gray',
 }
 
 function BrandFavicon({ brandSlug, size = 32 }: { brandSlug: string; size?: number }) {
@@ -111,7 +123,7 @@ export function BrandsView({ releases, onBrandClick, onReleaseClick }: BrandsVie
   if (cards.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
-        <p className="text-sm text-[#667085]">No releases match your filters</p>
+        <p className="text-sm text-tertiary">No releases match your filters</p>
       </div>
     )
   }
@@ -123,88 +135,64 @@ export function BrandsView({ releases, onBrandClick, onReleaseClick }: BrandsVie
           <div
             key={card.slug}
             onClick={() => onBrandClick(card.slug)}
-            className="cursor-pointer rounded-xl border border-[#E4E7EC] bg-white p-4 md:p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            className="cursor-pointer rounded-xl border border-secondary bg-primary p-4 md:p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
           >
             {/* Brand header */}
             <div className="mb-3 flex items-center gap-3">
               <BrandFavicon brandSlug={card.slug} />
-              <span
-                className="font-semibold"
-                style={{ fontSize: '16px', color: '#344054' }}
-              >
+              <span className="text-md font-semibold text-secondary">
                 {card.name}
               </span>
             </div>
 
             {/* Count */}
-            <p
-              className="font-bold leading-tight"
-              style={{ fontSize: '24px', color: '#185CE3', letterSpacing: '-0.5px' }}
-            >
+            <p className="text-display-xs font-bold leading-tight text-brand-tertiary_alt" style={{ letterSpacing: '-0.5px' }}>
               {card.count}
             </p>
-            <p
-              className="mb-3"
-              style={{ fontSize: '12px', color: '#667085' }}
-            >
+            <p className="mb-3 text-xs text-tertiary">
               releases this month
             </p>
 
             {/* Proportional bar */}
-            <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-[#F2F4F7]">
+            <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-quaternary">
               <div
-                className="h-full rounded-full"
+                className="h-full rounded-full bg-brand-solid"
                 style={{
                   width: `${card.pctOfMax}%`,
-                  backgroundColor: '#185CE3',
                   minWidth: card.pctOfMax > 0 ? '4px' : '0',
                 }}
               />
             </div>
 
-            {/* Type breakdown badges */}
+            {/* Type breakdown badges — using UUI Badge */}
             <div className="mb-3 flex flex-wrap gap-1.5">
               {TYPE_ORDER.map((type) => {
                 const count = card.typeCounts[type]
                 if (!count) return null
-                const colors = RELEASE_TYPE_COLORS[type]
+                const badgeColor = RELEASE_TYPE_BADGE_COLOR[type]
                 return (
-                  <span
-                    key={type}
-                    className="rounded-full font-medium"
-                    style={{
-                      fontSize: '11px',
-                      padding: '2px 7px',
-                      backgroundColor: colors.bg,
-                      color: colors.text,
-                      lineHeight: '16px',
-                    }}
-                  >
+                  <Badge key={type} color={badgeColor} size="sm" type="pill-color">
                     {count} {count === 1 ? type : TYPE_LABELS[type]}
-                  </span>
+                  </Badge>
                 )
               })}
             </div>
 
             {/* Last 3 releases */}
-            <div className="border-t border-[#F2F4F7] pt-2.5">
+            <div className="border-t border-tertiary pt-2.5">
               {card.lastThree.map((release) => (
-                <button
+                <Button
                   key={release.id}
-                  type="button"
-                  onClick={(e) => {
+                  color="link-gray"
+                  size="xs"
+                  className="block w-full truncate text-left"
+                  onClick={(e: React.MouseEvent) => {
                     e.stopPropagation()
                     onReleaseClick(release.id)
                   }}
-                  className="block w-full truncate text-left outline-none focus:outline-none hover:text-[#185CE3] transition-colors"
-                  style={{
-                    fontSize: '12px',
-                    color: '#667085',
-                    lineHeight: '22px',
-                  }}
                 >
                   {release.title}
-                </button>
+                </Button>
               ))}
             </div>
           </div>

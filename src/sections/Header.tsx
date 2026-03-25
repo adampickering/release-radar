@@ -1,4 +1,6 @@
 import { Calendar, Clock, Grid01 } from '@untitledui/icons'
+import { Button } from '@/components/base/buttons/button'
+import { cx } from '@/utils/cx'
 
 export type ViewMode = 'calendar' | 'timeline' | 'brands'
 
@@ -29,26 +31,27 @@ export function Header({ activeView, onViewChange }: HeaderProps) {
         </div>
       </div>
 
-      {/* Right: View toggle */}
+      {/* Right: View toggle using UUI Button components */}
       <div className="flex items-center rounded-lg bg-white/10 p-0.5 shrink-0 ml-2">
-        {viewOptions.map((opt) => {
-          const Icon = opt.icon
-          const isActive = opt.value === activeView
-          return (
-            <button
-              key={opt.value}
-              onClick={() => onViewChange(opt.value)}
-              className={
-                isActive
-                  ? 'flex items-center gap-1.5 rounded-md bg-white px-2 md:px-3 py-1.5 text-xs font-medium text-[#185CE3] shadow-sm outline-none focus:outline-none cursor-pointer'
-                  : 'flex items-center gap-1.5 rounded-md px-2 md:px-3 py-1.5 text-xs font-medium text-white/50 outline-none focus:outline-none cursor-pointer hover:text-white/80 transition-colors'
-              }
-            >
-              <Icon className="h-3.5 w-3.5" />
-              <span className="max-md:hidden">{opt.label}</span>
-            </button>
-          )
-        })}
+        {viewOptions.map((opt) => (
+          <Button
+            key={opt.value}
+            size="xs"
+            color={opt.value === activeView ? 'secondary' : 'tertiary'}
+            iconLeading={opt.icon}
+            onClick={() => onViewChange(opt.value)}
+            className={cx(
+              'rounded-md transition-colors',
+              opt.value === activeView
+                ? 'bg-white text-brand-secondary shadow-sm'
+                : 'bg-transparent text-white/50 hover:text-white/80 shadow-none ring-0',
+              // Override tertiary hover bg
+              opt.value !== activeView && 'hover:bg-transparent',
+            )}
+          >
+            <span className="max-md:hidden">{opt.label}</span>
+          </Button>
+        ))}
       </div>
     </header>
   )

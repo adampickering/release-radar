@@ -1,7 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
-import { XClose } from '@untitledui/icons'
-import type { ReleaseItem } from '@/types/release'
-import { RELEASE_TYPE_COLORS } from '@/types/release'
+import { useState } from 'react'
+import { Heading as AriaHeading } from 'react-aria-components'
+import { ModalOverlay, Modal, Dialog } from '@/components/application/modals/modal'
+import { Badge } from '@/components/base/badges/badges'
+import { CloseButton } from '@/components/base/buttons/close-button'
+import type { ReleaseItem, ReleaseType } from '@/types/release'
+import type { BadgeColors } from '@/components/base/badges/badge-types'
 import { brandsBySlug } from '@/data/brands'
 
 interface DaySummaryModalProps {
@@ -9,6 +12,15 @@ interface DaySummaryModalProps {
   releases: ReleaseItem[]
   onClose: () => void
   onReleaseClick: (id: string) => void
+}
+
+/** Map release type to UUI Badge color */
+const RELEASE_TYPE_BADGE_COLOR: Record<ReleaseType, BadgeColors> = {
+  feature: 'success',
+  improvement: 'purple',
+  fix: 'orange',
+  launch: 'blue',
+  milestone: 'gray',
 }
 
 function formatModalDate(dateStr: string): string {
@@ -67,152 +79,68 @@ export function DaySummaryModal({
   onClose,
   onReleaseClick,
 }: DaySummaryModalProps) {
-  const [visible, setVisible] = useState(false)
-  const panelRef = useRef<HTMLDivElement>(null)
-
-  // Animate in when modal opens
-  useEffect(() => {
-    if (date && releases.length > 0) {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setVisible(true)
-        })
-      })
-    } else {
-      setVisible(false)
-    }
-  }, [date, releases.length])
-
-  // ESC key listener
-  useEffect(() => {
-    if (!date) return
-
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') {
-        onClose()
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [date, onClose])
+  const isOpen = date !== null && releases.length > 0
 
   if (!date || releases.length === 0) return null
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{
-        backgroundColor: visible ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0)',
-        transition: 'background-color 200ms ease-out',
-      }}
-      onClick={(e) => {
-        // Close on overlay click (not panel click)
-        if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
-          onClose()
-        }
-      }}
-    >
-      {/* Modal panel */}
-      <div
-        ref={panelRef}
-        className="bg-white rounded-xl shadow-2xl w-full overflow-hidden mx-4 md:mx-auto"
-        style={{
-          maxWidth: '448px',
-          maxHeight: '80vh',
-          transform: visible ? 'scale(1)' : 'scale(0.95)',
-          opacity: visible ? 1 : 0,
-          transition: 'transform 200ms ease-out, opacity 200ms ease-out',
-        }}
-      >
-        {/* Header */}
-        <div
-          className="flex items-center px-4 md:px-6"
-          style={{
-            paddingTop: '20px',
-            paddingBottom: '20px',
-            borderBottom: '1px solid #E4E7EC',
-          }}
-        >
-          <div className="flex-1 min-w-0">
-            <div
-              className="font-semibold text-sm md:text-base"
-              style={{ color: '#0E1B3C' }}
-            >
-              {formatModalDate(date)}
+    <ModalOverlay isOpen={isOpen} onOpenChange={(open) => { if (!open) onClose() }} isDismissable>
+      <Modal className="max-w-[448px]">
+        <Dialog>
+          <div className="relative w-full overflow-hidden rounded-2xl bg-primary shadow-xl">
+            {/* Header */}
+            <div className="flex items-center px-4 py-5 md:px-6" style={{ borderBottom: '1px solid var(--color-border-secondary)' }}>
+              <div className="flex-1 min-w-0">
+                <AriaHeading slot="title" className="text-sm font-semibold text-primary md:text-base">
+                  {formatModalDate(date)}
+                </AriaHeading>
+                <p className="mt-0.5 text-xs text-tertiary">
+                  {releases.length} release{releases.length !== 1 ? 's' : ''}
+                </p>
+              </div>
+              <CloseButton size="sm" onClick={onClose} />
             </div>
-            <div style={{ fontSize: '12px', color: '#667085', marginTop: '2px' }}>
-              {releases.length} release{releases.length !== 1 ? 's' : ''}
+
+            {/* Release list */}
+            <div className="overflow-y-auto p-2" style={{ maxHeight: 'calc(80vh - 85px)' }}>
+              {releases.map((release) => {
+                const brand = brandsBySlug[release.brandSlug]
+                const badgeColor = RELEASE_TYPE_BADGE_COLOR[release.releaseType]
+
+                return (
+                  <button
+                    key={release.id}
+                    type="button"
+                    className="flex flex-col w-full text-left rounded-lg cursor-pointer outline-none focus:outline-none transition-colors duration-150 hover:bg-primary_hover"
+                    style={{ padding: '12px 16px' }}
+                    onClick={() => onReleaseClick(release.id)}
+                  >
+                    {/* Brand row */}
+                    <div className="flex items-center gap-1.5">
+                      <ModalFavicon brandSlug={release.brandSlug} />
+                      <span className="text-xs text-tertiary">
+                        {brand?.name ?? release.brand}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <div className="mt-1 text-sm font-medium text-primary">
+                      {release.title}
+                    </div>
+
+                    {/* Release type badge */}
+                    <div className="mt-1.5">
+                      <Badge color={badgeColor} size="sm" type="pill-color">
+                        {release.releaseType}
+                      </Badge>
+                    </div>
+                  </button>
+                )
+              })}
             </div>
           </div>
-          <button
-            type="button"
-            className="cursor-pointer shrink-0 ml-4 outline-none focus:outline-none flex items-center justify-center h-11 w-11 md:h-auto md:w-auto rounded-full md:rounded-none hover:bg-gray-100 md:hover:bg-transparent"
-            onClick={onClose}
-            style={{ color: '#667085' }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#667085')}
-          >
-            <XClose width={20} height={20} />
-          </button>
-        </div>
-
-        {/* Release list */}
-        <div
-          className="overflow-y-auto"
-          style={{ padding: '8px', maxHeight: 'calc(80vh - 85px)' }}
-        >
-          {releases.map((release) => {
-            const brand = brandsBySlug[release.brandSlug]
-            const typeColors = RELEASE_TYPE_COLORS[release.releaseType]
-
-            return (
-              <button
-                key={release.id}
-                type="button"
-                className="flex flex-col w-full text-left rounded-lg cursor-pointer outline-none focus:outline-none transition-colors duration-150 hover:bg-gray-50"
-                style={{ padding: '12px 16px' }}
-                onClick={() => onReleaseClick(release.id)}
-              >
-                {/* Brand row */}
-                <div className="flex items-center gap-1.5">
-                  <ModalFavicon brandSlug={release.brandSlug} />
-                  <span style={{ fontSize: '12px', color: '#667085' }}>
-                    {brand?.name ?? release.brand}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <div
-                  className="font-medium"
-                  style={{
-                    fontSize: '14px',
-                    color: '#0E1B3C',
-                    marginTop: '4px',
-                  }}
-                >
-                  {release.title}
-                </div>
-
-                {/* Release type badge */}
-                <div style={{ marginTop: '6px' }}>
-                  <span
-                    className="rounded-full font-medium"
-                    style={{
-                      fontSize: '11px',
-                      padding: '3px 8px',
-                      backgroundColor: typeColors.bg,
-                      color: typeColors.text,
-                    }}
-                  >
-                    {release.releaseType}
-                  </span>
-                </div>
-              </button>
-            )
-          })}
-        </div>
-      </div>
-    </div>
+        </Dialog>
+      </Modal>
+    </ModalOverlay>
   )
 }
