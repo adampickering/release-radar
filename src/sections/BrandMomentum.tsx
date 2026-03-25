@@ -62,18 +62,18 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
   return (
     <section className="bg-am-light">
       {/* Section header */}
-      <div className="flex items-end justify-between px-6 pt-5 pb-4">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-1 sm:gap-0 px-4 sm:px-6 pt-4 sm:pt-5 pb-3 sm:pb-4">
         <div>
-          <h2 className="text-[15px] font-bold text-[#344054]">Brand Momentum</h2>
-          <p className="text-[13px] text-am-text-secondary">
+          <h2 className="text-sm sm:text-[15px] font-bold text-[#344054]">Brand Momentum</h2>
+          <p className="text-xs sm:text-[13px] text-am-text-secondary">
             Shipping velocity across Awesome Motive brands this month
           </p>
         </div>
-        <span className="text-[12px] text-am-text-muted">Scroll for more &rarr;</span>
+        <span className="hidden sm:inline text-[12px] text-am-text-muted">Scroll for more &rarr;</span>
       </div>
 
       {/* Cards row */}
-      <div className="flex gap-3 overflow-x-auto px-6 pb-5">
+      <div className="flex gap-2.5 sm:gap-3 overflow-x-auto px-4 sm:px-6 pb-4 sm:pb-5">
         {stats.map((brand, index) => {
           const barWidth = maxCount > 0 ? (brand.count / maxCount) * 100 : 0
           const typeColor = RELEASE_TYPE_COLORS[brand.topType]
@@ -82,7 +82,7 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
             <div
               key={brand.slug}
               onClick={() => onBrandClick(brand.slug)}
-              className={`min-w-[200px] flex-shrink-0 cursor-pointer rounded-[10px] border bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
+              className={`min-w-[140px] sm:min-w-[200px] flex-shrink-0 cursor-pointer rounded-[10px] border bg-white p-3 sm:p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
                 hasActiveFilter && activeBrands.includes(brand.slug)
                   ? 'border-am-blue ring-1 ring-am-blue/20 shadow-sm'
                   : hasActiveFilter && !activeBrands.includes(brand.slug)
@@ -110,7 +110,7 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
               </div>
 
               {/* Count */}
-              <p className="text-[28px] font-bold leading-tight text-am-blue" style={{ letterSpacing: '-1px' }}>
+              <p className="text-[22px] sm:text-[28px] font-bold leading-tight text-am-blue" style={{ letterSpacing: '-1px' }}>
                 {brand.count}
               </p>
 

@@ -84,8 +84,8 @@ function App() {
       {/* Stats strip — scrolls naturally with content */}
       <StatsStrip stats={stats} isFiltered={isFiltered} />
 
-      {/* Filter bar — sticky below header */}
-      <div className="sticky top-[56px] z-40">
+      {/* Filter bar — sticky below header (header is ~44px on mobile, ~56px on desktop) */}
+      <div className="sticky top-[44px] sm:top-[56px] z-40">
         <FilterBar
           filters={filters}
           setFilter={setFilter}
@@ -127,7 +127,7 @@ function App() {
             />
 
             {/* Month picker — centered above calendar */}
-            <div className="flex justify-center bg-white py-3 border-b border-[#E4E7EC]">
+            <div className="flex justify-center bg-white py-2.5 sm:py-3 border-b border-[#E4E7EC]">
               <MonthPicker
                 month={filters.month}
                 onChange={(month) => setFilter('month', month)}
@@ -135,7 +135,7 @@ function App() {
             </div>
 
             {/* Calendar board */}
-            <main className="px-6 py-4">
+            <main className="px-2 sm:px-4 md:px-6 py-3 sm:py-4">
               <CalendarBoard
                 releases={filtered}
                 month={filters.month}

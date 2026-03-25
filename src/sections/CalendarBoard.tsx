@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { ReleaseItem } from '@/types/release'
 import { RELEASE_TYPE_COLORS } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
@@ -10,8 +10,47 @@ interface CalendarBoardProps {
   onDayOverflowClick: (date: string) => void
 }
 
-const MAX_VISIBLE = 3
+const MAX_VISIBLE_DESKTOP = 3
+const MAX_VISIBLE_TABLET = 2
+const MAX_VISIBLE_MOBILE = 2
 const DAY_HEADERS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+const DAY_HEADERS_SHORT = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+
+function useMaxVisible() {
+  const [maxVisible, setMaxVisible] = useState(() => {
+    const w = window.innerWidth
+    if (w < 640) return MAX_VISIBLE_MOBILE
+    if (w < 1024) return MAX_VISIBLE_TABLET
+    return MAX_VISIBLE_DESKTOP
+  })
+
+  useEffect(() => {
+    function update() {
+      const w = window.innerWidth
+      if (w < 640) setMaxVisible(MAX_VISIBLE_MOBILE)
+      else if (w < 1024) setMaxVisible(MAX_VISIBLE_TABLET)
+      else setMaxVisible(MAX_VISIBLE_DESKTOP)
+    }
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
+  return maxVisible
+}
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 640)
+
+  useEffect(() => {
+    function update() {
+      setIsMobile(window.innerWidth < 640)
+    }
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
+  return isMobile
+}
 
 function getMonthGrid(year: number, month: number) {
   // First day of the month
@@ -115,11 +154,41 @@ function ReleaseTypeBadge({ type }: { type: ReleaseItem['releaseType'] }) {
 function ReleaseEntry({
   release,
   onClick,
+  compact = false,
 }: {
   release: ReleaseItem
   onClick: () => void
+  compact?: boolean
 }) {
   const brandColor = brandsBySlug[release.brandSlug]?.color ?? '#667085'
+  const typeColors = RELEASE_TYPE_COLORS[release.releaseType]
+
+  if (compact) {
+    // Mobile: favicon + colored type dot only
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className="flex w-full items-center gap-1 rounded-[5px] bg-[#F9FAFB] px-1 py-0.5 cursor-pointer mb-[2px] outline-none focus:outline-none hover:shadow-sm transition-all duration-150 text-left"
+        style={{
+          borderLeft: `2px solid ${brandColor}`,
+          borderRadius: '2px 5px 5px 2px',
+        }}
+      >
+        <BrandFavicon brandSlug={release.brandSlug} size={12} />
+        <span
+          className="h-2 w-2 rounded-full shrink-0"
+          style={{ backgroundColor: typeColors.text }}
+        />
+        <span
+          className="flex-1 min-w-0 whitespace-nowrap overflow-hidden text-ellipsis"
+          style={{ fontSize: '10px', color: '#344054' }}
+        >
+          {release.title}
+        </span>
+      </button>
+    )
+  }
 
   return (
     <button
@@ -149,6 +218,9 @@ export function CalendarBoard({
   onReleaseClick,
   onDayOverflowClick,
 }: CalendarBoardProps) {
+  const maxVisible = useMaxVisible()
+  const isMobile = useIsMobile()
+
   const [year, monthIdx] = useMemo(() => {
     const [y, m] = month.split('-').map(Number)
     return [y, m - 1] // JS months are 0-indexed
@@ -186,6 +258,7 @@ export function CalendarBoard({
   }, [releasesByDate, month])
 
   const todayStr = getTodayStr()
+  const headers = isMobile ? DAY_HEADERS_SHORT : DAY_HEADERS
 
   if (releases.length === 0) {
     return (
@@ -210,11 +283,11 @@ export function CalendarBoard({
     <div className="overflow-hidden rounded-xl border border-[#E4E7EC] bg-white">
       {/* Day header row */}
       <div className="grid grid-cols-7">
-        {DAY_HEADERS.map((day) => (
+        {headers.map((day, idx) => (
           <div
-            key={day}
-            className="text-center font-medium py-2 px-3 border-b border-[#E4E7EC]"
-            style={{ fontSize: '12px', color: '#667085' }}
+            key={`${day}-${idx}`}
+            className="text-center font-medium py-1.5 sm:py-2 px-1 sm:px-3 border-b border-[#E4E7EC]"
+            style={{ fontSize: isMobile ? '10px' : '12px', color: '#667085' }}
           >
             {day}
           </div>
@@ -228,8 +301,8 @@ export function CalendarBoard({
           const isToday = day.dateStr === todayStr
           const isBusiest = day.dateStr === busiestDateStr
           const isDense = dayReleases.length >= 4
-          const visibleReleases = dayReleases.slice(0, MAX_VISIBLE)
-          const overflowCount = dayReleases.length - MAX_VISIBLE
+          const visibleReleases = dayReleases.slice(0, maxVisible)
+          const overflowCount = dayReleases.length - maxVisible
 
           // Determine if cell needs right border (not last column)
           const isLastCol = (i + 1) % 7 === 0
@@ -240,7 +313,7 @@ export function CalendarBoard({
             <div
               key={day.dateStr}
               className={[
-                'flex flex-col p-1.5 md:p-2 transition-colors',
+                'flex flex-col p-1 sm:p-1.5 md:p-2 transition-colors',
                 !isLastCol && 'border-r border-[#E4E7EC]',
                 !isLastRow && 'border-b border-[#E4E7EC]',
                 isToday && 'ring-2 ring-inset ring-[#185CE3]/20',
@@ -249,22 +322,22 @@ export function CalendarBoard({
               ]
                 .filter(Boolean)
                 .join(' ')}
-              style={{ minHeight: '130px' }}
+              style={{ minHeight: isMobile ? '80px' : '130px' }}
             >
               {/* Date number + Today badge + Busiest badge */}
-              <div className="flex items-center gap-1 mb-1">
+              <div className="flex items-center gap-0.5 sm:gap-1 mb-0.5 sm:mb-1">
                 <span
                   className="font-medium"
                   style={{
-                    fontSize: '12px',
+                    fontSize: isMobile ? '10px' : '12px',
                     color: day.inMonth ? '#344054' : '#98A2B3',
                   }}
                 >
                   {day.date.getDate()}
                 </span>
 
-                {/* Today pill badge (Feature 5) */}
-                {isToday && (
+                {/* Today pill badge (Feature 5) — hidden on mobile, show dot instead */}
+                {isToday && !isMobile && (
                   <span className="inline-flex items-center gap-1 bg-[#185CE3] text-white text-[9px] px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
                     Today
                     <span
@@ -273,11 +346,17 @@ export function CalendarBoard({
                     />
                   </span>
                 )}
+                {isToday && isMobile && (
+                  <span
+                    className="inline-block h-1.5 w-1.5 rounded-full bg-[#185CE3]"
+                    style={{ animation: 'pulse-dot 2s ease-in-out infinite' }}
+                  />
+                )}
 
-                {/* Busiest day badge (Feature 6) */}
-                {isBusiest && (
+                {/* Busiest day badge (Feature 6) — hidden on mobile */}
+                {isBusiest && !isMobile && (
                   <span className="text-[9px] bg-orange-50 text-orange-600 px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
-                    🔥 Busiest
+                    Busiest
                   </span>
                 )}
               </div>
@@ -289,17 +368,18 @@ export function CalendarBoard({
                     key={release.id}
                     release={release}
                     onClick={() => onReleaseClick(release.id)}
+                    compact={isMobile}
                   />
                 ))}
 
                 {overflowCount > 0 && (
                   <button
                     type="button"
-                    className="text-left px-1.5 py-1 cursor-pointer font-medium outline-none focus:outline-none hover:underline"
-                    style={{ fontSize: '11px', color: '#185CE3' }}
+                    className="text-left px-1 sm:px-1.5 py-0.5 sm:py-1 cursor-pointer font-medium outline-none focus:outline-none hover:underline"
+                    style={{ fontSize: isMobile ? '9px' : '11px', color: '#185CE3' }}
                     onClick={() => onDayOverflowClick(day.dateStr)}
                   >
-                    +{overflowCount} more
+                    +{overflowCount}
                   </button>
                 )}
               </div>

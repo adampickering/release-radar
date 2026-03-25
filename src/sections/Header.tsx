@@ -15,22 +15,22 @@ const viewOptions: { label: string; value: ViewMode; icon: typeof Calendar }[] =
 
 export function Header({ activeView, onViewChange }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between px-6 py-3.5" style={{ background: 'linear-gradient(135deg, #185CE3 0%, #1E6BF5 50%, #2D7AFF 100%)' }}>
+    <header className="flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3.5" style={{ background: 'linear-gradient(135deg, #185CE3 0%, #1E6BF5 50%, #2D7AFF 100%)' }}>
       {/* Left: Logo + Title */}
-      <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15">
-          <img src="/am-logo.svg" alt="Awesome Motive" className="h-9 w-9" />
+      <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+        <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-white/15 shrink-0">
+          <img src="/am-logo.svg" alt="Awesome Motive" className="h-7 w-7 sm:h-9 sm:w-9" />
         </div>
-        <div>
-          <h1 className="text-lg font-bold leading-tight text-white">Release Radar</h1>
-          <p className="text-[13px] leading-tight text-white/60">
+        <div className="min-w-0">
+          <h1 className="text-sm sm:text-lg font-bold leading-tight text-white truncate">Release Radar</h1>
+          <p className="text-[13px] leading-tight text-white/60 hidden sm:block">
             Track what shipped across Awesome Motive brands
           </p>
         </div>
       </div>
 
       {/* Right: View toggle */}
-      <div className="flex items-center rounded-lg bg-white/10 p-0.5">
+      <div className="flex items-center rounded-lg bg-white/10 p-0.5 shrink-0 ml-2">
         {viewOptions.map((opt) => {
           const Icon = opt.icon
           const isActive = opt.value === activeView
@@ -40,12 +40,12 @@ export function Header({ activeView, onViewChange }: HeaderProps) {
               onClick={() => onViewChange(opt.value)}
               className={
                 isActive
-                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-[#185CE3] shadow-sm outline-none focus:outline-none cursor-pointer'
-                  : 'flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-white/50 outline-none focus:outline-none cursor-pointer hover:text-white/80 transition-colors'
+                  ? 'flex items-center gap-1 sm:gap-1.5 rounded-md bg-white px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-medium text-[#185CE3] shadow-sm outline-none focus:outline-none cursor-pointer'
+                  : 'flex items-center gap-1 sm:gap-1.5 rounded-md px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-medium text-white/50 outline-none focus:outline-none cursor-pointer hover:text-white/80 transition-colors'
               }
             >
-              <Icon className="h-4 w-4" />
-              {opt.label}
+              <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span className="hidden sm:inline">{opt.label}</span>
             </button>
           )
         })}

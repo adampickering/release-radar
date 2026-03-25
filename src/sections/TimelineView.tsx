@@ -108,7 +108,7 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
   }
 
   return (
-    <div className="mx-auto max-w-[720px] px-6 py-8">
+    <div className="mx-auto max-w-[720px] px-4 sm:px-6 py-6 sm:py-8">
       {grouped.map((group) => (
         <div key={group.date} className="relative">
           {/* Date header */}
@@ -126,7 +126,7 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
           </div>
 
           {/* Timeline entries */}
-          <div className="relative ml-[11px] border-l-2 border-[#E4E7EC] pl-7 pb-6">
+          <div className="relative ml-[11px] border-l-2 border-[#E4E7EC] pl-5 sm:pl-7 pb-6">
             {group.items.map((release) => {
               const brand = brandsBySlug[release.brandSlug]
               const typeColors = RELEASE_TYPE_COLORS[release.releaseType]
@@ -137,16 +137,15 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
                   key={release.id}
                   type="button"
                   onClick={() => onReleaseClick(release.id)}
-                  className="group relative mb-3 w-full cursor-pointer rounded-lg border border-[#E4E7EC] bg-white p-4 text-left transition-all duration-150 hover:-translate-y-px hover:shadow-md outline-none focus:outline-none last:mb-0"
+                  className="group relative mb-3 w-full cursor-pointer rounded-lg border border-[#E4E7EC] bg-white p-3 sm:p-4 text-left transition-all duration-150 hover:-translate-y-px hover:shadow-md outline-none focus:outline-none last:mb-0"
                 >
                   {/* Dot on timeline */}
                   <div
-                    className="absolute rounded-full"
+                    className="absolute rounded-full left-[-26px] sm:left-[-34px]"
                     style={{
                       width: '10px',
                       height: '10px',
                       backgroundColor: dotColor,
-                      left: '-34px',
                       top: '18px',
                       border: '2px solid white',
                     }}
@@ -163,8 +162,8 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
                   {/* Title + badge */}
                   <div className="mb-1.5 flex items-start gap-2">
                     <span
-                      className="flex-1 font-medium"
-                      style={{ fontSize: '14px', color: '#344054', lineHeight: 1.4 }}
+                      className="flex-1 font-medium text-[13px] sm:text-[14px]"
+                      style={{ color: '#344054', lineHeight: 1.4 }}
                     >
                       {release.title}
                     </span>
@@ -184,9 +183,8 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
 
                   {/* Summary */}
                   <p
-                    className="line-clamp-2"
+                    className="line-clamp-1 sm:line-clamp-2 text-xs sm:text-[13px]"
                     style={{
-                      fontSize: '13px',
                       color: '#667085',
                       lineHeight: 1.5,
                       margin: 0,

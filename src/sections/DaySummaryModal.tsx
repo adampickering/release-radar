@@ -116,7 +116,7 @@ export function DaySummaryModal({
       {/* Modal panel */}
       <div
         ref={panelRef}
-        className="bg-white rounded-xl shadow-2xl w-full overflow-hidden"
+        className="bg-white rounded-xl shadow-2xl w-full overflow-hidden mx-4 sm:mx-auto"
         style={{
           maxWidth: '448px',
           maxHeight: '80vh',
@@ -127,16 +127,17 @@ export function DaySummaryModal({
       >
         {/* Header */}
         <div
-          className="flex items-center"
+          className="flex items-center px-4 sm:px-6"
           style={{
-            padding: '20px 24px',
+            paddingTop: '20px',
+            paddingBottom: '20px',
             borderBottom: '1px solid #E4E7EC',
           }}
         >
           <div className="flex-1 min-w-0">
             <div
-              className="font-semibold"
-              style={{ fontSize: '16px', color: '#0E1B3C' }}
+              className="font-semibold text-sm sm:text-base"
+              style={{ color: '#0E1B3C' }}
             >
               {formatModalDate(date)}
             </div>
@@ -146,7 +147,7 @@ export function DaySummaryModal({
           </div>
           <button
             type="button"
-            className="cursor-pointer shrink-0 ml-4 outline-none focus:outline-none"
+            className="cursor-pointer shrink-0 ml-4 outline-none focus:outline-none flex items-center justify-center h-11 w-11 sm:h-auto sm:w-auto rounded-full sm:rounded-none hover:bg-gray-100 sm:hover:bg-transparent"
             onClick={onClose}
             style={{ color: '#98A2B3' }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}

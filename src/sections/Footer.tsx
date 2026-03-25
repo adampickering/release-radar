@@ -3,7 +3,7 @@ import { Heart } from '@untitledui/icons'
 export function Footer() {
   return (
     <footer
-      className="flex items-center justify-between px-6 py-4"
+      className="flex flex-col sm:flex-row items-center sm:justify-between gap-2 sm:gap-0 px-4 sm:px-6 py-3 sm:py-4"
       style={{
         backgroundColor: '#0E1B3C',
         borderTop: '1px solid rgba(255,255,255,0.08)',
@@ -45,7 +45,8 @@ export function Footer() {
 
       {/* Right: Copyright */}
       <span
-        style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)' }}
+        className="text-center sm:text-left"
+        style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}
       >
         &copy; 2026 Awesome Motive Inc. All rights reserved.
       </span>

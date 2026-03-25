@@ -119,17 +119,18 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
 
       {/* Drawer panel */}
       <div
-        className="fixed right-0 top-0 h-full z-50 bg-white shadow-xl transition-transform duration-300 ease-out overflow-y-auto"
+        className="fixed right-0 top-0 h-full z-50 bg-white shadow-xl transition-transform duration-300 ease-out overflow-y-auto w-full sm:w-[380px]"
         style={{
-          width: '380px',
           borderLeft: '1px solid #E4E7EC',
           transform: visible ? 'translateX(0)' : 'translateX(100%)',
         }}
       >
         {/* Header */}
         <div
+          className="px-4 sm:px-6"
           style={{
-            padding: '20px 24px 16px',
+            paddingTop: '20px',
+            paddingBottom: '16px',
             borderBottom: '1px solid #E4E7EC',
           }}
         >
@@ -144,7 +145,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
             </span>
             <button
               type="button"
-              className="ml-auto cursor-pointer shrink-0 outline-none focus:outline-none"
+              className="ml-auto cursor-pointer shrink-0 outline-none focus:outline-none flex items-center justify-center h-11 w-11 sm:h-auto sm:w-auto rounded-full sm:rounded-none hover:bg-gray-100 sm:hover:bg-transparent"
               onClick={onClose}
               style={{ color: '#98A2B3' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}
@@ -198,7 +199,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
         </div>
 
         {/* Body */}
-        <div style={{ padding: '20px 24px' }}>
+        <div className="px-4 sm:px-6" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           {/* Summary */}
           <SectionLabel>Summary</SectionLabel>
           <p style={{ fontSize: '13px', color: '#344054', lineHeight: 1.6, margin: 0 }}>
