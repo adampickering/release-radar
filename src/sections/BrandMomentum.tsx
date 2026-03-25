@@ -64,7 +64,7 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick, layout = '
   const maxCount = stats[0].count
 
   return (
-    <section className="bg-secondary">
+    <section className="bg-primary">
       <div className={cx(
         'flex items-end justify-between pt-5 pb-4',
         layout === 'grid' ? 'px-4 md:px-6' : 'px-4 md:px-8',

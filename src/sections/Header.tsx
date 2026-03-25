@@ -16,7 +16,7 @@ const viewOptions: { label: string; value: ViewMode; icon: typeof Calendar }[] =
 
 export function Header({ activeView, onViewChange }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between px-4 md:px-6 py-3.5 bg-brand-solid">
+    <header className="flex items-center justify-between px-4 md:px-6 h-[60px] bg-brand-solid">
       {/* Left: Logo + Title */}
       <button
         type="button"

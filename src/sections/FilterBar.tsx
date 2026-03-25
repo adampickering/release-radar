@@ -199,7 +199,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
 
   return (
     <div className="border-b border-border-secondary bg-primary px-4 py-3 md:px-6 md:py-2.5">
-      <div className="flex flex-wrap items-center gap-2 md:gap-3">
+      <div className="flex flex-wrap items-center gap-2 md:flex-nowrap md:gap-3">
         {/* Search input — full width on mobile */}
         <div className="w-full md:w-auto md:min-w-[200px]">
           <Input

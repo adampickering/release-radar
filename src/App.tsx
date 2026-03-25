@@ -43,14 +43,14 @@ function App() {
   }, [activeView])
 
   return (
-    <div className="min-h-screen bg-am-light font-sans flex flex-col">
-      {/* Header — always sticky at top */}
-      <div className="sticky top-0 z-50">
+    <div className="min-h-screen bg-primary font-sans flex flex-col">
+      {/* Header — always sticky at top with fixed height */}
+      <div className="sticky top-0 z-50 h-[60px]">
         <Header activeView={activeView} onViewChange={setActiveView} />
       </div>
 
       {/* Filter bar — sticky below header */}
-      <div className="sticky top-[56px] z-40 bg-primary">
+      <div className="sticky top-[60px] z-40 bg-primary">
         <FilterBar
           filters={filters}
           setFilter={setFilter}
