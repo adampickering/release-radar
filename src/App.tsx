@@ -8,6 +8,7 @@ import { Header } from '@/sections/Header'
 import { StatsStrip } from '@/sections/StatsStrip'
 import { FilterBar } from '@/sections/FilterBar'
 import { CalendarBoard } from '@/sections/CalendarBoard'
+import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
 
 function App() {
   const { filters, setFilter, clearFilters, activeFilterCount } = useFilterState()
@@ -15,6 +16,9 @@ function App() {
   const stats = computeStats(filtered, brands)
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
+
+  // Look up from FULL releases array, not filtered — drawer opens regardless of current filters
+  const selectedRelease = releases.find(r => r.id === filters.release) ?? null
 
   return (
     <div className="min-h-screen bg-am-light font-sans">
@@ -37,6 +41,10 @@ function App() {
           onDayOverflowClick={(date) => setDayModalDate(date)}
         />
       </main>
+      <ReleaseDrawer
+        release={selectedRelease}
+        onClose={() => setFilter('release', null)}
+      />
     </div>
   )
 }
