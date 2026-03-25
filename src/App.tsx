@@ -5,6 +5,7 @@ import { filterReleases } from '@/utils/filters'
 import { computeStats } from '@/utils/stats'
 import { Header } from '@/sections/Header'
 import { StatsStrip } from '@/sections/StatsStrip'
+import { FilterBar } from '@/sections/FilterBar'
 
 function App() {
   const { filters, setFilter, clearFilters, activeFilterCount } = useFilterState()
@@ -17,6 +18,13 @@ function App() {
       <div className="sticky top-0 z-50 bg-white">
         <Header />
         <StatsStrip stats={stats} isFiltered={isFiltered} />
+        <FilterBar
+          filters={filters}
+          setFilter={setFilter}
+          clearFilters={clearFilters}
+          activeFilterCount={activeFilterCount}
+          brands={brands}
+        />
       </div>
       {/* Calendar and other sections will go here */}
       <div className="p-8 text-am-text-secondary">
