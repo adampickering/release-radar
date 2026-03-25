@@ -1,12 +1,19 @@
 import { Calendar, Clock, Grid01 } from '@untitledui/icons'
 
-const viewOptions = [
-  { label: 'Calendar', icon: Calendar, active: true },
-  { label: 'Timeline', icon: Clock, active: false },
-  { label: 'Brands', icon: Grid01, active: false },
-] as const
+export type ViewMode = 'calendar' | 'timeline' | 'brands'
 
-export function Header() {
+interface HeaderProps {
+  activeView: ViewMode
+  onViewChange: (view: ViewMode) => void
+}
+
+const viewOptions: { label: string; value: ViewMode; icon: typeof Calendar }[] = [
+  { label: 'Calendar', value: 'calendar', icon: Calendar },
+  { label: 'Timeline', value: 'timeline', icon: Clock },
+  { label: 'Brands', value: 'brands', icon: Grid01 },
+]
+
+export function Header({ activeView, onViewChange }: HeaderProps) {
   return (
     <header className="flex items-center justify-between bg-[#185CE3] px-6 py-3.5">
       {/* Left: Logo + Title */}
@@ -26,14 +33,15 @@ export function Header() {
       <div className="flex items-center rounded-lg bg-white/10 p-0.5">
         {viewOptions.map((opt) => {
           const Icon = opt.icon
+          const isActive = opt.value === activeView
           return (
             <button
-              key={opt.label}
-              disabled={!opt.active}
+              key={opt.value}
+              onClick={() => onViewChange(opt.value)}
               className={
-                opt.active
-                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-[#185CE3] shadow-sm outline-none focus:outline-none'
-                  : 'flex cursor-not-allowed items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-white/50 outline-none focus:outline-none'
+                isActive
+                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-[#185CE3] shadow-sm outline-none focus:outline-none cursor-pointer'
+                  : 'flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-white/50 outline-none focus:outline-none cursor-pointer hover:text-white/80 transition-colors'
               }
             >
               <Icon className="h-4 w-4" />

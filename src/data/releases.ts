@@ -360,7 +360,17 @@ export const releases: ReleaseItem[] = [
 
   // ── March 2026 ─────────────────────────────────────────────────────────
 
-  // Mar 2 (Mon) — 2 releases
+  // Mar 2 (Mon) — 3 releases
+  {
+    id: 'char-005',
+    title: 'Peer-to-peer fundraising campaigns',
+    date: '2026-03-02',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'launch',
+    summary: 'Supporters can create personal fundraising pages linked to a parent campaign with individual goals and social sharing.',
+    tags: ['donations', 'p2p'],
+  },
   {
     id: 'swp-003',
     title: 'Live search results preview',
@@ -443,7 +453,7 @@ export const releases: ReleaseItem[] = [
     tags: ['donations', 'templates'],
   },
 
-  // Mar 6 (Fri) — 2 releases
+  // Mar 6 (Fri) — 3 releases
   {
     id: 'dup-004',
     title: 'Scheduled backup timezone fix',
@@ -461,6 +471,18 @@ export const releases: ReleaseItem[] = [
     brandSlug: 'optinmonster',
     releaseType: 'improvement',
     summary: 'Auto-detection of statistical significance in A/B tests with confidence interval display.',
+  },
+
+  // Mar 8 (Sun) — 1 release
+  {
+    id: 'char-006',
+    title: 'Donation receipt PDF generator',
+    date: '2026-03-08',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'feature',
+    summary: 'Automatic PDF receipt generation for tax-deductible donations with customizable templates and org branding.',
+    tags: ['donations', 'pdf'],
   },
 
   // Mar 9 (Mon) — 3 releases
@@ -557,6 +579,18 @@ export const releases: ReleaseItem[] = [
     tags: ['company', 'acquisition'],
   },
 
+  // Mar 14 (Sat) — 1 release
+  {
+    id: 'char-007',
+    title: 'Gift Aid UK tax integration',
+    date: '2026-03-14',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'feature',
+    summary: 'Built-in Gift Aid declaration capture and HMRC submission support for UK-based charities to reclaim 25% tax.',
+    tags: ['donations', 'tax', 'uk'],
+  },
+
   // Mar 16 (Mon) — 4 releases (cluster day #5)
   {
     id: 'smtp-005',
@@ -620,6 +654,18 @@ export const releases: ReleaseItem[] = [
 
   // Mar 18 (Wed) — empty
 
+  // Mar 18 (Wed) — 1 release
+  {
+    id: 'char-008',
+    title: 'Donor wall public display widget',
+    date: '2026-03-18',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'feature',
+    summary: 'Embeddable donor wall widget showcasing contributors with customizable layouts, avatars, and donation tiers.',
+    tags: ['donations', 'widget'],
+  },
+
   // Mar 19 (Thu) — 3 releases
   {
     id: 'swp-005',
@@ -671,6 +717,18 @@ export const releases: ReleaseItem[] = [
     releaseType: 'feature',
     summary: 'Centralized donor management dashboard with lifetime value tracking, segmentation, and export tools.',
     tags: ['donations', 'dashboard'],
+  },
+
+  // Mar 22 (Sun) — 1 release
+  {
+    id: 'char-009',
+    title: 'Payment gateway retry logic',
+    date: '2026-03-22',
+    brand: 'Charitable',
+    brandSlug: 'charitable',
+    releaseType: 'fix',
+    summary: 'Intelligent retry logic for failed payment gateway transactions with exponential backoff and donor notification.',
+    tags: ['donations', 'payments'],
   },
 
   // Mar 23 (Mon) — 2 releases
