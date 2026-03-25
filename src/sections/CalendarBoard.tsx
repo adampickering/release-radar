@@ -119,11 +119,17 @@ function ReleaseEntry({
   release: ReleaseItem
   onClick: () => void
 }) {
+  const brandColor = brandsBySlug[release.brandSlug]?.color ?? '#667085'
+
   return (
     <button
       type="button"
       onClick={onClick}
       className="flex w-full items-center gap-[5px] rounded-[5px] bg-[#F9FAFB] px-1.5 py-1 cursor-pointer mb-[3px] outline-none focus:outline-none hover:-translate-y-px hover:shadow-sm transition-all duration-150 text-left"
+      style={{
+        borderLeft: `3px solid ${brandColor}`,
+        borderRadius: '3px 5px 5px 3px',
+      }}
     >
       <BrandFavicon brandSlug={release.brandSlug} />
       <span
@@ -166,6 +172,19 @@ export function CalendarBoard({
     return map
   }, [releases])
 
+  // Find the busiest day in the current month (Feature 6)
+  const busiestDateStr = useMemo(() => {
+    let maxCount = 0
+    let maxDate = ''
+    for (const [dateStr, dayReleases] of releasesByDate) {
+      if (dateStr.startsWith(month) && dayReleases.length > maxCount) {
+        maxCount = dayReleases.length
+        maxDate = dateStr
+      }
+    }
+    return maxCount >= 3 ? maxDate : ''
+  }, [releasesByDate, month])
+
   const todayStr = getTodayStr()
 
   if (releases.length === 0) {
@@ -207,6 +226,7 @@ export function CalendarBoard({
         {days.map((day, i) => {
           const dayReleases = releasesByDate.get(day.dateStr) ?? []
           const isToday = day.dateStr === todayStr
+          const isBusiest = day.dateStr === busiestDateStr
           const isDense = dayReleases.length >= 4
           const visibleReleases = dayReleases.slice(0, MAX_VISIBLE)
           const overflowCount = dayReleases.length - MAX_VISIBLE
@@ -231,16 +251,36 @@ export function CalendarBoard({
                 .join(' ')}
               style={{ minHeight: '130px' }}
             >
-              {/* Date number */}
-              <span
-                className="font-medium mb-1"
-                style={{
-                  fontSize: '12px',
-                  color: day.inMonth ? '#344054' : '#98A2B3',
-                }}
-              >
-                {day.date.getDate()}
-              </span>
+              {/* Date number + Today badge + Busiest badge */}
+              <div className="flex items-center gap-1 mb-1">
+                <span
+                  className="font-medium"
+                  style={{
+                    fontSize: '12px',
+                    color: day.inMonth ? '#344054' : '#98A2B3',
+                  }}
+                >
+                  {day.date.getDate()}
+                </span>
+
+                {/* Today pill badge (Feature 5) */}
+                {isToday && (
+                  <span className="inline-flex items-center gap-1 bg-[#185CE3] text-white text-[9px] px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
+                    Today
+                    <span
+                      className="inline-block h-1.5 w-1.5 rounded-full bg-white"
+                      style={{ animation: 'pulse-dot 2s ease-in-out infinite' }}
+                    />
+                  </span>
+                )}
+
+                {/* Busiest day badge (Feature 6) */}
+                {isBusiest && (
+                  <span className="text-[9px] bg-orange-50 text-orange-600 px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
+                    🔥 Busiest
+                  </span>
+                )}
+              </div>
 
               {/* Release entries */}
               <div className="flex flex-col flex-1 min-w-0">

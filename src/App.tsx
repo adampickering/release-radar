@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { releases } from '@/data/releases'
 import { brands } from '@/data/brands'
 import { useFilterState } from '@/hooks/useFilterState'
@@ -20,15 +20,59 @@ import { Footer } from '@/sections/Footer'
 function App() {
   const { filters, setFilter, clearFilters, activeFilterCount } = useFilterState()
   const filtered = filterReleases(releases, filters)
-  const stats = computeStats(filtered, brands)
+  const stats = computeStats(filtered, brands, releases, filters.month)
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
   const [activeView, setActiveView] = useState<ViewMode>('calendar')
+  const [viewKey, setViewKey] = useState(0)
+  const prevViewRef = useRef(activeView)
 
   const dayReleases = dayModalDate ? filtered.filter(r => r.date === dayModalDate) : []
 
   // Look up from FULL releases array, not filtered — drawer opens regardless of current filters
   const selectedRelease = releases.find(r => r.id === filters.release) ?? null
+
+  // Scroll to top + trigger fade transition when view changes (Feature 8)
+  useEffect(() => {
+    if (prevViewRef.current !== activeView) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      setViewKey(k => k + 1)
+      prevViewRef.current = activeView
+    }
+  }, [activeView])
+
+  // Keyboard shortcuts (Feature 9)
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      // Skip if an input/textarea/select is focused
+      const tag = (e.target as HTMLElement)?.tagName
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+
+      // Skip if drawer or modal is open
+      if (selectedRelease || dayModalDate) return
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        const [y, m] = filters.month.split('-').map(Number)
+        if (m === 1) {
+          setFilter('month', `${y - 1}-12`)
+        } else {
+          setFilter('month', `${y}-${String(m - 1).padStart(2, '0')}`)
+        }
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        const [y, m] = filters.month.split('-').map(Number)
+        if (m === 12) {
+          setFilter('month', `${y + 1}-01`)
+        } else {
+          setFilter('month', `${y}-${String(m + 1).padStart(2, '0')}`)
+        }
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [filters.month, setFilter, selectedRelease, dayModalDate])
 
   return (
     <div className="min-h-screen bg-am-light font-sans flex flex-col">
@@ -50,8 +94,8 @@ function App() {
         />
       </div>
 
-      {/* Main content area — grows to fill */}
-      <div className="flex-1">
+      {/* Main content area — grows to fill, with fade transition */}
+      <div key={viewKey} className="flex-1 transition-opacity duration-200" style={{ animation: 'fade-in 200ms ease-out' }}>
         {activeView === 'calendar' && (
           <>
             {/* Brand legend — toggleable brand filter pills */}

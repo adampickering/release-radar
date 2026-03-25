@@ -74,7 +74,7 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
 
       {/* Cards row */}
       <div className="flex gap-3 overflow-x-auto px-6 pb-5">
-        {stats.map((brand) => {
+        {stats.map((brand, index) => {
           const barWidth = maxCount > 0 ? (brand.count / maxCount) * 100 : 0
           const typeColor = RELEASE_TYPE_COLORS[brand.topType]
 
@@ -89,6 +89,9 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
                     ? 'border-am-border opacity-50 hover:opacity-80'
                     : 'border-am-border'
               }`}
+              style={{
+                animation: `card-enter 400ms ease-out ${index * 60}ms both`,
+              }}
             >
               {/* Brand header */}
               <div className="mb-3 flex items-center gap-2.5">
