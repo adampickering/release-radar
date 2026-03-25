@@ -492,6 +492,15 @@
     --outline-color-brand_alt: var(--color-border-brand_alt);
     --outline-color-brand-solid: var(--color-bg-brand-solid);
     --outline-color-brand-solid_hover: var(--color-bg-brand-solid_hover);
+
+    /* AM Brand Tokens */
+    --color-am-blue: #185CE3;
+    --color-am-light: #F8FAFE;
+    --color-am-navy: #0E1B3C;
+    --color-am-border: #E4E7EC;
+    --color-am-text: #344054;
+    --color-am-text-secondary: #667085;
+    --color-am-text-muted: #98A2B3;
 }
 
 @layer base {
