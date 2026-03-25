@@ -15,9 +15,11 @@ interface CalendarHeaderProps {
     onClickPrev?: () => void;
     onClickNext?: () => void;
     onClickToday?: () => void;
+    hideSearch?: boolean;
+    hideAddEvent?: boolean;
 }
 
-export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOptions, onClickPrev, onClickNext, onClickToday }: CalendarHeaderProps) => {
+export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOptions, onClickPrev, onClickNext, onClickToday, hideSearch, hideAddEvent }: CalendarHeaderProps) => {
     const { locale } = useLocale();
     const timeZone = getLocalTimeZone();
 
@@ -71,7 +73,7 @@ export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOpti
                 </div>
             </div>
             <div className="flex flex-wrap items-center gap-3 gap-y-4 max-lg:w-full">
-                <Button iconLeading={SearchLg} size="sm" color="tertiary" className="max-lg:order-1" />
+                {!hideSearch && <Button iconLeading={SearchLg} size="sm" color="tertiary" className="max-lg:order-1" />}
 
                 <ButtonGroup selectedKeys={[]} size="sm" className="flex max-lg:order-last max-lg:min-w-full max-lg:flex-1">
                     <ButtonGroupItem id="prev" iconLeading={ArrowLeft} onClick={onClickPrev} />
@@ -83,9 +85,11 @@ export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOpti
 
                 <CalendarViewDropdown value={selectedView} onSelectionChange={onSelectionChange} options={viewOptions} />
 
-                <Button iconLeading={Plus} size="sm">
-                    Add event
-                </Button>
+                {!hideAddEvent && (
+                    <Button iconLeading={Plus} size="sm">
+                        Add event
+                    </Button>
+                )}
             </div>
 
             <div className="pointer-events-none absolute bottom-0 left-0 w-full border-t border-secondary"></div>

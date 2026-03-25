@@ -169,6 +169,8 @@ interface MonthViewProps {
     shortWeekdayFormatter: DateFormatter;
     timeFormatter: DateFormatter;
     className?: string;
+    onEventClick?: (eventId: string) => void;
+    hideAddButton?: boolean;
 }
 
 const MonthView = ({
@@ -182,6 +184,8 @@ const MonthView = ({
     shortWeekdayFormatter,
     timeFormatter, // Needed for formatTime inside
     className,
+    onEventClick,
+    hideAddButton,
 }: MonthViewProps) => {
     const monthStart = startOfMonth(currentMonthDate);
     const monthEnd = endOfMonth(currentMonthDate);
@@ -445,6 +449,7 @@ const MonthView = ({
                             isDisabled={!isCurrentMonthFlag}
                             state={isSelectedFlag ? "selected" : isTodayFlag ? "current" : "default"}
                             className={cx(isLastRow && "before:border-b-0", isLastColumn && "before:border-r-0")}
+                            hideAddButton={hideAddButton}
                             onClick={() => isCurrentMonthFlag && setSelectedDate(date)}
                         >
                             <div className="flex gap-1 max-md:pl-1 md:flex-col">
@@ -485,7 +490,7 @@ const MonthView = ({
                                             : undefined;
 
                                     return (
-                                        <div key={event.id} style={spanStyle} className={cx(!isCurrentMonthFlag && "opacity-50")}>
+                                        <div key={event.id} style={spanStyle} className={cx(!isCurrentMonthFlag && "opacity-50")} onClick={(e) => { if (onEventClick) { e.stopPropagation(); onEventClick(event.id); } }}>
                                             <CalendarMonthViewEvent
                                                 label={event.title}
                                                 collapseOnMobile={true}
@@ -521,13 +526,14 @@ const MonthView = ({
                                 const supportingText = isAllDay ? "All day" : formatTimeForMonth(event.start);
 
                                 return (
-                                    <CalendarMonthViewEvent
-                                        key={`footer-${event.id}`}
-                                        label={event.title}
-                                        supportingText={supportingText}
-                                        color={event.color}
-                                        withDot={event.dot}
-                                    />
+                                    <div key={`footer-${event.id}`} onClick={() => onEventClick?.(event.id)}>
+                                        <CalendarMonthViewEvent
+                                            label={event.title}
+                                            supportingText={supportingText}
+                                            color={event.color}
+                                            withDot={event.dot}
+                                        />
+                                    </div>
                                 );
                             })}
                         </div>
@@ -1047,9 +1053,12 @@ interface CalendarProps {
     events: CalendarEvent[];
     view?: "month" | "week" | "day";
     className?: string;
+    onEventClick?: (eventId: string) => void;
+    hideSearch?: boolean;
+    hideAddEvent?: boolean;
 }
 
-export const Calendar = ({ events, view: defaultView = "month", className }: CalendarProps) => {
+export const Calendar = ({ events, view: defaultView = "month", className, onEventClick, hideSearch, hideAddEvent }: CalendarProps) => {
     const { locale } = useLocale();
     const timeZone = useMemo(() => getLocalTimeZone(), []);
 
@@ -1141,6 +1150,8 @@ export const Calendar = ({ events, view: defaultView = "month", className }: Cal
                 onClickPrev={() => handleNavigate("PREV")}
                 onClickNext={() => handleNavigate("NEXT")}
                 onClickToday={() => handleNavigate("TODAY")}
+                hideSearch={hideSearch}
+                hideAddEvent={hideAddEvent}
             />
             <main className="flex flex-1 overflow-hidden">
                 {view === "month" && (
@@ -1154,6 +1165,8 @@ export const Calendar = ({ events, view: defaultView = "month", className }: Cal
                         fullDateFormatter={fullDateFormatter}
                         shortWeekdayFormatter={shortWeekdayFormatter}
                         timeFormatter={timeFormatter}
+                        onEventClick={onEventClick}
+                        hideAddButton={hideAddEvent}
                     />
                 )}
                 {view === "week" && (

@@ -7,9 +7,10 @@ interface CalendarMonthViewCellProps extends HTMLAttributes<HTMLDivElement> {
     day: number;
     state?: "default" | "selected" | "current";
     isDisabled?: boolean;
+    hideAddButton?: boolean;
 }
 
-export const CalendarMonthViewCell = ({ isDisabled, children, className, day, state, ...props }: CalendarMonthViewCellProps) => {
+export const CalendarMonthViewCell = ({ isDisabled, children, className, day, state, hideAddButton, ...props }: CalendarMonthViewCellProps) => {
     return (
         <div
             {...props}
@@ -20,7 +21,7 @@ export const CalendarMonthViewCell = ({ isDisabled, children, className, day, st
                 className,
             )}
         >
-            {!isDisabled && (
+            {!isDisabled && !hideAddButton && (
                 <div className="absolute right-1.5 bottom-1.5 z-10 hidden group-hover:inline-flex">
                     <Button aria-label="Add event" size="sm" iconLeading={Plus} color="secondary" className="size-7 text-fg-quaternary" />
                 </div>
