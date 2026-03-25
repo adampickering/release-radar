@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import type { ReleaseItem } from '@/types/release'
 import { RELEASE_TYPE_COLORS } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
@@ -10,47 +10,8 @@ interface CalendarBoardProps {
   onDayOverflowClick: (date: string) => void
 }
 
-const MAX_VISIBLE_DESKTOP = 3
-const MAX_VISIBLE_TABLET = 2
-const MAX_VISIBLE_MOBILE = 2
+const MAX_VISIBLE = 3
 const DAY_HEADERS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-const DAY_HEADERS_SHORT = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
-
-function useMaxVisible() {
-  const [maxVisible, setMaxVisible] = useState(() => {
-    const w = window.innerWidth
-    if (w < 640) return MAX_VISIBLE_MOBILE
-    if (w < 1024) return MAX_VISIBLE_TABLET
-    return MAX_VISIBLE_DESKTOP
-  })
-
-  useEffect(() => {
-    function update() {
-      const w = window.innerWidth
-      if (w < 640) setMaxVisible(MAX_VISIBLE_MOBILE)
-      else if (w < 1024) setMaxVisible(MAX_VISIBLE_TABLET)
-      else setMaxVisible(MAX_VISIBLE_DESKTOP)
-    }
-    window.addEventListener('resize', update)
-    return () => window.removeEventListener('resize', update)
-  }, [])
-
-  return maxVisible
-}
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 640)
-
-  useEffect(() => {
-    function update() {
-      setIsMobile(window.innerWidth < 640)
-    }
-    window.addEventListener('resize', update)
-    return () => window.removeEventListener('resize', update)
-  }, [])
-
-  return isMobile
-}
 
 function getMonthGrid(year: number, month: number) {
   // First day of the month
@@ -137,7 +98,7 @@ function ReleaseTypeBadge({ type }: { type: ReleaseItem['releaseType'] }) {
   const colors = RELEASE_TYPE_COLORS[type]
   return (
     <span
-      className="shrink-0 rounded-full font-medium whitespace-nowrap"
+      className="shrink-0 rounded-full font-medium whitespace-nowrap max-md:hidden"
       style={{
         fontSize: '9px',
         lineHeight: '16px',
@@ -151,44 +112,25 @@ function ReleaseTypeBadge({ type }: { type: ReleaseItem['releaseType'] }) {
   )
 }
 
+/** Colored dot indicator visible only on mobile, representing release type */
+function MobileDot({ type }: { type: ReleaseItem['releaseType'] }) {
+  const colors = RELEASE_TYPE_COLORS[type]
+  return (
+    <span
+      className="size-2 rounded-full shrink-0 md:hidden"
+      style={{ backgroundColor: colors.text }}
+    />
+  )
+}
+
 function ReleaseEntry({
   release,
   onClick,
-  compact = false,
 }: {
   release: ReleaseItem
   onClick: () => void
-  compact?: boolean
 }) {
   const brandColor = brandsBySlug[release.brandSlug]?.color ?? '#667085'
-  const typeColors = RELEASE_TYPE_COLORS[release.releaseType]
-
-  if (compact) {
-    // Mobile: favicon + colored type dot only
-    return (
-      <button
-        type="button"
-        onClick={onClick}
-        className="flex w-full items-center gap-1 rounded-[5px] bg-[#F9FAFB] px-1 py-0.5 cursor-pointer mb-[2px] outline-none focus:outline-none hover:shadow-sm transition-all duration-150 text-left"
-        style={{
-          borderLeft: `2px solid ${brandColor}`,
-          borderRadius: '2px 5px 5px 2px',
-        }}
-      >
-        <BrandFavicon brandSlug={release.brandSlug} size={12} />
-        <span
-          className="h-2 w-2 rounded-full shrink-0"
-          style={{ backgroundColor: typeColors.text }}
-        />
-        <span
-          className="flex-1 min-w-0 whitespace-nowrap overflow-hidden text-ellipsis"
-          style={{ fontSize: '10px', color: '#344054' }}
-        >
-          {release.title}
-        </span>
-      </button>
-    )
-  }
 
   return (
     <button
@@ -201,8 +143,9 @@ function ReleaseEntry({
       }}
     >
       <BrandFavicon brandSlug={release.brandSlug} />
+      <MobileDot type={release.releaseType} />
       <span
-        className="flex-1 min-w-0 whitespace-nowrap overflow-hidden text-ellipsis"
+        className="flex-1 min-w-0 whitespace-nowrap overflow-hidden text-ellipsis max-md:hidden"
         style={{ fontSize: '11px', color: '#344054' }}
       >
         {release.title}
@@ -218,9 +161,6 @@ export function CalendarBoard({
   onReleaseClick,
   onDayOverflowClick,
 }: CalendarBoardProps) {
-  const maxVisible = useMaxVisible()
-  const isMobile = useIsMobile()
-
   const [year, monthIdx] = useMemo(() => {
     const [y, m] = month.split('-').map(Number)
     return [y, m - 1] // JS months are 0-indexed
@@ -244,7 +184,7 @@ export function CalendarBoard({
     return map
   }, [releases])
 
-  // Find the busiest day in the current month (Feature 6)
+  // Find the busiest day in the current month
   const busiestDateStr = useMemo(() => {
     let maxCount = 0
     let maxDate = ''
@@ -258,7 +198,6 @@ export function CalendarBoard({
   }, [releasesByDate, month])
 
   const todayStr = getTodayStr()
-  const headers = isMobile ? DAY_HEADERS_SHORT : DAY_HEADERS
 
   if (releases.length === 0) {
     return (
@@ -283,13 +222,13 @@ export function CalendarBoard({
     <div className="overflow-hidden rounded-xl border border-[#E4E7EC] bg-white">
       {/* Day header row */}
       <div className="grid grid-cols-7">
-        {headers.map((day, idx) => (
+        {DAY_HEADERS.map((day, idx) => (
           <div
             key={`${day}-${idx}`}
-            className="text-center font-medium py-1.5 sm:py-2 px-1 sm:px-3 border-b border-[#E4E7EC]"
-            style={{ fontSize: isMobile ? '10px' : '12px', color: '#667085' }}
+            className="text-center font-medium py-2 px-1 md:px-3 border-b border-[#E4E7EC] text-xs text-[#667085]"
           >
-            {day}
+            <span className="max-md:hidden">{day}</span>
+            <span className="md:hidden">{day[0]}</span>
           </div>
         ))}
       </div>
@@ -301,8 +240,8 @@ export function CalendarBoard({
           const isToday = day.dateStr === todayStr
           const isBusiest = day.dateStr === busiestDateStr
           const isDense = dayReleases.length >= 4
-          const visibleReleases = dayReleases.slice(0, maxVisible)
-          const overflowCount = dayReleases.length - maxVisible
+          const visibleReleases = dayReleases.slice(0, MAX_VISIBLE)
+          const overflowCount = dayReleases.length - MAX_VISIBLE
 
           // Determine if cell needs right border (not last column)
           const isLastCol = (i + 1) % 7 === 0
@@ -313,7 +252,7 @@ export function CalendarBoard({
             <div
               key={day.dateStr}
               className={[
-                'flex flex-col p-1 sm:p-1.5 md:p-2 transition-colors',
+                'flex flex-col p-1.5 md:p-2 transition-colors min-h-[80px] md:min-h-[130px]',
                 !isLastCol && 'border-r border-[#E4E7EC]',
                 !isLastRow && 'border-b border-[#E4E7EC]',
                 isToday && 'ring-2 ring-inset ring-[#185CE3]/20',
@@ -322,40 +261,38 @@ export function CalendarBoard({
               ]
                 .filter(Boolean)
                 .join(' ')}
-              style={{ minHeight: isMobile ? '80px' : '130px' }}
             >
               {/* Date number + Today badge + Busiest badge */}
-              <div className="flex items-center gap-0.5 sm:gap-1 mb-0.5 sm:mb-1">
+              <div className="flex items-center gap-1 mb-1">
                 <span
-                  className="font-medium"
+                  className="text-xs font-medium"
                   style={{
-                    fontSize: isMobile ? '10px' : '12px',
                     color: day.inMonth ? '#344054' : '#98A2B3',
                   }}
                 >
                   {day.date.getDate()}
                 </span>
 
-                {/* Today pill badge (Feature 5) — hidden on mobile, show dot instead */}
-                {isToday && !isMobile && (
-                  <span className="inline-flex items-center gap-1 bg-[#185CE3] text-white text-[9px] px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
-                    Today
+                {/* Today pill badge — text hidden on mobile, show dot instead */}
+                {isToday && (
+                  <>
+                    <span className="max-md:hidden inline-flex items-center gap-1 bg-[#185CE3] text-white text-[9px] px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
+                      Today
+                      <span
+                        className="inline-block h-1.5 w-1.5 rounded-full bg-white"
+                        style={{ animation: 'pulse-dot 2s ease-in-out infinite' }}
+                      />
+                    </span>
                     <span
-                      className="inline-block h-1.5 w-1.5 rounded-full bg-white"
+                      className="md:hidden inline-block h-1.5 w-1.5 rounded-full bg-[#185CE3]"
                       style={{ animation: 'pulse-dot 2s ease-in-out infinite' }}
                     />
-                  </span>
-                )}
-                {isToday && isMobile && (
-                  <span
-                    className="inline-block h-1.5 w-1.5 rounded-full bg-[#185CE3]"
-                    style={{ animation: 'pulse-dot 2s ease-in-out infinite' }}
-                  />
+                  </>
                 )}
 
-                {/* Busiest day badge (Feature 6) — hidden on mobile */}
-                {isBusiest && !isMobile && (
-                  <span className="text-[9px] bg-orange-50 text-orange-600 px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
+                {/* Busiest day badge — hidden on mobile */}
+                {isBusiest && (
+                  <span className="max-md:hidden text-[9px] bg-orange-50 text-orange-600 px-1.5 py-0.5 rounded-full font-medium" style={{ animation: 'fade-in 400ms ease-out' }}>
                     Busiest
                   </span>
                 )}
@@ -368,15 +305,13 @@ export function CalendarBoard({
                     key={release.id}
                     release={release}
                     onClick={() => onReleaseClick(release.id)}
-                    compact={isMobile}
                   />
                 ))}
 
                 {overflowCount > 0 && (
                   <button
                     type="button"
-                    className="text-left px-1 sm:px-1.5 py-0.5 sm:py-1 cursor-pointer font-medium outline-none focus:outline-none hover:underline"
-                    style={{ fontSize: isMobile ? '9px' : '11px', color: '#185CE3' }}
+                    className="text-left px-1.5 py-1 cursor-pointer font-medium outline-none focus:outline-none hover:underline text-[11px] text-[#185CE3]"
                     onClick={() => onDayOverflowClick(day.dateStr)}
                   >
                     +{overflowCount}

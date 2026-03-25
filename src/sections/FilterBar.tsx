@@ -106,12 +106,12 @@ function TypePills({ selected, onChange }: TypePillsProps) {
   }
 
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1.5 overflow-x-auto whitespace-nowrap scrollbar-hide">
       {/* "All" pill */}
       <button
         type="button"
         onClick={() => onChange([])}
-        className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
+        className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all shrink-0 ${
           isAllActive
             ? 'bg-[#185CE3] text-white shadow-sm'
             : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-[#344054]'
@@ -132,7 +132,7 @@ function TypePills({ selected, onChange }: TypePillsProps) {
                 ? { backgroundColor: colors.bg, color: colors.text, borderColor: colors.text + '30' }
                 : undefined
             }
-            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
+            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all shrink-0 ${
               isActive
                 ? 'border shadow-sm'
                 : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-[#344054]'
@@ -180,34 +180,36 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
   }, [])
 
   return (
-    <div className="flex items-center gap-3 border-b border-[#E4E7EC] bg-white px-6 py-3">
+    <div className="flex flex-wrap items-end gap-3 border-b border-[#E4E7EC] bg-white px-4 md:px-6 py-2.5">
       {/* Search input */}
-      <div className="relative min-w-[200px]">
-        <SearchMd className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-am-text-muted" />
+      <div className="relative w-full md:w-auto md:min-w-[200px]">
+        <SearchMd className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#667085]" />
         <input
           type="text"
           placeholder="Search releases..."
           value={filters.search}
           onChange={(e) => setFilter('search', e.target.value)}
-          className="h-9 w-full rounded-lg border border-[#D0D5DD] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
+          className="h-9 w-full rounded-lg border border-[#D0D5DD] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-[#667085] outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
         />
       </div>
 
-      {/* Vertical divider */}
-      <div className="h-6 w-px bg-[#E4E7EC]" />
+      {/* Vertical divider — hidden on mobile */}
+      <div className="hidden md:block h-6 w-px bg-[#E4E7EC]" />
 
       {/* Release type pills */}
-      <TypePills
-        selected={filters.type}
-        onChange={(selected) => setFilter('type', selected)}
-      />
+      <div>
+        <TypePills
+          selected={filters.type}
+          onChange={(selected) => setFilter('type', selected)}
+        />
+      </div>
 
       {/* Flex spacer */}
       <div className="flex-1" />
 
       {/* Vertical divider before actions */}
       {activeFilterCount > 0 && (
-        <div className="h-6 w-px bg-[#E4E7EC]" />
+        <div className="hidden md:block h-6 w-px bg-[#E4E7EC]" />
       )}
 
       {/* Clear all button */}
@@ -221,14 +223,14 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
         </button>
       )}
 
-      {/* Copy link button */}
+      {/* Copy link button — icon-only on mobile */}
       <button
         type="button"
         onClick={handleCopyLink}
-        className="flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-am-blue px-3 py-2 text-sm font-medium text-white shadow-sm outline-none focus:outline-none transition-colors hover:bg-[#1450CC]"
+        className="flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-am-blue px-3 py-2 text-sm font-medium text-white shadow-sm outline-none focus:outline-none transition-colors hover:bg-[#1450CC] shrink-0"
       >
         <Link01 className="h-4 w-4" />
-        {copied ? 'Copied!' : 'Copy link'}
+        <span className="max-md:hidden">{copied ? 'Copied!' : 'Copy link'}</span>
       </button>
     </div>
   )

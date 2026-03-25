@@ -116,7 +116,7 @@ export function DaySummaryModal({
       {/* Modal panel */}
       <div
         ref={panelRef}
-        className="bg-white rounded-xl shadow-2xl w-full overflow-hidden mx-4 sm:mx-auto"
+        className="bg-white rounded-xl shadow-2xl w-full overflow-hidden mx-4 md:mx-auto"
         style={{
           maxWidth: '448px',
           maxHeight: '80vh',
@@ -127,7 +127,7 @@ export function DaySummaryModal({
       >
         {/* Header */}
         <div
-          className="flex items-center px-4 sm:px-6"
+          className="flex items-center px-4 md:px-6"
           style={{
             paddingTop: '20px',
             paddingBottom: '20px',
@@ -136,7 +136,7 @@ export function DaySummaryModal({
         >
           <div className="flex-1 min-w-0">
             <div
-              className="font-semibold text-sm sm:text-base"
+              className="font-semibold text-sm md:text-base"
               style={{ color: '#0E1B3C' }}
             >
               {formatModalDate(date)}
@@ -147,11 +147,11 @@ export function DaySummaryModal({
           </div>
           <button
             type="button"
-            className="cursor-pointer shrink-0 ml-4 outline-none focus:outline-none flex items-center justify-center h-11 w-11 sm:h-auto sm:w-auto rounded-full sm:rounded-none hover:bg-gray-100 sm:hover:bg-transparent"
+            className="cursor-pointer shrink-0 ml-4 outline-none focus:outline-none flex items-center justify-center h-11 w-11 md:h-auto md:w-auto rounded-full md:rounded-none hover:bg-gray-100 md:hover:bg-transparent"
             onClick={onClose}
-            style={{ color: '#98A2B3' }}
+            style={{ color: '#667085' }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#98A2B3')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#667085')}
           >
             <XClose width={20} height={20} />
           </button>

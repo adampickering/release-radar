@@ -27,7 +27,7 @@ export function BrandLegend({ releases, activeBrands, onBrandToggle }: BrandLege
   const hasActiveFilter = activeBrands.length > 0
 
   return (
-    <div className="flex flex-wrap items-center gap-2 border-b border-[#E4E7EC] bg-white px-6 py-2.5">
+    <div className="flex flex-wrap items-center gap-2 border-b border-[#E4E7EC] bg-white px-4 md:px-6 py-2.5">
       {brandCounts.map(({ slug, count, brand }) => {
         if (!brand) return null
         const isActive = activeBrands.includes(slug)
@@ -50,7 +50,7 @@ export function BrandLegend({ releases, activeBrands, onBrandToggle }: BrandLege
               isActive
                 ? 'shadow-sm'
                 : isInactive
-                  ? 'border-[#E4E7EC] bg-white text-am-text-muted opacity-50 hover:opacity-80'
+                  ? 'border-[#E4E7EC] bg-white text-[#667085] opacity-60 hover:opacity-80'
                   : 'border-[#E4E7EC] bg-white text-am-text hover:bg-gray-50'
             }`}
           >
@@ -66,7 +66,7 @@ export function BrandLegend({ releases, activeBrands, onBrandToggle }: BrandLege
             {/* Brand name */}
             <span className={isActive ? '' : ''}>{brand.name}</span>
             {/* Count */}
-            <span className={`tabular-nums ${isActive ? 'opacity-70' : 'text-am-text-muted'}`}>
+            <span className={`tabular-nums ${isActive ? 'opacity-70' : 'text-[#667085]'}`}>
               ({count})
             </span>
           </button>

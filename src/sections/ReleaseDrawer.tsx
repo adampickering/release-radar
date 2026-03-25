@@ -109,7 +109,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
     <>
       {/* Overlay */}
       <div
-        className="fixed inset-0 z-40 transition-opacity duration-300"
+        className="fixed inset-0 z-40 pl-6 md:pl-10 transition-opacity duration-300"
         style={{
           backgroundColor: 'rgba(0, 0, 0, 0.2)',
           opacity: visible ? 1 : 0,
@@ -119,7 +119,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
 
       {/* Drawer panel */}
       <div
-        className="fixed right-0 top-0 h-full z-50 bg-white shadow-xl transition-transform duration-300 ease-out overflow-y-auto w-full sm:w-[380px]"
+        className="fixed right-0 top-0 h-full z-50 bg-white shadow-xl transition-transform duration-300 ease-out overflow-y-auto w-full max-w-100"
         style={{
           borderLeft: '1px solid #E4E7EC',
           transform: visible ? 'translateX(0)' : 'translateX(100%)',
@@ -127,7 +127,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
       >
         {/* Header */}
         <div
-          className="px-4 sm:px-6"
+          className="px-4 md:px-6"
           style={{
             paddingTop: '20px',
             paddingBottom: '16px',
@@ -140,16 +140,16 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
             <span className="font-medium" style={{ fontSize: '11px', color: '#667085' }}>
               {brand?.name ?? release.brand}
             </span>
-            <span style={{ fontSize: '10px', color: '#98A2B3' }}>
+            <span style={{ fontSize: '10px', color: '#667085' }}>
               {formatDate(release.date)}
             </span>
             <button
               type="button"
-              className="ml-auto cursor-pointer shrink-0 outline-none focus:outline-none flex items-center justify-center h-11 w-11 sm:h-auto sm:w-auto rounded-full sm:rounded-none hover:bg-gray-100 sm:hover:bg-transparent"
+              className="ml-auto cursor-pointer shrink-0 outline-none focus:outline-none flex items-center justify-center h-11 w-11 md:h-auto md:w-auto rounded-full md:rounded-none hover:bg-gray-100 md:hover:bg-transparent"
               onClick={onClose}
-              style={{ color: '#98A2B3' }}
+              style={{ color: '#667085' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#98A2B3')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#667085')}
             >
               <XClose width={20} height={20} />
             </button>
@@ -199,7 +199,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
         </div>
 
         {/* Body */}
-        <div className="px-4 sm:px-6" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
+        <div className="px-4 md:px-6" style={{ paddingTop: '20px', paddingBottom: '20px' }}>
           {/* Summary */}
           <SectionLabel>Summary</SectionLabel>
           <p style={{ fontSize: '13px', color: '#344054', lineHeight: 1.6, margin: 0 }}>

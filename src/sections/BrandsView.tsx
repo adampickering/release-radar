@@ -117,13 +117,13 @@ export function BrandsView({ releases, onBrandClick, onReleaseClick }: BrandsVie
   }
 
   return (
-    <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-6 sm:py-8">
+    <div className="mx-auto max-w-[1200px] px-4 md:px-6 py-6 md:py-8">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <div
             key={card.slug}
             onClick={() => onBrandClick(card.slug)}
-            className="cursor-pointer rounded-xl border border-[#E4E7EC] bg-white p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+            className="cursor-pointer rounded-xl border border-[#E4E7EC] bg-white p-4 md:p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
           >
             {/* Brand header */}
             <div className="mb-3 flex items-center gap-3">

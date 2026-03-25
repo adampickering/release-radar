@@ -6,8 +6,6 @@ interface StatsStripProps {
   isFiltered: boolean
 }
 
-const accentWidths = ['w-16', 'w-12', 'w-20', 'w-10'] as const
-
 /**
  * Animate a number from 0 to `target` over `duration` ms with ease-out.
  */
@@ -86,35 +84,25 @@ export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
   ]
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 border-b border-am-border bg-white">
+    <div className="flex flex-col md:flex-row border-b border-am-border bg-white px-4 md:px-8">
       {metrics.map((metric, i) => (
         <div
           key={metric.label}
-          className={`relative px-4 sm:px-6 py-3 sm:py-4 ${
-            /* Right border: on mobile, odd columns (0,2) get right border; on md+, all except last */
-            ''
-          } border-am-border ${
-            /* Bottom border on mobile for top row */
-            i < 2 ? 'border-b md:border-b' : 'md:border-b-0'
-          } ${
-            /* Right border: first and third items */
-            i % 2 === 0 ? 'border-r' : ''
-          } ${
-            /* On md+, all except last get right border */
-            i < metrics.length - 1 ? 'md:border-r' : 'md:border-r-0'
+          className={`relative flex-1 py-4 ${
+            i > 0 ? 'border-t-2 border-am-blue md:border-t-0 md:border-l-2 md:pl-6' : ''
           }`}
         >
-          <p className="text-[10px] sm:text-xs font-medium uppercase tracking-wide text-[#667085]">
+          <p className="text-xs font-medium uppercase tracking-wide text-[#667085]">
             {metric.label}
             {filtered && (
-              <span className="ml-1 normal-case tracking-normal text-am-text-muted">(filtered)</span>
+              <span className="ml-1 normal-case tracking-normal text-[#667085]">(filtered)</span>
             )}
           </p>
-          <p className="mt-1 text-[22px] sm:text-[28px] font-bold leading-tight tracking-tight text-am-blue" style={{ letterSpacing: '-1px', animation: 'count-fade 400ms ease-out' }}>
+          <p className="mt-1 text-[28px] font-bold leading-tight tracking-tight text-am-blue" style={{ letterSpacing: '-1px', animation: 'count-fade 400ms ease-out' }}>
             <AnimatedNumber value={metric.value} decimals={metric.decimals} />
           </p>
           {metric.secondary && (
-            <p className="mt-0.5 text-[10px] sm:text-xs text-am-text-secondary">{metric.secondary}</p>
+            <p className="mt-0.5 text-xs text-am-text-secondary">{metric.secondary}</p>
           )}
           {/* Monthly comparison badge — only on "Releases this month" */}
           {metric.showComparison && stats.lastMonthCount > 0 && (
@@ -129,7 +117,6 @@ export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
               {stats.monthChange >= 0 ? '+' : ''}{stats.monthChange}% vs last month
             </span>
           )}
-          <div className={`absolute bottom-0 left-4 sm:left-6 h-[3px] rounded-full bg-am-blue ${accentWidths[i]}`} />
         </div>
       ))}
     </div>

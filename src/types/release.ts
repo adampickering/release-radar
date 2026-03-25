@@ -24,6 +24,6 @@ export const RELEASE_TYPE_COLORS: Record<ReleaseType, { bg: string; text: string
   feature:     { bg: '#ECFDF3', text: '#027A48' },
   improvement: { bg: '#F0F3FF', text: '#5925DC' },
   fix:         { bg: '#FFF6ED', text: '#B54708' },
-  launch:      { bg: '#EFF4FF', text: '#185CE3' },
+  launch:      { bg: '#EFF4FF', text: '#1249B8' },
   milestone:   { bg: '#F2F4F7', text: '#344054' },
 }
