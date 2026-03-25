@@ -50,10 +50,7 @@ function App() {
         <Header activeView={activeView} onViewChange={setActiveView} />
       </div>
 
-      {/* Stats strip — scrolls naturally with content */}
-      <StatsStrip stats={stats} isFiltered={isFiltered} />
-
-      {/* Filter bar — sticky below header (header stays same height on all sizes) */}
+      {/* Filter bar — sticky below header */}
       <div className="sticky top-[56px] z-40">
         <FilterBar
           filters={filters}
@@ -62,6 +59,9 @@ function App() {
           activeFilterCount={activeFilterCount}
         />
       </div>
+
+      {/* Stats strip — below filter bar, scrolls with content */}
+      <StatsStrip stats={stats} isFiltered={isFiltered} />
 
       {/* Main content area — grows to fill, with fade transition */}
       <div key={viewKey} className="flex-1 transition-opacity duration-200" style={{ animation: 'fade-in 200ms ease-out' }}>

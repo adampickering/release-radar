@@ -1,6 +1,9 @@
 import type { ReleaseItem, ReleaseType } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { Badge } from '@/components/base/badges/badges'
+import { ProgressBarBase } from '@/components/base/progress-indicators/progress-indicators'
+import { Avatar } from '@/components/base/avatar/avatar'
+import { MetricChangeIndicator } from '@/components/application/metrics/metrics'
 import { cx } from '@/utils/cx'
 
 interface BrandMomentumProps {
@@ -30,7 +33,6 @@ function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
   const total = releases.length
 
   const stats: BrandStat[] = Object.entries(grouped).map(([slug, items]) => {
-    // Find most common release type
     const typeCounts: Partial<Record<ReleaseType, number>> = {}
     for (const item of items) {
       typeCounts[item.releaseType] = (typeCounts[item.releaseType] || 0) + 1
@@ -62,76 +64,60 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
 
   return (
     <section className="bg-secondary">
-      {/* Section header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-1 md:gap-0 px-4 md:px-6 pt-5 pb-4">
+      <div className="flex items-end justify-between px-4 pt-5 pb-4 md:px-8">
         <div>
           <h2 className="text-sm font-bold text-secondary">Brand Momentum</h2>
-          <p className="text-sm text-tertiary">
-            Shipping velocity across Awesome Motive brands this month
-          </p>
+          <p className="text-sm text-tertiary">Shipping velocity across Awesome Motive brands this month</p>
         </div>
-        <span className="max-md:hidden text-xs text-tertiary">Scroll for more &rarr;</span>
+        <span className="hidden text-xs text-tertiary md:inline">Scroll for more &rarr;</span>
       </div>
 
-      {/* Cards row */}
-      <div className="flex gap-3 overflow-x-auto px-4 md:px-6 pb-5">
+      <div className="flex gap-4 overflow-x-auto px-4 pb-5 md:px-8">
         {stats.map((brand, index) => {
-          const barWidth = maxCount > 0 ? (brand.count / maxCount) * 100 : 0
+          const barPct = maxCount > 0 ? Math.round((brand.count / maxCount) * 100) : 0
+          const isActive = hasActiveFilter && activeBrands.includes(brand.slug)
+          const isDimmed = hasActiveFilter && !activeBrands.includes(brand.slug)
 
           return (
             <div
               key={brand.slug}
               onClick={() => onBrandClick(brand.slug)}
               className={cx(
-                'min-w-[200px] flex-shrink-0 cursor-pointer rounded-xl border bg-primary p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md',
-                hasActiveFilter && activeBrands.includes(brand.slug)
-                  ? 'border-brand ring-1 ring-brand/20 shadow-sm'
-                  : hasActiveFilter && !activeBrands.includes(brand.slug)
-                    ? 'border-secondary opacity-60 hover:opacity-80'
-                    : 'border-secondary',
+                'min-w-[200px] flex-shrink-0 cursor-pointer rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md',
+                isActive
+                  ? 'ring-brand-solid shadow-sm'
+                  : isDimmed
+                    ? 'ring-secondary opacity-60 hover:opacity-80'
+                    : 'ring-secondary',
               )}
-              style={{
-                animation: `card-enter 400ms ease-out ${index * 60}ms both`,
-              }}
+              style={{ animation: `card-enter 400ms ease-out ${index * 60}ms both` }}
             >
-              {/* Brand header */}
-              <div className="mb-3 flex items-center gap-2.5">
-                <img
-                  src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=48`}
-                  alt={brand.name}
-                  width={24}
-                  height={24}
-                  className="rounded-[5px]"
-                  onError={(e) => {
-                    const target = e.currentTarget
-                    target.style.display = 'none'
-                  }}
-                />
-                <span className="text-sm font-semibold text-secondary">{brand.name}</span>
-              </div>
+              {/* Card body — matches MetricsSimple layout */}
+              <div className="flex flex-col gap-2 px-4 py-5 md:px-5">
+                {/* Brand header with avatar */}
+                <div className="flex items-center gap-2.5">
+                  <Avatar
+                    size="sm"
+                    src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=48`}
+                    alt={brand.name}
+                  />
+                  <h3 className="text-sm font-medium text-tertiary">{brand.name}</h3>
+                </div>
 
-              {/* Count */}
-              <p className="text-display-xs font-bold leading-tight text-brand-tertiary_alt" style={{ letterSpacing: '-1px' }}>
-                {brand.count}
-              </p>
+                {/* Big number */}
+                <p className="text-display-sm font-semibold text-primary">{brand.count}</p>
 
-              {/* Label */}
-              <p className="mb-2.5 text-xs text-tertiary">releases this month</p>
+                {/* Subtitle */}
+                <p className="text-xs text-tertiary">releases this month</p>
 
-              {/* Proportional bar */}
-              <div className="h-1.5 overflow-hidden rounded-full bg-quaternary">
-                <div
-                  className="h-full rounded-full bg-brand-solid"
-                  style={{ width: `${barWidth}%`, minWidth: barWidth > 0 ? '4px' : '0' }}
-                />
-              </div>
+                {/* Progress bar — UUI ProgressBarBase */}
+                <ProgressBarBase value={barPct} className="h-1.5" />
 
-              {/* Footer */}
-              <div className="mt-1.5 flex items-center justify-between">
-                <span className="text-[10px] text-tertiary">{brand.pctOfTotal}% of total</span>
-                <Badge size="sm" type="modern">
-                  Top: {brand.topType}
-                </Badge>
+                {/* Footer row */}
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-tertiary">{brand.pctOfTotal}% of total</span>
+                  <Badge size="sm" type="modern">Top: {brand.topType}</Badge>
+                </div>
               </div>
             </div>
           )
