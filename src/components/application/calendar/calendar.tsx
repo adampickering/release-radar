@@ -50,6 +50,7 @@ export type CalendarEvent = {
     end: Date;
     color?: EventViewColor;
     dot?: boolean;
+    avatarUrl?: string;
 };
 
 type ZonedEvent = Omit<CalendarEvent, "start" | "end"> & {
@@ -458,7 +459,7 @@ const MonthView = ({
                                     if (isPlaceholder) {
                                         return (
                                             <div key={`${event.id}-placeholder`} className="pointer-events-none opacity-0">
-                                                <CalendarMonthViewEvent label={event.title} collapseOnMobile={true} color={event.color} withDot={event.dot} />
+                                                <CalendarMonthViewEvent label={event.title} collapseOnMobile={true} color={event.color} withDot={event.dot} avatarUrl={event.avatarUrl} />
                                             </div>
                                         );
                                     }
@@ -497,6 +498,7 @@ const MonthView = ({
                                                 supportingText={supportingText}
                                                 color={event.color}
                                                 withDot={event.dot}
+                                                avatarUrl={event.avatarUrl}
                                             />
                                         </div>
                                     );
@@ -532,6 +534,7 @@ const MonthView = ({
                                             supportingText={supportingText}
                                             color={event.color}
                                             withDot={event.dot}
+                                            avatarUrl={event.avatarUrl}
                                         />
                                     </div>
                                 );

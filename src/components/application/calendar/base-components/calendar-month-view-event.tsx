@@ -1,3 +1,4 @@
+import { Avatar } from "@/components/base/avatar/avatar";
 import { cx } from "@/utils/cx";
 
 export const eventViewColors = {
@@ -65,9 +66,10 @@ interface CalendarMonthViewEventProps {
     withDot?: boolean;
     color?: EventViewColor;
     collapseOnMobile?: boolean;
+    avatarUrl?: string;
 }
 
-export const CalendarMonthViewEvent = ({ label, supportingText, color = "gray", collapseOnMobile = false }: CalendarMonthViewEventProps) => {
+export const CalendarMonthViewEvent = ({ label, supportingText, color = "gray", collapseOnMobile = false, avatarUrl }: CalendarMonthViewEventProps) => {
     return (
         <>
             <div className={cx("inline-flex size-2 items-center justify-center md:hidden", !collapseOnMobile && "hidden")}>
@@ -76,14 +78,22 @@ export const CalendarMonthViewEvent = ({ label, supportingText, color = "gray", 
 
             <div
                 className={cx(
-                    "flex w-full cursor-pointer items-center gap-1 rounded-md px-2 py-1 ring-1 ring-inset",
+                    "flex w-full cursor-pointer items-center gap-1.5 rounded-md px-2 py-1 ring-1 ring-inset",
                     collapseOnMobile && "max-md:hidden",
                     eventViewColors[color].root,
                 )}
             >
-                <div className="flex w-full items-center justify-between gap-0.5">
+                {avatarUrl && (
+                    <Avatar
+                        size="xs"
+                        src={avatarUrl}
+                        alt=""
+                        className="shrink-0"
+                    />
+                )}
+                <div className="flex w-full items-center justify-between gap-0.5 min-w-0">
                     <span className={cx("flex-1 truncate text-xs font-semibold", eventViewColors[color].label)}>{label}</span>
-                    {supportingText && <time className={cx("text-xs", eventViewColors[color].time)}>{supportingText}</time>}
+                    {supportingText && <time className={cx("shrink-0 text-xs", eventViewColors[color].time)}>{supportingText}</time>}
                 </div>
             </div>
         </>

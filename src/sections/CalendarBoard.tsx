@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Calendar, type CalendarEvent } from '@/components/application/calendar/calendar'
 import type { EventViewColor } from '@/components/application/calendar/base-components/calendar-month-view-event'
 import type { ReleaseItem, ReleaseType } from '@/types/release'
+import { brandsBySlug } from '@/data/brands'
 
 interface CalendarBoardProps {
   releases: ReleaseItem[]
@@ -33,14 +34,18 @@ export function CalendarBoard({
   /** Convert ReleaseItem[] into CalendarEvent[] for the UUI Calendar */
   const calendarEvents: CalendarEvent[] = useMemo(
     () =>
-      releases.map((r) => ({
-        id: r.id,
-        title: r.title,
-        start: new Date(r.date + 'T09:00:00'),
-        end: new Date(r.date + 'T10:00:00'),
-        color: releaseTypeToColor(r.releaseType),
-        dot: true,
-      })),
+      releases.map((r) => {
+        const brand = brandsBySlug[r.brandSlug]
+        return {
+          id: r.id,
+          title: r.title,
+          start: new Date(r.date + 'T09:00:00'),
+          end: new Date(r.date + 'T10:00:00'),
+          color: releaseTypeToColor(r.releaseType),
+          dot: true,
+          avatarUrl: brand ? `https://www.google.com/s2/favicons?domain=${brand.domain}&sz=32` : undefined,
+        }
+      }),
     [releases]
   )
 
