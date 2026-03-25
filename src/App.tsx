@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { releases } from '@/data/releases'
 import { brands } from '@/data/brands'
 import { useFilterState } from '@/hooks/useFilterState'
@@ -18,6 +18,15 @@ function App() {
   const stats = computeStats(filtered, brands)
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
+  const [isCompact, setIsCompact] = useState(false)
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsCompact(window.scrollY > 120)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const dayReleases = dayModalDate ? filtered.filter(r => r.date === dayModalDate) : []
 
@@ -26,9 +35,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-am-light font-sans">
-      <div className="sticky top-0 z-50 bg-white">
+      <div className={`sticky top-0 z-50 bg-white transition-shadow duration-200 ${isCompact ? 'shadow-sm' : ''}`}>
         <Header />
-        <StatsStrip stats={stats} isFiltered={isFiltered} />
+        <StatsStrip stats={stats} isFiltered={isFiltered} isCompact={isCompact} />
         <FilterBar
           filters={filters}
           setFilter={setFilter}

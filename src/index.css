@@ -8,3 +8,18 @@
   --color-am-text-muted: #98A2B3;
   --font-family-sans: 'Inter', system-ui, sans-serif;
 }
+
+@keyframes pill-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-pill-in {
+  animation: pill-in 150ms ease-out both;
+}

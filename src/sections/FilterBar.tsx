@@ -174,7 +174,7 @@ interface FilterPillProps {
 
 function FilterPill({ label, onRemove }: FilterPillProps) {
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-[#EFF4FF] px-2.5 py-1 text-xs font-medium text-am-blue">
+    <span className="inline-flex items-center gap-1 rounded-full bg-[#EFF4FF] px-2.5 py-1 text-xs font-medium text-am-blue animate-pill-in">
       {label}
       <button
         type="button"
