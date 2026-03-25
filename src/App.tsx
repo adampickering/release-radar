@@ -6,7 +6,7 @@ import { filterReleases } from '@/utils/filters'
 import { computeStats } from '@/utils/stats'
 import { Header } from '@/sections/Header'
 import { StatsStrip } from '@/sections/StatsStrip'
-import { FilterBar } from '@/sections/FilterBar'
+import { FilterBar, MonthPicker } from '@/sections/FilterBar'
 import { BrandLegend } from '@/sections/BrandLegend'
 import { CalendarBoard } from '@/sections/CalendarBoard'
 import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
@@ -62,13 +62,24 @@ function App() {
       {/* Brand momentum — visible right after filter bar */}
       <BrandMomentum
         releases={filtered}
+        activeBrands={filters.brand || []}
         onBrandClick={(slug) => {
           const current = filters.brand || []
-          if (!current.includes(slug)) {
+          if (current.includes(slug)) {
+            setFilter('brand', current.filter(s => s !== slug))
+          } else {
             setFilter('brand', [...current, slug])
           }
         }}
       />
+
+      {/* Month picker — centered above calendar */}
+      <div className="flex justify-center bg-white py-3 border-b border-[#E4E7EC]">
+        <MonthPicker
+          month={filters.month}
+          onChange={(month) => setFilter('month', month)}
+        />
+      </div>
 
       {/* Calendar board */}
       <main className="px-6 py-4">

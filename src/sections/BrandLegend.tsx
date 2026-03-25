@@ -54,11 +54,6 @@ export function BrandLegend({ releases, activeBrands, onBrandToggle }: BrandLege
                   : 'border-[#E4E7EC] bg-white text-am-text hover:bg-gray-50'
             }`}
           >
-            {/* Colored dot */}
-            <span
-              className="inline-block h-2 w-2 shrink-0 rounded-full"
-              style={{ backgroundColor: brand.color }}
-            />
             {/* Favicon */}
             <img
               src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=32`}

@@ -4,6 +4,7 @@ import { brandsBySlug } from '@/data/brands'
 
 interface BrandMomentumProps {
   releases: ReleaseItem[]
+  activeBrands: string[]
   onBrandClick: (slug: string) => void
 }
 
@@ -50,7 +51,8 @@ function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
   return stats
 }
 
-export function BrandMomentum({ releases, onBrandClick }: BrandMomentumProps) {
+export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMomentumProps) {
+  const hasActiveFilter = activeBrands.length > 0
   const stats = computeBrandStats(releases)
 
   if (stats.length === 0) return null
@@ -80,7 +82,13 @@ export function BrandMomentum({ releases, onBrandClick }: BrandMomentumProps) {
             <div
               key={brand.slug}
               onClick={() => onBrandClick(brand.slug)}
-              className="min-w-[200px] flex-shrink-0 cursor-pointer rounded-[10px] border border-am-border bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+              className={`min-w-[200px] flex-shrink-0 cursor-pointer rounded-[10px] border bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
+                hasActiveFilter && activeBrands.includes(brand.slug)
+                  ? 'border-am-blue ring-1 ring-am-blue/20 shadow-sm'
+                  : hasActiveFilter && !activeBrands.includes(brand.slug)
+                    ? 'border-am-border opacity-50 hover:opacity-80'
+                    : 'border-am-border'
+              }`}
             >
               {/* Brand header */}
               <div className="mb-3 flex items-center gap-2.5">

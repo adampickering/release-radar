@@ -38,14 +38,14 @@ function formatMonthLabel(monthStr: string): string {
   return `${MONTH_NAMES[month - 1]} ${year}`
 }
 
-// --- Month Picker ---
+// --- Month Picker (exported for use above calendar) ---
 
-interface MonthPickerProps {
+export interface MonthPickerProps {
   month: string
   onChange: (month: string) => void
 }
 
-function MonthPicker({ month, onChange }: MonthPickerProps) {
+export function MonthPicker({ month, onChange }: MonthPickerProps) {
   const { year, month: m } = parseMonth(month)
 
   const prev = () => {
@@ -65,7 +65,7 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
   }
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-2">
       <button
         type="button"
         onClick={prev}
@@ -73,7 +73,7 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
       >
         <ChevronLeft className="h-4 w-4" />
       </button>
-      <span className="min-w-[100px] text-center text-sm font-semibold text-[#344054]">
+      <span className="min-w-[120px] text-center text-base font-semibold text-[#344054]">
         {formatMonthLabel(month)}
       </span>
       <button
@@ -200,12 +200,6 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
       <TypePills
         selected={filters.type}
         onChange={(selected) => setFilter('type', selected)}
-      />
-
-      {/* Month picker */}
-      <MonthPicker
-        month={filters.month}
-        onChange={(month) => setFilter('month', month)}
       />
 
       {/* Flex spacer */}
