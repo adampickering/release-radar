@@ -64,7 +64,7 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 
 ### 1. Header + Stats Strip
 
-**UUI components:** `header`, `metrics-simple-accent-line`
+**UUI components:** `header-navigation` (adapted for app top bar), `metrics-simple-accent-line` (adapted from marketing section into inline stat strip)
 
 **Layout:**
 - Top bar: AM logo (left) + "Release Radar" title + subtitle → View toggle (right)
@@ -72,11 +72,11 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 - Stats strip below: 4 metrics in a row, separated by borders
   - Releases this month
   - Active brands (of total)
-  - Public-safe releases (% of total)
+  - Features shipped (count of feature + launch types)
   - Avg releases per week
 - Each metric: uppercase label, large number, secondary context text, blue accent bar
 - Total height: ~160px max
-- Sticky on scroll (compact when pinned)
+- Sticky on scroll. Compact state: stats strip hides, only the top bar (logo + title + view toggle) remains (~56px). Transition: smooth 200ms collapse.
 
 ### 2. Filter Bar
 
@@ -100,7 +100,7 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 - All filter state serialized to URL search params: `?brand=wpforms,aioseo&type=feature&month=2026-03`
 - Active selections shown as dismissible pill badges
 - "Copy link" copies current URL with filters to clipboard, shows UUI toast notification
-- Filters are additive (AND logic within same filter type)
+- Filters use OR logic within the same filter type (e.g., brand=wpforms OR aioseo) and AND logic across different filter types (e.g., brand=wpforms AND type=feature)
 
 ### 3. Calendar Release Board
 
@@ -128,10 +128,13 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 
 **Interactions:**
 - Click any entry → opens detail drawer
-- Click "+N more" → opens detail drawer showing all releases for that day
+- Click "+N more" → opens a day-summary modal (`calendar-event-modal`) listing all releases for that day. Each item in the list is clickable and opens the single-release detail drawer.
 - Today's date: subtle blue border highlight
 - Hover on cell: faint background lift
 - Dense days (4+ releases): subtle tinted background (`#FAFCFF`)
+- Month navigation is handled exclusively by the filter bar month picker. The calendar component does not render its own month navigation controls.
+
+**Empty state:** When filters produce zero results, the calendar shows a centered message: "No releases match your filters" with a "Clear filters" link. Stats strip shows zeroes with a "(filtered)" label.
 
 ### 4. Release Detail Drawer
 
@@ -154,7 +157,7 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 - Slides in from right with smooth CSS transition
 - Calendar dims behind (overlay)
 - Click outside or ESC or X to close
-- URL updates to include `?release={id}` when open
+- URL updates to include `?release={id}` when open. When a `release=` param is present, the drawer opens regardless of current filters (the release is shown even if its brand/type is filtered out). Closing the drawer removes the param.
 
 ### 5. Brand Momentum Strip
 
@@ -170,7 +173,7 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 - Brand favicon (24px) + brand name
 - Large release count number
 - "releases this month" label
-- Progress bar (share of total releases, AM blue)
+- Proportional bar (normalized to the top brand — leader gets 100% width, others scale relative to it, AM blue)
 - Footer: percentage of total + top release type (color-coded)
 
 **Behavior:**
@@ -193,12 +196,12 @@ WPForms, AIOSEO, WP Mail SMTP, MonsterInsights, OptinMonster, SeedProd, Duplicat
 ```bash
 npx untitledui@latest add calendar --yes
 npx untitledui@latest add calendar-event-menu --yes
-npx untitledui@latest add calendar-event-modal --yes
+npx untitledui@latest add calendar-event-modal --yes  # Used for "+N more" day-summary modal
 npx untitledui@latest add filter-bar --yes
 npx untitledui@latest add filter-dropdown-menu --yes
 npx untitledui@latest add badge-groups --yes
 npx untitledui@latest add metrics-simple-accent-line --yes
-npx untitledui@latest add header --yes
+npx untitledui@latest add header-navigation --yes
 npx untitledui@latest add notifications --yes
 npx untitledui@latest add section-label --yes
 ```
