@@ -1,3 +1,8 @@
+import { releases } from '@/data/releases'
+import { brands } from '@/data/brands'
+
+console.log(`Loaded ${releases.length} releases across ${brands.length} brands`)
+
 function App() {
   return (
     <div className="min-h-screen bg-am-light font-sans">
