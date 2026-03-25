@@ -1,9 +1,8 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { SearchMd, ChevronDown, ChevronLeft, ChevronRight, XClose, Link01 } from '@untitledui/icons'
 import type { FilterState } from '@/hooks/useFilterState'
-import type { BrandInfo, ReleaseType } from '@/types/release'
+import type { ReleaseType } from '@/types/release'
 import { RELEASE_TYPE_COLORS } from '@/types/release'
-import { Checkbox } from '@/components/base/checkbox/checkbox'
 
 const RELEASE_TYPES: { value: ReleaseType; label: string }[] = [
   { value: 'feature', label: 'Feature' },
@@ -23,19 +22,6 @@ interface FilterBarProps {
   setFilter: <K extends keyof FilterState>(key: K, value: FilterState[K]) => void
   clearFilters: () => void
   activeFilterCount: number
-  brands: BrandInfo[]
-}
-
-function useClickOutside(ref: React.RefObject<HTMLElement | null>, handler: () => void) {
-  useEffect(() => {
-    function onMouseDown(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        handler()
-      }
-    }
-    document.addEventListener('mousedown', onMouseDown)
-    return () => document.removeEventListener('mousedown', onMouseDown)
-  }, [ref, handler])
 }
 
 function parseMonth(month: string): { year: number; month: number } {
@@ -50,92 +36,6 @@ function formatMonth(year: number, month: number): string {
 function formatMonthLabel(monthStr: string): string {
   const { year, month } = parseMonth(monthStr)
   return `${MONTH_NAMES[month - 1]} ${year}`
-}
-
-// --- Dropdown Component ---
-
-interface DropdownOption {
-  value: string
-  label: string
-  domain?: string
-}
-
-interface MultiSelectDropdownProps {
-  label: string
-  options: DropdownOption[]
-  selected: string[]
-  onChange: (selected: string[]) => void
-}
-
-function MultiSelectDropdown({ label, options, selected, onChange }: MultiSelectDropdownProps) {
-  const [open, setOpen] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useClickOutside(ref, () => setOpen(false))
-
-  const toggle = (value: string) => {
-    if (selected.includes(value)) {
-      onChange(selected.filter((v) => v !== value))
-    } else {
-      onChange([...selected, value])
-    }
-  }
-
-  const hasSelection = selected.length > 0
-
-  return (
-    <div ref={ref} className="relative">
-      <button
-        type="button"
-        onClick={() => setOpen(!open)}
-        className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium outline-none focus:outline-none transition-colors ${
-          hasSelection
-            ? 'border-am-blue/30 bg-[#EFF4FF] text-am-blue'
-            : 'border-[#E4E7EC] bg-white text-am-text hover:bg-gray-50'
-        }`}
-      >
-        {label}
-        {hasSelection && (
-          <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-am-blue px-1.5 text-xs font-semibold text-white">
-            {selected.length}
-          </span>
-        )}
-        <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''} ${hasSelection ? 'text-am-blue' : 'text-am-text-secondary'}`} />
-      </button>
-
-      {open && (
-        <div className="absolute left-0 top-full z-50 mt-1 w-60 rounded-xl border border-[#E4E7EC] bg-white py-1 shadow-lg">
-          {options.map((opt) => (
-            <div
-              key={opt.value}
-              className="flex items-center gap-2.5 px-3 py-2 hover:bg-gray-50 cursor-pointer"
-              onClick={() => toggle(opt.value)}
-            >
-              <Checkbox
-                isSelected={selected.includes(opt.value)}
-                onChange={() => toggle(opt.value)}
-                label={
-                  <span className="flex items-center gap-2">
-                    {opt.domain && (
-                      <img
-                        src={`https://www.google.com/s2/favicons?domain=${opt.domain}&sz=32`}
-                        width="16"
-                        height="16"
-                        className="rounded-sm"
-                        loading="lazy"
-                        alt=""
-                      />
-                    )}
-                    {opt.label}
-                  </span>
-                }
-              />
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
 }
 
 // --- Month Picker ---
@@ -270,7 +170,7 @@ function FilterPill({ label, onRemove }: FilterPillProps) {
 
 // --- Main FilterBar ---
 
-export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount, brands }: FilterBarProps) {
+export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount }: FilterBarProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopyLink = useCallback(() => {
@@ -278,18 +178,6 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }, [])
-
-  // Build active filter pills
-  const brandPills = filters.brand.map((slug) => {
-    const brand = brands.find((b) => b.slug === slug)
-    return {
-      key: `brand-${slug}`,
-      label: brand?.name ?? slug,
-      onRemove: () => setFilter('brand', filters.brand.filter((s) => s !== slug)),
-    }
-  })
-
-  const allPills = [...brandPills]
 
   return (
     <div className="flex items-center gap-3 border-b border-[#E4E7EC] bg-white px-6 py-3">
@@ -308,14 +196,6 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
       {/* Vertical divider */}
       <div className="h-6 w-px bg-[#E4E7EC]" />
 
-      {/* Brand dropdown */}
-      <MultiSelectDropdown
-        label="Brand"
-        options={brands.map((b) => ({ value: b.slug, label: b.name, domain: b.domain }))}
-        selected={filters.brand}
-        onChange={(selected) => setFilter('brand', selected)}
-      />
-
       {/* Release type pills */}
       <TypePills
         selected={filters.type}
@@ -331,17 +211,8 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
       {/* Flex spacer */}
       <div className="flex-1" />
 
-      {/* Active filter pills */}
-      {allPills.length > 0 && (
-        <div className="flex flex-wrap items-center gap-1.5">
-          {allPills.map((pill) => (
-            <FilterPill key={pill.key} label={pill.label} onRemove={pill.onRemove} />
-          ))}
-        </div>
-      )}
-
       {/* Vertical divider before actions */}
-      {(allPills.length > 0 || activeFilterCount > 0) && (
+      {activeFilterCount > 0 && (
         <div className="h-6 w-px bg-[#E4E7EC]" />
       )}
 

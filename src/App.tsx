@@ -42,7 +42,6 @@ function App() {
           setFilter={setFilter}
           clearFilters={clearFilters}
           activeFilterCount={activeFilterCount}
-          brands={brands}
         />
       </div>
 

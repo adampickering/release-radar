@@ -12,7 +12,7 @@ export function Header() {
       {/* Left: Logo + Title */}
       <div className="flex items-center gap-3">
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15">
-          <img src="/am-logo.svg" alt="Awesome Motive" className="h-9 w-9 brightness-0 invert" />
+          <img src="/am-logo.svg" alt="Awesome Motive" className="h-9 w-9" />
         </div>
         <div>
           <h1 className="text-lg font-bold leading-tight text-white">Release Radar</h1>
