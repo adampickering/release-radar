@@ -18,8 +18,7 @@
 release-radar/
 ├── index.html                           # Vite entry HTML
 ├── vite.config.ts                       # Vite config with path aliases
-├── tailwind.config.ts                   # Tailwind with AM brand tokens
-├── postcss.config.mjs                   # PostCSS with Tailwind plugin
+├── postcss.config.mjs                   # PostCSS with Tailwind plugin (no tailwind.config.ts — Tailwind v4 uses CSS @theme)
 ├── tsconfig.json                        # TypeScript config
 ├── tsconfig.app.json                    # App-specific TS config
 ├── package.json
@@ -114,7 +113,7 @@ Update `src/index.css` to import Tailwind and add AM brand tokens:
   --color-am-text: #344054;
   --color-am-text-secondary: #667085;
   --color-am-text-muted: #98A2B3;
-  --font-family-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
 }
 ```
 
@@ -255,9 +254,34 @@ export const brandsBySlug = Object.fromEntries(brands.map(b => [b.slug, b]))
 
 - [ ] **Step 3: Create mock releases**
 
-`src/data/releases.ts` — Create 65+ realistic release items spread across Feb–Mar 2026. Include a mix of all 5 release types across all 12 brands. Use realistic titles from the PRD. Ensure some dense days (3-5 releases on a single day) and some quiet days. Each item needs a unique `id`, valid `date` string (YYYY-MM-DD format), and a 1-2 sentence `summary`.
+`src/data/releases.ts` — Create 65+ realistic release items spread across Feb–Mar 2026.
 
-This file will be large (~300 lines). Generate the full array. Every release must have: `id`, `title`, `date`, `brand`, `brandSlug`, `releaseType`, `summary`. Optionally include `tags` and `changelogUrl` on some entries.
+**Coverage constraints (verify all are met):**
+- At least 1 release per brand (all 12 brands represented)
+- At least 5 entries per release type (all 5 types represented)
+- At least 3 days with 4+ releases (to test "+N more" overflow)
+- At least 5 completely empty weekdays (to test quiet days)
+- At least 10 entries with `tags` arrays (to test drawer tag display)
+- At least 5 entries with `changelogUrl` (to test drawer link display)
+- Spread across both Feb and Mar 2026 (for month switching)
+- Use realistic titles from the PRD: "Smart schema helper rollout", "GA4 attribution fixes", "SMTP log retention controls", "Conversion insights dashboard polish", etc.
+
+**Example entry format:**
+```ts
+{
+  id: 'wpf-001',
+  title: 'Smart field logic v2',
+  date: '2026-03-10',
+  brand: 'WPForms',
+  brandSlug: 'wpforms',
+  releaseType: 'feature',
+  summary: 'Redesigned conditional logic engine with support for nested field groups and multi-step form branching.',
+  tags: ['forms', 'logic'],
+  changelogUrl: 'https://wpforms.com/changelog/',
+}
+```
+
+This file will be large (~300 lines). Generate the full array.
 
 - [ ] **Step 4: Verify imports work**
 
@@ -299,6 +323,8 @@ This hook reads/writes filter state to URL search params. It must handle:
 Expose: `filters` object, `setFilter(key, value)`, `clearFilters()`, `activeFilterCount`.
 
 Use `window.location` and `URLSearchParams` directly (no React Router needed for a single-page app). Use `window.history.replaceState` to update URL without navigation.
+
+**Important:** The hook must use `useState` internally to store the current params and trigger re-renders. `replaceState` alone does not cause React to re-render. Pattern: store parsed params in state, and when `setFilter` is called, update both the state (triggers re-render) and the URL (via `replaceState`). Initialize state from `window.location.search` on mount.
 
 - [ ] **Step 2: Create filter utility**
 
@@ -351,7 +377,7 @@ git commit -m "Add URL filter state hook and filter/stats utilities"
 
 `src/sections/Header.tsx`:
 
-Use UUI `header-navigation` as a base reference (check `src/components/marketing/header-navigation/` after install). Adapt into a compact app header:
+Use UUI `header-navigation` as a base reference (check `src/components/application/app-navigation/` after install — this is an application component, not marketing). Adapt into a compact app header:
 - Left: AM logo (`/am-logo.svg`, 36px in a navy rounded square) + "Release Radar" title (18px, bold, navy) + subtitle (13px, secondary)
 - Right: View toggle using a button group — Calendar (active, white bg with shadow), Timeline (disabled, muted text), Brands (disabled, muted text)
 - Border bottom `#E4E7EC`
@@ -454,6 +480,10 @@ git commit -m "Add filter bar with brand/type/month dropdowns, pills, and copy l
 
 Use UUI `calendar` component (check `src/components/application/calendar/` after install — 32 files). Adapt the calendar's day cell rendering to show release entries.
 
+**Important:** The UUI calendar likely includes built-in month navigation arrows. Remove or hide these — month navigation is handled exclusively by the filter bar month picker per spec. The calendar should only render the grid for the given month, with no internal prev/next controls.
+
+**Favicon error handling:** Add `onError` handler on favicon `<img>` tags to fall back to a colored circle with the brand's first initial if the Google Favicon Service fails to load.
+
 Props: `releases: ReleaseItem[]`, `month: string` (YYYY-MM), `onReleaseClick: (id: string) => void`, `onDayOverflowClick: (date: string) => void`
 
 Key implementation:
@@ -532,6 +562,9 @@ Behavior:
 - [ ] **Step 2: Wire into App.tsx**
 
 ```tsx
+// IMPORTANT: Look up from the FULL releases array, not `filtered`.
+// Per spec: "When a release= param is present, the drawer opens regardless
+// of current filters (the release is shown even if its brand/type is filtered out)."
 const selectedRelease = releases.find(r => r.id === filters.release) ?? null
 
 <ReleaseDrawer
@@ -571,6 +604,7 @@ Layout:
 - Modal header: formatted date (e.g., "Wednesday, March 11, 2026") + close button
 - List of all releases for that day, each showing: favicon + title + type badge + brand name
 - Each item clickable → calls `onReleaseClick(id)` which closes modal and opens drawer
+- ESC key and click-outside-overlay to close (same pattern as drawer)
 
 - [ ] **Step 2: Wire into App.tsx**
 
