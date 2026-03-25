@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { SearchMd, ChevronDown, ChevronLeft, ChevronRight, XClose, Link01 } from '@untitledui/icons'
 import type { FilterState } from '@/hooks/useFilterState'
 import type { BrandInfo, ReleaseType } from '@/types/release'
+import { RELEASE_TYPE_COLORS } from '@/types/release'
 import { Checkbox } from '@/components/base/checkbox/checkbox'
 
 const RELEASE_TYPES: { value: ReleaseType; label: string }[] = [
@@ -186,6 +187,65 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
   )
 }
 
+// --- Type Pill Toggles ---
+
+interface TypePillsProps {
+  selected: string[]
+  onChange: (selected: string[]) => void
+}
+
+function TypePills({ selected, onChange }: TypePillsProps) {
+  const isAllActive = selected.length === 0
+
+  const toggle = (value: string) => {
+    if (selected.includes(value)) {
+      onChange(selected.filter((v) => v !== value))
+    } else {
+      onChange([...selected, value])
+    }
+  }
+
+  return (
+    <div className="flex items-center gap-1.5">
+      {/* "All" pill */}
+      <button
+        type="button"
+        onClick={() => onChange([])}
+        className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
+          isAllActive
+            ? 'bg-am-navy text-white shadow-sm'
+            : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-am-text'
+        }`}
+      >
+        All
+      </button>
+      {RELEASE_TYPES.map((t) => {
+        const isActive = selected.includes(t.value)
+        const colors = RELEASE_TYPE_COLORS[t.value]
+        return (
+          <button
+            key={t.value}
+            type="button"
+            onClick={() => toggle(t.value)}
+            style={
+              isActive
+                ? { backgroundColor: colors.bg, color: colors.text, borderColor: colors.text + '30' }
+                : undefined
+            }
+            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium outline-none focus:outline-none transition-all ${
+              isActive
+                ? 'border shadow-sm'
+                : 'border border-[#E4E7EC] bg-white text-am-text-secondary hover:bg-gray-50 hover:text-am-text'
+            }`}
+          >
+            {t.label}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 // --- Filter Pill ---
 
 interface FilterPillProps {
@@ -229,16 +289,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
     }
   })
 
-  const typePills = filters.type.map((t) => {
-    const typeInfo = RELEASE_TYPES.find((rt) => rt.value === t)
-    return {
-      key: `type-${t}`,
-      label: typeInfo?.label ?? t,
-      onRemove: () => setFilter('type', filters.type.filter((v) => v !== t)),
-    }
-  })
-
-  const allPills = [...brandPills, ...typePills]
+  const allPills = [...brandPills]
 
   return (
     <div className="flex items-center gap-3 border-b border-[#E4E7EC] bg-white px-6 py-3">
@@ -265,10 +316,8 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
         onChange={(selected) => setFilter('brand', selected)}
       />
 
-      {/* Release type dropdown */}
-      <MultiSelectDropdown
-        label="Release type"
-        options={RELEASE_TYPES.map((t) => ({ value: t.value, label: t.label }))}
+      {/* Release type pills */}
+      <TypePills
         selected={filters.type}
         onChange={(selected) => setFilter('type', selected)}
       />
