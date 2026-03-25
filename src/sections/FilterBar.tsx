@@ -53,9 +53,15 @@ function formatMonthLabel(monthStr: string): string {
 
 // --- Dropdown Component ---
 
+interface DropdownOption {
+  value: string
+  label: string
+  domain?: string
+}
+
 interface MultiSelectDropdownProps {
   label: string
-  options: { value: string; label: string }[]
+  options: DropdownOption[]
   selected: string[]
   onChange: (selected: string[]) => void
 }
@@ -84,7 +90,7 @@ function MultiSelectDropdown({ label, options, selected, onChange }: MultiSelect
         className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium outline-none focus:outline-none transition-colors ${
           hasSelection
             ? 'border-am-blue/30 bg-[#EFF4FF] text-am-blue'
-            : 'border-[#D0D5DD] bg-white text-am-text hover:bg-gray-50'
+            : 'border-[#E4E7EC] bg-white text-am-text hover:bg-gray-50'
         }`}
       >
         {label}
@@ -97,16 +103,31 @@ function MultiSelectDropdown({ label, options, selected, onChange }: MultiSelect
       </button>
 
       {open && (
-        <div className="absolute left-0 top-full z-50 mt-1 w-56 rounded-lg border border-am-border bg-white py-1 shadow-lg">
+        <div className="absolute left-0 top-full z-50 mt-1 w-60 rounded-xl border border-[#E4E7EC] bg-white py-1 shadow-lg">
           {options.map((opt) => (
             <div
               key={opt.value}
-              className="px-3 py-2 hover:bg-gray-50"
+              className="flex items-center gap-2.5 px-3 py-2 hover:bg-gray-50 cursor-pointer"
+              onClick={() => toggle(opt.value)}
             >
               <Checkbox
                 isSelected={selected.includes(opt.value)}
                 onChange={() => toggle(opt.value)}
-                label={opt.label}
+                label={
+                  <span className="flex items-center gap-2">
+                    {opt.domain && (
+                      <img
+                        src={`https://www.google.com/s2/favicons?domain=${opt.domain}&sz=32`}
+                        width="16"
+                        height="16"
+                        className="rounded-sm"
+                        loading="lazy"
+                        alt=""
+                      />
+                    )}
+                    {opt.label}
+                  </span>
+                }
               />
             </div>
           ))}
@@ -147,7 +168,7 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
       <button
         type="button"
         onClick={prev}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#D0D5DD] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
+        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
       >
         <ChevronLeft className="h-4 w-4" />
       </button>
@@ -157,7 +178,7 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
       <button
         type="button"
         onClick={next}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#D0D5DD] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
+        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E4E7EC] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
       >
         <ChevronRight className="h-4 w-4" />
       </button>
@@ -220,7 +241,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
   const allPills = [...brandPills, ...typePills]
 
   return (
-    <div className="flex items-center gap-3 border-b border-am-border bg-white px-6 py-3">
+    <div className="flex items-center gap-3 border-b border-[#E4E7EC] bg-white px-6 py-3">
       {/* Search input */}
       <div className="relative min-w-[200px]">
         <SearchMd className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-am-text-muted" />
@@ -229,17 +250,17 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
           placeholder="Search releases..."
           value={filters.search}
           onChange={(e) => setFilter('search', e.target.value)}
-          className="h-9 w-full rounded-lg border border-[#D0D5DD] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
+          className="h-9 w-full rounded-lg border border-[#E4E7EC] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
         />
       </div>
 
       {/* Vertical divider */}
-      <div className="h-6 w-px bg-am-border" />
+      <div className="h-6 w-px bg-[#E4E7EC]" />
 
       {/* Brand dropdown */}
       <MultiSelectDropdown
         label="Brand"
-        options={brands.map((b) => ({ value: b.slug, label: b.name }))}
+        options={brands.map((b) => ({ value: b.slug, label: b.name, domain: b.domain }))}
         selected={filters.brand}
         onChange={(selected) => setFilter('brand', selected)}
       />
@@ -272,7 +293,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
 
       {/* Vertical divider before actions */}
       {(allPills.length > 0 || activeFilterCount > 0) && (
-        <div className="h-6 w-px bg-am-border" />
+        <div className="h-6 w-px bg-[#E4E7EC]" />
       )}
 
       {/* Clear all button */}

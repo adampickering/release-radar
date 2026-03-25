@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { releases } from '@/data/releases'
 import { brands } from '@/data/brands'
 import { useFilterState } from '@/hooks/useFilterState'
@@ -18,15 +18,6 @@ function App() {
   const stats = computeStats(filtered, brands)
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
-  const [isCompact, setIsCompact] = useState(false)
-
-  useEffect(() => {
-    function handleScroll() {
-      setIsCompact(window.scrollY > 120)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const dayReleases = dayModalDate ? filtered.filter(r => r.date === dayModalDate) : []
 
@@ -35,9 +26,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-am-light font-sans">
-      <div className={`sticky top-0 z-50 bg-white transition-shadow duration-200 ${isCompact ? 'shadow-sm' : ''}`}>
+      {/* Header — always sticky at top */}
+      <div className="sticky top-0 z-50">
         <Header />
-        <StatsStrip stats={stats} isFiltered={isFiltered} isCompact={isCompact} />
+      </div>
+
+      {/* Stats strip — scrolls naturally with content */}
+      <StatsStrip stats={stats} isFiltered={isFiltered} />
+
+      {/* Filter bar — sticky below header */}
+      <div className="sticky top-[56px] z-40">
         <FilterBar
           filters={filters}
           setFilter={setFilter}
@@ -46,14 +44,8 @@ function App() {
           brands={brands}
         />
       </div>
-      <main className="px-6 py-4">
-        <CalendarBoard
-          releases={filtered}
-          month={filters.month}
-          onReleaseClick={(id) => setFilter('release', id)}
-          onDayOverflowClick={(date) => setDayModalDate(date)}
-        />
-      </main>
+
+      {/* Brand momentum — visible right after filter bar */}
       <BrandMomentum
         releases={filtered}
         onBrandClick={(slug) => {
@@ -63,6 +55,17 @@ function App() {
           }
         }}
       />
+
+      {/* Calendar board */}
+      <main className="px-6 py-4">
+        <CalendarBoard
+          releases={filtered}
+          month={filters.month}
+          onReleaseClick={(id) => setFilter('release', id)}
+          onDayOverflowClick={(date) => setDayModalDate(date)}
+        />
+      </main>
+
       <ReleaseDrawer
         release={selectedRelease}
         onClose={() => setFilter('release', null)}

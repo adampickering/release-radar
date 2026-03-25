@@ -3,12 +3,11 @@ import type { StatsResult } from '@/utils/stats'
 interface StatsStripProps {
   stats: StatsResult
   isFiltered: boolean
-  isCompact?: boolean
 }
 
 const accentWidths = ['w-16', 'w-12', 'w-20', 'w-10'] as const
 
-export function StatsStrip({ stats, isFiltered, isCompact = false }: StatsStripProps) {
+export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
   const allZero =
     stats.releasesThisMonth === 0 &&
     stats.activeBrands === 0 &&
@@ -41,35 +40,27 @@ export function StatsStrip({ stats, isFiltered, isCompact = false }: StatsStripP
   ]
 
   return (
-    <div
-      className="overflow-hidden transition-all duration-200 ease-out"
-      style={{
-        maxHeight: isCompact ? 0 : '200px',
-        opacity: isCompact ? 0 : 1,
-      }}
-    >
-      <div className="grid grid-cols-4 border-b border-am-border bg-white">
-        {metrics.map((metric, i) => (
-          <div
-            key={metric.label}
-            className={`relative px-6 py-4 ${i < metrics.length - 1 ? 'border-r border-am-border' : ''}`}
-          >
-            <p className="text-xs font-medium uppercase tracking-wide text-am-text-secondary">
-              {metric.label}
-              {filtered && (
-                <span className="ml-1 normal-case tracking-normal text-am-text-muted">(filtered)</span>
-              )}
-            </p>
-            <p className="mt-1 text-[28px] font-bold leading-tight tracking-tight text-am-navy" style={{ letterSpacing: '-1px' }}>
-              {metric.value}
-            </p>
-            {metric.secondary && (
-              <p className="mt-0.5 text-xs text-am-text-secondary">{metric.secondary}</p>
+    <div className="grid grid-cols-4 border-b border-am-border bg-white">
+      {metrics.map((metric, i) => (
+        <div
+          key={metric.label}
+          className={`relative px-6 py-4 ${i < metrics.length - 1 ? 'border-r border-am-border' : ''}`}
+        >
+          <p className="text-xs font-medium uppercase tracking-wide text-am-text-secondary">
+            {metric.label}
+            {filtered && (
+              <span className="ml-1 normal-case tracking-normal text-am-text-muted">(filtered)</span>
             )}
-            <div className={`absolute bottom-0 left-6 h-[3px] rounded-full bg-am-blue ${accentWidths[i]}`} />
-          </div>
-        ))}
-      </div>
+          </p>
+          <p className="mt-1 text-[28px] font-bold leading-tight tracking-tight text-am-navy" style={{ letterSpacing: '-1px' }}>
+            {metric.value}
+          </p>
+          {metric.secondary && (
+            <p className="mt-0.5 text-xs text-am-text-secondary">{metric.secondary}</p>
+          )}
+          <div className={`absolute bottom-0 left-6 h-[3px] rounded-full bg-am-blue ${accentWidths[i]}`} />
+        </div>
+      ))}
     </div>
   )
 }
