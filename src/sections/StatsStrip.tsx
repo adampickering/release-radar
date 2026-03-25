@@ -89,7 +89,7 @@ export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
         <div
           key={metric.label}
           className={`relative flex-1 py-4 ${
-            i > 0 ? 'border-t-2 border-am-blue md:border-t-0 md:border-l-2 md:pl-6' : ''
+            i > 0 ? 'border-t border-am-border md:border-t-0 md:border-l md:pl-6' : ''
           }`}
         >
           <p className="text-xs font-medium uppercase tracking-wide text-[#667085]">
