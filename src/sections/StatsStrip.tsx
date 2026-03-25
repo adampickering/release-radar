@@ -18,7 +18,7 @@ export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
   const hasComparison = stats.lastMonthCount > 0
 
   return (
-    <div className="grid grid-cols-1 gap-4 bg-primary px-4 py-6 sm:grid-cols-2 lg:grid-cols-4 md:px-8">
+    <div className="grid grid-cols-2 gap-4 bg-primary px-4 py-6 lg:grid-cols-4 md:px-8">
       <MetricsChart01
         title={filtered ? '0' : String(stats.releasesThisMonth)}
         subtitle="Releases this month"

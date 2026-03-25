@@ -66,7 +66,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
   const brand = release ? brandsBySlug[release.brandSlug] : null
 
   return (
-    <SlideoutMenu isOpen={isOpen} onOpenChange={(open) => { if (!open) onClose() }} isDismissable>
+    <SlideoutMenu isOpen={isOpen} onOpenChange={(open) => { if (!open) onClose() }} isDismissable className="z-[60]">
       {release && (
         <>
           <SlideoutMenu.Header onClose={onClose} className="relative flex w-full flex-col items-start gap-3 px-4 pt-5 md:px-6">

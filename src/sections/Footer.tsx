@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0E1B3C] py-8 md:py-12">
       <div className="mx-auto flex w-full max-w-container flex-col items-center gap-4 px-4 md:px-8">
-        {/* Logo + Tagline */}
+        {/* Logo */}
         <div className="flex items-center gap-3">
           <img
             src="/am-logo.svg"
@@ -16,10 +16,6 @@ export function Footer() {
             Release Radar
           </span>
         </div>
-
-        <p className="text-sm text-white/50">
-          Release Radar by Awesome Motive
-        </p>
 
         {/* Built by */}
         <div className="flex items-center gap-1.5 text-sm text-white/40">
