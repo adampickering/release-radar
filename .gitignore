@@ -19,3 +19,6 @@ dist/
 # superpowers
 .superpowers/
 .vercel
+
+# Release ingestion output
+src/releases/output/
