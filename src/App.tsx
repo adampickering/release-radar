@@ -50,7 +50,7 @@ function App() {
       </div>
 
       {/* Filter bar — sticky below header */}
-      <div className="sticky top-[56px] z-40">
+      <div className="sticky top-[56px] z-40 bg-primary">
         <FilterBar
           filters={filters}
           setFilter={setFilter}
@@ -65,20 +65,6 @@ function App() {
           <>
             {/* Stats strip — only on calendar view */}
             <StatsStrip stats={stats} isFiltered={isFiltered} />
-
-            {/* Brand momentum — visible right after filter bar */}
-            <BrandMomentum
-              releases={filtered}
-              activeBrands={filters.brand || []}
-              onBrandClick={(slug) => {
-                const current = filters.brand || []
-                if (current.includes(slug)) {
-                  setFilter('brand', current.filter(s => s !== slug))
-                } else {
-                  setFilter('brand', [...current, slug])
-                }
-              }}
-            />
 
             {/* Calendar board — uses UUI Calendar with built-in month navigation */}
             <main className="px-4 md:px-6 py-4">

@@ -1,6 +1,5 @@
 import { Calendar, Clock, Grid01 } from '@untitledui/icons'
-import { Button } from '@/components/base/buttons/button'
-import { cx } from '@/utils/cx'
+import { ButtonGroup, ButtonGroupItem } from '@/components/base/button-group/button-group'
 
 export type ViewMode = 'calendar' | 'timeline' | 'brands'
 
@@ -12,7 +11,7 @@ interface HeaderProps {
 const viewOptions: { label: string; value: ViewMode; icon: typeof Calendar }[] = [
   { label: 'Calendar', value: 'calendar', icon: Calendar },
   { label: 'Timeline', value: 'timeline', icon: Clock },
-  { label: 'Brands', value: 'brands', icon: Grid01 },
+  { label: 'Brand Momentum', value: 'brands', icon: Grid01 },
 ]
 
 export function Header({ activeView, onViewChange }: HeaderProps) {
@@ -31,28 +30,22 @@ export function Header({ activeView, onViewChange }: HeaderProps) {
         </div>
       </div>
 
-      {/* Right: View toggle using UUI Button components */}
-      <div className="flex items-center rounded-lg bg-white/10 p-0.5 shrink-0 ml-2">
+      {/* Right: View toggle using UUI ButtonGroup */}
+      <ButtonGroup
+        size="sm"
+        selectedKeys={[activeView]}
+        onSelectionChange={(keys) => {
+          const selected = [...keys][0] as ViewMode | undefined
+          if (selected) onViewChange(selected)
+        }}
+        className="shrink-0 ml-2"
+      >
         {viewOptions.map((opt) => (
-          <Button
-            key={opt.value}
-            size="xs"
-            color={opt.value === activeView ? 'secondary' : 'tertiary'}
-            iconLeading={opt.icon}
-            onClick={() => onViewChange(opt.value)}
-            className={cx(
-              'rounded-md transition-colors',
-              opt.value === activeView
-                ? 'bg-white text-brand-secondary shadow-sm'
-                : 'bg-transparent text-white/50 hover:text-white/80 shadow-none ring-0',
-              // Override tertiary hover bg
-              opt.value !== activeView && 'hover:bg-transparent',
-            )}
-          >
+          <ButtonGroupItem key={opt.value} id={opt.value} iconLeading={opt.icon}>
             <span className="max-md:hidden">{opt.label}</span>
-          </Button>
+          </ButtonGroupItem>
         ))}
-      </div>
+      </ButtonGroup>
     </header>
   )
 }
