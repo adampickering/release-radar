@@ -123,7 +123,7 @@ function ReleaseEntry({
     <button
       type="button"
       onClick={onClick}
-      className="flex w-full items-center gap-[5px] rounded-[5px] bg-[#F9FAFB] px-1.5 py-1 cursor-pointer mb-[3px] hover:-translate-y-px hover:shadow-sm transition-all duration-150 text-left"
+      className="flex w-full items-center gap-[5px] rounded-[5px] bg-[#F9FAFB] px-1.5 py-1 cursor-pointer mb-[3px] outline-none focus:outline-none hover:-translate-y-px hover:shadow-sm transition-all duration-150 text-left"
     >
       <BrandFavicon brandSlug={release.brandSlug} />
       <span
@@ -174,7 +174,7 @@ export function CalendarBoard({
         <p className="text-sm text-[#667085] mb-2">No releases match your filters</p>
         <button
           type="button"
-          className="text-sm font-medium text-[#185CE3] hover:underline cursor-pointer"
+          className="text-sm font-medium text-[#185CE3] hover:underline cursor-pointer outline-none focus:outline-none"
           onClick={() => {
             // Trigger clear by navigating to bare URL
             window.history.replaceState(null, '', window.location.pathname)
@@ -255,7 +255,7 @@ export function CalendarBoard({
                 {overflowCount > 0 && (
                   <button
                     type="button"
-                    className="text-left px-1.5 py-1 cursor-pointer font-medium hover:underline"
+                    className="text-left px-1.5 py-1 cursor-pointer font-medium outline-none focus:outline-none hover:underline"
                     style={{ fontSize: '11px', color: '#185CE3' }}
                     onClick={() => onDayOverflowClick(day.dateStr)}
                   >

@@ -23,7 +23,7 @@ export function Header() {
       </div>
 
       {/* Right: View toggle */}
-      <div className="flex items-center rounded-lg border border-am-border bg-[#F9FAFB] p-0.5">
+      <div className="flex items-center rounded-lg bg-[#F2F4F7] p-0.5">
         {viewOptions.map((opt) => {
           const Icon = opt.icon
           return (
@@ -32,8 +32,8 @@ export function Header() {
               disabled={!opt.active}
               className={
                 opt.active
-                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-am-navy shadow-sm'
-                  : 'flex cursor-not-allowed items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-am-text-muted'
+                  ? 'flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-am-navy shadow-sm outline-none focus:outline-none'
+                  : 'flex cursor-not-allowed items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-am-text-muted outline-none focus:outline-none'
               }
             >
               <Icon className="h-4 w-4" />

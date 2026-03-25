@@ -81,10 +81,10 @@ function MultiSelectDropdown({ label, options, selected, onChange }: MultiSelect
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
+        className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium outline-none focus:outline-none transition-colors ${
           hasSelection
             ? 'border-am-blue/30 bg-[#EFF4FF] text-am-blue'
-            : 'border-am-border bg-white text-am-text hover:bg-gray-50'
+            : 'border-[#D0D5DD] bg-white text-am-text hover:bg-gray-50'
         }`}
       >
         {label}
@@ -147,7 +147,7 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
       <button
         type="button"
         onClick={prev}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-am-border bg-white text-am-text-secondary transition-colors hover:bg-gray-50 hover:text-am-text"
+        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#D0D5DD] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
       >
         <ChevronLeft className="h-4 w-4" />
       </button>
@@ -157,7 +157,7 @@ function MonthPicker({ month, onChange }: MonthPickerProps) {
       <button
         type="button"
         onClick={next}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-am-border bg-white text-am-text-secondary transition-colors hover:bg-gray-50 hover:text-am-text"
+        className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#D0D5DD] bg-white text-am-text-secondary outline-none focus:outline-none transition-colors hover:bg-gray-50 hover:text-am-text"
       >
         <ChevronRight className="h-4 w-4" />
       </button>
@@ -179,7 +179,7 @@ function FilterPill({ label, onRemove }: FilterPillProps) {
       <button
         type="button"
         onClick={onRemove}
-        className="flex h-4 w-4 items-center justify-center rounded-full text-am-blue/60 transition-colors hover:bg-am-blue/10 hover:text-am-blue"
+        className="flex h-4 w-4 items-center justify-center rounded-full text-am-blue/60 outline-none focus:outline-none transition-colors hover:bg-am-blue/10 hover:text-am-blue"
       >
         <XClose className="h-3 w-3" />
       </button>
@@ -229,7 +229,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
           placeholder="Search releases..."
           value={filters.search}
           onChange={(e) => setFilter('search', e.target.value)}
-          className="h-9 w-full rounded-lg border border-am-border bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none transition-colors focus:border-am-blue focus:ring-1 focus:ring-am-blue/30"
+          className="h-9 w-full rounded-lg border border-[#D0D5DD] bg-white pl-9 pr-3 text-sm text-am-text placeholder:text-am-text-muted outline-none focus:outline-none transition-colors focus:border-am-blue focus:ring-2 focus:ring-am-blue/20"
         />
       </div>
 
@@ -280,7 +280,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
         <button
           type="button"
           onClick={clearFilters}
-          className="whitespace-nowrap text-sm font-medium text-am-text-secondary transition-colors hover:text-am-text"
+          className="whitespace-nowrap text-sm font-medium text-am-text-secondary outline-none focus:outline-none transition-colors hover:text-am-text"
         >
           Clear all
         </button>
@@ -290,7 +290,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount,
       <button
         type="button"
         onClick={handleCopyLink}
-        className="flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-am-blue px-3 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#1450CC]"
+        className="flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-am-blue px-3 py-2 text-sm font-medium text-white shadow-sm outline-none focus:outline-none transition-colors hover:bg-[#1450CC]"
       >
         <Link01 className="h-4 w-4" />
         {copied ? 'Copied!' : 'Copy link'}

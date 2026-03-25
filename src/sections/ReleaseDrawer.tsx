@@ -144,7 +144,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
             </span>
             <button
               type="button"
-              className="ml-auto cursor-pointer shrink-0"
+              className="ml-auto cursor-pointer shrink-0 outline-none focus:outline-none"
               onClick={onClose}
               style={{ color: '#98A2B3' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}

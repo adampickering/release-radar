@@ -146,7 +146,7 @@ export function DaySummaryModal({
           </div>
           <button
             type="button"
-            className="cursor-pointer shrink-0 ml-4"
+            className="cursor-pointer shrink-0 ml-4 outline-none focus:outline-none"
             onClick={onClose}
             style={{ color: '#98A2B3' }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#344054')}
@@ -169,7 +169,7 @@ export function DaySummaryModal({
               <button
                 key={release.id}
                 type="button"
-                className="flex flex-col w-full text-left rounded-lg cursor-pointer transition-colors duration-150 hover:bg-gray-50"
+                className="flex flex-col w-full text-left rounded-lg cursor-pointer outline-none focus:outline-none transition-colors duration-150 hover:bg-gray-50"
                 style={{ padding: '12px 16px' }}
                 onClick={() => onReleaseClick(release.id)}
               >
