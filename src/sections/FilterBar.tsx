@@ -1,22 +1,17 @@
-import { useCallback } from 'react'
-import { SearchMd, ChevronLeft, ChevronRight, Link01 } from '@untitledui/icons'
+import { useState, useCallback } from 'react'
+import { SearchLg, ChevronDown, ChevronLeft, ChevronRight, Link01 } from '@untitledui/icons'
+import type { Selection } from 'react-aria-components'
+import { Autocomplete, SearchField, useFilter } from 'react-aria-components'
 import { toast } from 'sonner'
-import { Input } from '@/components/base/input/input'
 import { Button } from '@/components/base/buttons/button'
 import { ButtonUtility } from '@/components/base/buttons/button-utility'
-import { MultiSelect } from '@/components/base/select/multi-select'
-import { SelectItem } from '@/components/base/select/select-item'
+import { Dropdown } from '@/components/base/dropdown/dropdown'
+import { InputBase } from '@/components/base/input/input'
+import { Input } from '@/components/base/input/input'
 import { brands } from '@/data/brands'
 import type { FilterState } from '@/hooks/useFilterState'
-import type { SelectItemType } from '@/components/base/select/select-shared'
 
-const brandItems: SelectItemType[] = brands.map(b => ({
-  id: b.slug,
-  label: b.name,
-  avatarUrl: `https://www.google.com/s2/favicons?domain=${b.domain}&sz=32`,
-}))
-
-const typeItems: SelectItemType[] = [
+const RELEASE_TYPES = [
   { id: 'feature', label: 'Feature' },
   { id: 'improvement', label: 'Improvement' },
   { id: 'fix', label: 'Fix' },
@@ -61,41 +56,136 @@ export function MonthPicker({ month, onChange }: MonthPickerProps) {
   const { year, month: m } = parseMonth(month)
 
   const prev = () => {
-    if (m === 1) {
-      onChange(formatMonth(year - 1, 12))
-    } else {
-      onChange(formatMonth(year, m - 1))
-    }
+    if (m === 1) onChange(formatMonth(year - 1, 12))
+    else onChange(formatMonth(year, m - 1))
   }
 
   const next = () => {
-    if (m === 12) {
-      onChange(formatMonth(year + 1, 1))
-    } else {
-      onChange(formatMonth(year, m + 1))
-    }
+    if (m === 12) onChange(formatMonth(year + 1, 1))
+    else onChange(formatMonth(year, m + 1))
   }
 
   return (
     <div className="flex items-center gap-2">
-      <ButtonUtility
-        size="sm"
-        color="secondary"
-        icon={ChevronLeft}
-        tooltip="Previous month"
-        onClick={prev}
-      />
-      <span className="min-w-[120px] text-center text-base font-semibold text-secondary">
-        {formatMonthLabel(month)}
-      </span>
-      <ButtonUtility
-        size="sm"
-        color="secondary"
-        icon={ChevronRight}
-        tooltip="Next month"
-        onClick={next}
-      />
+      <ButtonUtility size="sm" color="secondary" icon={ChevronLeft} tooltip="Previous month" onClick={prev} />
+      <span className="min-w-[120px] text-center text-base font-semibold text-secondary">{formatMonthLabel(month)}</span>
+      <ButtonUtility size="sm" color="secondary" icon={ChevronRight} tooltip="Next month" onClick={next} />
     </div>
+  )
+}
+
+// --- Brand Dropdown using UUI Dropdown ---
+
+function BrandDropdown({
+  selectedBrands,
+  onChange,
+}: {
+  selectedBrands: string[]
+  onChange: (brands: string[]) => void
+}) {
+  const { contains } = useFilter({ sensitivity: 'base' })
+  const selectedKeys = new Set<string>(selectedBrands)
+
+  const handleSelectionChange = (keys: Selection) => {
+    if (keys === 'all') {
+      onChange(brands.map(b => b.slug))
+    } else {
+      onChange(Array.from(keys as Set<string>))
+    }
+  }
+
+  const count = selectedBrands.length
+
+  return (
+    <Dropdown.Root>
+      <Button
+        size="sm"
+        color="secondary"
+        className="group"
+        iconTrailing={(props) => <ChevronDown data-icon="trailing" {...props} className="size-4! stroke-[2.25px]!" />}
+      >
+        Brand{count > 0 ? ` (${count})` : ''}
+      </Button>
+
+      <Dropdown.Popover className="w-64">
+        <Autocomplete filter={contains}>
+          <SearchField className="flex gap-3 border-b border-secondary p-3">
+            <InputBase size="sm" placeholder="Search brands" icon={SearchLg} />
+          </SearchField>
+          <Dropdown.Menu
+            selectionMode="multiple"
+            selectedKeys={selectedKeys}
+            onSelectionChange={handleSelectionChange}
+          >
+            {brands.map(b => (
+              <Dropdown.Item
+                key={b.slug}
+                id={b.slug}
+                textValue={b.name}
+                avatarUrl={`https://www.google.com/s2/favicons?domain=${b.domain}&sz=32`}
+                selectionIndicator="checkbox"
+              >
+                {b.name}
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Autocomplete>
+      </Dropdown.Popover>
+    </Dropdown.Root>
+  )
+}
+
+// --- Release Type Dropdown using UUI Dropdown ---
+
+function TypeDropdown({
+  selectedTypes,
+  onChange,
+}: {
+  selectedTypes: string[]
+  onChange: (types: string[]) => void
+}) {
+  const selectedKeys = new Set<string>(selectedTypes)
+
+  const handleSelectionChange = (keys: Selection) => {
+    if (keys === 'all') {
+      onChange(RELEASE_TYPES.map(t => t.id))
+    } else {
+      onChange(Array.from(keys as Set<string>))
+    }
+  }
+
+  const count = selectedTypes.length
+
+  return (
+    <Dropdown.Root>
+      <Button
+        size="sm"
+        color="secondary"
+        className="group"
+        iconTrailing={(props) => <ChevronDown data-icon="trailing" {...props} className="size-4! stroke-[2.25px]!" />}
+      >
+        Release type{count > 0 ? ` (${count})` : ''}
+      </Button>
+
+      <Dropdown.Popover className="w-52">
+        <Dropdown.Menu
+          selectionMode="multiple"
+          selectedKeys={selectedKeys}
+          onSelectionChange={handleSelectionChange}
+        >
+          {RELEASE_TYPES.map(t => (
+            <Dropdown.Item
+              key={t.id}
+              id={t.id}
+              textValue={t.label}
+              selectionIndicator="checkbox"
+            >
+              {t.label}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown.Popover>
+    </Dropdown.Root>
   )
 }
 
@@ -108,13 +198,13 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
   }, [])
 
   return (
-    <div className="border-b border-border-secondary bg-primary px-4 md:px-6 py-3 md:py-2.5">
-      <div className="flex flex-wrap items-end gap-2 md:gap-3">
-        {/* Search input — full width on mobile, auto on desktop */}
+    <div className="border-b border-border-secondary bg-primary px-4 py-3 md:px-6 md:py-2.5">
+      <div className="flex flex-wrap items-center gap-2 md:gap-3">
+        {/* Search input — full width on mobile */}
         <div className="w-full md:w-auto md:min-w-[200px]">
           <Input
             size="sm"
-            icon={SearchMd}
+            icon={SearchLg}
             placeholder="Search releases..."
             value={filters.search}
             onChange={(v) => setFilter('search', v)}
@@ -122,87 +212,44 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
           />
         </div>
 
-        {/* Brand + Release type — side by side on mobile */}
-        <div className="flex flex-1 items-end gap-2 md:contents min-w-0">
-          <div className="flex-1 min-w-0 md:w-auto md:min-w-[160px]">
-            <MultiSelect
-              size="sm"
-              placeholder="Brand"
-              items={brandItems}
-              selectedKeys={new Set(filters.brand)}
-              onSelectionChange={(keys) => {
-                const selected = keys === 'all' ? brands.map(b => b.slug) : Array.from(keys as Set<string>)
-                setFilter('brand', selected)
-              }}
-              showFooter={false}
-            >
-              {(item) => <SelectItem {...item} selectionIndicator="checkbox" />}
-            </MultiSelect>
-          </div>
+        {/* Brand + Release type dropdowns — side by side */}
+        <BrandDropdown
+          selectedBrands={filters.brand || []}
+          onChange={(selected) => setFilter('brand', selected)}
+        />
 
-          <div className="flex-1 min-w-0 md:w-auto md:min-w-[160px]">
-            <MultiSelect
-              size="sm"
-              placeholder="Release type"
-              items={typeItems}
-              selectedKeys={new Set(filters.type)}
-              onSelectionChange={(keys) => {
-                const selected = keys === 'all' ? typeItems.map(t => String(t.id)) : Array.from(keys as Set<string>)
-                setFilter('type', selected)
-              }}
-              showFooter={false}
-            >
-              {(item) => <SelectItem {...item} selectionIndicator="checkbox" />}
-            </MultiSelect>
-          </div>
+        <TypeDropdown
+          selectedTypes={filters.type || []}
+          onChange={(selected) => setFilter('type', selected)}
+        />
 
-          {/* Copy link button — icon only on mobile, inline with dropdowns */}
-          <div className="shrink-0 md:hidden">
-            <Button
-              color="primary"
-              size="sm"
-              iconLeading={Link01}
-              onClick={handleCopyLink}
-            />
-          </div>
-        </div>
+        {/* Spacer — desktop only */}
+        <div className="hidden md:block flex-1" />
 
-        {/* Actions — desktop only for clear + copy link */}
+        {/* Clear all + Copy link — desktop */}
         <div className="hidden md:flex shrink-0 items-center gap-3">
           {activeFilterCount > 0 && (
             <>
               <div className="h-6 w-px bg-border-secondary" />
-              <Button
-                color="link-gray"
-                size="sm"
-                onClick={clearFilters}
-              >
+              <Button color="link-gray" size="sm" onClick={clearFilters}>
                 Clear all
               </Button>
             </>
           )}
-          <Button
-            color="primary"
-            size="sm"
-            iconLeading={Link01}
-            onClick={handleCopyLink}
-          >
+          <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink}>
             Copy link
           </Button>
         </div>
 
-        {/* Clear all — mobile, only when filters active */}
-        {activeFilterCount > 0 && (
-          <div className="w-full md:hidden">
-            <Button
-              color="link-gray"
-              size="sm"
-              onClick={clearFilters}
-            >
-              Clear all
+        {/* Mobile: copy link icon + clear */}
+        <div className="flex md:hidden shrink-0 items-center gap-2 ml-auto">
+          {activeFilterCount > 0 && (
+            <Button color="link-gray" size="sm" onClick={clearFilters}>
+              Clear
             </Button>
-          </div>
-        )}
+          )}
+          <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink} />
+        </div>
       </div>
     </div>
   )
