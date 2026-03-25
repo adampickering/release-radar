@@ -1,4 +1,4 @@
-import { MetricsChart04 } from '@/components/application/metrics/metrics'
+import { MetricsChart01 } from '@/components/application/metrics/metrics'
 import type { StatsResult } from '@/utils/stats'
 
 interface StatsStripProps {
@@ -19,33 +19,37 @@ export function StatsStrip({ stats, isFiltered }: StatsStripProps) {
 
   return (
     <div className="grid grid-cols-1 gap-4 bg-primary px-4 py-6 sm:grid-cols-2 lg:grid-cols-4 md:px-8">
-      <MetricsChart04
+      <MetricsChart01
         title={filtered ? '0' : String(stats.releasesThisMonth)}
         subtitle="Releases this month"
         change={hasComparison ? `${Math.abs(stats.monthChange)}%` : '0%'}
-        changeTrend={stats.monthChange >= 0 ? 'positive' : 'negative'}
         changeDescription="vs last month"
+        trend={stats.monthChange >= 0 ? 'positive' : 'negative'}
+        actions={false}
       />
-      <MetricsChart04
+      <MetricsChart01
         title={filtered ? '0' : String(stats.activeBrands)}
         subtitle="Active brands"
         change={`${stats.totalBrands}`}
-        changeTrend="positive"
         changeDescription="total brands"
+        trend="positive"
+        actions={false}
       />
-      <MetricsChart04
+      <MetricsChart01
         title={filtered ? '0' : String(stats.featuresShipped)}
         subtitle="Features shipped"
         change={String(stats.releasesThisMonth > 0 ? Math.round((stats.featuresShipped / stats.releasesThisMonth) * 100) : 0) + '%'}
-        changeTrend="positive"
         changeDescription="of total"
+        trend="positive"
+        actions={false}
       />
-      <MetricsChart04
+      <MetricsChart01
         title={filtered ? '0' : stats.avgPerWeek.toFixed(1)}
         subtitle="Avg releases / week"
         change={String(stats.releasesThisMonth)}
-        changeTrend="positive"
         changeDescription="this month"
+        trend="positive"
+        actions={false}
       />
     </div>
   )
