@@ -1,7 +1,6 @@
 import type { ReleaseItem, ReleaseType } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { Badge } from '@/components/base/badges/badges'
-import type { BadgeColors } from '@/components/base/badges/badge-types'
 import { cx } from '@/utils/cx'
 
 interface BrandMomentumProps {
@@ -17,15 +16,6 @@ interface BrandStat {
   count: number
   topType: ReleaseType
   pctOfTotal: number
-}
-
-/** Map release type to UUI Badge color */
-const RELEASE_TYPE_BADGE_COLOR: Record<ReleaseType, BadgeColors> = {
-  feature: 'success',
-  improvement: 'purple',
-  fix: 'orange',
-  launch: 'blue',
-  milestone: 'gray',
 }
 
 function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
@@ -87,7 +77,6 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
       <div className="flex gap-3 overflow-x-auto px-4 md:px-6 pb-5">
         {stats.map((brand, index) => {
           const barWidth = maxCount > 0 ? (brand.count / maxCount) * 100 : 0
-          const badgeColor = RELEASE_TYPE_BADGE_COLOR[brand.topType]
 
           return (
             <div
@@ -140,7 +129,7 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick }: BrandMom
               {/* Footer */}
               <div className="mt-1.5 flex items-center justify-between">
                 <span className="text-[10px] text-tertiary">{brand.pctOfTotal}% of total</span>
-                <Badge color={badgeColor} size="sm" type="pill-color">
+                <Badge size="sm" type="modern">
                   Top: {brand.topType}
                 </Badge>
               </div>

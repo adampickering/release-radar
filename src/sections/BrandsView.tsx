@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react'
 import type { ReleaseItem, ReleaseType } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { Badge } from '@/components/base/badges/badges'
-import type { BadgeColors } from '@/components/base/badges/badge-types'
 import { Button } from '@/components/base/buttons/button'
 import { cx } from '@/utils/cx'
 
@@ -20,15 +19,6 @@ interface BrandCardData {
   typeCounts: Partial<Record<ReleaseType, number>>
   lastThree: ReleaseItem[]
   pctOfMax: number
-}
-
-/** Map release type to UUI Badge color */
-const RELEASE_TYPE_BADGE_COLOR: Record<ReleaseType, BadgeColors> = {
-  feature: 'success',
-  improvement: 'purple',
-  fix: 'orange',
-  launch: 'blue',
-  milestone: 'gray',
 }
 
 function BrandFavicon({ brandSlug, size = 32 }: { brandSlug: string; size?: number }) {
@@ -169,9 +159,8 @@ export function BrandsView({ releases, onBrandClick, onReleaseClick }: BrandsVie
               {TYPE_ORDER.map((type) => {
                 const count = card.typeCounts[type]
                 if (!count) return null
-                const badgeColor = RELEASE_TYPE_BADGE_COLOR[type]
                 return (
-                  <Badge key={type} color={badgeColor} size="sm" type="pill-color">
+                  <Badge key={type} size="sm" type="modern">
                     {count} {count === 1 ? type : TYPE_LABELS[type]}
                   </Badge>
                 )

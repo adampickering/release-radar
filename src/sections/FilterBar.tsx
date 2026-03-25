@@ -1,21 +1,28 @@
-import { useState, useCallback } from 'react'
-import { SearchMd, ChevronLeft, ChevronRight, Link01, XClose } from '@untitledui/icons'
+import { useCallback } from 'react'
+import { SearchMd, ChevronLeft, ChevronRight, Link01 } from '@untitledui/icons'
 import { toast } from 'sonner'
 import { Input } from '@/components/base/input/input'
 import { Button } from '@/components/base/buttons/button'
 import { ButtonUtility } from '@/components/base/buttons/button-utility'
-import { Badge, BadgeWithButton } from '@/components/base/badges/badges'
+import { MultiSelect } from '@/components/base/select/multi-select'
+import { SelectItem } from '@/components/base/select/select-item'
 import { FilterBar as UUIFilterBar } from '@/components/application/filter-bar/filter-bar'
+import { brands } from '@/data/brands'
 import type { FilterState } from '@/hooks/useFilterState'
-import type { ReleaseType } from '@/types/release'
-import type { BadgeColors } from '@/components/base/badges/badge-types'
+import type { SelectItemType } from '@/components/base/select/select-shared'
 
-const RELEASE_TYPES: { value: ReleaseType; label: string; color: BadgeColors }[] = [
-  { value: 'feature', label: 'Feature', color: 'success' },
-  { value: 'improvement', label: 'Improvement', color: 'purple' },
-  { value: 'fix', label: 'Fix', color: 'orange' },
-  { value: 'launch', label: 'Launch', color: 'blue' },
-  { value: 'milestone', label: 'Milestone', color: 'gray' },
+const brandItems: SelectItemType[] = brands.map(b => ({
+  id: b.slug,
+  label: b.name,
+  avatarUrl: `https://www.google.com/s2/favicons?domain=${b.domain}&sz=32`,
+}))
+
+const typeItems: SelectItemType[] = [
+  { id: 'feature', label: 'Feature' },
+  { id: 'improvement', label: 'Improvement' },
+  { id: 'fix', label: 'Fix' },
+  { id: 'launch', label: 'Launch' },
+  { id: 'milestone', label: 'Milestone' },
 ]
 
 const MONTH_NAMES = [
@@ -93,86 +100,6 @@ export function MonthPicker({ month, onChange }: MonthPickerProps) {
   )
 }
 
-// --- Type Pill Toggles ---
-
-interface TypePillsProps {
-  selected: string[]
-  onChange: (selected: string[]) => void
-}
-
-function TypePills({ selected, onChange }: TypePillsProps) {
-  const isAllActive = selected.length === 0
-
-  const toggle = (value: string) => {
-    if (selected.includes(value)) {
-      onChange(selected.filter((v) => v !== value))
-    } else {
-      onChange([...selected, value])
-    }
-  }
-
-  return (
-    <div className="flex items-center gap-1.5 overflow-x-auto whitespace-nowrap scrollbar-hide">
-      {/* "All" pill */}
-      <button
-        type="button"
-        onClick={() => onChange([])}
-        className="outline-none focus:outline-none"
-      >
-        <Badge
-          color={isAllActive ? 'brand' : 'gray'}
-          size="sm"
-          type="pill-color"
-          className={`cursor-pointer transition-all ${!isAllActive ? 'opacity-70 hover:opacity-100' : ''}`}
-        >
-          All
-        </Badge>
-      </button>
-      {RELEASE_TYPES.map((t) => {
-        const isActive = selected.includes(t.value)
-        return (
-          <button
-            key={t.value}
-            type="button"
-            onClick={() => toggle(t.value)}
-            className="outline-none focus:outline-none"
-          >
-            <Badge
-              color={isActive ? t.color : 'gray'}
-              size="sm"
-              type="pill-color"
-              className={`cursor-pointer transition-all ${!isActive ? 'opacity-70 hover:opacity-100' : ''}`}
-            >
-              {t.label}
-            </Badge>
-          </button>
-        )
-      })}
-    </div>
-  )
-}
-
-// --- Filter Pill ---
-
-interface FilterPillProps {
-  label: string
-  onRemove: () => void
-}
-
-function FilterPill({ label, onRemove }: FilterPillProps) {
-  return (
-    <BadgeWithButton
-      color="brand"
-      size="sm"
-      type="pill-color"
-      buttonLabel={`Remove ${label} filter`}
-      onButtonClick={onRemove}
-    >
-      {label}
-    </BadgeWithButton>
-  )
-}
-
 // --- Main FilterBar ---
 
 export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount }: FilterBarProps) {
@@ -197,14 +124,39 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
             />
           </div>
 
-          {/* Vertical divider — hidden on mobile */}
-          <div className="hidden md:block h-6 w-px bg-border-secondary" />
+          {/* Brand multi-select dropdown */}
+          <div className="w-full md:w-auto md:min-w-[160px]">
+            <MultiSelect
+              size="sm"
+              placeholder="Brand"
+              items={brandItems}
+              selectedKeys={new Set(filters.brand)}
+              onSelectionChange={(keys) => {
+                const selected = keys === 'all' ? brands.map(b => b.slug) : Array.from(keys as Set<string>)
+                setFilter('brand', selected)
+              }}
+              showFooter={false}
+            >
+              {(item) => <SelectItem {...item} selectionIndicator="checkbox" />}
+            </MultiSelect>
+          </div>
 
-          {/* Release type pills */}
-          <TypePills
-            selected={filters.type}
-            onChange={(selected) => setFilter('type', selected)}
-          />
+          {/* Release type multi-select dropdown */}
+          <div className="w-full md:w-auto md:min-w-[160px]">
+            <MultiSelect
+              size="sm"
+              placeholder="Release type"
+              items={typeItems}
+              selectedKeys={new Set(filters.type)}
+              onSelectionChange={(keys) => {
+                const selected = keys === 'all' ? typeItems.map(t => String(t.id)) : Array.from(keys as Set<string>)
+                setFilter('type', selected)
+              }}
+              showFooter={false}
+            >
+              {(item) => <SelectItem {...item} selectionIndicator="checkbox" />}
+            </MultiSelect>
+          </div>
         </UUIFilterBar.Content>
 
         <UUIFilterBar.Actions>

@@ -3,8 +3,7 @@ import { Heading as AriaHeading } from 'react-aria-components'
 import { ModalOverlay, Modal, Dialog } from '@/components/application/modals/modal'
 import { Badge } from '@/components/base/badges/badges'
 import { CloseButton } from '@/components/base/buttons/close-button'
-import type { ReleaseItem, ReleaseType } from '@/types/release'
-import type { BadgeColors } from '@/components/base/badges/badge-types'
+import type { ReleaseItem } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 
 interface DaySummaryModalProps {
@@ -12,15 +11,6 @@ interface DaySummaryModalProps {
   releases: ReleaseItem[]
   onClose: () => void
   onReleaseClick: (id: string) => void
-}
-
-/** Map release type to UUI Badge color */
-const RELEASE_TYPE_BADGE_COLOR: Record<ReleaseType, BadgeColors> = {
-  feature: 'success',
-  improvement: 'purple',
-  fix: 'orange',
-  launch: 'blue',
-  milestone: 'gray',
 }
 
 function formatModalDate(dateStr: string): string {
@@ -105,7 +95,6 @@ export function DaySummaryModal({
             <div className="overflow-y-auto p-2" style={{ maxHeight: 'calc(80vh - 85px)' }}>
               {releases.map((release) => {
                 const brand = brandsBySlug[release.brandSlug]
-                const badgeColor = RELEASE_TYPE_BADGE_COLOR[release.releaseType]
 
                 return (
                   <button
@@ -130,7 +119,7 @@ export function DaySummaryModal({
 
                     {/* Release type badge */}
                     <div className="mt-1.5">
-                      <Badge color={badgeColor} size="sm" type="pill-color">
+                      <Badge size="sm" type="modern">
                         {release.releaseType}
                       </Badge>
                     </div>

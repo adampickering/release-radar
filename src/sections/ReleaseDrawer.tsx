@@ -1,13 +1,10 @@
 import { useState } from 'react'
 import { LinkExternal01 } from '@untitledui/icons'
 import type { ReleaseItem } from '@/types/release'
-import { RELEASE_TYPE_COLORS } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { SlideoutMenu } from '@/components/application/slideout-menus/slideout-menu'
 import { Badge } from '@/components/base/badges/badges'
 import { Button } from '@/components/base/buttons/button'
-import type { ReleaseType } from '@/types/release'
-import type { BadgeColors } from '@/components/base/badges/badge-types'
 
 interface ReleaseDrawerProps {
   release: ReleaseItem | null
@@ -22,15 +19,6 @@ function formatDate(dateStr: string): string {
     day: 'numeric',
     year: 'numeric',
   })
-}
-
-/** Map release type to UUI Badge color */
-const RELEASE_TYPE_BADGE_COLOR: Record<ReleaseType, BadgeColors> = {
-  feature: 'success',
-  improvement: 'purple',
-  fix: 'orange',
-  launch: 'blue',
-  milestone: 'gray',
 }
 
 function DrawerFavicon({ brandSlug }: { brandSlug: string }) {
@@ -78,8 +66,6 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
   if (!release) return null
 
   const brand = brandsBySlug[release.brandSlug]
-  const badgeColor = RELEASE_TYPE_BADGE_COLOR[release.releaseType]
-
   return (
     <SlideoutMenu isOpen={isOpen} onOpenChange={(open) => { if (!open) onClose() }} isDismissable>
       <SlideoutMenu.Header onClose={onClose} className="relative flex w-full flex-col items-start gap-3 px-4 pt-5 md:px-6">
@@ -101,11 +87,11 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
 
         {/* Badge row */}
         <div className="flex flex-wrap gap-1.5">
-          <Badge color={badgeColor} size="sm" type="pill-color">
+          <Badge size="sm" type="modern">
             {release.releaseType}
           </Badge>
           {release.tags?.map((tag) => (
-            <Badge key={tag} color="gray" size="sm" type="pill-color">
+            <Badge key={tag} color="gray" size="sm" type="modern">
               {tag}
             </Badge>
           ))}
@@ -168,7 +154,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
               <p className="text-xs font-semibold uppercase tracking-wide text-tertiary">Tags</p>
               <div className="flex flex-wrap gap-1.5">
                 {release.tags.map((tag) => (
-                  <Badge key={tag} color="gray" size="sm" type="pill-color">
+                  <Badge key={tag} color="gray" size="sm" type="modern">
                     {tag}
                   </Badge>
                 ))}

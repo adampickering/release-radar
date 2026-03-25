@@ -8,7 +8,6 @@ import { Header } from '@/sections/Header'
 import type { ViewMode } from '@/sections/Header'
 import { StatsStrip } from '@/sections/StatsStrip'
 import { FilterBar } from '@/sections/FilterBar'
-import { BrandLegend } from '@/sections/BrandLegend'
 import { CalendarBoard } from '@/sections/CalendarBoard'
 import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
 import { DaySummaryModal } from '@/sections/DaySummaryModal'
@@ -68,20 +67,6 @@ function App() {
       <div key={viewKey} className="flex-1 transition-opacity duration-200" style={{ animation: 'fade-in 200ms ease-out' }}>
         {activeView === 'calendar' && (
           <>
-            {/* Brand legend — toggleable brand filter pills */}
-            <BrandLegend
-              releases={filtered}
-              activeBrands={filters.brand || []}
-              onBrandToggle={(slug) => {
-                const current = filters.brand || []
-                if (current.includes(slug)) {
-                  setFilter('brand', current.filter(s => s !== slug))
-                } else {
-                  setFilter('brand', [...current, slug])
-                }
-              }}
-            />
-
             {/* Brand momentum — visible right after filter bar */}
             <BrandMomentum
               releases={filtered}
