@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState, useCallback } from 'react'
 import { Calendar, Clock, Grid01 } from '@untitledui/icons'
 import { ButtonGroup, ButtonGroupItem } from '@/components/base/button-group/button-group'
 
@@ -15,6 +16,35 @@ const viewOptions: { label: string; value: ViewMode; icon: typeof Calendar }[] =
 ]
 
 export function Header({ activeView, onViewChange }: HeaderProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  const [indicator, setIndicator] = useState({ left: 0, width: 0 })
+  const [ready, setReady] = useState(false)
+
+  const updateIndicator = useCallback(() => {
+    if (!wrapperRef.current) return
+    const activeBtn = wrapperRef.current.querySelector('[data-selected="true"]') as HTMLElement | null
+    if (activeBtn) {
+      const wrapperRect = wrapperRef.current.getBoundingClientRect()
+      const btnRect = activeBtn.getBoundingClientRect()
+      setIndicator({
+        left: btnRect.left - wrapperRect.left,
+        width: btnRect.width,
+      })
+      setReady(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    updateIndicator()
+  }, [activeView, updateIndicator])
+
+  // Measure on mount after layout + re-measure on resize
+  useEffect(() => {
+    requestAnimationFrame(updateIndicator)
+    window.addEventListener('resize', updateIndicator)
+    return () => window.removeEventListener('resize', updateIndicator)
+  }, [updateIndicator])
+
   return (
     <header className="flex items-center justify-between px-4 md:px-6 h-[60px] bg-brand-solid">
       {/* Left: Logo + Title */}
@@ -34,22 +64,34 @@ export function Header({ activeView, onViewChange }: HeaderProps) {
         </div>
       </button>
 
-      {/* Right: View toggle using UUI ButtonGroup */}
-      <ButtonGroup
-        size="sm"
-        selectedKeys={[activeView]}
-        onSelectionChange={(keys) => {
-          const selected = [...keys][0] as ViewMode | undefined
-          if (selected) onViewChange(selected)
-        }}
-        className="shrink-0 ml-2"
-      >
-        {viewOptions.map((opt) => (
-          <ButtonGroupItem key={opt.value} id={opt.value} iconLeading={opt.icon}>
-            <span className="max-md:hidden">{opt.label}</span>
-          </ButtonGroupItem>
-        ))}
-      </ButtonGroup>
+      {/* Right: View toggle with sliding indicator */}
+      <div ref={wrapperRef} className="relative shrink-0 ml-2">
+        {/* Sliding indicator pill */}
+        {ready && (
+          <span
+            className="absolute top-0 h-full rounded-lg bg-white/15 pointer-events-none"
+            style={{
+              left: indicator.left,
+              width: indicator.width,
+              transition: 'left 150ms ease-out, width 150ms ease-out',
+            }}
+          />
+        )}
+        <ButtonGroup
+          size="sm"
+          selectedKeys={[activeView]}
+          onSelectionChange={(keys) => {
+            const selected = [...keys][0] as ViewMode | undefined
+            if (selected) onViewChange(selected)
+          }}
+        >
+          {viewOptions.map((opt) => (
+            <ButtonGroupItem key={opt.value} id={opt.value} iconLeading={opt.icon}>
+              <span className="max-md:hidden">{opt.label}</span>
+            </ButtonGroupItem>
+          ))}
+        </ButtonGroup>
+      </div>
     </header>
   )
 }

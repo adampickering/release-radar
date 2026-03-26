@@ -94,7 +94,7 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick, layout = '
               key={brand.slug}
               onClick={() => onBrandClick(brand.slug)}
               className={cx(
-                'cursor-pointer rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md',
+                'cursor-pointer rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-[0.98] active:shadow-xs',
                 layout === 'scroll' && 'min-w-[200px] flex-shrink-0',
                 isActive
                   ? 'ring-brand-solid shadow-sm'

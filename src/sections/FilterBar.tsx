@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { SearchLg, ChevronDown, ChevronLeft, ChevronRight, Link01 } from '@untitledui/icons'
 import type { Selection } from 'react-aria-components'
 import { Autocomplete, SearchField, useFilter } from 'react-aria-components'
@@ -192,9 +192,25 @@ function TypeDropdown({
 // --- Main FilterBar ---
 
 export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount }: FilterBarProps) {
+  const [flashing, setFlashing] = useState(false)
+  const flashTimeout = useRef<ReturnType<typeof setTimeout>>(null)
+
+  useEffect(() => {
+    return () => {
+      if (flashTimeout.current) clearTimeout(flashTimeout.current)
+    }
+  }, [])
+
   const handleCopyLink = useCallback(() => {
     navigator.clipboard.writeText(window.location.href)
     toast.success('Link copied to clipboard')
+    setFlashing(false)
+    if (flashTimeout.current) clearTimeout(flashTimeout.current)
+    // Force reflow to restart animation if clicked rapidly
+    requestAnimationFrame(() => {
+      setFlashing(true)
+      flashTimeout.current = setTimeout(() => setFlashing(false), 300)
+    })
   }, [])
 
   return (
@@ -236,7 +252,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
               </Button>
             </>
           )}
-          <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink}>
+          <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink} className={flashing ? 'animate-flash' : ''}>
             Copy link
           </Button>
         </div>
@@ -248,7 +264,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
               Clear
             </Button>
           )}
-          <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink} />
+          <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink} className={flashing ? 'animate-flash' : ''} />
         </div>
       </div>
     </div>
