@@ -58,3 +58,12 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes button-flash {
+  0% { background-color: var(--color-bg-brand-secondary); }
+  100% { background-color: transparent; }
+}
+
+.animate-flash {
+  animation: button-flash 300ms ease-out both;
+}
