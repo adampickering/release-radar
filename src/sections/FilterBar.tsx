@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { SearchLg, ChevronDown, ChevronLeft, ChevronRight, Link01 } from '@untitledui/icons'
 import type { Selection } from 'react-aria-components'
 import { Autocomplete, SearchField, useFilter } from 'react-aria-components'
@@ -194,6 +194,12 @@ function TypeDropdown({
 export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount }: FilterBarProps) {
   const [flashing, setFlashing] = useState(false)
   const flashTimeout = useRef<ReturnType<typeof setTimeout>>(null)
+
+  useEffect(() => {
+    return () => {
+      if (flashTimeout.current) clearTimeout(flashTimeout.current)
+    }
+  }, [])
 
   const handleCopyLink = useCallback(() => {
     navigator.clipboard.writeText(window.location.href)

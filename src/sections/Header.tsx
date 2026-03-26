@@ -38,9 +38,11 @@ export function Header({ activeView, onViewChange }: HeaderProps) {
     updateIndicator()
   }, [activeView, updateIndicator])
 
-  // Measure on mount after layout
+  // Measure on mount after layout + re-measure on resize
   useEffect(() => {
     requestAnimationFrame(updateIndicator)
+    window.addEventListener('resize', updateIndicator)
+    return () => window.removeEventListener('resize', updateIndicator)
   }, [updateIndicator])
 
   return (
