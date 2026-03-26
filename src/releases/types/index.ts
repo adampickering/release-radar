@@ -21,6 +21,7 @@ export interface ParsedReleaseItem {
   pluginSlug: string
   pluginName: string
   brand: string
+  brandSlug: string
   version: string
   title: string
   shortTitle: string
@@ -29,6 +30,7 @@ export interface ParsedReleaseItem {
   stableTag: string
   sourceType: 'wporg-readme'
   sourceUrl: string
+  changelogUrl: string
   releaseType: ReleaseType
   access: ReleaseAccess
   summary: string
@@ -39,6 +41,7 @@ export interface ParsedReleaseItem {
 
 export interface WpOrgPluginSource {
   brand: string
+  brandSlug: string
   pluginSlug: string
   pluginName: string
   team?: string
@@ -62,6 +65,7 @@ export interface ReadmeHeader {
 
 export interface VersionBlock {
   version: string
+  date?: string
   bullets: string[]
   rawText: string
 }

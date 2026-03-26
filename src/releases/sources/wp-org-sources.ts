@@ -3,6 +3,7 @@ import type { WpOrgPluginSource } from '../types'
 export const wpOrgSources: WpOrgPluginSource[] = [
   {
     brand: 'WPForms',
+    brandSlug: 'wpforms',
     pluginSlug: 'wpforms-lite',
     pluginName: 'WPForms Lite',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/wpforms-lite/trunk/readme.txt',
@@ -10,6 +11,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'AIOSEO',
+    brandSlug: 'aioseo',
     pluginSlug: 'all-in-one-seo-pack',
     pluginName: 'All in One SEO',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/all-in-one-seo-pack/trunk/readme.txt',
@@ -17,6 +19,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'WP Mail SMTP',
+    brandSlug: 'wp-mail-smtp',
     pluginSlug: 'wp-mail-smtp',
     pluginName: 'WP Mail SMTP',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/wp-mail-smtp/trunk/readme.txt',
@@ -24,6 +27,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'MonsterInsights',
+    brandSlug: 'monsterinsights',
     pluginSlug: 'google-analytics-for-wordpress',
     pluginName: 'MonsterInsights',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/google-analytics-for-wordpress/trunk/readme.txt',
@@ -31,6 +35,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'OptinMonster',
+    brandSlug: 'optinmonster',
     pluginSlug: 'optinmonster',
     pluginName: 'OptinMonster',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/optinmonster/trunk/readme.txt',
@@ -38,6 +43,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'SeedProd',
+    brandSlug: 'seedprod',
     pluginSlug: 'coming-soon',
     pluginName: 'SeedProd',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/coming-soon/trunk/README.txt',
@@ -45,6 +51,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Duplicator',
+    brandSlug: 'duplicator',
     pluginSlug: 'duplicator',
     pluginName: 'Duplicator',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/duplicator/trunk/readme.txt',
@@ -52,6 +59,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'AffiliateWP',
+    brandSlug: 'affiliatewp',
     pluginSlug: 'affiliatewp-allowed-products',
     pluginName: 'AffiliateWP Allowed Products',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/affiliatewp-allowed-products/trunk/readme.txt',
@@ -59,6 +67,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'SearchWP',
+    brandSlug: 'searchwp',
     pluginSlug: 'searchwp-live-ajax-search',
     pluginName: 'SearchWP Live Ajax Search',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/searchwp-live-ajax-search/trunk/readme.txt',
@@ -66,6 +75,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Easy Digital Downloads',
+    brandSlug: 'easy-digital-downloads',
     pluginSlug: 'easy-digital-downloads',
     pluginName: 'Easy Digital Downloads',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/easy-digital-downloads/trunk/readme.txt',
@@ -73,6 +83,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Smash Balloon',
+    brandSlug: 'smash-balloon',
     pluginSlug: 'custom-facebook-feed',
     pluginName: 'Smash Balloon Social Post Feed',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/custom-facebook-feed/trunk/README.txt',
@@ -80,6 +91,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Smash Balloon',
+    brandSlug: 'smash-balloon',
     pluginSlug: 'instagram-feed',
     pluginName: 'Smash Balloon Instagram Feed',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/instagram-feed/trunk/README.txt',
@@ -87,6 +99,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Smash Balloon',
+    brandSlug: 'smash-balloon',
     pluginSlug: 'custom-twitter-feeds',
     pluginName: 'Smash Balloon Twitter Feed',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/custom-twitter-feeds/trunk/README.txt',
@@ -94,6 +107,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Smash Balloon',
+    brandSlug: 'smash-balloon',
     pluginSlug: 'feeds-for-youtube',
     pluginName: 'Smash Balloon YouTube Feed',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/feeds-for-youtube/trunk/README.txt',
@@ -101,6 +115,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'WP Simple Pay',
+    brandSlug: 'wp-simple-pay',
     pluginSlug: 'stripe',
     pluginName: 'WP Simple Pay',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/stripe/trunk/readme.txt',
@@ -108,6 +123,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'PushEngage',
+    brandSlug: 'pushengage',
     pluginSlug: 'pushengage',
     pluginName: 'PushEngage',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/pushengage/trunk/readme.txt',
@@ -115,6 +131,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'WPCode',
+    brandSlug: 'wpcode',
     pluginSlug: 'insert-headers-and-footers',
     pluginName: 'WPCode',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/insert-headers-and-footers/trunk/readme.txt',
@@ -122,6 +139,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'RafflePress',
+    brandSlug: 'rafflepress',
     pluginSlug: 'rafflepress',
     pluginName: 'RafflePress',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/rafflepress/trunk/readme.txt',
@@ -129,6 +147,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'TrustPulse',
+    brandSlug: 'trustpulse',
     pluginSlug: 'trustpulse-api',
     pluginName: 'TrustPulse',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/trustpulse-api/trunk/README.txt',
@@ -136,6 +155,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Charitable',
+    brandSlug: 'charitable',
     pluginSlug: 'charitable',
     pluginName: 'Charitable',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/charitable/trunk/readme.txt',
@@ -143,6 +163,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Sugar Calendar',
+    brandSlug: 'sugar-calendar',
     pluginSlug: 'sugar-calendar-lite',
     pluginName: 'Sugar Calendar Lite',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/sugar-calendar-lite/trunk/readme.txt',
@@ -150,6 +171,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Envira Gallery',
+    brandSlug: 'envira-gallery',
     pluginSlug: 'envira-gallery-lite',
     pluginName: 'Envira Gallery Lite',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/envira-gallery-lite/trunk/readme.txt',
@@ -157,6 +179,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Soliloquy',
+    brandSlug: 'soliloquy',
     pluginSlug: 'soliloquy-lite',
     pluginName: 'Soliloquy Lite',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/soliloquy-lite/trunk/readme.txt',
@@ -164,6 +187,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'UserFeedback',
+    brandSlug: 'userfeedback',
     pluginSlug: 'userfeedback-lite',
     pluginName: 'UserFeedback Lite',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/userfeedback-lite/trunk/readme.txt',
@@ -171,6 +195,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'WPConsent',
+    brandSlug: 'wpconsent',
     pluginSlug: 'cookie-notice-and-consent-banner',
     pluginName: 'WPConsent',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/cookie-notice-and-consent-banner/trunk/readme.txt',
@@ -178,6 +203,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Uncanny Automator',
+    brandSlug: 'uncanny-automator',
     pluginSlug: 'uncanny-automator',
     pluginName: 'Uncanny Automator',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/uncanny-automator/trunk/readme.txt',
@@ -185,6 +211,7 @@ export const wpOrgSources: WpOrgPluginSource[] = [
   },
   {
     brand: 'Uncanny Owl',
+    brandSlug: 'uncanny-owl',
     pluginSlug: 'uncanny-learndash-toolkit',
     pluginName: 'Uncanny LearnDash Toolkit',
     trunkReadmeUrl: 'https://plugins.svn.wordpress.org/uncanny-learndash-toolkit/trunk/readme.txt',

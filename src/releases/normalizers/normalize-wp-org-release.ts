@@ -41,6 +41,8 @@ export function normalizeWpOrgRelease(
     return { releases, warnings }
   }
 
+  const changelogUrl = `https://wordpress.org/plugins/${source.pluginSlug}/#developers`
+
   for (const block of versionBlocks) {
     if (block.bullets.length === 0) {
       warnings.push({
@@ -58,13 +60,16 @@ export function normalizeWpOrgRelease(
       pluginSlug: source.pluginSlug,
       pluginName: source.pluginName,
       brand: source.brand,
+      brandSlug: source.brandSlug,
       version: block.version,
       title: `${source.pluginName} ${block.version}`,
       shortTitle: block.version,
-      dateConfidence: 'unknown',
+      date: block.date,
+      dateConfidence: block.date ? 'exact' : 'unknown',
       stableTag: resolvedTag,
       sourceType: 'wporg-readme',
       sourceUrl,
+      changelogUrl,
       releaseType: classifyReleaseType(block.bullets),
       access: source.accessDefault,
       summary: summarizeRelease(block.bullets, block.version),

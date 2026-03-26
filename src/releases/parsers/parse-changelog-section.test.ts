@@ -52,6 +52,11 @@ describe('parseChangelogSection', () => {
 			expect(blocks[2].bullets).toHaveLength(1)
 		})
 
+		it('returns undefined date for standard headings without dates', () => {
+			const blocks = parseChangelogSection(WPFORMS_CHANGELOG)
+			expect(blocks[0].date).toBeUndefined()
+		})
+
 		it('strips bullet prefix characters', () => {
 			const blocks = parseChangelogSection(WPFORMS_CHANGELOG)
 			expect(blocks[0].bullets[0]).not.toMatch(/^-\s/)
@@ -103,6 +108,12 @@ describe('parseChangelogSection', () => {
 			expect(blocks[1].version).toBe('10.1.0')
 		})
 
+		it('extracts date from "= X.Y.Z: Month DD, YYYY =" format', () => {
+			const blocks = parseChangelogSection(MONSTERINSIGHTS_CHANGELOG)
+			expect(blocks[0].date).toBe('2026-03-24')
+			expect(blocks[1].date).toBe('2026-03-23')
+		})
+
 		it('collects bullets from date-format entries', () => {
 			const blocks = parseChangelogSection(MONSTERINSIGHTS_CHANGELOG)
 			expect(blocks[0].bullets).toHaveLength(1)
@@ -151,6 +162,12 @@ describe('parseChangelogSection', () => {
 			expect(blocks).toHaveLength(2)
 			expect(blocks[0].version).toBe('7.1.0.1')
 			expect(blocks[1].version).toBe('7.1.0')
+		})
+
+		it('extracts date from "= X.Y.Z [YYYY-MM-DD] =" format', () => {
+			const blocks = parseChangelogSection(UNCANNY_CHANGELOG)
+			expect(blocks[0].date).toBe('2026-03-02')
+			expect(blocks[1].date).toBe('2026-02-27')
 		})
 	})
 

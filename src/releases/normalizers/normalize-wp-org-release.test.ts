@@ -5,6 +5,7 @@ import type { WpOrgPluginSource } from '../types'
 
 const MOCK_SOURCE: WpOrgPluginSource = {
   brand: 'WPForms',
+  brandSlug: 'wpforms',
   pluginSlug: 'wpforms-lite',
   pluginName: 'WPForms Lite',
   team: 'Growth',
