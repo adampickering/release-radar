@@ -43,6 +43,20 @@ export function normalizeWpOrgRelease(
 
   const changelogUrl = `https://wordpress.org/plugins/${source.pluginSlug}/#developers`
 
+  // If the stable tag doesn't appear in changelog headings (common for point releases
+  // like 3.6.6.1 where the changelog only has 3.6.6), synthesize an entry using the
+  // first changelog block's content so the latest release isn't missed.
+  const parsedVersions = new Set(versionBlocks.map(b => b.version))
+  if (resolvedTag !== 'trunk' && !parsedVersions.has(resolvedTag)) {
+    const firstBlock = versionBlocks[0]
+    versionBlocks.unshift({
+      version: resolvedTag,
+      date: firstBlock.date,
+      bullets: firstBlock.bullets,
+      rawText: firstBlock.rawText,
+    })
+  }
+
   for (const block of versionBlocks) {
     if (block.bullets.length === 0) {
       warnings.push({

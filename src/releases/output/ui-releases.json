@@ -33,6 +33,17 @@
     "tags": []
   },
   {
+    "id": "easy-digital-downloads@3.6.6.1",
+    "title": "Easy Digital Downloads 3.6.6.1",
+    "date": "2026-03-23",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "fix",
+    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes and cart: Fixed cart validation when adding multiple items at the same time.",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@1.10.0.1",
     "title": "WPForms Lite 1.10.0.1",
     "date": "2026-03-19",
@@ -220,6 +231,17 @@
     "tags": []
   },
   {
+    "id": "coming-soon@6.19.9",
+    "title": "SeedProd 6.19.9",
+    "date": "2026-03-03",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.19.9.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.1.0.1",
     "title": "Uncanny Automator 7.1.0.1",
     "date": "2026-03-02",
@@ -382,17 +404,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.9.4",
-    "title": "Charitable 1.8.9.4",
-    "date": "2026-02-06",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "FIX: Resolved seemingly missing social media icons in some campaign builder template previews in certain scenarios and uPDATE: Improved campaign builder templates for cache busting.",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
@@ -624,17 +635,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.2",
-    "title": "Easy Digital Downloads 3.6.2",
-    "date": "2025-12-09",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "feature",
-    "summary": "NEW: Cart - Introducing the Cart Preview, a new modern cart experience for your customers and blocks: The Caps Lock warning was showing on the registration block for some sites.",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
@@ -2053,17 +2053,6 @@
     "brandSlug": "seedprod",
     "releaseType": "improvement",
     "summary": "Tweak - Clarify External Service is used for license upgrades and tweak - Removed helper function that was set for pre-release.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.2.0",
-    "title": "SeedProd 6.2.0",
-    "date": "2021-03-22",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "feature",
-    "summary": "Added - WooCommerce Blocks Pro Version and added - Accordion Block Pro Version.",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
