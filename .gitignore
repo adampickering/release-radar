@@ -18,6 +18,7 @@ dist/
 
 # superpowers
 .superpowers/
+.worktrees/
 .vercel
 
 # Release ingestion output

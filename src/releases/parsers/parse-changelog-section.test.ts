@@ -88,6 +88,95 @@ describe('parseChangelogSection', () => {
 		})
 	})
 
+	describe('version with date format (MonsterInsights/UserFeedback)', () => {
+		const MONSTERINSIGHTS_CHANGELOG = `= 10.1.1: March 24, 2026 =
+- Fixes: Various bug fixes and updates
+
+= 10.1.0: March 23, 2026 =
+- New: We completely updated our overview screen.
+- New: We added support for CSV and XLSX reports`
+
+		it('parses version from "= X.Y.Z: date =" format', () => {
+			const blocks = parseChangelogSection(MONSTERINSIGHTS_CHANGELOG)
+			expect(blocks).toHaveLength(2)
+			expect(blocks[0].version).toBe('10.1.1')
+			expect(blocks[1].version).toBe('10.1.0')
+		})
+
+		it('collects bullets from date-format entries', () => {
+			const blocks = parseChangelogSection(MONSTERINSIGHTS_CHANGELOG)
+			expect(blocks[0].bullets).toHaveLength(1)
+			expect(blocks[1].bullets).toHaveLength(2)
+		})
+	})
+
+	describe('name + version format (OptinMonster/Charitable)', () => {
+		const OPTINMONSTER_CHANGELOG = `= Popup Builder 2.16.22 =
+* Promotional updates to the dashboard.
+
+= Popup Builder 2.16.21 =
+* Maintenance updates.`
+
+		const CHARITABLE_CHANGELOG = `= Donation Form & Fundraising Campaigns v1.8.10 =
+* NEW: Expanded Import tools with sub-tabs.
+* IMPROVED: Strengthened Stripe webhook processing.
+* FIX: Restored campaign grid column widths.`
+
+		it('parses version from "= Name X.Y.Z =" format', () => {
+			const blocks = parseChangelogSection(OPTINMONSTER_CHANGELOG)
+			expect(blocks).toHaveLength(2)
+			expect(blocks[0].version).toBe('2.16.22')
+			expect(blocks[1].version).toBe('2.16.21')
+		})
+
+		it('parses version from "= Name vX.Y.Z =" format', () => {
+			const blocks = parseChangelogSection(CHARITABLE_CHANGELOG)
+			expect(blocks).toHaveLength(1)
+			expect(blocks[0].version).toBe('1.8.10')
+			expect(blocks[0].bullets).toHaveLength(3)
+		})
+	})
+
+	describe('version with bracketed date (Uncanny Automator)', () => {
+		const UNCANNY_CHANGELOG = `= 7.1.0.1 [2026-03-02] =
+
+* Fixed a PHP error on PHP 7.4 sites caused by throw expressions
+
+= 7.1.0 [2026-02-27] =
+
+* New Plugin Integrations added`
+
+		it('parses version from "= X.Y.Z [date] =" format', () => {
+			const blocks = parseChangelogSection(UNCANNY_CHANGELOG)
+			expect(blocks).toHaveLength(2)
+			expect(blocks[0].version).toBe('7.1.0.1')
+			expect(blocks[1].version).toBe('7.1.0')
+		})
+	})
+
+	describe('bare version format (Envira Gallery)', () => {
+		const ENVIRA_CHANGELOG = `1.12.4
+* Added: Empty state on the All Galleries screen.
+* Fixed: Access to the justified gallery theme parameter.
+
+1.12.3
+* Fixed: Added ABSPATH security checks.
+* Updated: Plugin readme title and description.`
+
+		it('parses bare version numbers on their own line', () => {
+			const blocks = parseChangelogSection(ENVIRA_CHANGELOG)
+			expect(blocks).toHaveLength(2)
+			expect(blocks[0].version).toBe('1.12.4')
+			expect(blocks[1].version).toBe('1.12.3')
+		})
+
+		it('collects bullets after bare version', () => {
+			const blocks = parseChangelogSection(ENVIRA_CHANGELOG)
+			expect(blocks[0].bullets).toHaveLength(2)
+			expect(blocks[1].bullets).toHaveLength(2)
+		})
+	})
+
 	describe('edge cases', () => {
 		it('returns empty array for empty changelog', () => {
 			expect(parseChangelogSection('')).toEqual([])

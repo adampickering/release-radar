@@ -815,3 +815,20 @@ Use background color variables to manage all fill colors for elements in your de
 | bg-success-secondary    | Secondary success state background color for components such as featured icons.                                                                                                               |
 | bg-success-solid        | Default solid (dark) success state background color for components such as featured icons and metric items.                                                                                   |
 <!-- @embed:end -->
+
+## UI Development Rules
+
+### Design System: Untitled UI (MANDATORY)
+- This project exclusively uses the Untitled UI design system
+- The Untitled UI MCP server MUST be invoked before writing ANY UI code
+- Read the Untitled UI skill file before starting any UI task
+- Never recreate components manually — always pull from the design system
+
+### Enforcement Process
+1. Before building UI: list which Untitled UI components you will use
+2. Query the MCP server to confirm component availability
+3. Build using real Untitled UI components only
+4. After building: self-audit for any hand-rolled components and replace them
+
+### If You Catch Yourself Recreating Components
+Stop immediately. Go back to the MCP server and use the real component. Do not proceed with custom implementations unless explicitly confirmed that no Untitled UI equivalent exists.
