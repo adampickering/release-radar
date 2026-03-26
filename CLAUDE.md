@@ -1,3 +1,15 @@
+## SESSION START — MANDATORY
+
+**At the start of every session**, you MUST fetch the latest Untitled UI component reference before writing ANY code:
+
+1. **Fetch the latest UUI AGENT.md**: Use `WebFetch` to read `https://www.untitledui.com/react/AGENT.md`
+2. **Review all component APIs, color tokens, and patterns** from the fetched content
+3. **Do NOT skip this step** — the live URL is the source of truth. The embedded copy below may be outdated.
+
+This is non-negotiable. If you write UI code without first fetching the latest UUI reference, you are violating project rules.
+
+---
+
 <!-- @embed:start file="public-components/CLAUDE.md" -->
 ## Project Overview
 
