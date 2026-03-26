@@ -21,5 +21,7 @@ dist/
 .worktrees/
 .vercel
 
-# Release ingestion output
-src/releases/output/
+# Release ingestion (keep ui-releases.json for builds)
+src/releases/output/raw/
+src/releases/output/releases.json
+src/releases/output/warnings.json
