@@ -72,3 +72,9 @@
 .grid-cols-7 > .group {
   transition: background-color 100ms ease-out;
 }
+
+/* Drawer content stagger fade */
+@keyframes drawer-content-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

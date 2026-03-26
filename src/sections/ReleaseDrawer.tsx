@@ -69,7 +69,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
     <SlideoutMenu isOpen={isOpen} onOpenChange={(open) => { if (!open) onClose() }} isDismissable className="z-[60]">
       {release && (
         <>
-          <SlideoutMenu.Header onClose={onClose} className="relative flex w-full flex-col items-start gap-3 px-4 pt-5 md:px-6">
+          <SlideoutMenu.Header onClose={onClose} className="relative flex w-full flex-col items-start gap-3 px-4 pt-5 md:px-6" style={{ animation: 'drawer-content-fade 200ms ease-out 50ms both' }}>
             {/* Top row: favicon + brand + date */}
             <div className="flex items-center gap-2">
               <DrawerFavicon brandSlug={release.brandSlug} />
@@ -99,7 +99,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
             </div>
           </SlideoutMenu.Header>
 
-          <SlideoutMenu.Content className="px-4 py-6 md:px-6">
+          <SlideoutMenu.Content className="px-4 py-6 md:px-6" style={{ animation: 'drawer-content-fade 200ms ease-out 100ms both' }}>
             {/* Summary */}
             <div className="flex flex-col gap-4">
               <section className="flex flex-col gap-1.5">
