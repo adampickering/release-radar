@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect, useRef, useCallback } from 'react'
 import type { ReleaseItem, ReleaseType } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { FeedItem } from '@/components/application/activity-feed/activity-feed'
-import { Badge } from '@/components/base/badges/badges'
+import { Button } from '@/components/base/buttons/button'
 import type { BadgeColors } from '@/components/base/badges/badge-types'
 
 interface TimelineViewProps {
@@ -63,6 +63,52 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
     return groups
   }, [sorted])
 
+  const PAGE_SIZE = 20
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+
+  // Reset visible count when releases change (e.g. filter applied)
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE)
+  }, [releases])
+
+  const visibleGroups = useMemo(() => {
+    let count = 0
+    const result: { date: string; items: ReleaseItem[] }[] = []
+    for (const group of grouped) {
+      if (count >= visibleCount) break
+      const remaining = visibleCount - count
+      if (group.items.length <= remaining) {
+        result.push(group)
+        count += group.items.length
+      } else {
+        result.push({ date: group.date, items: group.items.slice(0, remaining) })
+        count += remaining
+      }
+    }
+    return result
+  }, [grouped, visibleCount])
+
+  const totalReleases = sorted.length
+  const hasMore = visibleCount < totalReleases
+
+  // Infinite scroll: load more when sentinel enters viewport
+  const sentinelRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const sentinel = sentinelRef.current
+    if (!sentinel || !hasMore) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, totalReleases))
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(sentinel)
+    return () => observer.disconnect()
+  }, [hasMore, totalReleases])
+
   if (releases.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
@@ -73,7 +119,7 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
 
   return (
     <div className="mx-auto max-w-[720px] px-4 md:px-6 py-6 md:py-8">
-      {grouped.map((group) => (
+      {visibleGroups.map((group) => (
         <div key={group.date} className="mb-6">
           {/* Date header */}
           <h3 className="mb-4 text-sm font-semibold text-secondary">
@@ -126,6 +172,18 @@ export function TimelineView({ releases, onReleaseClick }: TimelineViewProps) {
           </div>
         </div>
       ))}
+
+      {hasMore && (
+        <div ref={sentinelRef} className="flex justify-center py-6">
+          <Button
+            size="sm"
+            color="secondary"
+            onClick={() => setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, totalReleases))}
+          >
+            Load more ({totalReleases - visibleCount} remaining)
+          </Button>
+        </div>
+      )}
     </div>
   )
 }
