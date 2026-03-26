@@ -65,7 +65,7 @@ export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOpti
                     <div className="flex items-center gap-2 text-lg font-semibold whitespace-nowrap text-primary">
                         {date.toLocaleString(locale, { month: "long" })} {date.getFullYear()}
                         <Badge size="sm" color="gray" type="modern">
-                            Week {Math.ceil(date.getDate() / 7)}
+                            Week {(() => { const d = new Date(date); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + 3 - ((d.getDay() + 6) % 7)); const yearStart = new Date(d.getFullYear(), 0, 1); return Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7); })()}
                         </Badge>
                     </div>
 
