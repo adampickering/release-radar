@@ -41,6 +41,7 @@ export function CalendarBoard({
           title: r.title,
           start: new Date(r.date + 'T00:00:00'),
           end: new Date(r.date + 'T23:59:59'),
+          showTime: false,
           color: releaseTypeToColor(r.releaseType),
           dot: true,
           avatarUrl: brand ? `https://www.google.com/s2/favicons?domain=${brand.domain}&sz=64` : undefined,

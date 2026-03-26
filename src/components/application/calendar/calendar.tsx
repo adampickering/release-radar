@@ -51,6 +51,7 @@ export type CalendarEvent = {
     color?: EventViewColor;
     dot?: boolean;
     avatarUrl?: string;
+    showTime?: boolean;
 };
 
 type ZonedEvent = Omit<CalendarEvent, "start" | "end"> & {
@@ -479,7 +480,7 @@ const MonthView = ({
                                         (startsToday && continuesAfter && eventStartsAtDayStart) ||
                                         (continuesPrior && endsToday && eventEndsAtDayEnd);
 
-                                    const supportingText = isAllDayForCell ? undefined : formatTimeForMonth(event.start);
+                                    const supportingText = (isAllDayForCell || !event.showTime) ? undefined : formatTimeForMonth(event.start);
 
                                     // Apply custom width style for multi-day events
                                     const spanStyle =
@@ -525,7 +526,7 @@ const MonthView = ({
                                 const eventEndDay = getEndOfDay(event.end, timeZone);
                                 const isAllDay = event.start.compare(eventStartDay) <= 0 && event.end.compare(eventEndDay) >= 0;
 
-                                const supportingText = isAllDay ? "All day" : formatTimeForMonth(event.start);
+                                const supportingText = (isAllDay || !event.showTime) ? undefined : formatTimeForMonth(event.start);
 
                                 return (
                                     <div key={`footer-${event.id}`} onClick={() => onEventClick?.(event.id)}>
