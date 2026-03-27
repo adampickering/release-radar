@@ -1,5 +1,16 @@
 [
   {
+    "id": "charitable@1.8.10.2",
+    "title": "Charitable 1.8.10.2",
+    "date": "2026-03-27",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "feature",
+    "summary": "NEW: Added Sync Pending Stripe Donations tool to gateway settings (beta) and fIX: Fixed some minor PHP warnings and minor CSS issues on dashboard.",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@1.10.0.2",
     "title": "WPForms Lite 1.10.0.2",
     "date": "2026-03-26",
@@ -382,17 +393,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Smart tags sometimes not inserting into attached text area.",
     "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.9.5",
-    "title": "Charitable 1.8.9.5",
-    "date": "2026-02-13",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "fix",
-    "summary": "FIX: Added additional checks to resolved issue with Stripe webhook that was causing a fatal error a certain scenario and fIX: Allow more international characters into campaign title fields in campaign visual builder.",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
