@@ -29,10 +29,10 @@ export type CalendarEvent = {
 };
 
 const viewOptions: ViewOption[] = [
-    { value: "day", label: "Day view", addon: "⌘D" },
-    { value: "week", label: "Week view", addon: "⌘W" },
-    { value: "month", label: "Month view", addon: "⌘M" },
-    { value: "year", label: "Year to date", addon: "⌘Y" },
+    { value: "day", label: "Day view", addon: "D" },
+    { value: "week", label: "Week view", addon: "W" },
+    { value: "month", label: "Month view", addon: "M" },
+    { value: "year", label: "Year to date", addon: "Y" },
 ];
 
 interface CalendarProps {
@@ -113,6 +113,12 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                     newDate = currentMonthDate;
             }
         }
+        // Don't navigate into the future
+        const todayDate = today(timeZone);
+        if (newDate.compare(todayDate) > 0) {
+            newDate = todayDate;
+        }
+
         setCurrentMonthDate(newDate);
         if (action === "TODAY" || view === "day") {
             setSelectedDate(newDate);
@@ -121,28 +127,29 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
         }
     };
 
-    // Keyboard shortcuts
+    // Keyboard shortcuts (single-key, like Google Calendar)
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.metaKey || e.ctrlKey) {
-                switch (e.key.toLowerCase()) {
-                    case "d":
-                        e.preventDefault();
-                        setView("day");
-                        break;
-                    case "w":
-                        e.preventDefault();
-                        setView("week");
-                        break;
-                    case "m":
-                        e.preventDefault();
-                        setView("month");
-                        break;
-                    case "y":
-                        e.preventDefault();
-                        setView("year");
-                        break;
-                }
+            // Skip if user is typing in an input/textarea or using a modifier
+            const target = e.target as HTMLElement;
+            if (e.metaKey || e.ctrlKey || e.altKey || target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable) return;
+
+            switch (e.key.toLowerCase()) {
+                case "d":
+                    setView("day");
+                    break;
+                case "w":
+                    setView("week");
+                    break;
+                case "m":
+                    setView("month");
+                    break;
+                case "y":
+                    setView("year");
+                    break;
+                case "t":
+                    handleToday();
+                    break;
             }
         };
         window.addEventListener("keydown", handleKeyDown);
@@ -150,6 +157,27 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
     }, []);
 
     const dayToDisplay = selectedDate || currentMonthDate;
+
+    // Disable "next" when at current period
+    const todayDate = today(timeZone);
+    const isNextDisabled = useMemo(() => {
+        const anchor = selectedDate || currentMonthDate;
+        switch (view) {
+            case "day":
+                return anchor.compare(todayDate) >= 0;
+            case "week": {
+                const weekStart = startOfWeek(anchor, locale);
+                const todayWeekStart = startOfWeek(todayDate, locale);
+                return weekStart.compare(todayWeekStart) >= 0;
+            }
+            case "month":
+                return currentMonthDate.year === todayDate.year && currentMonthDate.month === todayDate.month;
+            case "year":
+                return currentMonthDate.year >= todayDate.year;
+            default:
+                return false;
+        }
+    }, [view, currentMonthDate, selectedDate, todayDate, locale]);
 
     if (!isMounted) return null;
 
@@ -171,6 +199,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                 onClickPrev={() => handleNavigate("PREV")}
                 onClickNext={() => handleNavigate("NEXT")}
                 onClickToday={() => handleNavigate("TODAY")}
+                isNextDisabled={isNextDisabled}
                 hideSearch={hideSearch}
                 hideAddEvent={hideAddEvent}
             />
@@ -187,6 +216,11 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                         shortWeekdayFormatter={shortWeekdayFormatter}
                         timeFormatter={timeFormatter}
                         onEventClick={onEventClick}
+                        onDayClick={(date) => {
+                            setSelectedDate(date);
+                            setCurrentMonthDate(date);
+                            setView("day");
+                        }}
                         hideAddButton={hideAddEvent}
                     />
                 )}
@@ -203,6 +237,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                             shortWeekdayFormatter={shortWeekdayFormatter}
                             timeFormatter={timeFormatter}
                             hourOnlyFormatter={hourOnlyFormatter}
+                            onEventClick={onEventClick}
                             view={view}
                             className="md:hidden"
                         />
@@ -218,6 +253,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                             shortWeekdayFormatter={shortWeekdayFormatter}
                             timeFormatter={timeFormatter}
                             hourOnlyFormatter={hourOnlyFormatter}
+                            onEventClick={onEventClick}
                             view={view}
                             className="max-md:hidden"
                         />
@@ -235,6 +271,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                         shortWeekdayFormatter={shortWeekdayFormatter}
                         timeFormatter={timeFormatter}
                         hourOnlyFormatter={hourOnlyFormatter}
+                        onEventClick={onEventClick}
                         view={view}
                     />
                 )}

@@ -16,6 +16,15 @@ export type ZonedEvent = Omit<CalendarEvent, "start" | "end"> & {
 
 export const SLOT_HEIGHT = 48;
 
+/** Human-readable labels for event color types */
+export const EVENT_TYPE_LABELS: Record<string, string> = {
+    green: "Feature",
+    purple: "Improvement",
+    orange: "Fix",
+    blue: "Launch",
+    gray: "Other",
+};
+
 export const getStartOfDay = (date: ZonedDateTime | CalendarDate, timeZone: string): ZonedDateTime => {
     const zoned = date instanceof CalendarDate ? toZoned(date, timeZone) : date;
     return zoned.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
