@@ -32,6 +32,7 @@ export interface MonthViewProps {
     timeFormatter: DateFormatter;
     className?: string;
     onEventClick?: (eventId: string) => void;
+    onDayClick?: (date: CalendarDate) => void;
     hideAddButton?: boolean;
 }
 
@@ -47,6 +48,7 @@ export const MonthView = ({
     timeFormatter,
     className,
     onEventClick,
+    onDayClick,
     hideAddButton,
 }: MonthViewProps) => {
     const monthStart = startOfMonth(currentMonthDate);
@@ -271,7 +273,7 @@ export const MonthView = ({
                             state={isSelectedFlag ? "selected" : isTodayFlag ? "current" : "default"}
                             className={cx(isLastRow && "before:border-b-0", isLastColumn && "before:border-r-0")}
                             hideAddButton={hideAddButton}
-                            onClick={() => isCurrentMonthFlag && setSelectedDate(date)}
+                            onClick={() => { if (isCurrentMonthFlag) { setSelectedDate(date); onDayClick?.(date); } }}
                         >
                             <div className="flex gap-1 max-md:pl-1 md:flex-col">
                                 {eventsToShow.map(({ event, span, isPlaceholder }) => {
@@ -323,7 +325,13 @@ export const MonthView = ({
                             </div>
 
                             {remainingEventsCount > 0 && (
-                                <div className="truncate text-xs font-semibold text-utility-neutral-500 max-md:pl-1">{`${remainingEventsCount} more...`}</div>
+                                <button
+                                    type="button"
+                                    onClick={(e) => { e.stopPropagation(); onDayClick?.(date); }}
+                                    className="cursor-pointer truncate text-xs font-semibold text-utility-neutral-500 transition duration-100 ease-linear hover:text-brand-secondary max-md:pl-1"
+                                >
+                                    {`${remainingEventsCount} more...`}
+                                </button>
                             )}
                         </CalendarMonthViewCell>
                     );

@@ -15,11 +15,12 @@ interface CalendarHeaderProps {
     onClickPrev?: () => void;
     onClickNext?: () => void;
     onClickToday?: () => void;
+    isNextDisabled?: boolean;
     hideSearch?: boolean;
     hideAddEvent?: boolean;
 }
 
-export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOptions, onClickPrev, onClickNext, onClickToday, hideSearch, hideAddEvent }: CalendarHeaderProps) => {
+export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOptions, onClickPrev, onClickNext, onClickToday, isNextDisabled, hideSearch, hideAddEvent }: CalendarHeaderProps) => {
     const { locale } = useLocale();
     const timeZone = getLocalTimeZone();
 
@@ -98,7 +99,7 @@ export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOpti
                     <ButtonGroupItem id="today" className="flex-1 justify-center text-center" onClick={onClickToday}>
                         Today
                     </ButtonGroupItem>
-                    <ButtonGroupItem id="next" iconLeading={ArrowRight} onClick={onClickNext} />
+                    <ButtonGroupItem id="next" iconLeading={ArrowRight} onClick={onClickNext} isDisabled={isNextDisabled} />
                 </ButtonGroup>
 
                 <CalendarViewDropdown value={selectedView} onSelectionChange={onSelectionChange} options={viewOptions} />

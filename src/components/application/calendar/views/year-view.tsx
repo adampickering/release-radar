@@ -6,7 +6,7 @@ import { Avatar } from "@/components/base/avatar/avatar";
 import { Badge } from "@/components/base/badges/badges";
 import { ButtonGroup, ButtonGroupItem } from "@/components/base/button-group/button-group";
 import { eventViewColors, type EventViewColor } from "../base-components/calendar-month-view-event";
-import type { ZonedEvent } from "../utils/calendar-helpers";
+import { type ZonedEvent, EVENT_TYPE_LABELS } from "../utils/calendar-helpers";
 
 export interface YearViewProps {
     currentYear: number;
@@ -26,13 +26,9 @@ interface MonthData {
     typeBreakdown: { type: EventViewColor; label: string; count: number }[];
 }
 
-const TYPE_LABELS: Record<string, string> = {
-    green: "Features",
-    purple: "Improvements",
-    orange: "Fixes",
-    blue: "Launches",
-    gray: "Other",
-};
+const TYPE_LABELS: Record<string, string> = Object.fromEntries(
+    Object.entries(EVENT_TYPE_LABELS).map(([k, v]) => [k, `${v}s`]),
+);
 
 const TYPE_ORDER: EventViewColor[] = ["green", "purple", "orange", "blue", "gray"];
 
@@ -214,7 +210,7 @@ const MonthSummaryCard = ({ data, onMonthClick, onEventClick }: MonthSummaryCard
                             key={event.id}
                             type="button"
                             onClick={() => onEventClick?.(event.id)}
-                            className="flex items-center gap-2 rounded-md px-1.5 py-1 text-left transition duration-100 ease-linear hover:bg-secondary"
+                            className="flex items-center gap-2 rounded-md px-1.5 py-1 cursor-pointer text-left transition duration-100 ease-linear hover:bg-secondary"
                         >
                             {event.avatarUrl && (
                                 <Avatar src={event.avatarUrl} alt="" size="xs" />
@@ -323,7 +319,7 @@ const MonthTimelineSection = ({ data, locale, currentYear, onMonthClick, onEvent
                                     key={event.id}
                                     type="button"
                                     onClick={() => onEventClick?.(event.id)}
-                                    className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-left transition duration-100 ease-linear hover:bg-secondary"
+                                    className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 cursor-pointer text-left transition duration-100 ease-linear hover:bg-secondary"
                                 >
                                     {event.avatarUrl && (
                                         <Avatar src={event.avatarUrl} alt="" size="xs" />
