@@ -148,7 +148,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                     setView("year");
                     break;
                 case "t":
-                    handleToday();
+                    handleNavigate("TODAY");
                     break;
             }
         };
