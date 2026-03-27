@@ -6,7 +6,7 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: Added Sync Pending Stripe Donations tool to gateway settings (beta) and fIX: Fixed some minor PHP warnings and minor CSS issues on dashboard.",
+    "summary": "NEW: Added Sync Pending Stripe Donations tool to gateway settings (beta), fIX: Fixed some minor PHP warnings and minor CSS issues on dashboard, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -28,8 +28,19 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "improvement",
-    "summary": "FIX: Improved Stripe webhook verification and resolved several issues with signing secret setup and auto-migration and fIX: Improved license detection on WordPress multisite subsites.",
+    "summary": "FIX: Improved Stripe webhook verification and resolved several issues with signing secret setup and auto-migration, fIX: Improved license detection on WordPress multisite subsites, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.8.9.1",
+    "title": "Thrive Themes 10.8.9.1",
+    "date": "2026-03-26",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Lightspeed Compatibility: Element styles now display correctly when using the Lightspeed caching plugin and link Typography: Link styling in text elements has been restored to its previous behavior. An improved version will be included in a future update.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/03/v10-8-9-1/",
     "tags": []
   },
   {
@@ -41,6 +52,17 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.8.9",
+    "title": "Thrive Themes 10.8.9",
+    "date": "2026-03-24",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "WooCommerce View Cart Button: The View Cart button renders correctly in WooCommerce shop pages so your store looks exactly as intended, link Typography Consistency: Links in text elements now inherit the correct line-height from surrounding text, keeping your typography consistent without manual adjustments, and 4 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/03/v10-8-9/",
     "tags": []
   },
   {
@@ -61,7 +83,7 @@
     "brand": "Easy Digital Downloads",
     "brandSlug": "easy-digital-downloads",
     "releaseType": "fix",
-    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes and cart: Fixed cart validation when adding multiple items at the same time.",
+    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes, cart: Fixed cart validation when adding multiple items at the same time, and 8 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
@@ -72,7 +94,7 @@
     "brand": "WPForms",
     "brandSlug": "wpforms",
     "releaseType": "fix",
-    "summary": "Added: Users can connect their PayPal Commerce accounts and receive payments via their payment forms and changed: Refactored the Form Builder JavaScript into modular architecture for improved maintainability and performance.",
+    "summary": "Added: Users can connect their PayPal Commerce accounts and receive payments via their payment forms, changed: Refactored the Form Builder JavaScript into modular architecture for improved maintainability and performance, and 11 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
@@ -94,7 +116,7 @@
     "brand": "Easy Digital Downloads",
     "brandSlug": "easy-digital-downloads",
     "releaseType": "fix",
-    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes and cart: Fixed cart validation when adding multiple items at the same time.",
+    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes, cart: Fixed cart validation when adding multiple items at the same time, and 8 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
@@ -105,7 +127,7 @@
     "brand": "WP Simple Pay",
     "brandSlug": "wp-simple-pay",
     "releaseType": "feature",
-    "summary": "New: Added Form Style tab with theme presets, colors, typography, and border radius options to customize payment forms and new: Added Tabs and Accordion display options for payment methods.",
+    "summary": "New: Added Form Style tab with theme presets, colors, typography, and border radius options to customize payment forms, new: Added Tabs and Accordion display options for payment methods, and 9 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
@@ -116,7 +138,7 @@
     "brand": "WPCode",
     "brandSlug": "wpcode",
     "releaseType": "fix",
-    "summary": "Fix: Switching a snippet from shortcode back to auto-insert mode now correctly restores the selected location and fix: Changes made in the Text tab of the visual editor for text snippets are now saved correctly.",
+    "summary": "Fix: Switching a snippet from shortcode back to auto-insert mode now correctly restores the selected location, fix: Changes made in the Text tab of the visual editor for text snippets are now saved correctly, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
     "tags": []
   },
@@ -127,7 +149,7 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: Expanded Import tools with sub-tabs for Charitable, GiveWP, and GiveButter imports including CSV donations import and GiveWP Migration Tool (Beta) and nEW: Redesigned blank slate pages for campaigns and donations.",
+    "summary": "NEW: Expanded Import tools with sub-tabs for Charitable, GiveWP, and GiveButter imports including CSV donations import and GiveWP Migration Tool (Beta), nEW: Redesigned blank slate pages for campaigns and donations, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -138,7 +160,7 @@
     "brand": "PushEngage",
     "brandSlug": "pushengage",
     "releaseType": "feature",
-    "summary": "Added a new Chat Widget Analytics feature for tracking widget and Channel Interactions and enhancements in PushEngage WP Admin screens for better visibility and usability.",
+    "summary": "Added a new Chat Widget Analytics feature for tracking widget and Channel Interactions, enhancements in PushEngage WP Admin screens for better visibility and usability, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
@@ -198,6 +220,17 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.8.8",
+    "title": "Thrive Themes 10.8.8",
+    "date": "2026-03-12",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Expandable Right Sidebar: The right sidebar now has an expanded view that shows text labels alongside icons, making tools easier to find at a glance. Your preference is saved automatically, so the sidebar stays the way you like it every time you open it, cleaner Post List Excerpts: Excerpts in the Post List element display with correct spacing between words and sentences, regardless of how the source content is formatted, and 16 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/03/v10-8-8/",
+    "tags": []
+  },
+  {
     "id": "userfeedback-lite@1.11.0",
     "title": "UserFeedback Lite 1.11.0",
     "date": "2026-03-11",
@@ -226,7 +259,7 @@
     "brand": "AIOSEO",
     "brandSlug": "aioseo",
     "releaseType": "fix",
-    "summary": "Updated: TruSEO analysis content parser for better compatibility and updated: Added custom field smart tag support to the Schema Review Author field.",
+    "summary": "Updated: TruSEO analysis content parser for better compatibility, updated: Added custom field smart tag support to the Schema Review Author field, and 21 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
@@ -281,7 +314,7 @@
     "brand": "Uncanny Automator",
     "brandSlug": "uncanny-automator",
     "releaseType": "improvement",
-    "summary": "[All in One SEO](https://automatorplugin.com/integration/all-in-one-seo/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #6648 and [Cloudflare](https://automatorplugin.com/integration/cloudflare/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #6694.",
+    "summary": "[All in One SEO](https://automatorplugin.com/integration/all-in-one-seo/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #6648, [Cloudflare](https://automatorplugin.com/integration/cloudflare/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #6694, and 84 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
@@ -292,7 +325,7 @@
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "feature",
-    "summary": "New - Added support for Instagram's Media API. This will future-proof the plugin and prevent issues with Instagram deprecating the 'thumbnail_url' from the oEmbed API and fix - Added compatibility with Complianz GDPR plugin.",
+    "summary": "New - Added support for Instagram's Media API. This will future-proof the plugin and prevent issues with Instagram deprecating the 'thumbnail_url' from the oEmbed API, fix - Added compatibility with Complianz GDPR plugin, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
@@ -336,8 +369,19 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: Charitable will add social meta to campaign pages for improved sharing on some social networks (SEO plugins can override this) and fIX: Fixed broken social share URLs for Twitter/X, Pinterest, and improved share link defaults.",
+    "summary": "NEW: Charitable will add social meta to campaign pages for improved sharing on some social networks (SEO plugins can override this), fIX: Fixed broken social share URLs for Twitter/X, Pinterest, and improved share link defaults, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.8.7",
+    "title": "Thrive Themes 10.8.7",
+    "date": "2026-02-24",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Post list sticky posts handling: Fixed an error that occurred when using post lists in Thrive Architect on PHP 8.2+ environments, include sticky header height if present to the offset calculation: When clicking on jumplinks or table of contents items, content now properly scrolls into view below the sticky header instead of being hidden behind it, and 9 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/02/v10-8-7/",
     "tags": []
   },
   {
@@ -358,7 +402,7 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "improvement",
-    "summary": "IMPROVED: Enhanced license validation process with improved performance when downloading Charitable Pro automatically and fIX: Improved email reliability in certain scenarios, especially with certain aggressive WordPress themes.",
+    "summary": "IMPROVED: Enhanced license validation process with improved performance when downloading Charitable Pro automatically, fIX: Improved email reliability in certain scenarios, especially with certain aggressive WordPress themes, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -369,7 +413,7 @@
     "brand": "Envira Gallery",
     "brandSlug": "envira-gallery",
     "releaseType": "improvement",
-    "summary": "Added: Empty state on the All Galleries screen when you have no galleries, with a clear call-to-action to create your first gallery and fixed: Access to the justified gallery theme parameter.",
+    "summary": "Added: Empty state on the All Galleries screen when you have no galleries, with a clear call-to-action to create your first gallery, fixed: Access to the justified gallery theme parameter, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
@@ -380,7 +424,7 @@
     "brand": "Easy Digital Downloads",
     "brandSlug": "easy-digital-downloads",
     "releaseType": "feature",
-    "summary": "NEW: Cron - Cron events are now more reliable and based on Action Scheduler and cart: Fixed an unused variable in the cart class.",
+    "summary": "NEW: Cron - Cron events are now more reliable and based on Action Scheduler, cart: Fixed an unused variable in the cart class, and 19 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
@@ -435,7 +479,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: See your store's performance in more detail with our 5 new reports and updated: Launch Google Ads campaigns from any version of MonsterInsights.",
+    "summary": "New: See your store's performance in more detail with our 5 new reports, updated: Launch Google Ads campaigns from any version of MonsterInsights, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -446,7 +490,7 @@
     "brand": "WPForms",
     "brandSlug": "wpforms",
     "releaseType": "fix",
-    "summary": "Added: WordPress Abilities API integration for AI and automation-ready access to WPForms and added: Ability to generate Quiz-enabled forms using the AI Form generator.",
+    "summary": "Added: WordPress Abilities API integration for AI and automation-ready access to WPForms, added: Ability to generate Quiz-enabled forms using the AI Form generator, and 15 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
@@ -457,7 +501,7 @@
     "brand": "Envira Gallery",
     "brandSlug": "envira-gallery",
     "releaseType": "fix",
-    "summary": "Fixed: Added ABSPATH security checks to all admin and partial files to prevent direct file access and fixed: Added missing text domain parameters to all translation strings throughout the plugin.",
+    "summary": "Fixed: Added ABSPATH security checks to all admin and partial files to prevent direct file access, fixed: Added missing text domain parameters to all translation strings throughout the plugin, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
@@ -473,13 +517,24 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.8.6",
+    "title": "Thrive Themes 10.8.6",
+    "date": "2026-01-21",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Data Cleanup Tool: Bulk delete old reporting and user data to keep your database clean and optimized, course List Carousel Updates: The carousel keeps working when you change the number of elements to display, and 18 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/01/v10-8-6/",
+    "tags": []
+  },
+  {
     "id": "easy-digital-downloads@3.6.4",
     "title": "Easy Digital Downloads 3.6.4",
     "date": "2026-01-15",
     "brand": "Easy Digital Downloads",
     "brandSlug": "easy-digital-downloads",
     "releaseType": "feature",
-    "summary": "New: Manage logs with the Log Retention Settings and admin: Some help icons could get duplicated.",
+    "summary": "New: Manage logs with the Log Retention Settings, admin: Some help icons could get duplicated, and 6 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
@@ -501,7 +556,7 @@
     "brand": "Easy Digital Downloads",
     "brandSlug": "easy-digital-downloads",
     "releaseType": "improvement",
-    "summary": "Blocks: Updating handling of Password Reset redirect and checkout: Improved form data handling for AJAX based checkouts.",
+    "summary": "Blocks: Updating handling of Password Reset redirect, checkout: Improved form data handling for AJAX based checkouts, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
@@ -534,7 +589,7 @@
     "brand": "Envira Gallery",
     "brandSlug": "envira-gallery",
     "releaseType": "fix",
-    "summary": "Added new Pro templates in layout chooser: Grid Fixed Title and Vertical Line Grid (with new preview images) and added improved Gutenberg block empty-state UX: clearer “no galleries” messaging, Create/Add New Gallery CTA, and refreshed upload/media library UI.",
+    "summary": "Added new Pro templates in layout chooser: Grid Fixed Title and Vertical Line Grid (with new preview images), added improved Gutenberg block empty-state UX: clearer “no galleries” messaging, Create/Add New Gallery CTA, and refreshed upload/media library UI, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
@@ -556,7 +611,7 @@
     "brand": "Envira Gallery",
     "brandSlug": "envira-gallery",
     "releaseType": "feature",
-    "summary": "Added: Show likes text on comments tab and added: TikTok Videos as gallery source.",
+    "summary": "Added: Show likes text on comments tab, added: TikTok Videos as gallery source, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
@@ -567,7 +622,7 @@
     "brand": "Sugar Calendar",
     "brandSlug": "sugar-calendar",
     "releaseType": "feature",
-    "summary": "Added: Massive improvements to our Elementor integration. This includes many new Sugar Calendar Widgets for Elementor, Theme Builder support, and Loop Grid support and added: Support to Excerpt in Events.",
+    "summary": "Added: Massive improvements to our Elementor integration. This includes many new Sugar Calendar Widgets for Elementor, Theme Builder support, and Loop Grid support, added: Support to Excerpt in Events, and 6 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
@@ -594,13 +649,24 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.8.5",
+    "title": "Thrive Themes 10.8.5",
+    "date": "2025-12-16",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Advanced Tag Management: You can now create, select, and manage tags directly within Thrive Architect for supported platforms. No need to switch back and forth between your email service provider and WordPress!, enhanced Custom Field Mapping: Map your form fields to custom fields in your email service provider, giving you more control over the data you collect and how it&#8217;s organized in your marketing platform, and 34 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/12/v10-8-5/",
+    "tags": []
+  },
+  {
     "id": "custom-facebook-feed@4.3.4",
     "title": "Smash Balloon Social Post Feed 4.3.4",
     "date": "2025-12-11",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "fix",
-    "summary": "Fix: Plugin security hardening and fix: Fixed an issue with the review notice not being dismissible.",
+    "summary": "Fix: Plugin security hardening, fix: Fixed an issue with the review notice not being dismissible, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
@@ -611,7 +677,7 @@
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "feature",
-    "summary": "New - Added support for a new GDPR consent plugin [WPConsent](https://wpconsent.com/?utm_campaign=twitter-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement) and new - Added support for GDPR Cookie Compliance by Moove Agency and Real Cookie Banner GDPR plugins.",
+    "summary": "New - Added support for a new GDPR consent plugin [WPConsent](https://wpconsent.com/?utm_campaign=twitter-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement), new - Added support for GDPR Cookie Compliance by Moove Agency and Real Cookie Banner GDPR plugins, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
     "tags": []
   },
@@ -622,7 +688,7 @@
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "fix",
-    "summary": "Tweak: Improved SEO by changing Load More, Close, and Cancel buttons to div elements and fix: Resolved translation loading issue (_load_textdomain_just_in_time warning).",
+    "summary": "Tweak: Improved SEO by changing Load More, Close, and Cancel buttons to div elements, fix: Resolved translation loading issue (_load_textdomain_just_in_time warning), and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
     "tags": []
   },
@@ -633,7 +699,7 @@
     "brand": "SearchWP",
     "brandSlug": "searchwp",
     "releaseType": "improvement",
-    "summary": "Updated compatibility with WP 6.9 and adds ARIA attributes to the search forms.",
+    "summary": "Updated compatibility with WP 6.9, adds ARIA attributes to the search forms, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
     "tags": []
   },
@@ -671,13 +737,24 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.8.4",
+    "title": "Thrive Themes 10.8.4",
+    "date": "2025-12-03",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Members List Access Display: Fixed an issue where the Members list wouldn&#8217;t display users who have access when a product isn&#8217;t restricting a course. Your member access information now appears correctly in all scenarios, video Cover Play Button Fix: Videos with video covers now play immediately when you click the play button!, and 13 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/12/v10-8-4/",
+    "tags": []
+  },
+  {
     "id": "stripe@4.16.1",
     "title": "WP Simple Pay 4.16.1",
     "date": "2025-12-01",
     "brand": "WP Simple Pay",
     "brandSlug": "wp-simple-pay",
     "releaseType": "feature",
-    "summary": "New: Added a “Display Type” setting to switch the payment method layout between Tabs and Accordion and update: Added the `simpay_show_card_field_label` filter to display a label for the Card Element field.",
+    "summary": "New: Added a “Display Type” setting to switch the payment method layout between Tabs and Accordion, update: Added the `simpay_show_card_field_label` filter to display a label for the Card Element field, and 5 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
@@ -710,7 +787,7 @@
     "brand": "PushEngage",
     "brandSlug": "pushengage",
     "releaseType": "feature",
-    "summary": "Added a multichannel Chat widget enabling users to start conversations across multiple platforms and added filter for WooCommerce Order Push Notification dynamic replacement variables.",
+    "summary": "Added a multichannel Chat widget enabling users to start conversations across multiple platforms, added filter for WooCommerce Order Push Notification dynamic replacement variables, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
@@ -737,13 +814,24 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.8.3",
+    "title": "Thrive Themes 10.8.3",
+    "date": "2025-11-18",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Countdown Evergreen Timer Fixed: Fixed an issue where the Evergreen Countdown timer would show &#8220;NaN&#8221; instead of the correct time remaining, memberMouse Smart Tags Working Again: Fixed an issue where MemberMouse smart tags weren&#8217;t working properly in pages created with Thrive Architect. Your dynamic content will now display exactly as expected, and 4 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-3/",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@9.10.0",
     "title": "MonsterInsights 9.10.0",
     "date": "2025-11-17",
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Sync site annotations with GA4 automatically and new: Create custom conversions in GA and access detailed event tracking reports.",
+    "summary": "New: Sync site annotations with GA4 automatically, new: Create custom conversions in GA and access detailed event tracking reports, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -776,7 +864,7 @@
     "brand": "PushEngage",
     "brandSlug": "pushengage",
     "releaseType": "feature",
-    "summary": "Added new attributes and subscriber fields UI and added support for using shortcodes in WhatsApp templates.",
+    "summary": "Added new attributes and subscriber fields UI, added support for using shortcodes in WhatsApp templates, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
@@ -787,8 +875,19 @@
     "brand": "Uncanny Owl",
     "brandSlug": "uncanny-owl",
     "releaseType": "improvement",
-    "summary": "Frontend Login - New \"Modern theme\" with colour selectors to customize the login form and implemented new, standardized Uncanny Owl admin UI theme.",
+    "summary": "Frontend Login - New \"Modern theme\" with colour selectors to customize the login form, implemented new, standardized Uncanny Owl admin UI theme, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.8.2",
+    "title": "Thrive Themes 10.8.2",
+    "date": "2025-11-04",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Lightning-Fast Checkout: We&#8217;ve brought the payment process directly onto your site. Your customers can now complete their purchase seamlessly and without leaving the page. Say goodbye to annoying redirects and hello to more completed sales!, more Accurate Access Timing for WooCommerce Drip Campaigns: The drip and expiration timing for courses and products sold via WooCommerce will now start based on when the user actually receives access (e.g., upon successful completion of a bank transfer order), not just the order date. This ensures your customers always get their full access period, and 9 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-2/",
     "tags": []
   },
   {
@@ -798,8 +897,19 @@
     "brand": "WP Simple Pay",
     "brandSlug": "wp-simple-pay",
     "releaseType": "feature",
-    "summary": "New: Added support for MobilePay, BECS Direct Debit, PromptPay, and WeChat Pay payment methods and update: Activity & Reports - Stripe Balance component now supports Test Mode.",
+    "summary": "New: Added support for MobilePay, BECS Direct Debit, PromptPay, and WeChat Pay payment methods, update: Activity & Reports - Stripe Balance component now supports Test Mode, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.8.1.1",
+    "title": "Thrive Themes 10.8.1.1",
+    "date": "2025-10-28",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "The Case of the Missing Lists and Tags: We fixed an issue where available lists and tags were playing hide-and-seek when you tried to connect your forms to your email provider. They&#8217;re back, they&#8217;re accounted for, and all your existing forms will automatically work correctly without you having to lift a finger!, webhook Power-Up for File Uploads: A genuine improvement this time! You can now send any files uploaded via your Thrive Architect forms straight to external services using webhooks. More flexibility for collecting all the user data you need!, and 3 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/10/v10-8-1-1/",
     "tags": []
   },
   {
@@ -820,7 +930,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Unlock new organic traffic insights with our completely updated Google Search Console report and new: Automatically track eCommerce sales with LinkedIn and SnapChat PPC campaigns-.",
+    "summary": "New: Unlock new organic traffic insights with our completely updated Google Search Console report, new: Automatically track eCommerce sales with LinkedIn and SnapChat PPC campaigns-, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -842,7 +952,7 @@
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "improvement",
-    "summary": "Fix: Cleaned up legacy code to enhance overall security and fix: Resolved _load_textdomain_just_in_time issue to improve localization handling.",
+    "summary": "Fix: Cleaned up legacy code to enhance overall security, fix: Resolved _load_textdomain_just_in_time issue to improve localization handling, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
@@ -875,8 +985,30 @@
     "brand": "Sugar Calendar",
     "brandSlug": "sugar-calendar",
     "releaseType": "fix",
-    "summary": "Added: Shortcode generator for the classical editor and changed: Filter dropdown in Calendar and List blocks/shortcodes.",
+    "summary": "Added: Shortcode generator for the classical editor, changed: Filter dropdown in Calendar and List blocks/shortcodes, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.8",
+    "title": "Thrive Themes 10.8",
+    "date": "2025-09-30",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Expanded Field Mapping: Map system fields (Email, Name, etc.,) and custom fields across the 11 platforms below, when supported by the platform, directly in the Form’s settings, lists & Tags Management: Assign submissions to specific lists and tags directly through API connections. Select from existing options or create new ones where the platform allows, and 31 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-8/",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.7.5",
+    "title": "Thrive Themes 10.7.5",
+    "date": "2025-09-16",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Fixed: Dynamic post permalink shortcodes now work correctly without causing 404 errors, enhanced: Featured Content list now supports &#8220;Filter Posts&#8221; functionality, enabling sticky posts on Blog index pages, and 5 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-7-5/",
     "tags": []
   },
   {
@@ -886,7 +1018,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Google Ads Integration! Set up Google Ads campaigns directly from the MonsterInsights dashboard and new: AI Traffic Report - see what LLMs are sending traffic to your website.",
+    "summary": "New: Google Ads Integration! Set up Google Ads campaigns directly from the MonsterInsights dashboard, new: AI Traffic Report - see what LLMs are sending traffic to your website, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -897,7 +1029,7 @@
     "brand": "Sugar Calendar",
     "brandSlug": "sugar-calendar",
     "releaseType": "fix",
-    "summary": "Fixed: Single event page Timezone display, when enabled and fixed: Tags filter in Events Calendar admin page.",
+    "summary": "Fixed: Single event page Timezone display, when enabled, fixed: Tags filter in Events Calendar admin page, and 10 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
@@ -910,6 +1042,17 @@
     "releaseType": "feature",
     "summary": "New: Google Spreadsheets integration! Automatically store your Survey replies in a Google Spreadsheet and fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.7.4",
+    "title": "Thrive Themes 10.7.4",
+    "date": "2025-09-02",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Fixed: Post list carousels inside conditional displays now properly show featured images, enhanced: Testimonial carousel functionality within Conditional Display Blocks to prevent parsing conflicts, and 8 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-7-4/",
     "tags": []
   },
   {
@@ -930,8 +1073,19 @@
     "brand": "PushEngage",
     "brandSlug": "pushengage",
     "releaseType": "feature",
-    "summary": "Added WooCommerce Automation page, new UI for consistency in managing WooCommerce Integrations and added a new tags filter for push broadcast notifications list.",
+    "summary": "Added WooCommerce Automation page, new UI for consistency in managing WooCommerce Integrations, added a new tags filter for push broadcast notifications list, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.7.3",
+    "title": "Thrive Themes 10.7.3",
+    "date": "2025-08-19",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Fixed: Category title size and color persistence issues have been resolved, enhanced: Stripe integration stability for more reliable payments, and 12 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/08/v10-7-3/",
     "tags": []
   },
   {
@@ -941,7 +1095,7 @@
     "brand": "WP Simple Pay",
     "brandSlug": "wp-simple-pay",
     "releaseType": "improvement",
-    "summary": "Update: Added more details to the System Report and fix: Added support for 4-digit card numbers in the {card-last4} smart tag for Stripe Checkout one-time payments.",
+    "summary": "Update: Added more details to the System Report, fix: Added support for 4-digit card numbers in the {card-last4} smart tag for Stripe Checkout one-time payments, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
@@ -974,7 +1128,7 @@
     "brand": "WP Simple Pay",
     "brandSlug": "wp-simple-pay",
     "releaseType": "improvement",
-    "summary": "Fix: Optional recurring price option and fix: Restored maximum value field for custom amounts.",
+    "summary": "Fix: Optional recurring price option, fix: Restored maximum value field for custom amounts, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
@@ -1029,7 +1183,7 @@
     "brand": "Soliloquy",
     "brandSlug": "soliloquy",
     "releaseType": "feature",
-    "summary": "Fixed: Render same short code multiple times and added: `webp` and `heic` image support.",
+    "summary": "Fixed: Render same short code multiple times, added: `webp` and `heic` image support, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
     "tags": []
   },
@@ -1051,8 +1205,19 @@
     "brand": "WP Mail SMTP",
     "brandSlug": "wp-mail-smtp",
     "releaseType": "feature",
-    "summary": "IMPORTANT: Support for PHP 7.2 has been discontinued. If you are running this version, you MUST upgrade PHP before installing or upgrading to WP Mail SMTP v4.5. Failure to do that will disable WP Mail SMTP functionality and added: New transactional mailer: MailerSend integration.",
+    "summary": "IMPORTANT: Support for PHP 7.2 has been discontinued. If you are running this version, you MUST upgrade PHP before installing or upgrading to WP Mail SMTP v4.5. Failure to do that will disable WP Mail SMTP functionality, added: New transactional mailer: MailerSend integration, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.7",
+    "title": "Thrive Themes 10.7",
+    "date": "2025-06-03",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "More Payment Options for Your Students: Offer a widely recognized and secure way for your users to purchase your courses, seamless Checkout: Provide a smooth and trustworthy payment experience, making it easier for users to enroll, and 10 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/06/version-10-7-released/",
     "tags": []
   },
   {
@@ -1084,7 +1249,7 @@
     "brand": "SearchWP",
     "brandSlug": "searchwp",
     "releaseType": "improvement",
-    "summary": "Updates deprecated jQuery methods and improved results' dropdown alignment with Gutenberg search block.",
+    "summary": "Updates deprecated jQuery methods, improved results' dropdown alignment with Gutenberg search block, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
     "tags": []
   },
@@ -1111,6 +1276,17 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.6.2",
+    "title": "Thrive Themes 10.6.2",
+    "date": "2025-05-14",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Fix: The date picker is not working when Thrive Theme Builder is active, fix: Importing Users via CSV or List of Names sends multiple &#8220;New Account&#8221; emails from WordPress, and 15 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/05/version-10-6-2-released/",
+    "tags": []
+  },
+  {
     "id": "affiliatewp-allowed-products@1.3.0",
     "title": "AffiliateWP Allowed Products 1.3.0",
     "date": "2025-05-08",
@@ -1128,7 +1304,7 @@
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "fix",
-    "summary": "Important - Added accessibility improvements related to the front-end feed display. This may affect custom code applied to the feed. Please check and reach out to support if you need help and important - To comply with Meta's security standards, we have raised the minimum PHP version to 7.4.",
+    "summary": "Important - Added accessibility improvements related to the front-end feed display. This may affect custom code applied to the feed. Please check and reach out to support if you need help, important - To comply with Meta's security standards, we have raised the minimum PHP version to 7.4, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
@@ -1221,6 +1397,17 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.6.1",
+    "title": "Thrive Themes 10.6.1",
+    "date": "2025-04-08",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Automator UI changes: As we continue to grow and expand our product suite, We&#8217;ve made the strategic decision to retire Thrive Automator and partner with our sister brand, Uncanny Automator and fix: Fonts can be installed/uploaded by Admin user role.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/04/version-10-6-1-released/",
+    "tags": []
+  },
+  {
     "id": "cookie-notice-and-consent-banner@1.7.8",
     "title": "WPConsent 1.7.8",
     "date": "2025-04-03",
@@ -1254,6 +1441,17 @@
     "tags": []
   },
   {
+    "id": "thrive-themes@10.6",
+    "title": "Thrive Themes 10.6",
+    "date": "2025-03-27",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Support WordPress Font Library: We have implemented support for WordPress Font Library features in TAR and TTB. Customers can access native WordPress Fonts Library features from the ThriveThemes Dashboard. Clicking Manage Fonts will redirect users to the Fonts library page, where they can manage their fonts, fix: TQB quiz takes around 20 25 seconds to show the result page, and 4 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/03/version-10-6-released/",
+    "tags": []
+  },
+  {
     "id": "optinmonster@2.16.18",
     "title": "OptinMonster 2.16.18",
     "date": "2025-03-26",
@@ -1282,7 +1480,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Support for TikTok PPC conversion tracking and enhancement: Adding translatable strings throughout our plugin. More to come!.",
+    "summary": "New: Support for TikTok PPC conversion tracking, enhancement: Adding translatable strings throughout our plugin. More to come!, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1315,8 +1513,19 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Overview Report Metrics and new: Cart Abandonment Report.",
+    "summary": "New: Overview Report Metrics, new: Cart Abandonment Report, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.5",
+    "title": "Thrive Themes 10.5",
+    "date": "2025-01-28",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Lead Generation now has a Country/State field(s): You can now add a country field to your form and choose to enable the State field and add states for that country, too. Choose between displaying all of them or just including or excluding some; it&#8217;s your choice, lead Generation now supports custom fields with Zapier: one of the most requested features is live and ready for you &#8211; Zapier integration with Lead Gen forms and any custom fields that you add to better pass data to your third-party services, and 11 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2025/01/version-10-5-released/",
     "tags": []
   },
   {
@@ -1326,7 +1535,7 @@
     "brand": "SearchWP",
     "brandSlug": "searchwp",
     "releaseType": "improvement",
-    "summary": "Adds support for SearchWP multisite search and improves search results dropdown role attribute, for better accessibility.",
+    "summary": "Adds support for SearchWP multisite search, improves search results dropdown role attribute, for better accessibility, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
     "tags": []
   },
@@ -1337,7 +1546,7 @@
     "brand": "UserFeedback",
     "brandSlug": "userfeedback",
     "releaseType": "feature",
-    "summary": "New: Image and Icon question types and new: Conditional Redirect options.",
+    "summary": "New: Image and Icon question types, new: Conditional Redirect options, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
     "tags": []
   },
@@ -1372,6 +1581,17 @@
     "releaseType": "feature",
     "summary": "New: Advanced Targeting Options and fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.4",
+    "title": "Thrive Themes 10.4",
+    "date": "2024-12-11",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Integrate Zapier with LG Custom Fields: You can now send custom fields to your Zapier zaps for greater flexibility and increased integration opportunities, course Level Grading in your Thrive Apprentice Courses will provide course owners with structured a way to issue an “overall course grade” for their members based on the results of assessments throughout the course with all the flexibility you expect, and 25 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2024/12/version-10-4-released/",
     "tags": []
   },
   {
@@ -1436,8 +1656,19 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Country and region report to see where and how your visitors find your website and new: Advanced tracking options for users of Google Tag Manager.",
+    "summary": "New: Country and region report to see where and how your visitors find your website, new: Advanced tracking options for users of Google Tag Manager, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.3",
+    "title": "Thrive Themes 10.3",
+    "date": "2024-10-22",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "feature",
+    "summary": "Vertical Tabs in Thrive Architect: Vertical just got even better with an improve mobile experience for your customers! Read more about Wrap to Toggle View at Breakpoint, new beautiful tab templates &#8211; We have released some new tabs templates for you to check out!, and 11 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2024/10/version-10-3-released/",
     "tags": []
   },
   {
@@ -1449,6 +1680,17 @@
     "releaseType": "improvement",
     "summary": "Prevents issues with caching plugins in some cases and adds support for loading a custom template from a user specified directory path.",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.2",
+    "title": "Thrive Themes 10.2",
+    "date": "2024-09-26",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Vertical Tabs in Thrive Architect: Our single most requested feature is finally live for you to use! You can now choose between horizontal and vertical tabs. There&#8217;s also more to come and new exciting templates in the works!, thrive Notifications in WordPress Dashboard: A brand new notifications engine to keep you informed of all important updates related to your Thrive products, and 11 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2024/09/version-10-2-released/",
     "tags": []
   },
   {
@@ -1469,7 +1711,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Stats at a Glance report shows you information about your website in a whole new way and new: Google Ads Enhanced Conversion Support & Meta Conversion API Support (CAPI) for PPC Campaigns.",
+    "summary": "New: Stats at a Glance report shows you information about your website in a whole new way, new: Google Ads Enhanced Conversion Support & Meta Conversion API Support (CAPI) for PPC Campaigns, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1482,6 +1724,28 @@
     "releaseType": "fix",
     "summary": "Fixed: Gutenberg block not displaying on site editor.",
     "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.1",
+    "title": "Thrive Themes 10.1",
+    "date": "2024-08-27",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "New Date/Time field for the Lead Generation element: You can now add a date/time picker to your lead generation forms, updated Apprentice Drip to include unlock time(s): You can now specify the time that content will be released to your customers/students, and 10 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2024/08/version-10-1-released/",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.0",
+    "title": "Thrive Themes 10.0",
+    "date": "2024-08-26",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "New Thrive Spam Protection: Released our new native honeypot system keeps your lead generation forms clean without hassling real users, cloudFlare Turnstile Spam Integration: Released our integration with CloudFlare Turnstile, an alternative to Google ReCaptcha, to be used with your lead generation forms, and 13 more changes.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2024/08/version-10-0-released/",
     "tags": []
   },
   {
@@ -1502,7 +1766,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Conversations AI - chat with your website's analytics without any need to read reports and new: AI Insights - Get automated insights about your website with the power of AI.",
+    "summary": "New: Conversations AI - chat with your website's analytics without any need to read reports, new: AI Insights - Get automated insights about your website with the power of AI, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1590,7 +1854,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Site Notes Automations addon and fix: We fixed an issue related to eCommerce abandoned checkouts.",
+    "summary": "New: Site Notes Automations addon, fix: We fixed an issue related to eCommerce abandoned checkouts, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1601,7 +1865,7 @@
     "brand": "UserFeedback",
     "brandSlug": "userfeedback",
     "releaseType": "fix",
-    "summary": "Enhancement: We have improved the trigger for a user's exit intent to show Surveys and fix: We fixed an issue occurring in the API survey/responses endpoint.",
+    "summary": "Enhancement: We have improved the trigger for a user's exit intent to show Surveys, fix: We fixed an issue occurring in the API survey/responses endpoint, and 6 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
     "tags": []
   },
@@ -1612,7 +1876,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Added new Exceptions Report and new: Added new Google Consent support.",
+    "summary": "New: Added new Exceptions Report, new: Added new Google Consent support, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1634,7 +1898,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "improvement",
-    "summary": "Enhancement: Improved Site Speed report and fix: We solved an issue related to flag icons.",
+    "summary": "Enhancement: Improved Site Speed report, fix: We solved an issue related to flag icons, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1678,7 +1942,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Site Insights Gutenberg block. Easily share website stats with your visitors and new: PrivacyGuard Feature - Proactively block PII (Personally Identifiable Information) from ever making it to Google Analytics.",
+    "summary": "New: Site Insights Gutenberg block. Easily share website stats with your visitors, new: PrivacyGuard Feature - Proactively block PII (Personally Identifiable Information) from ever making it to Google Analytics, and 4 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1711,7 +1975,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Our Year In Review report is here. This report will automatically show up starting in January 1 until Jan 14 2024 and fix: We fixed an issue occurring with Site Notes.",
+    "summary": "New: Our Year In Review report is here. This report will automatically show up starting in January 1 until Jan 14 2024, fix: We fixed an issue occurring with Site Notes, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1722,7 +1986,7 @@
     "brand": "UserFeedback",
     "brandSlug": "userfeedback",
     "releaseType": "fix",
-    "summary": "Enhancement: We improved compatibility towards WordPress 6.4.1 and enhancement: We have improved some elements of the UI.",
+    "summary": "Enhancement: We improved compatibility towards WordPress 6.4.1, enhancement: We have improved some elements of the UI, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
     "tags": []
   },
@@ -1733,7 +1997,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "fix",
-    "summary": "Enhancement: Improved Social Media report and fix: We fixed the View More link in the Email Summaries.",
+    "summary": "Enhancement: Improved Social Media report, fix: We fixed the View More link in the Email Summaries, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1744,7 +2008,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Social Media report and new: Exclude query parameters from GA4 data stream.",
+    "summary": "New: Social Media report, new: Exclude query parameters from GA4 data stream, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1788,7 +2052,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "fix",
-    "summary": "New: Google Analytics and eCommerce support for WishList Member and new: Google Analytics and eCommerce support for WPCharitable.",
+    "summary": "New: Google Analytics and eCommerce support for WishList Member, new: Google Analytics and eCommerce support for WPCharitable, and 6 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1799,7 +2063,7 @@
     "brand": "UserFeedback",
     "brandSlug": "userfeedback",
     "releaseType": "fix",
-    "summary": "New: We upgraded the User Feedback UI to make creating, editing, and asking for user feedback easier to use and fixed: Squashed a PHP 8 error some user feedback users were having on preview page.",
+    "summary": "New: We upgraded the User Feedback UI to make creating, editing, and asking for user feedback easier to use, fixed: Squashed a PHP 8 error some user feedback users were having on preview page, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
     "tags": []
   },
@@ -1810,7 +2074,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Ecommerce funnel report for WooCommerce and Easy Digital Downloads and new: Setup checklist to get up and running faster.",
+    "summary": "New: Ecommerce funnel report for WooCommerce and Easy Digital Downloads, new: Setup checklist to get up and running faster, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1832,7 +2096,7 @@
     "brand": "UserFeedback",
     "brandSlug": "userfeedback",
     "releaseType": "feature",
-    "summary": "New: Widget Customizer preview mode and update: We improved the OnBoarding process.",
+    "summary": "New: Widget Customizer preview mode, update: We improved the OnBoarding process, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
     "tags": []
   },
@@ -1843,7 +2107,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "fix",
-    "summary": "New: Added 6 Completely New Pro Reports to bring the power of Google Analytics into your WordPress dashboard and fixed: We fixed an issue that prevented tracking with WPML.",
+    "summary": "New: Added 6 Completely New Pro Reports to bring the power of Google Analytics into your WordPress dashboard, fixed: We fixed an issue that prevented tracking with WPML, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1865,7 +2129,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "fix",
-    "summary": "Updated: Removed dual tracking panel and limit reporting to GA4 only properties and fixed: We fixed a bug in the WPForms integration.",
+    "summary": "Updated: Removed dual tracking panel and limit reporting to GA4 only properties, fixed: We fixed a bug in the WPForms integration, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1876,7 +2140,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "fix",
-    "summary": "New: User Journey report now available! See all of your website's purchases in one screen and update: We updated the Popular Posts to support themes that allow widgets.",
+    "summary": "New: User Journey report now available! See all of your website's purchases in one screen, update: We updated the Popular Posts to support themes that allow widgets, and 3 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1920,7 +2184,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "feature",
-    "summary": "New: Site Notes allows you to record important website events right inside your WordPress dashboard and update: Fix EDD integration.",
+    "summary": "New: Site Notes allows you to record important website events right inside your WordPress dashboard, update: Fix EDD integration, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -1975,7 +2239,7 @@
     "brand": "MonsterInsights",
     "brandSlug": "monsterinsights",
     "releaseType": "fix",
-    "summary": "Enhancement: We enhanced the notifications user experience and fixed: We fixed the PDF reports header.",
+    "summary": "Enhancement: We enhanced the notifications user experience, fixed: We fixed the PDF reports header, and 1 more change.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
@@ -2052,7 +2316,7 @@
     "brand": "SeedProd",
     "brandSlug": "seedprod",
     "releaseType": "feature",
-    "summary": "Added - Column Alignment Controls and added - Divice Visibility Controls.",
+    "summary": "Added - Column Alignment Controls, added - Divice Visibility Controls, and 2 more changes.",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },

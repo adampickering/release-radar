@@ -1,21 +1,15 @@
 // src/releases/ingest-wp-org-releases.ts
-import { mkdir, writeFile } from 'fs/promises'
-import path from 'path'
-import { fileURLToPath } from 'url'
 import { wpOrgSources } from './sources/wp-org-sources'
 import { fetchWpOrgReadme } from './fetchers/fetch-wp-org-readme'
 import { fetchSvnTagDate } from './fetchers/fetch-svn-tag-date'
 import { normalizeWpOrgRelease } from './normalizers/normalize-wp-org-release'
-import type { ParsedReleaseItem, ParserWarning } from './types'
+import type { IngestionResult, ParsedReleaseItem } from './types'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const OUTPUT_DIR = path.resolve(__dirname, 'output')
-
-async function main() {
+export async function ingestWpOrgReleases(): Promise<IngestionResult> {
   const allReleases: ParsedReleaseItem[] = []
-  const allWarnings: ParserWarning[] = []
+  const allWarnings: IngestionResult['warnings'] = []
 
-  console.log(`Starting ingestion for ${wpOrgSources.length} sources...\n`)
+  console.log(`[WP.org] Starting ingestion for ${wpOrgSources.length} sources...\n`)
 
   for (const source of wpOrgSources) {
     const label = `${source.brand} (${source.pluginSlug})`
@@ -69,7 +63,6 @@ async function main() {
     let fetched = 0
 
     for (const [pluginSlug, releases] of byPlugin) {
-      // Only fetch dates for the latest 5 versions per plugin
       const toFetch = releases.slice(0, 5)
       for (const release of toFetch) {
         const date = await fetchSvnTagDate(pluginSlug, release.version)
@@ -84,52 +77,5 @@ async function main() {
     console.log(`  Resolved ${fetched} of ${totalToFetch} dates from SVN`)
   }
 
-  // Write full pipeline output
-  await mkdir(OUTPUT_DIR, { recursive: true })
-
-  const releasesPath = path.join(OUTPUT_DIR, 'releases.json')
-  await writeFile(releasesPath, JSON.stringify(allReleases, null, 2), 'utf-8')
-
-  const warningsPath = path.join(OUTPUT_DIR, 'warnings.json')
-  await writeFile(warningsPath, JSON.stringify(allWarnings, null, 2), 'utf-8')
-
-  // Generate UI-ready data: filter to releases with dates, transform to ReleaseItem shape
-  const uiReleases = allReleases
-    .filter(r => r.date)
-    .map(r => ({
-      id: r.id,
-      title: r.title,
-      date: r.date!,
-      brand: r.brand,
-      brandSlug: r.brandSlug,
-      releaseType: r.releaseType === 'experiment' ? 'improvement' : r.releaseType,
-      summary: r.summary,
-      changelogUrl: r.changelogUrl,
-      tags: r.tags,
-    }))
-    .sort((a, b) => b.date.localeCompare(a.date))
-
-  const uiReleasesPath = path.join(OUTPUT_DIR, 'ui-releases.json')
-  await writeFile(uiReleasesPath, JSON.stringify(uiReleases, null, 2), 'utf-8')
-
-  // Summary
-  console.log('\n--- Ingestion Complete ---')
-  console.log(`  Total releases:    ${allReleases.length}`)
-  console.log(`  With dates:        ${allReleases.filter(r => r.date).length}`)
-  console.log(`  UI-ready releases: ${uiReleases.length}`)
-  console.log(`  Warnings:          ${allWarnings.length}`)
-  console.log(`  Output:            ${releasesPath}`)
-  console.log(`  UI output:         ${uiReleasesPath}`)
-
-  if (allWarnings.length > 0) {
-    console.log('\nWarnings:')
-    for (const w of allWarnings) {
-      console.log(`  [${w.code}] ${w.pluginSlug}: ${w.message}`)
-    }
-  }
+  return { releases: allReleases, warnings: allWarnings }
 }
-
-main().catch((err) => {
-  console.error('Fatal error:', err)
-  process.exit(1)
-})
