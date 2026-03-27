@@ -30,6 +30,19 @@ export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOpti
             year: "numeric",
         };
 
+        if (selectedView === "year") {
+            const year = date.getFullYear();
+            const now = new Date();
+            const endDate = year === now.getFullYear() ? now : new Date(year, 11, 31);
+            return (
+                <span className="text-sm text-tertiary">
+                    {new Date(year, 0, 1).toLocaleDateString(locale, dateFormatOptions)}
+                    {" – "}
+                    {endDate.toLocaleDateString(locale, dateFormatOptions)}
+                </span>
+            );
+        }
+
         if (selectedView === "month") {
             return (
                 <span className="text-sm text-tertiary">
@@ -63,10 +76,15 @@ export const CalendarHeader = ({ date, selectedView, onSelectionChange, viewOpti
                 <CalendarDateIcon day={date.getDate()} month={date.toLocaleString(locale, { month: "short" }).toUpperCase()} className="max-md:hidden" />
                 <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2 text-lg font-semibold whitespace-nowrap text-primary">
-                        {date.toLocaleString(locale, { month: "long" })} {date.getFullYear()}
-                        <Badge size="sm" color="gray" type="modern">
-                            Week {(() => { const d = new Date(date); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + 3 - ((d.getDay() + 6) % 7)); const yearStart = new Date(d.getFullYear(), 0, 1); return Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7); })()}
-                        </Badge>
+                        {selectedView === "year"
+                            ? date.getFullYear()
+                            : <>{date.toLocaleString(locale, { month: "long" })} {date.getFullYear()}</>
+                        }
+                        {selectedView !== "year" && (
+                            <Badge size="sm" color="gray" type="modern">
+                                Week {(() => { const d = new Date(date); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + 3 - ((d.getDay() + 6) % 7)); const yearStart = new Date(d.getFullYear(), 0, 1); return Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7); })()}
+                            </Badge>
+                        )}
                     </div>
 
                     {renderPeriod()}
