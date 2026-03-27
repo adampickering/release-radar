@@ -42,10 +42,13 @@ export function normalizeWpRestRelease(
       continue
     }
 
-    // Merge all product bullets into a single release per version
+    // Merge all product bullets into a single release per version,
+    // prefixing each bullet with its product heading
     const allBullets: string[] = []
     for (const block of productBlocks) {
-      allBullets.push(...block.bullets)
+      for (const bullet of block.bullets) {
+        allBullets.push(`${block.productHeading}: ${bullet}`)
+      }
     }
 
     releases.push({
