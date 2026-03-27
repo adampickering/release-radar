@@ -1,4 +1,4 @@
-name: Ingest WP.org releases
+name: Ingest releases
 
 on:
   schedule:
@@ -34,6 +34,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update release data from WP.org"
+            git commit -m "chore: update release data"
             git push
           fi
