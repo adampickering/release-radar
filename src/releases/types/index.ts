@@ -28,7 +28,7 @@ export interface ParsedReleaseItem {
   date?: string
   dateConfidence: DateConfidence
   stableTag: string
-  sourceType: 'wporg-readme'
+  sourceType: 'wporg-readme' | 'wp-rest-changelog'
   sourceUrl: string
   changelogUrl: string
   releaseType: ReleaseType
@@ -81,4 +81,27 @@ export interface FetchedReadme {
 export interface IngestionResult {
   releases: ParsedReleaseItem[]
   warnings: ParserWarning[]
+}
+
+export interface WpRestProduct {
+  pluginSlug: string
+  pluginName: string
+  headingMatch: string
+}
+
+export interface WpRestChangelogSource {
+  brand: string
+  brandSlug: string
+  apiUrl: string
+  perPage?: number
+  products: WpRestProduct[]
+  accessDefault: ReleaseAccess
+}
+
+export interface WpRestPost {
+  id: number
+  date: string
+  title: { rendered: string }
+  content: { rendered: string }
+  link: string
 }

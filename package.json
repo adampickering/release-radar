@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "ingest": "tsx src/releases/ingest-wp-org-releases.ts",
+    "ingest": "tsx src/releases/ingest-all.ts",
+    "ingest:wporg": "tsx -e \"import {ingestWpOrgReleases} from './src/releases/ingest-wp-org-releases'; ingestWpOrgReleases().then(r => console.log(r.releases.length + ' releases'))\"",
+    "ingest:wprest": "tsx -e \"import {ingestWpRestReleases} from './src/releases/ingest-wp-rest-releases'; ingestWpRestReleases().then(r => console.log(r.releases.length + ' releases'))\"",
     "test:releases": "vitest run src/releases/",
     "test:releases:watch": "vitest src/releases/"
   },
