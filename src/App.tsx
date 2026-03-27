@@ -91,16 +91,10 @@ function App() {
         {activeView === 'brands' && (
           <BrandMomentum
             releases={filtered}
-            activeBrands={filters.brand || []}
+            allReleases={releases}
+            currentMonth={filters.month}
             layout="grid"
-            onBrandClick={(slug) => {
-              const current = filters.brand || []
-              if (current.includes(slug)) {
-                setFilter('brand', current.filter(s => s !== slug))
-              } else {
-                setFilter('brand', [...current, slug])
-              }
-            }}
+            onReleaseClick={(id) => setFilter('release', id)}
           />
         )}
       </div>

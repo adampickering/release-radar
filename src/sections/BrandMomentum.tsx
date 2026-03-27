@@ -1,15 +1,17 @@
+import { useState, useMemo } from 'react'
+import { ChevronDown } from '@untitledui/icons'
 import type { ReleaseItem, ReleaseType } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { Badge } from '@/components/base/badges/badges'
-import { ProgressBarBase } from '@/components/base/progress-indicators/progress-indicators'
 import { Avatar } from '@/components/base/avatar/avatar'
 import { MetricChangeIndicator } from '@/components/application/metrics/metrics'
 import { cx } from '@/utils/cx'
 
 interface BrandMomentumProps {
   releases: ReleaseItem[]
-  activeBrands: string[]
-  onBrandClick: (slug: string) => void
+  allReleases: ReleaseItem[]
+  currentMonth: string
+  onReleaseClick: (id: string) => void
   layout?: 'scroll' | 'grid'
 }
 
@@ -18,12 +20,35 @@ interface BrandStat {
   name: string
   domain: string
   count: number
+  lastMonthCount: number
   topType: ReleaseType
   pctOfTotal: number
 }
 
-function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
+const typeBadgeColors: Record<ReleaseType, 'success' | 'brand' | 'orange' | 'blue' | 'gray'> = {
+  feature: 'success',
+  improvement: 'brand',
+  fix: 'orange',
+  launch: 'blue',
+  milestone: 'gray',
+}
+
+function computeBrandStats(releases: ReleaseItem[], allReleases: ReleaseItem[], currentMonth: string): BrandStat[] {
   if (releases.length === 0) return []
+
+  // Compute previous month string
+  const [year, month] = currentMonth.split('-').map(Number)
+  const prevYear = month === 1 ? year - 1 : year
+  const prevMonth = month === 1 ? 12 : month - 1
+  const prevMonthStr = `${prevYear}-${String(prevMonth).padStart(2, '0')}`
+
+  // Count last month releases per brand
+  const lastMonthByBrand: Record<string, number> = {}
+  for (const r of allReleases) {
+    if (r.date.startsWith(prevMonthStr)) {
+      lastMonthByBrand[r.brandSlug] = (lastMonthByBrand[r.brandSlug] || 0) + 1
+    }
+  }
 
   const grouped: Record<string, ReleaseItem[]> = {}
   for (const r of releases) {
@@ -46,6 +71,7 @@ function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
       name: brand?.name ?? slug,
       domain: brand?.domain ?? '',
       count: items.length,
+      lastMonthCount: lastMonthByBrand[slug] || 0,
       topType,
       pctOfTotal: Math.round((items.length / total) * 100),
     }
@@ -55,13 +81,23 @@ function computeBrandStats(releases: ReleaseItem[]): BrandStat[] {
   return stats
 }
 
-export function BrandMomentum({ releases, activeBrands, onBrandClick, layout = 'scroll' }: BrandMomentumProps) {
-  const hasActiveFilter = activeBrands.length > 0
-  const stats = computeBrandStats(releases)
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00')
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+}
+
+export function BrandMomentum({ releases, allReleases, currentMonth, onReleaseClick, layout = 'scroll' }: BrandMomentumProps) {
+  const [selectedBrand, setSelectedBrand] = useState<string | null>(null)
+  const stats = computeBrandStats(releases, allReleases, currentMonth)
+
+  const brandReleases = useMemo(() => {
+    if (!selectedBrand) return []
+    return releases
+      .filter((r) => r.brandSlug === selectedBrand)
+      .sort((a, b) => b.date.localeCompare(a.date))
+  }, [releases, selectedBrand])
 
   if (stats.length === 0) return null
-
-  const maxCount = stats[0].count
 
   return (
     <section className="bg-primary">
@@ -85,52 +121,84 @@ export function BrandMomentum({ releases, activeBrands, onBrandClick, layout = '
           : 'flex overflow-x-auto px-4 md:px-8',
       )}>
         {stats.map((brand, index) => {
-          const barPct = maxCount > 0 ? Math.round((brand.count / maxCount) * 100) : 0
-          const isActive = hasActiveFilter && activeBrands.includes(brand.slug)
-          const isDimmed = hasActiveFilter && !activeBrands.includes(brand.slug)
+          const isSelected = selectedBrand === brand.slug
+          const change = brand.lastMonthCount > 0
+            ? Math.round(((brand.count - brand.lastMonthCount) / brand.lastMonthCount) * 100)
+            : brand.count > 0 ? 100 : 0
+          const trend = change >= 0 ? 'positive' as const : 'negative' as const
 
           return (
             <div
               key={brand.slug}
-              onClick={() => onBrandClick(brand.slug)}
               className={cx(
-                'cursor-pointer rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-[0.98] active:shadow-xs',
-                layout === 'scroll' && 'min-w-[200px] flex-shrink-0',
-                isActive
+                'rounded-xl bg-primary shadow-xs ring-1 ring-inset transition-all duration-200',
+                layout === 'scroll' && !isSelected && 'min-w-[200px] flex-shrink-0',
+                layout === 'grid' && isSelected && 'col-span-full',
+                isSelected
                   ? 'ring-brand-solid shadow-sm'
-                  : isDimmed
-                    ? 'ring-secondary opacity-60 hover:opacity-80'
-                    : 'ring-secondary',
+                  : 'ring-secondary hover:-translate-y-0.5 hover:shadow-md',
               )}
               style={{ animation: `card-enter 400ms ease-out ${index * 60}ms both` }}
             >
-              {/* Card body — matches MetricsSimple layout */}
-              <div className="flex flex-col gap-2 px-4 py-5 md:px-5">
-                {/* Brand header with avatar */}
-                <div className="flex items-center gap-2.5">
-                  <Avatar
-                    size="sm"
-                    src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=48`}
-                    alt={brand.name}
-                  />
-                  <h3 className="text-sm font-medium text-tertiary">{brand.name}</h3>
+              {/* Card header — always visible, clickable */}
+              <div
+                onClick={() => setSelectedBrand(isSelected ? null : brand.slug)}
+                className="flex cursor-pointer items-start gap-4 px-4 py-5 md:px-5 active:scale-[0.99]"
+              >
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="flex items-center gap-2.5">
+                    <Avatar
+                      size="sm"
+                      src={`https://www.google.com/s2/favicons?domain=${brand.domain}&sz=48`}
+                      alt={brand.name}
+                    />
+                    <h3 className="text-sm font-medium text-tertiary">{brand.name}</h3>
+                  </div>
+
+                  <div className="flex items-end gap-3">
+                    <p className="text-display-sm font-semibold text-primary">{brand.count}</p>
+                    <MetricChangeIndicator type="simple" trend={trend} value={`${Math.abs(change)}%`} />
+                  </div>
+
+                  <p className="text-xs text-tertiary">releases this month</p>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-tertiary">{brand.pctOfTotal}% of total releases</span>
+                    <Badge size="sm" type="modern">Top: {brand.topType}</Badge>
+                  </div>
                 </div>
 
-                {/* Big number */}
-                <p className="text-display-sm font-semibold text-primary">{brand.count}</p>
-
-                {/* Subtitle */}
-                <p className="text-xs text-tertiary">releases this month</p>
-
-                {/* Progress bar — UUI ProgressBarBase */}
-                <ProgressBarBase value={barPct} className="h-1.5" />
-
-                {/* Footer row */}
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-tertiary">{brand.pctOfTotal}% of total</span>
-                  <Badge size="sm" type="modern">Top: {brand.topType}</Badge>
-                </div>
+                <ChevronDown
+                  className={cx(
+                    'size-4 flex-shrink-0 text-fg-quaternary transition-transform duration-200 mt-1',
+                    isSelected && 'rotate-180',
+                  )}
+                />
               </div>
+
+              {/* Expanded release list */}
+              {isSelected && brandReleases.length > 0 && (
+                <div className="border-t border-secondary px-4 pb-4 pt-3 md:px-5" style={{ animation: 'fade-in 150ms ease-out' }}>
+                  <div className="flex flex-col gap-1">
+                    {brandReleases.map((release) => (
+                      <div
+                        key={release.id}
+                        onClick={() => onReleaseClick(release.id)}
+                        className="flex cursor-pointer items-center gap-4 rounded-lg px-3 py-2.5 transition duration-100 ease-linear hover:bg-secondary"
+                      >
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-primary truncate">{release.title}</p>
+                          <p className="text-xs text-tertiary mt-0.5 line-clamp-1">{release.summary}</p>
+                        </div>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          <Badge size="sm" color={typeBadgeColors[release.releaseType]} type="pill-color">{release.releaseType}</Badge>
+                          <span className="text-xs text-tertiary whitespace-nowrap">{formatDate(release.date)}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )
         })}
