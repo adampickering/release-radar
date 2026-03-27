@@ -56,6 +56,11 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
     const [currentMonthDate, setCurrentMonthDate] = useState(() => today(timeZone));
     const [selectedDate, setSelectedDate] = useState<CalendarDate | null>(currentMonthDate);
     const [view, setView] = useState<string>(defaultView);
+
+    // Sync view when the parent forces a different view via prop
+    useEffect(() => {
+        if (defaultView) setView(defaultView);
+    }, [defaultView]);
     const [currentTime, setCurrentTime] = useState(() => now(timeZone));
     const [isMounted, setIsMounted] = useState(false);
 

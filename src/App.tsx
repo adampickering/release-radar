@@ -25,6 +25,7 @@ function App() {
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
   const [activeView, setActiveView] = useState<ViewMode>('calendar')
+  const [calendarView, setCalendarView] = useState<'month' | 'week' | 'day' | 'year'>('month')
   const [viewKey, setViewKey] = useState(0)
   const prevViewRef = useRef(activeView)
 
@@ -46,7 +47,10 @@ function App() {
     <div className="min-h-screen bg-primary font-sans flex flex-col">
       {/* Header — always sticky at top with fixed height */}
       <div className="sticky top-0 z-50 h-[60px]">
-        <Header activeView={activeView} onViewChange={setActiveView} />
+        <Header activeView={activeView} onViewChange={(view) => {
+          if (view === 'calendar') setFilter('type', [])
+          setActiveView(view)
+        }} />
       </div>
 
       {/* Filter bar — sticky below header */}
@@ -64,13 +68,14 @@ function App() {
         {activeView === 'calendar' && (
           <>
             {/* Stats strip — only on calendar view */}
-            <StatsStrip stats={stats} isFiltered={isFiltered} />
+            <StatsStrip stats={stats} isFiltered={isFiltered} releases={filtered} chartReleases={calendarFiltered} currentMonth={filters.month} onReleasesClick={() => setCalendarView('month')} onBrandsClick={() => setActiveView('brands')} onFeaturesClick={() => { setFilter('type', ['feature']); setActiveView('timeline') }} onAvgWeekClick={() => setCalendarView('week')} />
 
             {/* Calendar board — uses UUI Calendar with built-in month navigation */}
             <main className="px-4 md:px-6 py-4">
               <CalendarBoard
                 releases={calendarFiltered}
                 onReleaseClick={(id) => setFilter('release', id)}
+                view={calendarView}
               />
             </main>
           </>
