@@ -223,6 +223,10 @@ Open [http://localhost:5173](http://localhost:5173).
 | `npm run ingest` | Run WordPress.org changelog ingestion pipeline |
 | `npm run test:releases` | Run ingestion pipeline tests |
 | `npm run test:releases:watch` | Run tests in watch mode |
+| `npm run api` | Start subscriber API server (port 3456) |
+| `npm run digest` | Generate AI digest + send emails |
+| `npm run digest:generate` | Generate weekly digest content via OpenRouter |
+| `npm run digest:send` | Send digest emails via Resend |
 
 ---
 
@@ -281,7 +285,7 @@ Custom keyframes are defined in `src/styles/theme.css`.
 
 ### Phase 4 — Collaboration
 - [ ] Slack notifications for new releases
-- [ ] Email digest (weekly/monthly summary)
+- [x] Email digest (weekly/monthly summary)
 - [ ] Comments / notes on individual releases
 - [ ] Team annotations ("this was a big one", priority flags)
 
