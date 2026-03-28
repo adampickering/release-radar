@@ -9,6 +9,7 @@ import {
     startOfWeek,
     today,
 } from "@internationalized/date";
+import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
 import { eventViewColors, type EventViewColor } from "./calendar-month-view-event";
 import type { ZonedEvent } from "../utils/calendar-helpers";
@@ -65,13 +66,14 @@ export const CalendarYearMiniMonth = ({
     return (
         <div className="flex flex-col gap-2">
             {/* Month heading */}
-            <button
-                type="button"
+            <Button
+                color="tertiary"
+                size="xs"
                 onClick={() => onMonthClick(month)}
-                className="text-left text-sm font-semibold text-primary transition duration-100 ease-linear hover:text-brand-secondary"
+                className="!justify-start !p-0 !text-primary hover:!text-brand-secondary hover:!bg-transparent"
             >
                 {monthName}
-            </button>
+            </Button>
 
             {/* Weekday headers */}
             <div className="grid grid-cols-7 gap-0">
@@ -92,17 +94,20 @@ export const CalendarYearMiniMonth = ({
                     const hasEvents = dayEvents.length > 0;
 
                     return (
-                        <button
+                        <Button
                             key={dateKey}
-                            type="button"
+                            color="tertiary"
+                            size="xs"
+                            noTextPadding
                             onClick={() => hasEvents && onDayClick(date)}
                             className={cx(
-                                "flex flex-col items-center justify-center rounded-md py-0.5",
-                                "size-7 text-[11px]",
-                                isCurrentMonth ? "text-secondary" : "text-quaternary opacity-30",
-                                isTodayFlag && "bg-brand-solid text-white font-semibold",
-                                hasEvents && isCurrentMonth && !isTodayFlag && "cursor-pointer hover:bg-secondary",
-                                !hasEvents && "cursor-default",
+                                "!flex-col !rounded-md !p-0 !py-0.5 !gap-0",
+                                "!size-7 !text-[11px] !font-normal",
+                                "*:data-text:contents",
+                                isCurrentMonth ? "!text-secondary" : "!text-quaternary !opacity-30",
+                                isTodayFlag && "!bg-brand-solid !text-white !font-semibold",
+                                hasEvents && isCurrentMonth && !isTodayFlag && "cursor-pointer hover:!bg-secondary",
+                                !hasEvents && "!cursor-default hover:!bg-transparent",
                             )}
                         >
                             <span>{date.day}</span>
@@ -119,7 +124,7 @@ export const CalendarYearMiniMonth = ({
                                     ))}
                                 </div>
                             )}
-                        </button>
+                        </Button>
                     );
                 })}
             </div>

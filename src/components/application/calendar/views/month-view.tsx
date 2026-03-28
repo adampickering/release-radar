@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import {
     CalendarDate,
     type ZonedDateTime,
@@ -14,6 +14,7 @@ import {
     today,
 } from "@internationalized/date";
 import type { DateFormatter } from "@react-aria/i18n";
+import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
 import { CalendarColumnHeader } from "../base-components/calendar-column-header";
 import { CalendarMonthViewCell } from "../base-components/calendar-month-view-cell";
@@ -325,13 +326,14 @@ export const MonthView = ({
                             </div>
 
                             {remainingEventsCount > 0 && (
-                                <button
-                                    type="button"
-                                    onClick={(e) => { e.stopPropagation(); onDayClick?.(date); }}
-                                    className="cursor-pointer truncate text-xs font-semibold text-utility-neutral-500 transition duration-100 ease-linear hover:text-brand-secondary max-md:pl-1"
+                                <Button
+                                    color="link-color"
+                                    size="xs"
+                                    onClick={(e: React.MouseEvent) => { e.stopPropagation(); onDayClick?.(date); }}
+                                    className="truncate !text-xs !font-semibold !text-utility-neutral-500 hover:!text-brand-secondary max-md:pl-1"
                                 >
                                     {`${remainingEventsCount} more...`}
-                                </button>
+                                </Button>
                             )}
                         </CalendarMonthViewCell>
                     );

@@ -26,16 +26,11 @@ import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
 import { CalendarColumnHeader } from "../base-components/calendar-column-header";
 import { CalendarDwViewCell } from "../base-components/calendar-dw-view-cell";
-import { CalendarDwViewEvent } from "../base-components/calendar-dw-view-event";
+import { PositionedEvent } from "../base-components/calendar-positioned-event";
 import { CalendarRowLabel } from "../base-components/calendar-row-label";
 import { CalendarTimeMarker } from "../base-components/calendar-time-marker";
-import { eventViewColors, type EventViewColor } from "../base-components/calendar-month-view-event";
-import { type ZonedEvent, SLOT_HEIGHT, EVENT_TYPE_LABELS, getStartOfDay, getEndOfDay, getEventsForDay } from "../utils/calendar-helpers";
-
-/** An event is "all-day" when it spans midnight-to-midnight (i.e. a release date). */
-const isAllDayEvent = (event: ZonedEvent): boolean => {
-    return event.start.hour === 0 && event.start.minute === 0 && event.end.hour === 23 && event.end.minute === 59;
-};
+import { eventViewColors } from "../base-components/calendar-month-view-event";
+import { type ZonedEvent, SLOT_HEIGHT, EVENT_TYPE_LABELS, getStartOfDay, getEndOfDay, getEventsForDay, isAllDayEvent } from "../utils/calendar-helpers";
 
 // ─── All-Day Bar ────────────────────────────────────────────────────────────
 
@@ -52,19 +47,20 @@ const AllDayBar = ({ events, onEventClick }: AllDayBarProps) => {
             <div className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-quaternary">All day</div>
             <div className="flex flex-wrap gap-1.5">
                 {events.map((event) => (
-                    <button
+                    <Button
                         key={event.id}
-                        type="button"
+                        color="tertiary"
+                        size="xs"
                         onClick={() => onEventClick?.(event.id)}
                         className={cx(
-                            "flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset transition duration-100 ease-linear",
+                            "!gap-1.5 !rounded-md !px-2 !py-1 !text-xs !font-medium !ring-1 !ring-inset *:data-text:contents",
                             eventViewColors[event.color || "gray"].root,
                             eventViewColors[event.color || "gray"].label,
                         )}
                     >
                         {event.avatarUrl && <Avatar src={event.avatarUrl} alt="" size="xs" />}
                         {event.title}
-                    </button>
+                    </Button>
                 ))}
             </div>
         </div>
@@ -94,13 +90,16 @@ const ReleaseCards = ({ events, onEventClick }: ReleaseCardsProps) => (
         </p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {events.map((event) => (
-                <button
+                <Button
                     key={event.id}
-                    type="button"
+                    color="tertiary"
+                    size="xs"
+                    noTextPadding
                     onClick={() => onEventClick?.(event.id)}
                     className={cx(
-                        "flex cursor-pointer items-start gap-3 rounded-xl border p-4 text-left transition duration-100 ease-linear hover:shadow-sm",
-                        "border-secondary bg-primary",
+                        "!items-start !gap-3 !rounded-xl !border !p-4 text-left hover:!bg-transparent hover:shadow-sm",
+                        "!border-secondary !bg-primary",
+                        "*:data-text:contents",
                     )}
                 >
                     {event.avatarUrl && <Avatar src={event.avatarUrl} alt="" size="md" />}
@@ -111,64 +110,11 @@ const ReleaseCards = ({ events, onEventClick }: ReleaseCardsProps) => (
                             <span className="text-xs text-tertiary">{EVENT_TYPE_LABELS[event.color || "gray"] || "Other"}</span>
                         </div>
                     </div>
-                </button>
+                </Button>
             ))}
         </div>
     </div>
 );
-
-// ─── Positioned Event (for timed events in the time grid) ───────────────────
-
-interface PositionedEventProps {
-    event: ZonedEvent;
-    dayStart: ZonedDateTime;
-    timeZone: string;
-    slotHeight: number;
-    overlapIndex: number;
-    totalOverlapping: number;
-    setSelectedDate: (date: CalendarDate | null) => void;
-    timeFormatter: DateFormatter;
-    onEventClick?: (eventId: string) => void;
-}
-
-const PositionedEvent = ({ event, dayStart, timeZone, slotHeight, overlapIndex, setSelectedDate, timeFormatter, onEventClick }: PositionedEventProps) => {
-    const formatTime = (dateTime: ZonedDateTime) => timeFormatter.format(dateTime.toDate());
-
-    const startZoned = event.start;
-    const endZoned = event.end;
-
-    const dayEnd = getEndOfDay(dayStart, timeZone);
-    const clampedStart = startZoned.compare(dayStart) < 0 ? dayStart : startZoned;
-    const clampedEnd = endZoned.compare(dayEnd) > 0 ? dayEnd : endZoned;
-
-    const startMinutes = clampedStart.hour * 60 + clampedStart.minute;
-    const endMinutes = clampedEnd.hour * 60 + clampedEnd.minute;
-    const durationMinutes = Math.max(15, endMinutes - startMinutes);
-
-    const top = (startMinutes / 30) * slotHeight;
-    const height = Math.max(slotHeight / 2, (durationMinutes / 30) * slotHeight);
-
-    const horizontalOffset = 0;
-
-    const displayTime = durationMinutes > 30;
-    const supportingText = displayTime ? formatTime(startZoned) : undefined;
-
-    return (
-        <div
-            key={event.id}
-            className="absolute w-full px-1.5 py-1.5"
-            style={{
-                top: `${top}px`,
-                height: `${height}px`,
-                left: `${horizontalOffset}px`,
-                zIndex: overlapIndex,
-            }}
-            onClick={() => onEventClick?.(event.id)}
-        >
-            <CalendarDwViewEvent label={event.title} supportingText={supportingText} color={event.color} withDot={event.dot} />
-        </div>
-    );
-};
 
 // ─── Mobile Single Day Grid (time grid for timed events) ────────────────────
 
@@ -235,16 +181,18 @@ const SidebarReleaseList = ({ events, onEventClick }: SidebarReleaseListProps) =
                 {events.length} {events.length === 1 ? "release" : "releases"}
             </p>
             {events.map((event) => (
-                <button
+                <Button
                     key={event.id}
-                    type="button"
+                    color="tertiary"
+                    size="xs"
+                    noTextPadding
                     onClick={() => onEventClick?.(event.id)}
-                    className="flex items-center gap-2 rounded-md px-1.5 py-1 text-left transition duration-100 ease-linear hover:bg-secondary"
+                    className="w-full !justify-start !gap-2 !rounded-md !px-1.5 !py-1 text-left hover:!bg-secondary *:data-text:contents"
                 >
                     {event.avatarUrl && <Avatar src={event.avatarUrl} alt="" size="xs" />}
                     <span className="flex-1 truncate text-xs font-medium text-secondary">{event.title}</span>
                     <span className={cx("size-2 shrink-0 rounded-full", eventViewColors[event.color || "gray"].dot)} />
-                </button>
+                </Button>
             ))}
         </div>
     );

@@ -50,6 +50,11 @@ export const getDaysInVisibleMonthGrid = (anchorDate: CalendarDate, locale: stri
     return days;
 };
 
+/** An event is "all-day" when it spans midnight-to-midnight (i.e. a release date). */
+export const isAllDayEvent = (event: ZonedEvent): boolean => {
+    return event.start.hour === 0 && event.start.minute === 0 && event.end.hour === 23 && event.end.minute === 59;
+};
+
 export const getEventsForDay = (allEvents: ZonedEvent[], targetDate: CalendarDate, timeZone: string): ZonedEvent[] => {
     const dayStart = getStartOfDay(targetDate, timeZone);
     const dayEnd = getEndOfDay(targetDate, timeZone);
