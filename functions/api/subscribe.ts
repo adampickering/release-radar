@@ -28,7 +28,7 @@ function welcomeEmail(firstName: string): string {
 
 <!-- Logo -->
 <tr><td align="center" style="padding:40px 40px 0">
-<img src="https://releaseradar.work/am-logo.svg" alt="Awesome Motive" width="56" height="56" style="width:56px;height:56px;border-radius:50%;background:#0a0d12">
+<img src="https://releaseradar.work/am-logo.png" alt="Awesome Motive" width="56" height="56" style="width:56px;height:56px;border-radius:50%;background:#0a0d12">
 </td></tr>
 
 <!-- Welcome text -->

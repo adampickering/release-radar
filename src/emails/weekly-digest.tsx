@@ -72,7 +72,7 @@ export const WeeklyDigest = ({
                         <Container align="center" className="max-w-full bg-primary p-6">
                             <Row>
                                 <Column align="center">
-                                    <Img src="https://releaseradar.work/am-logo.svg" alt="Awesome Motive" width="36" height="36" style={{ borderRadius: '50%', background: '#0a0d12' }} />
+                                    <Img src="https://releaseradar.work/am-logo.png" alt="Awesome Motive" width="36" height="36" style={{ borderRadius: '50%', background: '#0a0d12' }} />
                                 </Column>
                             </Row>
                         </Container>
