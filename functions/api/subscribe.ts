@@ -1,8 +1,9 @@
 // Cloudflare Pages Function — handles POST /api/subscribe
-// Stores subscribers in a KV namespace (SUBSCRIBERS)
+// Adds subscriber to Brevo contact list
 
 interface Env {
-	SUBSCRIBERS: KVNamespace
+	BREVO_API_KEY: string
+	BREVO_LIST_ID?: string
 }
 
 interface SubscribeBody {
@@ -17,6 +18,11 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		'Access-Control-Allow-Origin': '*',
 	}
 
+	const apiKey = context.env.BREVO_API_KEY
+	if (!apiKey) {
+		return new Response(JSON.stringify({ error: 'Server misconfigured' }), { status: 500, headers })
+	}
+
 	try {
 		const body = await context.request.json<SubscribeBody>()
 		const email = (body.email || '').trim().toLowerCase()
@@ -27,19 +33,33 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 			return new Response(JSON.stringify({ error: 'Invalid email address' }), { status: 400, headers })
 		}
 
-		// Check for duplicate
-		const existing = await context.env.SUBSCRIBERS.get(email)
-		if (existing) {
-			return new Response(JSON.stringify({ error: 'Already subscribed' }), { status: 409, headers })
-		}
+		const listId = parseInt(context.env.BREVO_LIST_ID || '2', 10)
 
-		// Store subscriber
-		await context.env.SUBSCRIBERS.put(email, JSON.stringify({
-			firstName,
-			lastName,
-			email,
-			subscribedAt: new Date().toISOString(),
-		}))
+		const res = await fetch('https://api.brevo.com/v3/contacts', {
+			method: 'POST',
+			headers: {
+				'api-key': apiKey,
+				'Content-Type': 'application/json',
+				'Accept': 'application/json',
+			},
+			body: JSON.stringify({
+				email,
+				attributes: {
+					FIRSTNAME: firstName,
+					LASTNAME: lastName,
+				},
+				listIds: [listId],
+				updateEnabled: true,
+			}),
+		})
+
+		if (!res.ok) {
+			const err = await res.json<{ message?: string }>().catch(() => ({ message: 'Unknown error' }))
+			if (res.status === 400 && err.message?.includes('already exist')) {
+				return new Response(JSON.stringify({ error: 'Already subscribed' }), { status: 409, headers })
+			}
+			return new Response(JSON.stringify({ error: err.message || 'Failed to subscribe' }), { status: res.status, headers })
+		}
 
 		return new Response(JSON.stringify({ success: true }), { status: 200, headers })
 	} catch {

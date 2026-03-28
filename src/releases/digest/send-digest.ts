@@ -3,17 +3,18 @@ import { resolve } from 'node:path'
 import { render } from '@react-email/components'
 import { WeeklyDigest } from '../../emails/weekly-digest'
 
-const SUBSCRIBERS_PATH = resolve(import.meta.dirname, '../output/subscribers.json')
 const DIGEST_PATH = resolve(import.meta.dirname, '../output/weekly-digest.json')
 const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://release-radar.pages.dev'
 const FROM_EMAIL = process.env.DIGEST_FROM_EMAIL || 'The Weekly Roundup <roundup@releaseradar.work>'
 const UNSUBSCRIBE_BASE = process.env.UNSUBSCRIBE_URL || 'https://release-radar.pages.dev/api/unsubscribe'
+const BREVO_LIST_ID = parseInt(process.env.BREVO_LIST_ID || '2', 10)
 
-interface Subscriber {
-	firstName: string
-	lastName: string
+interface BrevoContact {
 	email: string
-	subscribedAt: string
+	attributes?: {
+		FIRSTNAME?: string
+		LASTNAME?: string
+	}
 }
 
 interface DigestContent {
@@ -32,10 +33,38 @@ function parseFromEmail(from: string): { name: string; email: string } {
 	return { name: '', email: from }
 }
 
-async function sendViaBrevо(to: string, subject: string, html: string, unsubscribeUrl: string) {
-	const apiKey = process.env.BREVO_API_KEY
-	if (!apiKey) throw new Error('BREVO_API_KEY environment variable is not set')
+async function fetchSubscribers(apiKey: string): Promise<BrevoContact[]> {
+	const contacts: BrevoContact[] = []
+	let offset = 0
+	const limit = 50
 
+	while (true) {
+		const res = await fetch(
+			`https://api.brevo.com/v3/contacts/lists/${BREVO_LIST_ID}/contacts?limit=${limit}&offset=${offset}`,
+			{
+				headers: {
+					'api-key': apiKey,
+					'Accept': 'application/json',
+				},
+			}
+		)
+
+		if (!res.ok) {
+			const err = await res.text()
+			throw new Error(`Brevo API error fetching contacts: ${res.status} ${err}`)
+		}
+
+		const data = await res.json() as { contacts: BrevoContact[]; count: number }
+		contacts.push(...data.contacts)
+
+		if (contacts.length >= data.count || data.contacts.length < limit) break
+		offset += limit
+	}
+
+	return contacts
+}
+
+async function sendViaBrevo(apiKey: string, to: string, subject: string, html: string, unsubscribeUrl: string) {
 	const sender = parseFromEmail(FROM_EMAIL)
 
 	const res = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -65,17 +94,18 @@ async function sendViaBrevо(to: string, subject: string, html: string, unsubscr
 }
 
 async function main() {
-	if (!process.env.BREVO_API_KEY) {
-		throw new Error('BREVO_API_KEY environment variable is not set')
-	}
+	const apiKey = process.env.BREVO_API_KEY
+	if (!apiKey) throw new Error('BREVO_API_KEY environment variable is not set')
 
-	const subscribers: Subscriber[] = JSON.parse(readFileSync(SUBSCRIBERS_PATH, 'utf-8'))
-	const digest: DigestContent = JSON.parse(readFileSync(DIGEST_PATH, 'utf-8'))
+	console.log('📋 Fetching subscribers from Brevo...')
+	const subscribers = await fetchSubscribers(apiKey)
 
 	if (subscribers.length === 0) {
 		console.log('No subscribers. Skipping send.')
 		process.exit(0)
 	}
+
+	const digest: DigestContent = JSON.parse(readFileSync(DIGEST_PATH, 'utf-8'))
 
 	console.log(`📬 Sending digest to ${subscribers.length} subscriber(s)...`)
 
@@ -83,11 +113,12 @@ async function main() {
 	let failureCount = 0
 
 	for (const sub of subscribers) {
+		const firstName = sub.attributes?.FIRSTNAME || 'there'
 		const unsubscribeUrl = `${UNSUBSCRIBE_BASE}?email=${encodeURIComponent(sub.email)}`
 
 		const html = await render(
 			WeeklyDigest({
-				firstName: sub.firstName,
+				firstName,
 				weekRange: digest.weekRange,
 				greeting: digest.greeting,
 				introParagraph: digest.introParagraph,
@@ -103,7 +134,7 @@ async function main() {
 		const subject = `The Weekly Roundup — ${digest.weekRange}`
 
 		try {
-			await sendViaBrevо(sub.email, subject, html, unsubscribeUrl)
+			await sendViaBrevo(apiKey, sub.email, subject, html, unsubscribeUrl)
 			console.log(`  ✓ ${sub.email}`)
 			successCount++
 		} catch (err) {
