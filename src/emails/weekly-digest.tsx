@@ -1,9 +1,8 @@
-import { Column, Container, Hr, Html, Preview, Row } from "@react-email/components"
+import { Column, Container, Hr, Html, Img, Preview, Row } from "@react-email/components"
 import { Body } from "../components/emails/_components/body"
 import { Button } from "../components/emails/_components/button"
 import { LeftAligned as Footer } from "../components/emails/_components/footer"
 import { Head } from "../components/emails/_components/head"
-import { CenterAligned as Header } from "../components/emails/_components/header"
 import { Tailwind } from "../components/emails/_components/tailwind"
 import { Text } from "../components/emails/_components/text"
 
@@ -70,7 +69,13 @@ export const WeeklyDigest = ({
                 <Body>
                     <Container align="center" className="w-full max-w-160 bg-primary md:p-8">
                         {/* Header */}
-                        <Header />
+                        <Container align="center" className="max-w-full bg-primary p-6">
+                            <Row>
+                                <Column align="center">
+                                    <Img src="https://releaseradar.work/am-logo.svg" alt="Awesome Motive" width="36" height="36" style={{ borderRadius: '50%', background: '#0a0d12' }} />
+                                </Column>
+                            </Row>
+                        </Container>
 
                         <Container align="left" className="max-w-full px-6 py-8">
                             {/* Greeting */}

@@ -26,11 +26,9 @@ function welcomeEmail(firstName: string): string {
 <!-- Header accent -->
 <tr><td style="height:4px;background:linear-gradient(90deg,#7F56D9 0%,#9E77ED 50%,#B692F6 100%)"></td></tr>
 
-<!-- Logo + party -->
+<!-- Logo -->
 <tr><td align="center" style="padding:40px 40px 0">
-<div style="width:56px;height:56px;border-radius:50%;background:#0a0d12;display:inline-flex;align-items:center;justify-content:center">
-<span style="color:white;font-weight:800;font-size:20px;line-height:56px">AM</span>
-</div>
+<img src="https://releaseradar.work/am-logo.svg" alt="Awesome Motive" width="56" height="56" style="width:56px;height:56px;border-radius:50%;background:#0a0d12">
 </td></tr>
 
 <!-- Welcome text -->
