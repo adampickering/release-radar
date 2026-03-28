@@ -24,7 +24,7 @@ jobs:
       - name: Generate and send digest
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           DIGEST_FROM_EMAIL: ${{ secrets.DIGEST_FROM_EMAIL }}
           DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
           UNSUBSCRIBE_URL: ${{ secrets.UNSUBSCRIBE_URL }}
