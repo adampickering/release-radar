@@ -4,9 +4,9 @@ import { render } from '@react-email/components'
 import { WeeklyDigest } from '../../emails/weekly-digest'
 
 const DIGEST_PATH = resolve(import.meta.dirname, '../output/weekly-digest.json')
-const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://release-radar.pages.dev'
+const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://releaseradar.work'
 const FROM_EMAIL = process.env.DIGEST_FROM_EMAIL || 'The Weekly Roundup <roundup@releaseradar.work>'
-const UNSUBSCRIBE_BASE = process.env.UNSUBSCRIBE_URL || 'https://release-radar.pages.dev/api/unsubscribe'
+const UNSUBSCRIBE_BASE = process.env.UNSUBSCRIBE_URL || 'https://releaseradar.work/api/unsubscribe'
 const BREVO_LIST_ID = parseInt(process.env.BREVO_LIST_ID || '2', 10)
 
 interface BrevoContact {
