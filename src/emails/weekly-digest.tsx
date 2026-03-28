@@ -1,11 +1,11 @@
 import { Column, Container, Hr, Html, Preview, Row } from "@react-email/components"
-import { Body } from "@/components/emails/_components/body"
-import { Button } from "@/components/emails/_components/button"
-import { LeftAligned as Footer } from "@/components/emails/_components/footer"
-import { Head } from "@/components/emails/_components/head"
-import { CenterAligned as Header } from "@/components/emails/_components/header"
-import { Tailwind } from "@/components/emails/_components/tailwind"
-import { Text } from "@/components/emails/_components/text"
+import { Body } from "../components/emails/_components/body"
+import { Button } from "../components/emails/_components/button"
+import { LeftAligned as Footer } from "../components/emails/_components/footer"
+import { Head } from "../components/emails/_components/head"
+import { CenterAligned as Header } from "../components/emails/_components/header"
+import { Tailwind } from "../components/emails/_components/tailwind"
+import { Text } from "../components/emails/_components/text"
 
 const TYPE_COLORS: Record<string, { bg: string; text: string }> = {
     feature: { bg: "#ECFDF3", text: "#067647" },

@@ -1,6 +1,6 @@
 import type { BodyProps } from "@react-email/components";
 import { Body as EmailBody } from "@react-email/components";
-import { cx } from "@/utils/cx";
+import { cx } from "../../../utils/cx";
 
 export const Body = (props: BodyProps) => {
     return (

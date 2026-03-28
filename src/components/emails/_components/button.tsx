@@ -1,6 +1,6 @@
 import type { ButtonProps as EmailButtonProps } from "@react-email/components";
 import { Button as EmailButton } from "@react-email/components";
-import { cx } from "@/utils/cx";
+import { cx } from "../../../utils/cx";
 
 const variants = {
     primary: "bg-brand-solid border text-white  border-violet-700",

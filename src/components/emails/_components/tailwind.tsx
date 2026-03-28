@@ -1,6 +1,6 @@
 import type { TailwindConfig, TailwindProps } from "@react-email/components";
 import { Tailwind as EmailTailwind } from "@react-email/tailwind";
-import { getThemeObject } from "@/emails/_theme/theme";
+import { getThemeObject } from "../../../emails/_theme/theme";
 
 export const Tailwind = (props: TailwindProps & { theme?: "light" | "dark" }) => {
     return (
