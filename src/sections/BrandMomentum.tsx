@@ -4,6 +4,7 @@ import type { ReleaseItem, ReleaseType } from '@/types/release'
 import { brandsBySlug } from '@/data/brands'
 import { Badge } from '@/components/base/badges/badges'
 import { Avatar } from '@/components/base/avatar/avatar'
+import { Button } from '@/components/base/buttons/button'
 import { MetricChangeIndicator } from '@/components/application/metrics/metrics'
 import { cx } from '@/utils/cx'
 
@@ -138,14 +139,20 @@ export function BrandMomentum({ releases, allReleases, currentMonth, onReleaseCl
                   ? 'ring-brand-solid shadow-sm'
                   : 'ring-secondary hover:-translate-y-0.5 hover:shadow-md',
               )}
-              style={{ animation: `card-enter 400ms ease-out ${index * 60}ms both` }}
+              style={{ animation: `card-enter 400ms cubic-bezier(0.25, 1, 0.5, 1) ${index * 60}ms both` }}
             >
               {/* Card header — always visible, clickable */}
-              <div
+              <Button
+                color="tertiary"
+                size="xs"
+                noTextPadding
                 onClick={() => setSelectedBrand(isSelected ? null : brand.slug)}
-                className="flex cursor-pointer items-start gap-4 px-4 py-5 md:px-5 active:scale-[0.99]"
+                className={cx(
+                  "w-full !flex-col !items-start !gap-2 !px-4 !py-5 md:!px-5 hover:!bg-transparent active:!scale-[0.99] *:data-text:contents",
+                  isSelected ? "!rounded-t-xl !rounded-b-none" : "!rounded-xl",
+                )}
               >
-                <div className="flex flex-1 flex-col gap-2">
+                <div className="flex w-full items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <Avatar
                       size="sm"
@@ -154,47 +161,56 @@ export function BrandMomentum({ releases, allReleases, currentMonth, onReleaseCl
                     />
                     <h3 className="text-sm font-medium text-tertiary">{brand.name}</h3>
                   </div>
-
-                  <div className="flex items-end gap-3">
-                    <p className="text-display-sm font-semibold text-primary">{brand.count}</p>
-                    <MetricChangeIndicator type="simple" trend={trend} value={`${Math.abs(change)}%`} />
-                  </div>
-
-                  <p className="text-xs text-tertiary">releases this month</p>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-tertiary">{brand.pctOfTotal}% of total releases</span>
-                    <Badge size="sm" type="modern">Top: {brand.topType}</Badge>
-                  </div>
+                  <ChevronDown
+                    className={cx(
+                      'size-4 flex-shrink-0 text-fg-quaternary transition-transform duration-200',
+                      isSelected && 'rotate-180',
+                    )}
+                  />
                 </div>
 
-                <ChevronDown
-                  className={cx(
-                    'size-4 flex-shrink-0 text-fg-quaternary transition-transform duration-200 mt-1',
-                    isSelected && 'rotate-180',
-                  )}
-                />
-              </div>
+                <div className="flex items-end gap-3">
+                  <p className="text-display-sm font-semibold text-primary">{brand.count}</p>
+                  <MetricChangeIndicator type="simple" trend={trend} value={`${Math.abs(change)}%`} />
+                </div>
+
+                <p className="text-xs text-tertiary">releases this month</p>
+
+                <div className="flex w-full items-center justify-between">
+                  <span className="text-xs text-tertiary">{brand.pctOfTotal}% of total releases</span>
+                  <Badge size="sm" type="modern">Top: {brand.topType}</Badge>
+                </div>
+              </Button>
 
               {/* Expanded release list */}
               {isSelected && brandReleases.length > 0 && (
-                <div className="border-t border-secondary px-4 pb-4 pt-3 md:px-5" style={{ animation: 'fade-in 150ms ease-out' }}>
-                  <div className="flex flex-col gap-1">
-                    {brandReleases.map((release) => (
-                      <div
+                <div
+                  className="border-t border-secondary"
+                  style={{ animation: 'fade-in 200ms cubic-bezier(0.25, 1, 0.5, 1) both' }}
+                >
+                  <div className={cx(
+                    "flex flex-col gap-0.5 px-3 py-3 md:px-4",
+                    layout === 'grid' && 'lg:grid lg:grid-cols-2 lg:gap-x-2 lg:gap-y-0.5',
+                  )}>
+                    {brandReleases.map((release, i) => (
+                      <Button
                         key={release.id}
+                        color="tertiary"
+                        size="xs"
+                        noTextPadding
                         onClick={() => onReleaseClick(release.id)}
-                        className="flex cursor-pointer items-center gap-4 rounded-lg px-3 py-2.5 transition duration-100 ease-linear hover:bg-secondary"
+                        className="w-full !gap-3 !rounded-lg !px-3 !py-2 hover:!bg-secondary *:data-text:contents"
+                        style={{ animation: `count-fade 250ms cubic-bezier(0.25, 1, 0.5, 1) ${i * 40}ms both` }}
                       >
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-primary truncate">{release.title}</p>
-                          <p className="text-xs text-tertiary mt-0.5 line-clamp-1">{release.summary}</p>
+                          <p className="truncate text-sm font-medium text-primary">{release.title}</p>
+                          <p className="mt-0.5 truncate text-xs text-tertiary">{release.summary}</p>
                         </div>
-                        <div className="flex items-center gap-2 flex-shrink-0">
+                        <div className="flex flex-shrink-0 items-center gap-2">
                           <Badge size="sm" color={typeBadgeColors[release.releaseType]} type="pill-color">{release.releaseType}</Badge>
-                          <span className="text-xs text-tertiary whitespace-nowrap">{formatDate(release.date)}</span>
+                          <span className="whitespace-nowrap text-xs tabular-nums text-quaternary">{formatDate(release.date)}</span>
                         </div>
-                      </div>
+                      </Button>
                     ))}
                   </div>
                 </div>
