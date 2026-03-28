@@ -13,19 +13,15 @@ import {
 import type { DateFormatter } from "@react-aria/i18n";
 import { Calendar as CalendarIcon } from "@untitledui/icons";
 import { Avatar } from "@/components/base/avatar/avatar";
+import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
 import { CalendarColumnHeader } from "../base-components/calendar-column-header";
 import { CalendarDwViewCell } from "../base-components/calendar-dw-view-cell";
-import { CalendarDwViewEvent } from "../base-components/calendar-dw-view-event";
+import { PositionedEvent } from "../base-components/calendar-positioned-event";
 import { CalendarRowLabel } from "../base-components/calendar-row-label";
 import { CalendarTimeMarker } from "../base-components/calendar-time-marker";
 import { eventViewColors } from "../base-components/calendar-month-view-event";
-import { type ZonedEvent, SLOT_HEIGHT, getStartOfDay, getEndOfDay, getEventsForDay } from "../utils/calendar-helpers";
-
-/** An event is "all-day" when it spans midnight-to-midnight (i.e. a release date). */
-const isAllDayEvent = (event: ZonedEvent): boolean => {
-    return event.start.hour === 0 && event.start.minute === 0 && event.end.hour === 23 && event.end.minute === 59;
-};
+import { type ZonedEvent, SLOT_HEIGHT, getStartOfDay, getEndOfDay, getEventsForDay, isAllDayEvent } from "../utils/calendar-helpers";
 
 // ─── All-Day Row (week view) ────────────────────────────────────────────────
 
@@ -52,19 +48,20 @@ const WeekAllDayRow = ({ days, zonedEvents, timeZone, onEventClick }: WeekAllDay
             {allDayByDay.map((events, i) => (
                 <div key={days[i].toString()} className={cx("flex flex-col gap-1 border-r border-secondary px-1 py-1.5", i === 6 && "border-r-0")}>
                     {events.map((event) => (
-                        <button
+                        <Button
                             key={event.id}
-                            type="button"
+                            color="tertiary"
+                            size="xs"
                             onClick={() => onEventClick?.(event.id)}
                             className={cx(
-                                "flex cursor-pointer items-center gap-1 truncate rounded px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset transition duration-100 ease-linear",
+                                "!gap-1 truncate !rounded !px-1.5 !py-0.5 !text-[11px] !font-medium !ring-1 !ring-inset *:data-text:contents",
                                 eventViewColors[event.color || "gray"].root,
                                 eventViewColors[event.color || "gray"].label,
                             )}
                         >
                             {event.avatarUrl && <Avatar src={event.avatarUrl} alt="" size="xs" />}
                             <span className="truncate">{event.title}</span>
-                        </button>
+                        </Button>
                     ))}
                 </div>
             ))}
@@ -80,59 +77,6 @@ const EmptyWeekState = () => (
         <p className="text-sm font-medium text-tertiary">No releases this week</p>
     </div>
 );
-
-// ─── Positioned Event ───────────────────────────────────────────────────────
-
-interface PositionedEventProps {
-    event: ZonedEvent;
-    dayStart: ZonedDateTime;
-    timeZone: string;
-    slotHeight: number;
-    overlapIndex: number;
-    totalOverlapping: number;
-    setSelectedDate: (date: CalendarDate) => void;
-    timeFormatter: DateFormatter;
-    onEventClick?: (eventId: string) => void;
-}
-
-const PositionedEvent = ({ event, dayStart, timeZone, slotHeight, overlapIndex, setSelectedDate, timeFormatter, onEventClick }: PositionedEventProps) => {
-    const formatTime = (dateTime: ZonedDateTime) => timeFormatter.format(dateTime.toDate());
-
-    const startZoned = event.start;
-    const endZoned = event.end;
-
-    const dayEnd = getEndOfDay(dayStart, timeZone);
-    const clampedStart = startZoned.compare(dayStart) < 0 ? dayStart : startZoned;
-    const clampedEnd = endZoned.compare(dayEnd) > 0 ? dayEnd : endZoned;
-
-    const startMinutes = clampedStart.hour * 60 + clampedStart.minute;
-    const endMinutes = clampedEnd.hour * 60 + clampedEnd.minute;
-    const durationMinutes = Math.max(15, endMinutes - startMinutes);
-
-    const top = (startMinutes / 30) * slotHeight;
-    const height = Math.max(slotHeight / 2, (durationMinutes / 30) * slotHeight);
-
-    const horizontalOffset = 0;
-
-    const displayTime = durationMinutes > 30;
-    const supportingText = displayTime ? formatTime(startZoned) : undefined;
-
-    return (
-        <div
-            key={event.id}
-            className="absolute w-full px-1.5 py-1.5"
-            style={{
-                top: `${top}px`,
-                height: `${height}px`,
-                left: `${horizontalOffset}px`,
-                zIndex: overlapIndex,
-            }}
-            onClick={() => onEventClick?.(event.id)}
-        >
-            <CalendarDwViewEvent label={event.title} supportingText={supportingText} color={event.color} withDot={event.dot} />
-        </div>
-    );
-};
 
 // ─── Week View Day Column ───────────────────────────────────────────────────
 

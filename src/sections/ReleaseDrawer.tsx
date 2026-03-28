@@ -104,7 +104,7 @@ export function ReleaseDrawer({ release, onClose }: ReleaseDrawerProps) {
             <div className="flex flex-col gap-4">
               <section className="flex flex-col gap-1.5">
                 <p className="text-xs font-semibold uppercase tracking-wide text-tertiary">Summary</p>
-                <p className="whitespace-pre-line text-sm text-secondary" style={{ lineHeight: 1.6 }}>
+                <p className="whitespace-pre-line text-sm leading-relaxed text-secondary">
                   {release.summary}
                 </p>
               </section>

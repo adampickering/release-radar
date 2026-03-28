@@ -4,6 +4,7 @@ import { Grid01, List } from "@untitledui/icons";
 import { cx } from "@/utils/cx";
 import { Avatar } from "@/components/base/avatar/avatar";
 import { Badge } from "@/components/base/badges/badges";
+import { Button } from "@/components/base/buttons/button";
 import { ButtonGroup, ButtonGroupItem } from "@/components/base/button-group/button-group";
 import { eventViewColors, type EventViewColor } from "../base-components/calendar-month-view-event";
 import { type ZonedEvent, EVENT_TYPE_LABELS } from "../utils/calendar-helpers";
@@ -167,13 +168,14 @@ const MonthSummaryCard = ({ data, onMonthClick, onEventClick }: MonthSummaryCard
     return (
         <div className="flex flex-col rounded-xl border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:shadow-sm">
             <div className="flex items-center justify-between">
-                <button
-                    type="button"
+                <Button
+                    color="tertiary"
+                    size="xs"
                     onClick={() => onMonthClick(month)}
-                    className="text-sm font-semibold text-primary transition duration-100 ease-linear hover:text-brand-secondary"
+                    className="!justify-start !p-0 !text-primary hover:!text-brand-secondary hover:!bg-transparent"
                 >
                     {name}
-                </button>
+                </Button>
                 <span className="text-xs font-medium text-tertiary">
                     {total} {total === 1 ? "release" : "releases"}
                 </span>
@@ -206,11 +208,13 @@ const MonthSummaryCard = ({ data, onMonthClick, onEventClick }: MonthSummaryCard
             {total > 0 && (
                 <div className="mt-3 flex flex-col gap-1">
                     {shown.map((event) => (
-                        <button
+                        <Button
                             key={event.id}
-                            type="button"
+                            color="tertiary"
+                            size="xs"
+                            noTextPadding
                             onClick={() => onEventClick?.(event.id)}
-                            className="flex items-center gap-2 rounded-md px-1.5 py-1 cursor-pointer text-left transition duration-100 ease-linear hover:bg-secondary"
+                            className="w-full !justify-start !gap-2 !rounded-md !px-1.5 !py-1 text-left hover:!bg-secondary *:data-text:contents"
                         >
                             {event.avatarUrl && (
                                 <Avatar src={event.avatarUrl} alt="" size="xs" />
@@ -219,16 +223,17 @@ const MonthSummaryCard = ({ data, onMonthClick, onEventClick }: MonthSummaryCard
                                 {event.title}
                             </span>
                             <span className={cx("size-2 shrink-0 rounded-full", eventViewColors[event.color || "gray"].dot)} />
-                        </button>
+                        </Button>
                     ))}
                     {remaining > 0 && (
-                        <button
-                            type="button"
+                        <Button
+                            color="link-color"
+                            size="xs"
                             onClick={() => onMonthClick(month)}
-                            className="mt-1 text-left text-xs font-medium text-brand-secondary transition duration-100 ease-linear hover:text-brand-secondary_hover"
+                            className="mt-1 !text-xs !font-medium"
                         >
                             +{remaining} more
-                        </button>
+                        </Button>
                     )}
                 </div>
             )}
@@ -283,13 +288,14 @@ const MonthTimelineSection = ({ data, locale, currentYear, onMonthClick, onEvent
         <div className="relative mb-8 last:mb-0">
             {/* Month header */}
             <div className="sticky top-0 z-10 flex items-center gap-3 bg-primary pb-3">
-                <button
-                    type="button"
+                <Button
+                    color="tertiary"
+                    size="xs"
                     onClick={() => onMonthClick(month)}
-                    className="text-base font-semibold text-primary transition duration-100 ease-linear hover:text-brand-secondary"
+                    className="!justify-start !p-0 !text-base !text-primary hover:!text-brand-secondary hover:!bg-transparent"
                 >
                     {name}
-                </button>
+                </Button>
                 <span className="text-xs font-medium text-tertiary">
                     {total} {total === 1 ? "release" : "releases"}
                 </span>
@@ -315,11 +321,13 @@ const MonthTimelineSection = ({ data, locale, currentYear, onMonthClick, onEvent
                         {/* Releases for this date */}
                         <div className="flex flex-col gap-1">
                             {group.events.map((event) => (
-                                <button
+                                <Button
                                     key={event.id}
-                                    type="button"
+                                    color="tertiary"
+                                    size="xs"
+                                    noTextPadding
                                     onClick={() => onEventClick?.(event.id)}
-                                    className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 cursor-pointer text-left transition duration-100 ease-linear hover:bg-secondary"
+                                    className="w-full !justify-start !gap-2.5 !rounded-lg !px-2 !py-1.5 text-left hover:!bg-secondary *:data-text:contents"
                                 >
                                     {event.avatarUrl && (
                                         <Avatar src={event.avatarUrl} alt="" size="xs" />
@@ -328,7 +336,7 @@ const MonthTimelineSection = ({ data, locale, currentYear, onMonthClick, onEvent
                                         {event.title}
                                     </span>
                                     <span className={cx("size-2 shrink-0 rounded-full", eventViewColors[event.color || "gray"].dot)} />
-                                </button>
+                                </Button>
                             ))}
                         </div>
                     </div>
