@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
-import { SearchLg, ChevronDown, ChevronLeft, ChevronRight, Link01 } from '@untitledui/icons'
+import { SearchLg, ChevronDown, ChevronLeft, ChevronRight, Link01, Mail01 } from '@untitledui/icons'
 import type { Selection } from 'react-aria-components'
 import { Autocomplete, SearchField, useFilter } from 'react-aria-components'
 import { toast } from 'sonner'
@@ -29,6 +29,7 @@ interface FilterBarProps {
   setFilter: <K extends keyof FilterState>(key: K, value: FilterState[K]) => void
   clearFilters: () => void
   activeFilterCount: number
+  onSubscribe?: () => void
 }
 
 function parseMonth(month: string): { year: number; month: number } {
@@ -191,7 +192,7 @@ function TypeDropdown({
 
 // --- Main FilterBar ---
 
-export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount }: FilterBarProps) {
+export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount, onSubscribe }: FilterBarProps) {
   const [flashing, setFlashing] = useState(false)
   const flashTimeout = useRef<ReturnType<typeof setTimeout>>(null)
 
@@ -252,6 +253,9 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
               </Button>
             </>
           )}
+          <Button color="secondary" size="sm" iconLeading={Mail01} onClick={onSubscribe}>
+            Subscribe
+          </Button>
           <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink} className={flashing ? 'animate-flash' : ''}>
             Copy link
           </Button>
@@ -264,6 +268,7 @@ export function FilterBar({ filters, setFilter, clearFilters, activeFilterCount 
               Clear
             </Button>
           )}
+          <Button color="secondary" size="sm" iconLeading={Mail01} onClick={onSubscribe} />
           <Button color="primary" size="sm" iconLeading={Link01} onClick={handleCopyLink} className={flashing ? 'animate-flash' : ''} />
         </div>
       </div>
