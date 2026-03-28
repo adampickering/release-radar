@@ -11,6 +11,7 @@ import { FilterBar } from '@/sections/FilterBar'
 import { CalendarBoard } from '@/sections/CalendarBoard'
 import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
 import { DaySummaryModal } from '@/sections/DaySummaryModal'
+import { SubscribeModal } from '@/sections/SubscribeModal'
 import { BrandMomentum } from '@/sections/BrandMomentum'
 import { TimelineView } from '@/sections/TimelineView'
 import { Footer } from '@/sections/Footer'
@@ -24,6 +25,7 @@ function App() {
   const stats = computeStats(filtered, brands, releases, filters.month)
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
+  const [subscribeModalOpen, setSubscribeModalOpen] = useState(false)
   const [activeView, setActiveView] = useState<ViewMode>('calendar')
   const [calendarView, setCalendarView] = useState<'month' | 'week' | 'day' | 'year'>('month')
   const [viewKey, setViewKey] = useState(0)
@@ -60,6 +62,7 @@ function App() {
           setFilter={setFilter}
           clearFilters={clearFilters}
           activeFilterCount={activeFilterCount}
+          onSubscribe={() => setSubscribeModalOpen(true)}
         />
       </div>
 
@@ -115,6 +118,7 @@ function App() {
           setFilter('release', id)
         }}
       />
+      <SubscribeModal isOpen={subscribeModalOpen} onClose={() => setSubscribeModalOpen(false)} />
     </div>
   )
 }
