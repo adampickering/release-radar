@@ -14,7 +14,9 @@
     "ingest:wprest": "tsx -e \"import {ingestWpRestReleases} from './src/releases/ingest-wp-rest-releases'; ingestWpRestReleases().then(r => console.log(r.releases.length + ' releases'))\"",
     "test:releases": "vitest run src/releases/",
     "test:releases:watch": "vitest src/releases/",
-    "digest:generate": "tsx src/releases/digest/generate-digest.ts"
+    "digest:generate": "tsx src/releases/digest/generate-digest.ts",
+    "digest:send": "tsx src/releases/digest/send-digest.ts",
+    "digest": "npm run digest:generate && npm run digest:send"
   },
   "dependencies": {
     "@internationalized/date": "^3.12.0",
