@@ -1,47 +1,21 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
     CalendarDate,
-    CalendarDateTime,
-    type ZonedDateTime,
-    endOfMonth,
-    endOfWeek,
     getLocalTimeZone,
-    isToday as isDateToday,
-    isSameDay,
-    isSameMonth,
     now,
     parseAbsoluteToLocal,
-    startOfMonth,
     startOfWeek,
-    toCalendarDate,
-    toZoned,
     today,
 } from "@internationalized/date";
-import { type DateFormatter, useDateFormatter, useLocale } from "@react-aria/i18n";
-import { BellRinging01, Calendar as CalendarIcon, ChevronLeft, ChevronRight, Clock, Copy01, Edit01, Trash01 } from "@untitledui/icons";
-import {
-    Calendar as AriaCalendar,
-    CalendarGrid as AriaCalendarGrid,
-    CalendarGridBody as AriaCalendarGridBody,
-    CalendarGridHeader as AriaCalendarGridHeader,
-    CalendarHeaderCell as AriaCalendarHeaderCell,
-    Heading as AriaHeading,
-} from "react-aria-components";
-import { CalendarCell } from "@/components/application/date-picker/cell";
-import { Avatar } from "@/components/base/avatar/avatar";
-import { AvatarAddButton } from "@/components/base/avatar/base-components";
-import { Button } from "@/components/base/buttons/button";
-import { ButtonUtility } from "@/components/base/buttons/button-utility";
+import { useDateFormatter, useLocale } from "@react-aria/i18n";
 import { cx } from "@/utils/cx";
-import { CalendarColumnHeader } from "./base-components/calendar-column-header";
-import { CalendarDwViewCell } from "./base-components/calendar-dw-view-cell";
-import { CalendarDwViewEvent } from "./base-components/calendar-dw-view-event";
 import { CalendarHeader } from "./base-components/calendar-header";
-import { CalendarMonthViewCell } from "./base-components/calendar-month-view-cell";
-import { CalendarMonthViewEvent, type EventViewColor } from "./base-components/calendar-month-view-event";
-import { CalendarRowLabel } from "./base-components/calendar-row-label";
-import { CalendarTimeMarker } from "./base-components/calendar-time-marker";
+import type { EventViewColor } from "./base-components/calendar-month-view-event";
 import type { ViewOption } from "./base-components/calendar-view-dropdown";
+import { DayView } from "./views/day-view";
+import { MonthView } from "./views/month-view";
+import { WeekView } from "./views/week-view";
+import { YearView } from "./views/year-view";
 
 export type CalendarEvent = {
     id: string;
@@ -54,17 +28,11 @@ export type CalendarEvent = {
     showTime?: boolean;
 };
 
-type ZonedEvent = Omit<CalendarEvent, "start" | "end"> & {
-    start: ZonedDateTime;
-    end: ZonedDateTime;
-};
-
-const SLOT_HEIGHT = 48;
-
 const viewOptions: ViewOption[] = [
-    { value: "day", label: "Day view", addon: "⌘D" },
-    { value: "week", label: "Week view", addon: "⌘W" },
-    { value: "month", label: "Month view", addon: "⌘M" },
+    { value: "day", label: "Day view", addon: "D" },
+    { value: "week", label: "Week view", addon: "W" },
+    { value: "month", label: "Month view", addon: "M" },
+    { value: "year", label: "Year to date", addon: "Y" },
 ];
 
 const getStartOfDay = (date: ZonedDateTime | CalendarDate, timeZone: string): ZonedDateTime => {
@@ -969,7 +937,7 @@ const DayView = ({
 
 interface CalendarProps {
     events: CalendarEvent[];
-    view?: "month" | "week" | "day";
+    view?: "month" | "week" | "day" | "year";
     className?: string;
     onEventClick?: (eventId: string) => void;
     onMoreClick?: (dateStr: string) => void;
@@ -989,6 +957,11 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
     const [currentMonthDate, setCurrentMonthDate] = useState(() => today(timeZone));
     const [selectedDate, setSelectedDate] = useState<CalendarDate | null>(currentMonthDate);
     const [view, setView] = useState<string>(defaultView);
+
+    // Sync view when the parent forces a different view via prop
+    useEffect(() => {
+        if (defaultView) setView(defaultView);
+    }, [defaultView]);
     const [currentTime, setCurrentTime] = useState(() => now(timeZone));
     const [isMounted, setIsMounted] = useState(false);
 
@@ -1011,27 +984,34 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
         }));
     }, [events]);
 
-    const headerDate = useMemo(
-        () => (view === "day" && selectedDate ? selectedDate.toDate(timeZone) : currentMonthDate.toDate(timeZone)),
-        [view, selectedDate, currentMonthDate, timeZone],
-    );
+    const headerDate = useMemo(() => {
+        if (view === "year") {
+            const now = new Date();
+            return currentMonthDate.year === now.getFullYear() ? now : new Date(currentMonthDate.year, 0, 1);
+        }
+        return view === "day" && selectedDate ? selectedDate.toDate(timeZone) : currentMonthDate.toDate(timeZone);
+    }, [view, selectedDate, currentMonthDate, timeZone]);
 
     const handleNavigate = (action: "PREV" | "NEXT" | "TODAY") => {
         let newDate: CalendarDate;
-        const anchorDate = selectedDate || currentMonthDate; // Use selected or current month anchor
+        const anchorDate = selectedDate || currentMonthDate;
 
         if (action === "TODAY") {
             newDate = today(timeZone);
         } else {
             const P = action === "PREV" ? -1 : 1;
             switch (view) {
+                case "year":
+                    newDate = new CalendarDate(currentMonthDate.year + P, 1, 1);
+                    break;
                 case "month":
                     newDate = currentMonthDate.add({ months: P });
                     break;
-                case "week":
+                case "week": {
                     const currentWeekStart = startOfWeek(anchorDate, locale);
                     newDate = currentWeekStart.add({ weeks: P });
                     break;
+                }
                 case "day":
                     newDate = anchorDate.add({ days: P });
                     break;
@@ -1039,15 +1019,71 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                     newDate = currentMonthDate;
             }
         }
-        setCurrentMonthDate(newDate); // Always update month anchor for header consistency
+        // Don't navigate into the future
+        const todayDate = today(timeZone);
+        if (newDate.compare(todayDate) > 0) {
+            newDate = todayDate;
+        }
+
+        setCurrentMonthDate(newDate);
         if (action === "TODAY" || view === "day") {
-            setSelectedDate(newDate); // Select today or the navigated day
+            setSelectedDate(newDate);
         } else {
-            setSelectedDate(null); // Clear selection when navigating months/weeks
+            setSelectedDate(null);
         }
     };
 
+    // Keyboard shortcuts (single-key, like Google Calendar)
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            // Skip if user is typing in an input/textarea or using a modifier
+            const target = e.target as HTMLElement;
+            if (e.metaKey || e.ctrlKey || e.altKey || target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable) return;
+
+            switch (e.key.toLowerCase()) {
+                case "d":
+                    setView("day");
+                    break;
+                case "w":
+                    setView("week");
+                    break;
+                case "m":
+                    setView("month");
+                    break;
+                case "y":
+                    setView("year");
+                    break;
+                case "t":
+                    handleNavigate("TODAY");
+                    break;
+            }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, []);
+
     const dayToDisplay = selectedDate || currentMonthDate;
+
+    // Disable "next" when at current period
+    const todayDate = today(timeZone);
+    const isNextDisabled = useMemo(() => {
+        const anchor = selectedDate || currentMonthDate;
+        switch (view) {
+            case "day":
+                return anchor.compare(todayDate) >= 0;
+            case "week": {
+                const weekStart = startOfWeek(anchor, locale);
+                const todayWeekStart = startOfWeek(todayDate, locale);
+                return weekStart.compare(todayWeekStart) >= 0;
+            }
+            case "month":
+                return currentMonthDate.year === todayDate.year && currentMonthDate.month === todayDate.month;
+            case "year":
+                return currentMonthDate.year >= todayDate.year;
+            default:
+                return false;
+        }
+    }, [view, currentMonthDate, selectedDate, todayDate, locale]);
 
     if (!isMounted) return null;
 
@@ -1057,7 +1093,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
             aria-label="Calendar"
             className={cx(
                 "flex flex-col overflow-hidden rounded-xl bg-primary shadow-xs ring ring-secondary",
-                view === "month" ? "h-full md:min-h-[912px]" : "h-[912px]",
+                view === "month" ? "h-full md:min-h-[912px]" : view === "year" ? "h-full" : "h-[912px]",
                 className,
             )}
         >
@@ -1069,6 +1105,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                 onClickPrev={() => handleNavigate("PREV")}
                 onClickNext={() => handleNavigate("NEXT")}
                 onClickToday={() => handleNavigate("TODAY")}
+                isNextDisabled={isNextDisabled}
                 hideSearch={hideSearch}
                 hideAddEvent={hideAddEvent}
             />
@@ -1086,6 +1123,11 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                         timeFormatter={timeFormatter}
                         onEventClick={onEventClick}
                         onMoreClick={onMoreClick}
+                        onDayClick={(date) => {
+                            setSelectedDate(date);
+                            setCurrentMonthDate(date);
+                            setView("day");
+                        }}
                         hideAddButton={hideAddEvent}
                     />
                 )}
@@ -1102,6 +1144,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                             shortWeekdayFormatter={shortWeekdayFormatter}
                             timeFormatter={timeFormatter}
                             hourOnlyFormatter={hourOnlyFormatter}
+                            onEventClick={onEventClick}
                             view={view}
                             className="md:hidden"
                         />
@@ -1117,6 +1160,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                             shortWeekdayFormatter={shortWeekdayFormatter}
                             timeFormatter={timeFormatter}
                             hourOnlyFormatter={hourOnlyFormatter}
+                            onEventClick={onEventClick}
                             view={view}
                             className="max-md:hidden"
                         />
@@ -1134,7 +1178,26 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                         shortWeekdayFormatter={shortWeekdayFormatter}
                         timeFormatter={timeFormatter}
                         hourOnlyFormatter={hourOnlyFormatter}
+                        onEventClick={onEventClick}
                         view={view}
+                    />
+                )}
+                {view === "year" && (
+                    <YearView
+                        currentYear={currentMonthDate.year}
+                        zonedEvents={zonedEvents}
+                        locale={locale}
+                        timeZone={timeZone}
+                        onDayClick={(date) => {
+                            setSelectedDate(date);
+                            setCurrentMonthDate(date);
+                            setView("day");
+                        }}
+                        onMonthClick={(month) => {
+                            setCurrentMonthDate(new CalendarDate(currentMonthDate.year, month, 1));
+                            setView("month");
+                        }}
+                        onEventClick={onEventClick}
                     />
                 )}
             </main>

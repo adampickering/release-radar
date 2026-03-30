@@ -11,6 +11,7 @@ import { FilterBar } from '@/sections/FilterBar'
 import { CalendarBoard } from '@/sections/CalendarBoard'
 import { ReleaseDrawer } from '@/sections/ReleaseDrawer'
 import { DaySummaryModal } from '@/sections/DaySummaryModal'
+import { SubscribeModal } from '@/sections/SubscribeModal'
 import { BrandMomentum } from '@/sections/BrandMomentum'
 import { TimelineView } from '@/sections/TimelineView'
 import { Footer } from '@/sections/Footer'
@@ -24,7 +25,9 @@ function App() {
   const stats = computeStats(filtered, brands, releases, filters.month)
   const isFiltered = activeFilterCount > 0
   const [dayModalDate, setDayModalDate] = useState<string | null>(null)
+  const [subscribeModalOpen, setSubscribeModalOpen] = useState(false)
   const [activeView, setActiveView] = useState<ViewMode>('calendar')
+  const [calendarView, setCalendarView] = useState<'month' | 'week' | 'day' | 'year'>('month')
   const [viewKey, setViewKey] = useState(0)
   const prevViewRef = useRef(activeView)
 
@@ -46,7 +49,10 @@ function App() {
     <div className="min-h-screen bg-primary font-sans flex flex-col">
       {/* Header — always sticky at top with fixed height */}
       <div className="sticky top-0 z-50 h-[60px]">
-        <Header activeView={activeView} onViewChange={setActiveView} />
+        <Header activeView={activeView} onViewChange={(view) => {
+          if (view === 'calendar') setFilter('type', [])
+          setActiveView(view)
+        }} />
       </div>
 
       {/* Filter bar — sticky below header */}
@@ -56,6 +62,7 @@ function App() {
           setFilter={setFilter}
           clearFilters={clearFilters}
           activeFilterCount={activeFilterCount}
+          onSubscribe={() => setSubscribeModalOpen(true)}
         />
       </div>
 
@@ -64,7 +71,7 @@ function App() {
         {activeView === 'calendar' && (
           <>
             {/* Stats strip — only on calendar view */}
-            <StatsStrip stats={stats} isFiltered={isFiltered} />
+            <StatsStrip stats={stats} isFiltered={isFiltered} releases={filtered} chartReleases={calendarFiltered} currentMonth={filters.month} onReleasesClick={() => setCalendarView('month')} onBrandsClick={() => setActiveView('brands')} onFeaturesClick={() => { setFilter('type', ['feature']); setActiveView('timeline') }} onAvgWeekClick={() => setCalendarView('week')} />
 
             {/* Calendar board — uses UUI Calendar with built-in month navigation */}
             <main className="px-4 md:px-6 py-4">
@@ -72,6 +79,7 @@ function App() {
                 releases={calendarFiltered}
                 onReleaseClick={(id) => setFilter('release', id)}
                 onDayClick={(date) => setDayModalDate(date)}
+                view={calendarView}
               />
             </main>
           </>
@@ -87,16 +95,10 @@ function App() {
         {activeView === 'brands' && (
           <BrandMomentum
             releases={filtered}
-            activeBrands={filters.brand || []}
+            allReleases={releases}
+            currentMonth={filters.month}
             layout="grid"
-            onBrandClick={(slug) => {
-              const current = filters.brand || []
-              if (current.includes(slug)) {
-                setFilter('brand', current.filter(s => s !== slug))
-              } else {
-                setFilter('brand', [...current, slug])
-              }
-            }}
+            onReleaseClick={(id) => setFilter('release', id)}
           />
         )}
       </div>
@@ -117,6 +119,7 @@ function App() {
           setFilter('release', id)
         }}
       />
+      <SubscribeModal isOpen={subscribeModalOpen} onClose={() => setSubscribeModalOpen(false)} />
     </div>
   )
 }

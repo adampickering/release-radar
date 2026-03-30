@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from "react";
 import { useId } from "react";
 import { ArrowDown, ArrowDownRight, ArrowUp, ArrowUpRight, Copy01, Eye, Share01, TrendDown01, TrendUp01, Zap } from "@untitledui/icons";
-import { Area, AreaChart, ResponsiveContainer } from "recharts";
+import { Area, AreaChart, ResponsiveContainer, Tooltip } from "recharts";
 import type { CurveType } from "recharts/types/shape/Curve";
 import type { Props as DotProps } from "recharts/types/shape/Dot";
 import { Dropdown } from "@/components/base/dropdown/dropdown";
@@ -330,9 +330,11 @@ export const MetricsChart01 = ({
     changeDescription = "vs last month",
     actions = true,
     chartData = lineData,
+    chartLabel,
     trend = "positive",
     footer,
     className,
+    onClick,
 }: {
     title?: string;
     subtitle?: string;
@@ -340,38 +342,81 @@ export const MetricsChart01 = ({
     changeDescription?: string;
     actions?: boolean;
     trend?: "positive" | "negative";
-    chartData?: { value: number; highlight?: boolean }[];
+    chartData?: { value: number; label?: string; highlight?: boolean }[];
+    chartLabel?: string;
     footer?: ReactNode;
     className?: string;
+    onClick?: () => void;
 }) => {
     const id = useId();
 
     const chartColor = trend === "positive" ? "text-fg-success-secondary" : "text-fg-error-secondary";
 
     return (
-        <div className={cx("rounded-xl bg-primary shadow-xs ring-1 ring-secondary ring-inset", className)}>
-            <div className="relative flex flex-col gap-5 px-4 py-5 md:px-5">
-                <h3 className="text-md font-semibold text-primary">{subtitle}</h3>
+        <div
+            className={cx(
+                "rounded-xl bg-primary shadow-xs ring-1 ring-secondary ring-inset",
+                onClick && "cursor-pointer transition duration-100 ease-linear hover:ring-brand hover:shadow-md",
+                className,
+            )}
+            onClick={onClick}
+        >
+            <div className="relative flex flex-col gap-3 px-4 py-4 md:gap-5 md:px-5 md:py-5">
+                <h3 className="text-sm font-semibold text-primary md:text-md">{subtitle}</h3>
 
-                <div className="flex items-end justify-between gap-4">
-                    <div className="flex flex-col gap-3">
-                        <p className="flex-1 text-display-sm font-semibold text-primary">{title}</p>
-                        <div className="flex gap-2">
+                <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between md:gap-4">
+                    <div className="flex flex-col gap-2 md:gap-3">
+                        <p className="text-display-xs font-semibold text-primary md:text-display-sm">{title}</p>
+                        <div className="flex items-center gap-2">
                             <MetricChangeIndicator type="simple" trend={trend} value={change} />
-                            <span className="text-sm font-medium text-tertiary">{changeDescription}</span>
+                            <span className="text-xs font-medium text-tertiary md:text-sm">{changeDescription}</span>
                         </div>
                     </div>
 
+                    <div className="flex flex-col items-end gap-1">
+                    <ResponsiveContainer width="100%" height={48} className="md:hidden">
+                        <AreaChart
+                            data={chartData}
+                            margin={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                        >
+                            <defs>
+                                <linearGradient id={`gradient-sm-${id}`} x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="5%" stopColor="currentColor" className={chartColor} stopOpacity="1" />
+                                    <stop offset="95%" stopColor="currentColor" className={chartColor} stopOpacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <Tooltip
+                                cursor={{ stroke: 'currentColor', strokeWidth: 1, strokeDasharray: '4 4', className: 'text-tertiary' }}
+                                content={({ active, payload }) => {
+                                    if (!active || !payload?.[0]) return null;
+                                    const point = payload[0].payload as { value: number; label?: string };
+                                    return (
+                                        <div className="rounded-lg bg-primary-solid px-2.5 py-1.5 text-xs font-semibold text-white shadow-lg">
+                                            {point.label ? `${point.label}: ${point.value}` : point.value}
+                                        </div>
+                                    );
+                                }}
+                            />
+                            <Area
+                                isAnimationActive={false}
+                                className={chartColor}
+                                dataKey="value"
+                                type="monotone"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                                fill={`url(#gradient-sm-${id})`}
+                                fillOpacity={0.2}
+                                dot={<CustomizedDot dotColor={chartColor} />}
+                                activeDot={{ r: 4, stroke: 'currentColor', strokeWidth: 2, fill: 'white' }}
+                            />
+                        </AreaChart>
+                    </ResponsiveContainer>
+                    <div className="hidden md:block">
                     <AreaChart
                         height={56}
                         width={112}
                         data={chartData}
-                        margin={{
-                            left: 0,
-                            right: 0,
-                            top: 0,
-                            bottom: 0,
-                        }}
+                        margin={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     >
                         <defs>
                             <linearGradient id={`gradient-${id}`} x1="0" y1="0" x2="0" y2="1">
@@ -380,6 +425,18 @@ export const MetricsChart01 = ({
                             </linearGradient>
                         </defs>
 
+                        <Tooltip
+                            cursor={{ stroke: 'currentColor', strokeWidth: 1, strokeDasharray: '4 4', className: 'text-tertiary' }}
+                            content={({ active, payload }) => {
+                                if (!active || !payload?.[0]) return null;
+                                const point = payload[0].payload as { value: number; label?: string };
+                                return (
+                                    <div className="rounded-lg bg-primary-solid px-2.5 py-1.5 text-xs font-semibold text-white shadow-lg">
+                                        {point.label ? `${point.label}: ${point.value}` : point.value}
+                                    </div>
+                                );
+                            }}
+                        />
                         <Area
                             isAnimationActive={false}
                             className={chartColor}
@@ -390,9 +447,12 @@ export const MetricsChart01 = ({
                             fill={`url(#gradient-${id})`}
                             fillOpacity={0.2}
                             dot={<CustomizedDot dotColor={chartColor} />}
-                            activeDot={false}
+                            activeDot={{ r: 4, stroke: 'currentColor', strokeWidth: 2, fill: 'white' }}
                         />
                     </AreaChart>
+                    </div>
+                    {chartLabel && <span className="text-xs font-medium text-tertiary">{chartLabel}</span>}
+                    </div>
                 </div>
 
                 {actions && (

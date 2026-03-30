@@ -8,6 +8,7 @@ interface CalendarBoardProps {
   releases: ReleaseItem[]
   onReleaseClick: (id: string) => void
   onDayClick: (date: string) => void
+  view?: 'month' | 'week' | 'day' | 'year'
 }
 
 /** Map our release types to UUI Calendar EventViewColor values */
@@ -32,6 +33,7 @@ export function CalendarBoard({
   releases,
   onReleaseClick,
   onDayClick,
+  view = 'month',
 }: CalendarBoardProps) {
   /** Convert ReleaseItem[] into CalendarEvent[] for the UUI Calendar */
   const calendarEvents: CalendarEvent[] = useMemo(
@@ -73,7 +75,7 @@ export function CalendarBoard({
   return (
     <Calendar
       events={calendarEvents}
-      view="month"
+      view={view}
       onEventClick={onReleaseClick}
       onMoreClick={onDayClick}
       hideSearch
