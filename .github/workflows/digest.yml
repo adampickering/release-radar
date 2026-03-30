@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 15 * * 1'
   workflow_dispatch:
+    inputs:
+      test_recipient:
+        description: 'Send only to this email (leave empty to send to all subscribers)'
+        required: false
+        type: string
 
 jobs:
   send-digest:
@@ -28,6 +33,7 @@ jobs:
           DIGEST_FROM_EMAIL: ${{ secrets.DIGEST_FROM_EMAIL }}
           DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
           UNSUBSCRIBE_URL: ${{ secrets.UNSUBSCRIBE_URL }}
+          TEST_RECIPIENT: ${{ inputs.test_recipient }}
         run: npm run digest
 
       - name: Commit digest archive

@@ -97,8 +97,16 @@ async function main() {
 	const apiKey = process.env.BREVO_API_KEY
 	if (!apiKey) throw new Error('BREVO_API_KEY environment variable is not set')
 
-	console.log('📋 Fetching subscribers from Brevo...')
-	const subscribers = await fetchSubscribers(apiKey)
+	const testRecipient = process.env.TEST_RECIPIENT?.trim()
+	let subscribers: BrevoContact[]
+
+	if (testRecipient) {
+		console.log(`🧪 Test mode: sending only to ${testRecipient}`)
+		subscribers = [{ email: testRecipient, attributes: { FIRSTNAME: testRecipient.split('@')[0] } }]
+	} else {
+		console.log('📋 Fetching subscribers from Brevo...')
+		subscribers = await fetchSubscribers(apiKey)
+	}
 
 	if (subscribers.length === 0) {
 		console.log('No subscribers. Skipping send.')
@@ -131,7 +139,7 @@ async function main() {
 			})
 		)
 
-		const subject = `The Weekly Roundup — ${digest.weekRange}`
+		const subject = `Awesome Motive The Weekly Roundup — ${digest.weekRange}`
 
 		try {
 			await sendViaBrevo(apiKey, sub.email, subject, html, unsubscribeUrl)

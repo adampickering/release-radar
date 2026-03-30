@@ -74,7 +74,7 @@ export function SubscribeModal({ isOpen, onClose }: SubscribeModalProps) {
                     You're subscribed!
                   </AriaHeading>
                   <p className="text-sm text-tertiary">
-                    Look for The Weekly Roundup in your inbox every Monday at 10am EST.
+                    Look for The Weekly Roundup in your inbox every Monday at 3pm UTC.
                   </p>
                 </div>
                 <Button color="secondary" size="md" className="w-full" onClick={handleClose}>
@@ -91,7 +91,7 @@ export function SubscribeModal({ isOpen, onClose }: SubscribeModalProps) {
                       The Weekly Roundup
                     </AriaHeading>
                     <p className="text-sm text-tertiary">
-                      Every Monday at 10am EST — a witty digest of what shipped across Awesome Motive brands.
+                      Every Monday at 3pm UTC — a witty digest of what shipped across Awesome Motive brands.
                     </p>
                   </div>
 

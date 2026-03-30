@@ -2,7 +2,6 @@ import React from "react"
 import { Column, Container, Hr, Html, Img, Preview, Row } from "@react-email/components"
 import { Body } from "../components/emails/_components/body"
 import { Button } from "../components/emails/_components/button"
-import { LeftAligned as Footer } from "../components/emails/_components/footer"
 import { Head } from "../components/emails/_components/head"
 import { Tailwind } from "../components/emails/_components/tailwind"
 import { Text } from "../components/emails/_components/text"
@@ -66,7 +65,7 @@ export const WeeklyDigest = ({
         <Html>
             <Tailwind theme={theme}>
                 <Head />
-                <Preview>The Weekly Roundup — {weekRange}</Preview>
+                <Preview>Awesome Motive The Weekly Roundup — {weekRange}</Preview>
                 <Body>
                     <Container align="center" className="w-full max-w-160 bg-primary md:p-8">
                         {/* Header */}
@@ -191,7 +190,25 @@ export const WeeklyDigest = ({
                         </Container>
 
                         {/* Footer */}
-                        <Footer />
+                        <Container align="center" className="max-w-full bg-primary px-6 py-8">
+                            <Hr className="mb-6 border-t border-secondary" />
+                            <Row>
+                                <Column align="center">
+                                    <Img src="https://releaseradar.work/am-logo.png" alt="Awesome Motive" width="28" height="28" style={{ borderRadius: '50%', background: '#0a0d12', margin: '0 auto' }} />
+                                </Column>
+                            </Row>
+                            <Text className="mt-4 text-center text-xs text-tertiary">
+                                © {new Date().getFullYear()} Awesome Motive Inc.
+                            </Text>
+                            {unsubscribeUrl && (
+                                <Text className="mt-1 text-center text-xs text-tertiary">
+                                    Don't want these emails?{" "}
+                                    <a href={unsubscribeUrl} style={{ color: "#6941C6", textDecoration: "underline" }}>
+                                        Unsubscribe
+                                    </a>
+                                </Text>
+                            )}
+                        </Container>
                     </Container>
                 </Body>
             </Tailwind>
