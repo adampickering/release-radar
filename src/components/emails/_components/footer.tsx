@@ -1,3 +1,4 @@
+import React from "react";
 import { Column, Container, Button as EmailButton, Hr, Img, Row } from "@react-email/components";
 import { Text } from "./text";
 

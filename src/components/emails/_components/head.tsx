@@ -1,3 +1,4 @@
+import React from "react";
 import type { HeadProps } from "@react-email/components";
 import { Head as EmailHead } from "@react-email/components";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import type { TextProps } from "@react-email/components";
 import { Text as EmailText } from "@react-email/components";
 import { cx } from "../../../utils/cx";

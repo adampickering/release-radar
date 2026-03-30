@@ -1,3 +1,4 @@
+import React from "react";
 import type { BodyProps } from "@react-email/components";
 import { Body as EmailBody } from "@react-email/components";
 import { cx } from "../../../utils/cx";

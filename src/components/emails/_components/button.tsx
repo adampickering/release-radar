@@ -1,3 +1,4 @@
+import React from "react";
 import type { ButtonProps as EmailButtonProps } from "@react-email/components";
 import { Button as EmailButton } from "@react-email/components";
 import { cx } from "../../../utils/cx";

@@ -1,3 +1,4 @@
+import React from "react";
 import type { TailwindConfig, TailwindProps } from "@react-email/components";
 import { Tailwind as EmailTailwind } from "@react-email/tailwind";
 import { getThemeObject } from "../../../emails/_theme/theme";
