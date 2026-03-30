@@ -7,7 +7,6 @@ import { brandsBySlug } from '@/data/brands'
 interface CalendarBoardProps {
   releases: ReleaseItem[]
   onReleaseClick: (id: string) => void
-  onDayClick: (date: string) => void
   view?: 'month' | 'week' | 'day' | 'year'
 }
 
@@ -32,7 +31,6 @@ function releaseTypeToColor(type: ReleaseType): EventViewColor {
 export function CalendarBoard({
   releases,
   onReleaseClick,
-  onDayClick,
   view = 'month',
 }: CalendarBoardProps) {
   /** Convert ReleaseItem[] into CalendarEvent[] for the UUI Calendar */
@@ -77,7 +75,6 @@ export function CalendarBoard({
       events={calendarEvents}
       view={view}
       onEventClick={onReleaseClick}
-      onMoreClick={onDayClick}
       hideSearch
       hideAddEvent
     />
