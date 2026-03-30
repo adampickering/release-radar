@@ -28,7 +28,7 @@ function App() {
   const [viewKey, setViewKey] = useState(0)
   const prevViewRef = useRef(activeView)
 
-  const dayReleases = dayModalDate ? filtered.filter(r => r.date === dayModalDate) : []
+  const dayReleases = dayModalDate ? calendarFiltered.filter(r => r.date === dayModalDate) : []
 
   // Look up from FULL releases array, not filtered — drawer opens regardless of current filters
   const selectedRelease = releases.find(r => r.id === filters.release) ?? null
@@ -71,6 +71,7 @@ function App() {
               <CalendarBoard
                 releases={calendarFiltered}
                 onReleaseClick={(id) => setFilter('release', id)}
+                onDayClick={(date) => setDayModalDate(date)}
               />
             </main>
           </>

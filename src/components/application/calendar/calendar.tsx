@@ -172,6 +172,7 @@ interface MonthViewProps {
     timeFormatter: DateFormatter;
     className?: string;
     onEventClick?: (eventId: string) => void;
+    onMoreClick?: (dateStr: string) => void;
     hideAddButton?: boolean;
 }
 
@@ -187,6 +188,7 @@ const MonthView = ({
     timeFormatter, // Needed for formatTime inside
     className,
     onEventClick,
+    onMoreClick,
     hideAddButton,
 }: MonthViewProps) => {
     const monthStart = startOfMonth(currentMonthDate);
@@ -507,7 +509,7 @@ const MonthView = ({
                             </div>
 
                             {remainingEventsCount > 0 && (
-                                <div className="truncate text-xs font-semibold text-utility-neutral-500 max-md:pl-1">{`${remainingEventsCount} more...`}</div>
+                                <div className="truncate text-xs font-semibold text-utility-neutral-500 max-md:pl-1 cursor-pointer hover:text-utility-neutral-700" onClick={(e) => { e.stopPropagation(); onMoreClick?.(date.toString()); }}>{`${remainingEventsCount} more...`}</div>
                             )}
                         </CalendarMonthViewCell>
                     );
@@ -970,11 +972,12 @@ interface CalendarProps {
     view?: "month" | "week" | "day";
     className?: string;
     onEventClick?: (eventId: string) => void;
+    onMoreClick?: (dateStr: string) => void;
     hideSearch?: boolean;
     hideAddEvent?: boolean;
 }
 
-export const Calendar = ({ events, view: defaultView = "month", className, onEventClick, hideSearch, hideAddEvent }: CalendarProps) => {
+export const Calendar = ({ events, view: defaultView = "month", className, onEventClick, onMoreClick, hideSearch, hideAddEvent }: CalendarProps) => {
     const { locale } = useLocale();
     const timeZone = useMemo(() => getLocalTimeZone(), []);
 
@@ -1082,6 +1085,7 @@ export const Calendar = ({ events, view: defaultView = "month", className, onEve
                         shortWeekdayFormatter={shortWeekdayFormatter}
                         timeFormatter={timeFormatter}
                         onEventClick={onEventClick}
+                        onMoreClick={onMoreClick}
                         hideAddButton={hideAddEvent}
                     />
                 )}

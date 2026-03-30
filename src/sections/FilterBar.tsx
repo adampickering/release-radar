@@ -117,7 +117,7 @@ function BrandDropdown({
             selectedKeys={selectedKeys}
             onSelectionChange={handleSelectionChange}
           >
-            {brands.map(b => (
+            {[...brands].sort((a, b) => a.name.localeCompare(b.name)).map(b => (
               <Dropdown.Item
                 key={b.slug}
                 id={b.slug}
