@@ -1,5 +1,16 @@
 [
   {
+    "id": "google-analytics-for-wordpress@10.1.2",
+    "title": "MonsterInsights 10.1.2",
+    "date": "2026-03-31",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
     "id": "charitable@1.8.10.2",
     "title": "Charitable 1.8.10.2",
     "date": "2026-03-27",
