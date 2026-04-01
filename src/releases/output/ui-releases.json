@@ -111,7 +111,7 @@
   },
   {
     "id": "feeds-for-youtube@2.6.4",
-    "title": "Smash Balloon YouTube Feed 2.6.4",
+    "title": "YouTube Feed 2.6.4",
     "date": "2026-03-19",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -177,7 +177,7 @@
   },
   {
     "id": "custom-facebook-feed@4.7.6",
-    "title": "Smash Balloon Social Post Feed 4.7.6",
+    "title": "Facebook Feed 4.7.6",
     "date": "2026-03-12",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -188,7 +188,7 @@
   },
   {
     "id": "instagram-feed@6.10.1",
-    "title": "Smash Balloon Instagram Feed 6.10.1",
+    "title": "Instagram Feed 6.10.1",
     "date": "2026-03-12",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -199,7 +199,7 @@
   },
   {
     "id": "custom-twitter-feeds@2.5.4",
-    "title": "Smash Balloon Twitter Feed 2.5.4",
+    "title": "Twitter Feeds 2.5.4",
     "date": "2026-03-12",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -210,13 +210,24 @@
   },
   {
     "id": "feeds-for-youtube@2.6.3",
-    "title": "Smash Balloon YouTube Feed 2.6.3",
+    "title": "YouTube Feed 2.6.3",
     "date": "2026-03-12",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "improvement",
     "summary": "Tweak: Added optional deactivation feedback survey to help us improve the plugin.",
     "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
+    "id": "smashballoon-wpchat-livechat-customer-support@1.3.1",
+    "title": "WPChat 1.3.1",
+    "date": "2026-03-12",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Added optional deactivation feedback survey to help us improve the plugin.",
+    "changelogUrl": "https://wordpress.org/plugins/smashballoon-wpchat-livechat-customer-support/#developers",
     "tags": []
   },
   {
@@ -253,6 +264,17 @@
     "tags": []
   },
   {
+    "id": "reviews-feed@2.4.6",
+    "title": "Reviews Feed 2.4.6",
+    "date": "2026-03-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added deactivation feedback survey to help improve the plugin\n\nFix: Improved block editor performance by eliminating unnecessary database queries on page load",
+    "changelogUrl": "https://wordpress.org/plugins/reviews-feed/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@4.9.5.1",
     "title": "All in One SEO 4.9.5.1",
     "date": "2026-03-09",
@@ -272,6 +294,17 @@
     "releaseType": "fix",
     "summary": "Updated: TruSEO analysis content parser for better compatibility\n\nUpdated: Added custom field smart tag support to the Schema Review Author field\n\nUpdated: Restored the \"Download Sample CSV File\" link and import instructions on the Redirects Import/Export screen\n\nUpdated: Database table information is now included in the System Status tool and system information exports\n\nUpdated: Added a size-based log cleanup mechanism to prevent performance issues with large Redirects and 404 log tables\n\nFixed: SEO Checklist's \"Delete Hello World\" task no longer suggests deleting repurposed WordPress sample posts\n\nFixed: Post archive sitemap returning empty content when sitemap indexes are enabled\n\nFixed: Import/Export now list all sites instead of only 20 on Multisite Networks\n\nFixed: LLMs.txt button URLs pointing to wrong location on non-standard WordPress installations\n\nFixed: Bricks Builder ACF Relationship query loops returning no results when AIOSEO is active\n\nFixed: Improved performance of sitemap taxonomy queries for sites with large numbers of terms\n\nFixed: Posts with different or external Canonical URLs are now excluded from the sitemap\n\nFixed: Posts and terms with custom canonical URLs are now excluded from XML sitemaps\n\nFixed: TOC block triggering \"unsaved changes\" warning even without any changes\n\nFixed: Warnings in ProfilePage schema\n\nFixed: URL count mismatch between root sitemap index and date sitemap\n\nFixed: Fatal error when editing posts with corrupt breadcrumb settings\n\nFixed: Local SEO Opening Hours time dropdowns not updating to 24h format when toggling \"Use 24h Format\"\n\nFixed: Console warning about navigation throttling when using SiteOrigin Page Builder\n\nFixed: SEO Analyzer database error when focus keywords contain double quotes\n\nFixed: Rare cases where scheduled actions were duplicated\n\nFixed: AI access token sometimes failing to be fetched\n\nFixed: PHP warning when analyzing a one-word title starting with the question word in Headline Analyzer",
     "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "reviews-feed@2.4.5",
+    "title": "Reviews Feed 2.4.5",
+    "date": "2026-03-05",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Resolved international character encoding issues (æ, ø, å, etc.) in source names causing API errors\n\nFix: Improved HTML entity decoding in review content display\n\nTweak: Enhanced source identification reliability for API communications",
+    "changelogUrl": "https://wordpress.org/plugins/reviews-feed/#developers",
     "tags": []
   },
   {
@@ -331,7 +364,7 @@
   },
   {
     "id": "instagram-feed@6.10.0",
-    "title": "Smash Balloon Instagram Feed 6.10.0",
+    "title": "Instagram Feed 6.10.0",
     "date": "2026-02-26",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -342,7 +375,7 @@
   },
   {
     "id": "custom-twitter-feeds@2.3.1",
-    "title": "Smash Balloon Twitter Feed 2.3.1",
+    "title": "Twitter Feeds 2.3.1",
     "date": "2026-02-26",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -353,13 +386,24 @@
   },
   {
     "id": "feeds-for-youtube@2.6.2",
-    "title": "Smash Balloon YouTube Feed 2.6.2",
+    "title": "YouTube Feed 2.6.2",
     "date": "2026-02-26",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
     "releaseType": "improvement",
     "summary": "Fix: Additional plugin hardening.",
     "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
+    "id": "reviews-feed@2.4.4",
+    "title": "Reviews Feed 2.4.4",
+    "date": "2026-02-26",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Resolved Borlabs Cookie 3.x compatibility issue preventing consent detection\n\nFix: Improved website registration token handling for better reliability",
+    "changelogUrl": "https://wordpress.org/plugins/reviews-feed/#developers",
     "tags": []
   },
   {
@@ -397,7 +441,7 @@
   },
   {
     "id": "custom-facebook-feed@4.7.5",
-    "title": "Smash Balloon Social Post Feed 4.7.5",
+    "title": "Facebook Feed 4.7.5",
     "date": "2026-02-19",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -451,6 +495,17 @@
     "tags": []
   },
   {
+    "id": "reviews-feed@2.4.3",
+    "title": "Reviews Feed 2.4.3",
+    "date": "2026-02-12",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Improved API key handling for all review providers\n\nTweak: Saved API keys are now used when adding new sources\n\nTweak: Enhanced API communication reliability",
+    "changelogUrl": "https://wordpress.org/plugins/reviews-feed/#developers",
+    "tags": []
+  },
+  {
     "id": "insert-headers-and-footers@2.3.4",
     "title": "WPCode 2.3.4",
     "date": "2026-02-12",
@@ -473,6 +528,17 @@
     "tags": []
   },
   {
+    "id": "reviews-feed@2.4.2",
+    "title": "Reviews Feed 2.4.2",
+    "date": "2026-02-06",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Plugin hardening and miscellaneous fixes.",
+    "changelogUrl": "https://wordpress.org/plugins/reviews-feed/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.0.1",
     "title": "MonsterInsights 10.0.1",
     "date": "2026-02-05",
@@ -492,6 +558,17 @@
     "releaseType": "feature",
     "summary": "New: See your store's performance in more detail with our 5 new reports\n\nUpdated: Launch Google Ads campaigns from any version of MonsterInsights\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "smashballoon-wpchat-livechat-customer-support@1.3.0",
+    "title": "WPChat 1.3.0",
+    "date": "2026-01-30",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Onboarding wizard now supports adding multiple platforms during setup\n\nNew: User conversations now persist between page navigations for a seamless experience\n\nTweak: The widget now hides the frequently asked questions section when no FAQs are configured",
+    "changelogUrl": "https://wordpress.org/plugins/smashballoon-wpchat-livechat-customer-support/#developers",
     "tags": []
   },
   {
@@ -547,6 +624,17 @@
     "releaseType": "feature",
     "summary": "New: Manage logs with the Log Retention Settings\n\nAdmin: Some help icons could get duplicated\n\nBlocks: Login block could prevent WordPress admin email confirmation from working\n\nCheckout: Improved billing address conditional logic and validation\n\nImports: Improved handling of files uploaded for import\n\nReports: Gateway pie charts now only show gateways used during the report date range\n\nReports: Stripe payment method data now respects report date ranges\n\nReports: The vendor script paths for legacy graphs have been updated",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
+    "id": "smashballoon-wpchat-livechat-customer-support@1.2.0",
+    "title": "WPChat 1.2.0",
+    "date": "2026-01-15",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: RTL support has been fully implemented to enhance the usability for right-to-left languages\n\nNew: A reset option has been added to the chat agent profile picture, allowing users to revert to the default image easily\n\nNew: The chat bubble UI now features an \"x\" button, enabling users to close the UI more conveniently\n\nNew: WPChat plugin now offers fully translatable frontend components, making it easier for users to localize their experiences\n\nNew: Platform URLs have been configured to open in a new tab, improving user navigation\n\nNew: The chat bubble button icon has been updated to the correct orientation for a better visual experience\n\nNew: The 'Powered by WPChat' link in the chat bubble UI now correctly directs users to wpchat.com\n\nNew: A button to create new or add FAQ entries has been introduced on the FAQ page for enhanced content management\n\nFix: A glitch that caused issues when saving FAQs in preview mode has been resolved, ensuring smoother functionality",
+    "changelogUrl": "https://wordpress.org/plugins/smashballoon-wpchat-livechat-customer-support/#developers",
     "tags": []
   },
   {
@@ -671,8 +759,19 @@
     "tags": []
   },
   {
+    "id": "smashballoon-wpchat-livechat-customer-support@1.1.1",
+    "title": "WPChat 1.1.1",
+    "date": "2025-12-12",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: The plugin is now more compatible with older themes.",
+    "changelogUrl": "https://wordpress.org/plugins/smashballoon-wpchat-livechat-customer-support/#developers",
+    "tags": []
+  },
+  {
     "id": "custom-facebook-feed@4.3.4",
-    "title": "Smash Balloon Social Post Feed 4.3.4",
+    "title": "Facebook Feed 4.3.4",
     "date": "2025-12-11",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -683,7 +782,7 @@
   },
   {
     "id": "custom-twitter-feeds@2.3.0",
-    "title": "Smash Balloon Twitter Feed 2.3.0",
+    "title": "Twitter Feeds 2.3.0",
     "date": "2025-12-11",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -694,7 +793,7 @@
   },
   {
     "id": "feeds-for-youtube@2.6.1",
-    "title": "Smash Balloon YouTube Feed 2.6.1",
+    "title": "YouTube Feed 2.6.1",
     "date": "2025-12-11",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -891,6 +990,17 @@
     "tags": []
   },
   {
+    "id": "smashballoon-wpchat-livechat-customer-support@1.1.0",
+    "title": "WPChat 1.1.0",
+    "date": "2025-11-05",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added support for messaging on Telegram, Instagram, and Facebook Messenger\n\nTweak: Improved customizer usability on smaller screens\n\nTweak: The verified badge color now matches your selected theme\n\nTweak: The admin menu now highlights correctly on create and edit pages\n\nTweak: Updated page titles to match their corresponding admin menu items\n\nTweak: Enhanced the onboarding wizard performance\n\nFix: Resolved a display issue with the funnel visibility notice",
+    "changelogUrl": "https://wordpress.org/plugins/smashballoon-wpchat-livechat-customer-support/#developers",
+    "tags": []
+  },
+  {
     "id": "thrive-themes@10.8.2",
     "title": "Thrive Themes 10.8.2",
     "date": "2025-11-04",
@@ -958,7 +1068,7 @@
   },
   {
     "id": "custom-facebook-feed@4.3.3",
-    "title": "Smash Balloon Social Post Feed 4.3.3",
+    "title": "Facebook Feed 4.3.3",
     "date": "2025-10-09",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -1233,7 +1343,7 @@
   },
   {
     "id": "custom-facebook-feed@4.3.2",
-    "title": "Smash Balloon Social Post Feed 4.3.2",
+    "title": "Facebook Feed 4.3.2",
     "date": "2025-06-02",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -1266,7 +1376,7 @@
   },
   {
     "id": "instagram-feed@6.9.1",
-    "title": "Smash Balloon Instagram Feed 6.9.1",
+    "title": "Instagram Feed 6.9.1",
     "date": "2025-05-21",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -1310,7 +1420,7 @@
   },
   {
     "id": "instagram-feed@6.9.0",
-    "title": "Smash Balloon Instagram Feed 6.9.0",
+    "title": "Instagram Feed 6.9.0",
     "date": "2025-05-07",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -1365,7 +1475,7 @@
   },
   {
     "id": "instagram-feed@6.8.0",
-    "title": "Smash Balloon Instagram Feed 6.8.0",
+    "title": "Instagram Feed 6.8.0",
     "date": "2025-04-23",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -1376,7 +1486,7 @@
   },
   {
     "id": "feeds-for-youtube@2.4.0",
-    "title": "Smash Balloon YouTube Feed 2.4.0",
+    "title": "YouTube Feed 2.4.0",
     "date": "2025-04-23",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
@@ -1607,7 +1717,7 @@
   },
   {
     "id": "custom-twitter-feeds@2.2.5",
-    "title": "Smash Balloon Twitter Feed 2.2.5",
+    "title": "Twitter Feeds 2.2.5",
     "date": "2024-11-19",
     "brand": "Smash Balloon",
     "brandSlug": "smash-balloon",
