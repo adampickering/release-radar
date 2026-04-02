@@ -1,5 +1,16 @@
 [
   {
+    "id": "charitable@1.8.10.3",
+    "title": "Charitable 1.8.10.3",
+    "date": "2026-04-01",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "IMPROVED: Sync Pending Stripe Donations now uses AJAX processing with new dry run and email options\n\nFIX: Improved Stripe webhook reliability, signing secret handling, and notice wording in certain scenarios\n\nFIX: Fixed refund checkbox not appearing when changing donation status to Refunded in certain scenarios",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.1.2",
     "title": "MonsterInsights 10.1.2",
     "date": "2026-03-31",
@@ -17,7 +28,7 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: Added Sync Pending Stripe Donations tool to gateway settings (beta)\n\nFIX: Fixed some minor PHP warnings and minor CSS issues on dashboard\n\nFIX: Fixed a fatal error involving Stripe webhook migration on sites without an active Stripe connection in certain scenarios",
+    "summary": "NEW: Added Sync Pending Stripe Donations tool to gateway settings (beta)\n\nFIX: Fixed minor CSS issues on dashboard\n\nFIX: Fixed some PHP warnings\n\nFIX: Fixed a fatal error involving Stripe webhook migration on sites without an active Stripe connection in certain scenarios",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -404,17 +415,6 @@
     "releaseType": "improvement",
     "summary": "Fix: Updated placeholder text with actual content.",
     "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.9.6",
-    "title": "Charitable 1.8.9.6",
-    "date": "2026-02-19",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "IMPROVED: Enhanced license validation process with improved performance when downloading Charitable Pro automatically\n\nFIX: Improved email reliability in certain scenarios, especially with certain aggressive WordPress themes\n\nFIX: Updated translation strings and minor updates to PHP and CSS regarding best practices",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
