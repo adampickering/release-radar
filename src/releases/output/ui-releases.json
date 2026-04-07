@@ -1,5 +1,16 @@
 [
   {
+    "id": "charitable@1.8.10.4",
+    "title": "Charitable 1.8.10.4",
+    "date": "2026-04-06",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "FIX: Fixed an issue where multiple Stripe webhook endpoints could accumulate over time, causing donation webhook events to fail signature verification in certain scenarios.",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "charitable@1.8.10.3",
     "title": "Charitable 1.8.10.3",
     "date": "2026-04-01",
@@ -382,17 +393,6 @@
     "releaseType": "fix",
     "summary": "Fixed: The Cloudflare Turnstile captcha rendered twice if a CF7 form was also added on the same page.",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.9.7",
-    "title": "Charitable 1.8.9.7",
-    "date": "2026-02-24",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "feature",
-    "summary": "NEW: Charitable will add social meta to campaign pages for improved sharing on some social networks (SEO plugins can override this)\n\nFIX: Fixed broken social share URLs for Twitter/X, Pinterest, and improved share link defaults\n\nFIX: Corrected sanitization issue that resulted in incorrect display of code in \"time left\" display for campaigns in certain scenarios",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
