@@ -1,5 +1,16 @@
 [
   {
+    "id": "wpforms-lite@1.10.0.3",
+    "title": "WPForms Lite 1.10.0.3",
+    "date": "2026-04-08",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Fixed: PayPal Connection URL was cached and contains the old site URL after the site migration.",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.2.0",
     "title": "Uncanny Automator 7.2.0",
     "date": "2026-04-07",
@@ -481,17 +492,6 @@
     "releaseType": "feature",
     "summary": "New: See your store's performance in more detail with our 5 new reports\n\nUpdated: Launch Google Ads campaigns from any version of MonsterInsights\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.9.9.2",
-    "title": "WPForms Lite 1.9.9.2",
-    "date": "2026-01-29",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: WordPress Abilities API integration for AI and automation-ready access to WPForms\n\nAdded: Ability to generate Quiz-enabled forms using the AI Form generator\n\nAdded: Support for multiple fields selection: you can now drag, duplicate, or delete multiple fields at once\n\nAdded: Keyboard shortcuts for field duplication (D), field removal (Delete), copy (Ctrl/Cmd + C), and paste (Ctrl/Cmd + V)\n\nAdded: Undo/redo command manager with modular integrations for Form Builder inputs\n\nAdded: Divi 5 compatibility and a new block for the Divi page builder\n\nChanged: Put the plugin on a diet – performed a cleanup, reducing plugin size\n\nChanged: Improved compatibility with the MotoPress Content Editor plugin\n\nChanged: Updated Chart.js library to v4.5.1\n\nFixed: Selected form type was not retained when refreshing the Forms Overview page\n\nFixed: Deprecation error with PHP 8.4 that occurred during WPForms installation\n\nFixed: Form creation via Form AI for users without manage_options capability\n\nFixed: Deprecation warning being logged in the browser console on the Dashboard admin page\n\nFixed: Fixed PHP 8.4 deprecated error in Stripe integration related to nullable parameter type declaration\n\nFixed: From Email/Name fields appeared blank for new notifications when WP Mail SMTP force settings were enabled\n\nFixed: The collapsible block height in the builder to be consistent with other fields\n\nFixed: Disabled field option toggle remained interactive",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
