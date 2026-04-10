@@ -1,5 +1,38 @@
 [
   {
+    "id": "stripe@4.17.1",
+    "title": "WP Simple Pay 4.17.1",
+    "date": "2026-04-09",
+    "brand": "WP Simple Pay",
+    "brandSlug": "wp-simple-pay",
+    "releaseType": "feature",
+    "summary": "New: Installment description format setting. Choose how recurring payment descriptions appear across your forms with three format options, configurable globally and per form\n\nNew: Per-form transaction description source. Choose what text appears in Stripe for each form's transactions, including a new \"Price Option Label\" source\n\nNew: Per-form email subject customization. Override global email subject lines on individual forms for both receipts and notifications\n\nNew: `{payment-method}` smart tag for displaying the payment method used by the customer in confirmation pages and emails\n\nUpdate: Plugin styles and scripts are now loaded only on pages that contain a payment form, while Stripe.js remains loaded site-wide for advanced fraud detection\n\nUpdate: Webhook endpoint now returns a success response for events not created by WP Simple Pay, eliminating Stripe Dashboard warnings\n\nUpdate: Improved payment charge retrieval for more reliable confirmation pages and receipts\n\nUpdate: Receipt line items now display in the same order as price options in the form editor\n\nUpdate: Subscription payment descriptions now use proper grammar for singular and plural billing intervals\n\nFix: Resolved an issue where a \"Bank\" tab appeared in the payment form when Stripe Link was enabled\n\nFix: Font size settings in the form style editor no longer override theme typography when left empty\n\nFix: Resolved a JavaScript error related to Payment Element updates",
+    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.2.1",
+    "title": "Uncanny Automator 7.2.1",
+    "date": "2026-04-09",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Microsoft Teams - Some integration items were missing from v7.2.0 release, so the integration has been re-pushed to ensure everything is available\n\nLegacy Helper chaining - Added a defensive code guard to method and property handling. #7125\n\nSwitched to the new framework:\n\nFacebook Lead Ads #6642\n\nFacebook Pages #6563\n\nInstagram #6563\n\nOntraport #6303\n\nTrello #6831",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.2.0.1",
+    "title": "Uncanny Automator 7.2.0.1",
+    "date": "2026-04-09",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "Pro integration helpers overwriting Free helpers, causing fatal \"undefined property $options\" on trigger/action load. #7123.",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@1.10.0.3",
     "title": "WPForms Lite 1.10.0.3",
     "date": "2026-04-08",
@@ -1119,17 +1152,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "stripe@4.14.3",
-    "title": "WP Simple Pay 4.14.3",
-    "date": "2025-08-07",
-    "brand": "WP Simple Pay",
-    "brandSlug": "wp-simple-pay",
-    "releaseType": "improvement",
-    "summary": "Fix: Optional recurring price option\n\nFix: Restored maximum value field for custom amounts\n\nFix: Added fallbacks for legacy shared scripts",
-    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
   {
