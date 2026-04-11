@@ -1,5 +1,16 @@
 [
   {
+    "id": "wpforms-lite@1.10.0.4",
+    "title": "WPForms Lite 1.10.0.4",
+    "date": "2026-04-10",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Fixed: Stripe payment with Link and a 3D Secure card did not trigger the authentication modal, leaving the payment incomplete on Stripe.",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "stripe@4.17.1",
     "title": "WP Simple Pay 4.17.1",
     "date": "2026-04-09",
@@ -415,17 +426,6 @@
     "releaseType": "improvement",
     "summary": "Fix: Additional plugin hardening.",
     "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.9.9.3",
-    "title": "WPForms Lite 1.9.9.3",
-    "date": "2026-02-24",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: The Cloudflare Turnstile captcha rendered twice if a CF7 form was also added on the same page.",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
