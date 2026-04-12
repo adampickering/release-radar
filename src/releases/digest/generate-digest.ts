@@ -43,14 +43,12 @@ interface DigestContent {
   generatedAt: string
 }
 
-interface OpenRouterChoice {
-  message: {
-    content: string
-  }
-}
-
-interface OpenRouterResponse {
-  choices: OpenRouterChoice[]
+interface GeminiResponse {
+  candidates?: Array<{
+    content?: {
+      parts?: Array<{ text?: string }>
+    }
+  }>
 }
 
 interface AiDigestResult {
@@ -115,10 +113,10 @@ function getWeekRange(): string {
   return `${startMonth} ${startDay} \u2013 ${endMonth} ${endDay}, ${year}`
 }
 
-async function callOpenRouter(releases: UiRelease[], stats: DigestStats): Promise<AiDigestResult> {
-  const apiKey = process.env.OPENROUTER_API_KEY
+async function callGemini(releases: UiRelease[], stats: DigestStats): Promise<AiDigestResult> {
+  const apiKey = process.env.GOOGLE_API_KEY
   if (!apiKey) {
-    throw new Error('OPENROUTER_API_KEY environment variable is not set')
+    throw new Error('GOOGLE_API_KEY environment variable is not set')
   }
 
   const releaseSummaries = releases
@@ -129,9 +127,7 @@ async function callOpenRouter(releases: UiRelease[], stats: DigestStats): Promis
 Your tone is knowledgeable, slightly playful, and engaging — like a seasoned developer who enjoys a good pun but keeps things professional.
 You write for an audience of WordPress developers and agency owners who care about plugin updates.
 
-You MUST respond with valid JSON only, no markdown code blocks, no prose outside the JSON.
-
-JSON format:
+Respond with a JSON object matching this shape:
 {
   "greeting": "A brief, warm and slightly witty greeting (1 sentence)",
   "introParagraph": "An engaging intro paragraph summarizing the week's release activity (2-3 sentences, witty but informative)",
@@ -156,45 +152,43 @@ ${releaseSummaries}
 
 Write the digest content based on these releases.`
 
-  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+  const model = process.env.GOOGLE_MODEL ?? 'gemini-2.5-flash'
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
+
+  const response = await fetch(url, {
     method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: 'anthropic/claude-sonnet-4',
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt },
-      ],
-      temperature: 0.8,
-      max_tokens: 1000,
+      system_instruction: { parts: [{ text: systemPrompt }] },
+      contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+      generationConfig: {
+        temperature: 0.8,
+        maxOutputTokens: 2048,
+        responseMimeType: 'application/json',
+        thinkingConfig: { thinkingBudget: 0 },
+      },
     }),
   })
 
   if (!response.ok) {
     const errorText = await response.text()
-    throw new Error(`OpenRouter API error ${response.status}: ${errorText}`)
+    throw new Error(`Gemini API error ${response.status}: ${errorText}`)
   }
 
-  const data = (await response.json()) as OpenRouterResponse
-  const rawContent = data.choices[0]?.message?.content ?? ''
+  const data = (await response.json()) as GeminiResponse
+  const rawContent = data.candidates?.[0]?.content?.parts?.[0]?.text ?? ''
 
-  // Strip markdown code blocks if present
-  const jsonContent = rawContent
-    .replace(/^```(?:json)?\s*/i, '')
-    .replace(/\s*```\s*$/, '')
-    .trim()
+  if (!rawContent) {
+    throw new Error('Gemini returned empty response content')
+  }
 
-  const parsed = JSON.parse(jsonContent) as AiDigestResult
-  return parsed
+  return JSON.parse(rawContent) as AiDigestResult
 }
 
 async function main(): Promise<void> {
-  const apiKey = process.env.OPENROUTER_API_KEY
+  const apiKey = process.env.GOOGLE_API_KEY
   if (!apiKey) {
-    throw new Error('OPENROUTER_API_KEY environment variable is not set')
+    throw new Error('GOOGLE_API_KEY environment variable is not set')
   }
 
   const outputDir = resolve(import.meta.dirname, '../output')
@@ -216,8 +210,8 @@ async function main(): Promise<void> {
   const stats = computeStats(weekReleases)
   const weekRange = getWeekRange()
 
-  console.log('Calling OpenRouter API...')
-  const aiResult = await callOpenRouter(weekReleases, stats)
+  console.log('Calling Gemini API...')
+  const aiResult = await callGemini(weekReleases, stats)
 
   // Build otherReleases from non-highlight titles
   const highlightTitles = new Set(aiResult.highlights.map((h) => h.title.toLowerCase()))
