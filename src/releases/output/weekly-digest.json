@@ -1,7 +1,7 @@
 {
   "weekRange": "April 5 – 12, 2026",
-  "greeting": "Well hello there, fellow pixel-pioneer and code-connoisseur!",
-  "introParagraph": "This week, the plugin landscape offered a mix of crucial fixes and nifty new features, proving that developers are diligently patching up the past while paving the way for the future. From streamlined payment experiences to advanced automation triggers, it's clear the WordPress ecosystem continues to evolve with user needs in mind.",
+  "greeting": "Well hello there, fellow pixel pioneers and code connoisseurs!",
+  "introParagraph": "This week's 'Release Radar' is pinging with a respectable seven updates across four brands, proving that even a quieter week still has plenty of action under the hood. We're seeing a healthy mix of new features making life easier, alongside crucial fixes ensuring everything runs smoother than a freshly deployed Git commit.",
   "stats": {
     "releases": 7,
     "brands": 4,
@@ -10,24 +10,24 @@
   },
   "highlights": [
     {
-      "title": "Uncanny Automator 7.2.0 & 7.2.1",
-      "type": "feature",
-      "summary": "Uncanny Automator dropped some exciting new triggers for AffiliateWP, allowing you to automate workflows based on an affiliate's unpaid referral or visit counts. Plus, a quick follow-up release ensured all those shiny new Microsoft Teams integration items made it into the party."
-    },
-    {
       "title": "WP Simple Pay 4.17.1",
       "type": "feature",
-      "summary": "WP Simple Pay is making recurring payments even more user-friendly with a new installment description format setting. Now you have more control over how payment descriptions appear, globally or per form, giving you that extra touch of professionalism."
+      "summary": "WP Simple Pay just made managing recurring payments a breeze with a new installment description format setting. Now you can customize how those payment descriptions appear across your forms, globally or individually, giving you more control over your transaction narratives."
     },
     {
-      "title": "WPForms Lite 1.10.0.4",
-      "type": "fix",
-      "summary": "WPForms tackled a critical Stripe payment hiccup, ensuring that 3D Secure card authentications now properly trigger. This fix is a big win for payment processing reliability and user experience, preventing incomplete transactions."
+      "title": "Uncanny Automator 7.2.0",
+      "type": "feature",
+      "summary": "Uncanny Automator is leveling up its AffiliateWP game, introducing new triggers based on an affiliate's unpaid referral count and visit count. This opens up a world of automation possibilities for affiliate managers looking to engage and reward their top performers."
     },
     {
       "title": "Charitable 1.8.10.4",
       "type": "improvement",
-      "summary": "Charitable swooped in with an important fix addressing an issue where multiple Stripe webhook endpoints could pile up, potentially causing donation webhook events to fail. Keeping those donations flowing smoothly is always a top priority!"
+      "summary": "Charitable swooped in with a critical fix for Stripe users, addressing an issue where multiple webhook endpoints could gum up the works and cause donation webhook events to fail. Keeping those donations flowing smoothly is always a win!"
+    },
+    {
+      "title": "WPForms Lite 1.10.0.4",
+      "type": "fix",
+      "summary": "WPForms Lite tackled a tricky Stripe payment bug where 3D Secure cards using Link wouldn't trigger the authentication modal, leaving payments incomplete. A crucial fix to ensure your users' payment journeys are as seamless as possible."
     }
   ],
   "otherReleases": [
@@ -45,13 +45,8 @@
       "title": "WPForms Lite 1.10.0.3",
       "type": "fix",
       "shortSummary": "Fixed: PayPal Connection URL was cached and contains the old site URL after t..."
-    },
-    {
-      "title": "Uncanny Automator 7.2.0",
-      "type": "feature",
-      "shortSummary": "AffiliateWP - An affiliate's unpaid referral count is greater than, less than..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he needed more commitment... to PHP updates! Ba-dum-tss.",
-  "generatedAt": "2026-04-12T00:11:14.474Z"
+  "closingJoke": "Why did the WordPress plugin break up with its theme? Because it felt too much like a 'block' relationship and wanted more 'elementor' of its own!",
+  "generatedAt": "2026-04-12T00:13:57.949Z"
 }
