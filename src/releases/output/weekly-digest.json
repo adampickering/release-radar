@@ -1,0 +1,57 @@
+{
+  "weekRange": "April 5 – 12, 2026",
+  "greeting": "Well hello there, fellow pixel-pioneer and code-connoisseur!",
+  "introParagraph": "This week, the plugin landscape offered a mix of crucial fixes and nifty new features, proving that developers are diligently patching up the past while paving the way for the future. From streamlined payment experiences to advanced automation triggers, it's clear the WordPress ecosystem continues to evolve with user needs in mind.",
+  "stats": {
+    "releases": 7,
+    "brands": 4,
+    "features": 2,
+    "fixes": 3
+  },
+  "highlights": [
+    {
+      "title": "Uncanny Automator 7.2.0 & 7.2.1",
+      "type": "feature",
+      "summary": "Uncanny Automator dropped some exciting new triggers for AffiliateWP, allowing you to automate workflows based on an affiliate's unpaid referral or visit counts. Plus, a quick follow-up release ensured all those shiny new Microsoft Teams integration items made it into the party."
+    },
+    {
+      "title": "WP Simple Pay 4.17.1",
+      "type": "feature",
+      "summary": "WP Simple Pay is making recurring payments even more user-friendly with a new installment description format setting. Now you have more control over how payment descriptions appear, globally or per form, giving you that extra touch of professionalism."
+    },
+    {
+      "title": "WPForms Lite 1.10.0.4",
+      "type": "fix",
+      "summary": "WPForms tackled a critical Stripe payment hiccup, ensuring that 3D Secure card authentications now properly trigger. This fix is a big win for payment processing reliability and user experience, preventing incomplete transactions."
+    },
+    {
+      "title": "Charitable 1.8.10.4",
+      "type": "improvement",
+      "summary": "Charitable swooped in with an important fix addressing an issue where multiple Stripe webhook endpoints could pile up, potentially causing donation webhook events to fail. Keeping those donations flowing smoothly is always a top priority!"
+    }
+  ],
+  "otherReleases": [
+    {
+      "title": "Uncanny Automator 7.2.1",
+      "type": "improvement",
+      "shortSummary": "Microsoft Teams - Some integration items were missing from v7.2.0 release, so..."
+    },
+    {
+      "title": "Uncanny Automator 7.2.0.1",
+      "type": "fix",
+      "shortSummary": "Pro integration helpers overwriting Free helpers, causing fatal \"undefined pr..."
+    },
+    {
+      "title": "WPForms Lite 1.10.0.3",
+      "type": "fix",
+      "shortSummary": "Fixed: PayPal Connection URL was cached and contains the old site URL after t..."
+    },
+    {
+      "title": "Uncanny Automator 7.2.0",
+      "type": "feature",
+      "shortSummary": "AffiliateWP - An affiliate's unpaid referral count is greater than, less than..."
+    }
+  ],
+  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he needed more commitment... to PHP updates! Ba-dum-tss.",
+  "generatedAt": "2026-04-12T00:11:14.474Z"
+}
