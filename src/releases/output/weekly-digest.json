@@ -1,7 +1,7 @@
 {
-  "weekRange": "April 5 – 12, 2026",
-  "greeting": "Well hello there, fellow pixel-pushers and plugin aficionados!",
-  "introParagraph": "This week's 'Release Radar' pings are coming in hot, primarily from the form and automation front. We saw a flurry of activity, with some critical fixes squashing pesky payment bugs and a few neat features making their debut. It seems like the developers were busy ensuring everything's running smoothly under the hood, with a sprinkle of new capabilities to keep things fresh.",
+  "weekRange": "April 6 – 13, 2026",
+  "greeting": "Hello, fellow plugin aficionados and code connoisseurs!",
+  "introParagraph": "This week, the Release Radar tracked a steady hum of activity, with a focus on refining payment gateways and expanding automation horizons. While a couple of major features dropped, much of the effort went into squashing those pesky bugs that can trip up even the most robust systems. It seems everyone's striving for smoother operations, from donations to form submissions.",
   "stats": {
     "releases": 7,
     "brands": 4,
@@ -12,22 +12,22 @@
     {
       "title": "WP Simple Pay 4.17.1",
       "type": "feature",
-      "summary": "WP Simple Pay rolled out a handy new installment description format setting, giving you more control over how recurring payments appear. This means clearer communication for your customers and better organization for you, configurable both globally and per form."
+      "summary": "Stripe Simple Pay just made managing recurring payments even simpler with new installment description format settings! Now you have more control over how those payment descriptions appear, ensuring clarity for both you and your customers."
     },
     {
       "title": "Uncanny Automator 7.2.0",
       "type": "feature",
-      "summary": "Uncanny Automator beefed up its AffiliateWP integration, introducing new triggers based on an affiliate's unpaid referral count and visit count. This opens up exciting new possibilities for automating your affiliate program workflows and keeping an even closer eye on performance."
+      "summary": "Uncanny Automator continues to expand its integration prowess, this time bolstering its AffiliateWP integration. You can now automate actions based on an affiliate's unpaid referral count or visit count, opening up a world of new possibilities for affiliate marketing strategies."
+    },
+    {
+      "title": "Charitable 1.8.10.4",
+      "type": "fix",
+      "summary": "Charitable swooped in with a crucial fix, addressing an issue where multiple Stripe webhook endpoints could accumulate. This resolves potential headaches with failed donation signature verifications, ensuring your fundraising efforts are seamless and secure."
     },
     {
       "title": "WPForms Lite 1.10.0.4",
       "type": "fix",
-      "summary": "WPForms delivered a crucial fix for Stripe payments with Link and 3D Secure cards, addressing an issue where the authentication modal wasn't triggering. This ensures smoother, more reliable payment processing and prevents incomplete transactions, which is always a win!"
-    },
-    {
-      "title": "Charitable 1.8.10.4",
-      "type": "improvement",
-      "summary": "Charitable swooped in with an important fix addressing an accumulation of multiple Stripe webhook endpoints, which could previously cause donation webhook events to fail signature verification. This update ensures the integrity and reliability of your donation processing."
+      "summary": "WPForms Lite ironed out a wrinkle in its Stripe payment integration. A fix ensures that 3D Secure cards with Link now properly trigger the authentication modal, preventing incomplete payments and a smoother checkout experience for your users."
     }
   ],
   "otherReleases": [
@@ -47,6 +47,6 @@
       "shortSummary": "Fixed: PayPal Connection URL was cached and contains the old site URL after t..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he needed more commitment from his dependencies! At least our plugins are committed to regular updates.",
-  "generatedAt": "2026-04-12T15:11:32.810Z"
+  "closingJoke": "Why did the WordPress developer break up with the bug? Because it kept crashing their site and had too many 'unresolved issues'!",
+  "generatedAt": "2026-04-13T15:34:58.574Z"
 }
