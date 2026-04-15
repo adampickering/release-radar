@@ -1,5 +1,16 @@
 [
   {
+    "id": "thrive-themes@10.8.10",
+    "title": "Thrive Themes 10.8.10",
+    "date": "2026-04-14",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Apprentice: Course Welcome Email: When you add a new member to a course with the welcome email enabled, they now receive exactly one welcome email instead of two\n\nThrive Theme Builder and Thrive Architect: Google SiteKit GTM: Google Tag Manager configured through Google SiteKit now fires correctly on Thrive landing pages\n\nIntegrations: Behind the scenes, we&#8217;ve laid the groundwork for a new way for Thrive products to connect with each other and with external tools for more powerful and flexible integrations and automations. Stay tuned for what&#8217;s coming",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/04/v10-8-10/",
+    "tags": []
+  },
+  {
     "id": "charitable@1.8.10.4",
     "title": "Charitable 1.8.10.4",
     "date": "2026-04-13",
@@ -1757,17 +1768,6 @@
     "releaseType": "feature",
     "summary": "New Features Added to Thrive Suite: New Date/Time field for the Lead Generation element: You can now add a date/time picker to your lead generation forms\n\nNew Features Added to Thrive Suite: Updated Apprentice Drip to include unlock time(s): You can now specify the time that content will be released to your customers/students\n\nNew Features Added to Thrive Suite: Updated Keap (InfusionSoft) integration: Be compliant with the Keap legacy API key sunsetting plan with support for Service Account Keys. Learn more here\n\nImprovements and fixes: Fix: Getting a fatal error from Tve_Dash_Growth_Tools.php in Growth Tools should be fixed now\n\nImprovements and fixes: Fix: The page editor generates a WordPress error if the Thrive Product Manager plugin is active\n\nImprovements and fixes: Fix: The Menu Items display Option is not displayed in Mega Menu Items\n\nImprovements and fixes: Fix: Add post type check before changing the slug of a course certificate\n\nImprovements and fixes: Fix: Post Format options not showing on WP 6.6.1\n\nImprovements and fixes: Fix: The last available lesson page returns a critical error when the mark lesson complete is clicked\n\nImprovements and fixes: Fix: Thrive Optimize variation not showing other variations\n\nImprovements and fixes: Fix: Thrive Apprentice Stripe issue that will allow multiple purchases to be attributed to the same customer in Stripe\n\nImprovements and fixes: Fix: Show all five stars inside WooCommerce",
     "changelogUrl": "https://changelog.thrivethemes.com/2024/08/version-10-1-released/",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.0",
-    "title": "Thrive Themes 10.0",
-    "date": "2024-08-26",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "6 New Features Added to Thrive Suite: New Thrive Spam Protection: Released our new native honeypot system keeps your lead generation forms clean without hassling real users\n\n6 New Features Added to Thrive Suite: CloudFlare Turnstile Spam Integration: Released our integration with CloudFlare Turnstile, an alternative to Google ReCaptcha, to be used with your lead generation forms\n\n6 New Features Added to Thrive Suite: Custom Number Field for Forms: Add number fields to your lead generation forms\n\n6 New Features Added to Thrive Suite: Stripe Customer Portal in Thrive Apprentice: Your customers can now manage subscriptions, update payment info, and view invoices directly from your site\n\n6 New Features Added to Thrive Suite: New Assessments Progress Feature: Customize how students earn credit in your courses when completing assessments\n\n6 New Features Added to Thrive Suite: AIOSEO Integration with Thrive Architect: Get live SEO scores and tweak your page meta data without even leaving Thrive Architect\n\nImprovements and fixes: Growth Tools: Check out other great tools that we recommend to help your online business grow even faster, simply go to Thrive Dashboard / About Us section\n\nImprovements and fixes: Z-index issue with custom navigation menu: We fixed the bug when a Custom Menu element is used within a Content Box element, and a conditional display rule contents appear above the Navigation menu on mobile screens\n\nImprovements and fixes: User is Logged Out every 15 minutes: We fixed the issue when users got logged out every 15 mins while using Fortress Security plugin\n\nImprovements and fixes: Certificate conflict Borlabs Cookie 3.0: We fixed the compatibility issue with Borlabs Cookie 3.0\n\nImprovements and fixes: Error 500 occurs after adding a new Lightbox State: We fixed the issue when adding a new Lightbox State to a Thrive Leads Shortcode\n\nImprovements and fixes: Incorrect lessons count in the course dashboard: We fixed the issue with some isolated cases when lessons count wasn&#8217;t showing correctly\n\nImprovements and fixes: Megamenu item columns fix: Fixed the issues with megamenu&#8217;s number of columns and image height reverting to default value when put out of focus after a change\n\nImprovements and fixes: Fix query not showing all pages in display settings: This fixes the issue in Thrive Leads Lead Groups Display settings not showing all pages\n\nImprovements and fixes: Course overview page now can be edited: Fixes the issue that prevents course overview page to be edited",
-    "changelogUrl": "https://changelog.thrivethemes.com/2024/08/version-10-0-released/",
     "tags": []
   },
   {
