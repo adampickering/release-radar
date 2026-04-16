@@ -1,5 +1,16 @@
 [
   {
+    "id": "coming-soon@6.19.10",
+    "title": "SeedProd 6.19.10",
+    "date": "2026-04-15",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.19.10.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
     "id": "thrive-themes@10.8.10",
     "title": "Thrive Themes 10.8.10",
     "date": "2026-04-14",
@@ -393,17 +404,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.19.9",
-    "title": "SeedProd 6.19.9",
-    "date": "2026-03-03",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.19.9.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
