@@ -38,7 +38,6 @@ export const brands: BrandInfo[] = [
   { name: 'aThemes',               slug: 'athemes',               domain: 'athemes.com',               color: '#4769D8' },
   { name: 'Uncanny Owl',           slug: 'uncanny-owl',           domain: 'uncannyowl.com',            color: '#012B28' },
   { name: 'Uncanny Automator',     slug: 'uncanny-automator',     domain: 'automatorplugin.com',       color: '#0790E8' },
-  { name: 'WPChat',                slug: 'wpchat',                domain: 'wpchat.com',                color: '#F53C5E' },
 ]
 
 export const brandsBySlug = Object.fromEntries(brands.map(b => [b.slug, b]))

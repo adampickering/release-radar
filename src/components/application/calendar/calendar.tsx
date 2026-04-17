@@ -35,6 +35,7 @@ const viewOptions: ViewOption[] = [
     { value: "year", label: "Year to date", addon: "Y" },
 ];
 
+
 interface CalendarProps {
     events: CalendarEvent[];
     view?: "month" | "week" | "day" | "year";
