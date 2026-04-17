@@ -1,5 +1,16 @@
 [
   {
+    "id": "wp-mail-smtp@4.8.0",
+    "title": "WP Mail SMTP 4.8.0",
+    "date": "2026-04-16",
+    "brand": "WP Mail SMTP",
+    "brandSlug": "wp-mail-smtp",
+    "releaseType": "feature",
+    "summary": "Added: SendLayer Quick Connect - allows connecting to SendLayer without DNS setup in 2 minutes\n\nChanged: Improved plugin security",
+    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
     "id": "coming-soon@6.19.10",
     "title": "SeedProd 6.19.10",
     "date": "2026-04-15",
@@ -1515,17 +1526,6 @@
     "releaseType": "feature",
     "summary": "New: Support for TikTok PPC conversion tracking\n\nEnhancement: Adding translatable strings throughout our plugin. More to come!\n\nEnhancement: Our monthly statistics emails got a fresh facelift\n\nEnhancement: Our plugin code now follows WP VIP standards",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "wp-mail-smtp@4.4.0",
-    "title": "WP Mail SMTP 4.4.0",
-    "date": "2025-03-05",
-    "brand": "WP Mail SMTP",
-    "brandSlug": "wp-mail-smtp",
-    "releaseType": "fix",
-    "summary": "Fixed: Emails queue runner Action Scheduler task deadlock issue\n\nFixed: Undefined array key \"wp_mail_smtp_reports_widget_lite\" warning in the dashboard widget",
-    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
     "tags": []
   },
   {
