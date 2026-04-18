@@ -1,5 +1,27 @@
 [
   {
+    "id": "all-in-one-seo-pack@4.9.6.2",
+    "title": "All in One SEO 4.9.6.2",
+    "date": "2026-04-18",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Updated: Removed deprecated internal option references that could cause error on WooCommerce checkouts for some users\n\nFixed: Possible fatal error when activating license via AIOSEO_LICENSE_KEY constant",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "all-in-one-seo-pack@4.9.6.1",
+    "title": "All in One SEO 4.9.6.1",
+    "date": "2026-04-17",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Fixed: Possible fatal error during WooCommerce checkout due to an internal option structure.",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
     "id": "wp-mail-smtp@4.8.0",
     "title": "WP Mail SMTP 4.8.0",
     "date": "2026-04-16",
@@ -385,17 +407,6 @@
     "tags": []
   },
   {
-    "id": "all-in-one-seo-pack@4.9.5",
-    "title": "All in One SEO 4.9.5",
-    "date": "2026-03-06",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Updated: TruSEO analysis content parser for better compatibility\n\nUpdated: Added custom field smart tag support to the Schema Review Author field\n\nUpdated: Restored the \"Download Sample CSV File\" link and import instructions on the Redirects Import/Export screen\n\nUpdated: Database table information is now included in the System Status tool and system information exports\n\nUpdated: Added a size-based log cleanup mechanism to prevent performance issues with large Redirects and 404 log tables\n\nFixed: SEO Checklist's \"Delete Hello World\" task no longer suggests deleting repurposed WordPress sample posts\n\nFixed: Post archive sitemap returning empty content when sitemap indexes are enabled\n\nFixed: Import/Export now list all sites instead of only 20 on Multisite Networks\n\nFixed: LLMs.txt button URLs pointing to wrong location on non-standard WordPress installations\n\nFixed: Bricks Builder ACF Relationship query loops returning no results when AIOSEO is active\n\nFixed: Improved performance of sitemap taxonomy queries for sites with large numbers of terms\n\nFixed: Posts with different or external Canonical URLs are now excluded from the sitemap\n\nFixed: Posts and terms with custom canonical URLs are now excluded from XML sitemaps\n\nFixed: TOC block triggering \"unsaved changes\" warning even without any changes\n\nFixed: Warnings in ProfilePage schema\n\nFixed: URL count mismatch between root sitemap index and date sitemap\n\nFixed: Fatal error when editing posts with corrupt breadcrumb settings\n\nFixed: Local SEO Opening Hours time dropdowns not updating to 24h format when toggling \"Use 24h Format\"\n\nFixed: Console warning about navigation throttling when using SiteOrigin Page Builder\n\nFixed: SEO Analyzer database error when focus keywords contain double quotes\n\nFixed: Rare cases where scheduled actions were duplicated\n\nFixed: AI access token sometimes failing to be fetched\n\nFixed: PHP warning when analyzing a one-word title starting with the question word in Headline Analyzer",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
-    "tags": []
-  },
-  {
     "id": "wpforms-lite@1.9.9.4",
     "title": "WPForms Lite 1.9.9.4",
     "date": "2026-03-03",
@@ -492,17 +503,6 @@
     "releaseType": "feature",
     "summary": "NEW: Cron - Cron events are now more reliable and based on Action Scheduler\n\nCart: Fixed an unused variable in the cart class\n\nCart: The error handler has been improved to show messages more consistently\n\nCheckout: Improved checkout accessibility\n\nDiscounts: Discount Select field now supports filtering out invalid discounts\n\nDownloads: Improved the accuracy of the Download select field\n\nEmails: Fixed documentation link\n\nEmails: Introduced new 'Styles' feature to the email editor\n\nEmails: Base email class now passes the Email Type to the template part\n\nLabs: Cart Caching - Corrected an issue with tax recalculation not invalidating cache\n\nLogs: Added filters for the LogStorageCalculator to support extensions\n\nLogs: Improved log filter navigation\n\nNotifications: Improved the flexibility of store notifications\n\nOrders: Improved order status logic when processing a refund\n\nPrivacy: Personal data exports could fatal error if a product no longer exists\n\nStripe: Removed Sofort as an individual gateway (now supported in Klarna)\n\nStripe: Prevent a console error on the Stripe settings page\n\nDev: Added the cookie name to the `edd_cookie_options` filter\n\nDev: Fixed incorrect usage of `echo` with `esc_html_e`\n\nDev: Introduced base `edd-modal` styles and scripts\n\nDev: Introduced the `edd_cart_tax_recalculated` hook",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@4.9.4.1",
-    "title": "All in One SEO 4.9.4.1",
-    "date": "2026-02-17",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Fixed: Smart tags sometimes not inserting into attached text area.",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
   {
