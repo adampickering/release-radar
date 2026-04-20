@@ -1,52 +1,47 @@
 {
-  "weekRange": "April 6 – 13, 2026",
-  "greeting": "Hello, fellow plugin aficionados and code connoisseurs!",
-  "introParagraph": "This week, the Release Radar tracked a steady hum of activity, with a focus on refining payment gateways and expanding automation horizons. While a couple of major features dropped, much of the effort went into squashing those pesky bugs that can trip up even the most robust systems. It seems everyone's striving for smoother operations, from donations to form submissions.",
+  "weekRange": "April 13 – 20, 2026",
+  "greeting": "Well hello there, release enthusiasts and fellow code wranglers!",
+  "introParagraph": "This week's 'Release Radar' pings are a bit quieter on the feature front, but don't let that fool you – there's some solid under-the-hood work happening. From smoothing out checkout bumps to streamlining email delivery and even speeding up email sending, our plugin pals have been busy ensuring our WordPress worlds run a little more efficiently, one update at a time.",
   "stats": {
-    "releases": 7,
-    "brands": 4,
-    "features": 2,
-    "fixes": 3
+    "releases": 6,
+    "brands": 5,
+    "features": 1,
+    "fixes": 2
   },
   "highlights": [
     {
-      "title": "WP Simple Pay 4.17.1",
+      "title": "WP Mail SMTP 4.8.0",
       "type": "feature",
-      "summary": "Stripe Simple Pay just made managing recurring payments even simpler with new installment description format settings! Now you have more control over how those payment descriptions appear, ensuring clarity for both you and your customers."
+      "summary": "This update introduces SendLayer Quick Connect, promising a two-minute setup without the usual DNS dance. For those tired of wrestling with DNS records just to get their emails flowing, this is a significant quality-of-life improvement."
     },
     {
-      "title": "Uncanny Automator 7.2.0",
-      "type": "feature",
-      "summary": "Uncanny Automator continues to expand its integration prowess, this time bolstering its AffiliateWP integration. You can now automate actions based on an affiliate's unpaid referral count or visit count, opening up a world of new possibilities for affiliate marketing strategies."
+      "title": "All in One SEO 4.9.6.2",
+      "type": "fix",
+      "summary": "AIOSEO squashed a pesky bug that could cause fatal errors during WooCommerce checkouts, ensuring your e-commerce funnels remain smooth and error-free. They also patched a potential fatal error when activating licenses, keeping your SEO efforts robust."
+    },
+    {
+      "title": "Thrive Themes 10.8.10",
+      "type": "improvement",
+      "summary": "Thrive Apprentice users rejoice! This release ensures your course members receive exactly one welcome email instead of a duplicate, saving them from inbox clutter and you from support tickets. Less email, more learning!"
     },
     {
       "title": "Charitable 1.8.10.4",
       "type": "fix",
-      "summary": "Charitable swooped in with a crucial fix, addressing an issue where multiple Stripe webhook endpoints could accumulate. This resolves potential headaches with failed donation signature verifications, ensuring your fundraising efforts are seamless and secure."
-    },
-    {
-      "title": "WPForms Lite 1.10.0.4",
-      "type": "fix",
-      "summary": "WPForms Lite ironed out a wrinkle in its Stripe payment integration. A fix ensures that 3D Secure cards with Link now properly trigger the authentication modal, preventing incomplete payments and a smoother checkout experience for your users."
+      "summary": "Charitable tackled an issue where multiple Stripe webhook endpoints could accumulate, potentially leading to failed donation signature verifications. This fix ensures your fundraising efforts remain seamless and secure, keeping those donations flowing without a hitch."
     }
   ],
   "otherReleases": [
     {
-      "title": "Uncanny Automator 7.2.1",
+      "title": "All in One SEO 4.9.6.1",
+      "type": "fix",
+      "shortSummary": "Fixed: Possible fatal error during WooCommerce checkout due to an internal op..."
+    },
+    {
+      "title": "SeedProd 6.19.10",
       "type": "improvement",
-      "shortSummary": "Microsoft Teams - Some integration items were missing from v7.2.0 release, so..."
-    },
-    {
-      "title": "Uncanny Automator 7.2.0.1",
-      "type": "fix",
-      "shortSummary": "Pro integration helpers overwriting Free helpers, causing fatal \"undefined pr..."
-    },
-    {
-      "title": "WPForms Lite 1.10.0.3",
-      "type": "fix",
-      "shortSummary": "Fixed: PayPal Connection URL was cached and contains the old site URL after t..."
+      "shortSummary": "Release 6.19.10."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the bug? Because it kept crashing their site and had too many 'unresolved issues'!",
-  "generatedAt": "2026-04-13T15:34:58.574Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and was always crashing their site! Talk about a fatal error in judgment.",
+  "generatedAt": "2026-04-20T15:34:35.662Z"
 }
