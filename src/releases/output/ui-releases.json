@@ -1,5 +1,27 @@
 [
   {
+    "id": "easy-digital-downloads@3.6.7",
+    "title": "Easy Digital Downloads 3.6.7",
+    "date": "2026-04-20",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "feature",
+    "summary": "NEW: Blocks - Introducing the Profile Editor Block\n\nNEW: Checkout - Added a Business Name field to checkout addresses\n\nNEW: Checkout - Returning customers can now log in via a secure email link at checkout\n\nNEW: Purchase Links - Discount codes can now be added to the buy button block\n\nAdmin: Improved customer detail page markup and layout\n\nAdmin: Customer counts are now accurate when searching the list table\n\nAdmin: Updated the user search input field\n\nBlocks: Fixed the Checkout block setting an incorrect page ID\n\nCheckout: Fixed profile editor layout with multiple email addresses\n\nCLI: Added support for setting a specific gateway when generating orders\n\nCustomers: Customer notes now include user created order notes\n\nDatabase: Fixed an issue where JOIN queries could cause an error in newer PHP versions\n\nEmails: Fixed the email description not displaying in the editor\n\nEmails: Fixed the toggle \"updating\" indicator positioning\n\nMigration: Fixed a potential loop when migrating orders that no longer exist\n\nPayPal: Fixed PHP compatibility in PayPal Commerce\n\nStripe: Modernized checkout to use the FormData API\n\nStripe: Fixed card elements not displaying on Firefox/Windows\n\nDev: Fixed file protection symlink detection with trailing slashes\n\nDev: Fixed multicheck field error when label is not set\n\nDev: Fixed AJAX-backed select fields showing \"No results found\" incorrectly\n\nDev: Improved compatibility with LSCache\n\nDev: Improved nocache headers for important EDD pages\n\nDev: Removed legacy jQuery UI CSS\n\nDev: Reset Store now properly resets download sales and revenue data",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.2.2",
+    "title": "Uncanny Automator 7.2.2",
+    "date": "2026-04-20",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Gravity Forms - Triggers - Hidden fields now generate tokens. #7153\n\nRSS - Process an RSS feed – Media thumbnails found their way; URL tokens resolved. #7191\n\nRepeater fields with Uncanny Agent - Fixed an issue where meta unslashing was corrupting repeater JSON data. Data now stays intact. #7166\n\nCore – Windows/IIS path drama solved; legacy integrations breathe easy again. #7194",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@4.9.6.2",
     "title": "All in One SEO 4.9.6.2",
     "date": "2026-04-18",
@@ -94,7 +116,7 @@
     "brand": "Uncanny Automator",
     "brandSlug": "uncanny-automator",
     "releaseType": "improvement",
-    "summary": "Microsoft Teams - Some integration items were missing from v7.2.0 release, so the integration has been re-pushed to ensure everything is available\n\nLegacy Helper chaining - Added a defensive code guard to method and property handling. #7125\n\nSwitched to the new framework:\n\nFacebook Lead Ads #6642\n\nFacebook Pages #6563\n\nInstagram #6563\n\nOntraport #6303\n\nTrello #6831",
+    "summary": "Microsoft Teams - Some integration items were missing from v7.2.0 release, so the integration has been re-pushed to ensure everything is available\n\nLegacy Helper chaining - Added a defensive code guard to method and property handling. #7125\n\nSwitched to the new framework:\n\nFacebook Lead Ads #6642\n\nFacebook Page #6563\n\nInstagram #6563\n\nOntraport #6303\n\nTrello #6831",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
@@ -228,17 +250,6 @@
     "releaseType": "feature",
     "summary": "New: We completely updated our overview screen to make it easy to filter and view your stats inside your dashboard without needing to navigate away\n\nNew: We added support for CSV and XLSX reports",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.6.1",
-    "title": "Easy Digital Downloads 3.6.6.1",
-    "date": "2026-03-23",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "fix",
-    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes\n\nCart: Fixed cart validation when adding multiple items at the same time\n\nCart: Improved mixed cart behavior with Stripe\n\nCart: Fixed a potential fatal error when checking cart discounts repeatedly\n\nCron: Reduced database queries for event handling\n\nEmails: Preview function did not show the email heading\n\nEmails: Improved bounce notification handling\n\nMessaging: Removed dependency on Alpine library\n\nStripe: Improved PaymentIntent handling\n\nDev: Removed a number of unnecessary files from dependencies",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
