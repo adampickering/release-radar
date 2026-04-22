@@ -1771,17 +1771,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.1",
-    "title": "Thrive Themes 10.1",
-    "date": "2024-08-27",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: New Date/Time field for the Lead Generation element: You can now add a date/time picker to your lead generation forms\n\nNew Features Added to Thrive Suite: Updated Apprentice Drip to include unlock time(s): You can now specify the time that content will be released to your customers/students\n\nNew Features Added to Thrive Suite: Updated Keap (InfusionSoft) integration: Be compliant with the Keap legacy API key sunsetting plan with support for Service Account Keys. Learn more here\n\nImprovements and fixes: Fix: Getting a fatal error from Tve_Dash_Growth_Tools.php in Growth Tools should be fixed now\n\nImprovements and fixes: Fix: The page editor generates a WordPress error if the Thrive Product Manager plugin is active\n\nImprovements and fixes: Fix: The Menu Items display Option is not displayed in Mega Menu Items\n\nImprovements and fixes: Fix: Add post type check before changing the slug of a course certificate\n\nImprovements and fixes: Fix: Post Format options not showing on WP 6.6.1\n\nImprovements and fixes: Fix: The last available lesson page returns a critical error when the mark lesson complete is clicked\n\nImprovements and fixes: Fix: Thrive Optimize variation not showing other variations\n\nImprovements and fixes: Fix: Thrive Apprentice Stripe issue that will allow multiple purchases to be attributed to the same customer in Stripe\n\nImprovements and fixes: Fix: Show all five stars inside WooCommerce",
-    "changelogUrl": "https://changelog.thrivethemes.com/2024/08/version-10-1-released/",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.0.1",
     "title": "MonsterInsights 9.0.1",
     "date": "2024-08-21",
