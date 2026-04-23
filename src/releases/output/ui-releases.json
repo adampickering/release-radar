@@ -1,5 +1,27 @@
 [
   {
+    "id": "google-analytics-for-wordpress@10.1.3",
+    "title": "MonsterInsights 10.1.3",
+    "date": "2026-04-22",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.2.2.1",
+    "title": "Uncanny Automator 7.2.2.1",
+    "date": "2026-04-22",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "MemberPress Courses – Banished the \"Undefined array key 'ID'\" gremlin. #7204\n\nUncanny Agent - Resolves authentication conflicts between Agent REST endpoints and JWT apps. #7202\n\nToken Parser – Banished undefined \"ID\" warnings from empty `$trigger_data`. #7206",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "easy-digital-downloads@3.6.7",
     "title": "Easy Digital Downloads 3.6.7",
     "date": "2026-04-20",
