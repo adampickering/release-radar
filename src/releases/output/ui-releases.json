@@ -1,5 +1,38 @@
 [
   {
+    "id": "coming-soon@6.20.0",
+    "title": "SeedProd 6.20.0",
+    "date": "2026-04-23",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.20.0.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.6.5",
+    "title": "Smash Balloon YouTube Feed 2.6.5",
+    "date": "2026-04-23",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "fix",
+    "summary": "Fix: Elementor CSS no longer double-prefixes, preventing 301 redirects on preview URLs\n\nFix: Cron update no longer triggers a PHP 8.x fatal when a source video has been deleted or set private",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
+    "id": "envira-gallery-lite@1.12.5",
+    "title": "Envira Gallery Lite 1.12.5",
+    "date": "2026-04-23",
+    "brand": "Envira Gallery",
+    "brandSlug": "envira-gallery",
+    "releaseType": "fix",
+    "summary": "Added: Google Photos option to external gallery type selector (Pro feature upsell)\n\nFixed: Onboarding wizard \"Save and Continue\" button not responding on Step 1\n\nFixed: Admin button height inconsistency\n\nFixed: Security hardening for REST API gallery settings handling\n\nFixed: Security hardening for gallery description handling",
+    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.1.3",
     "title": "MonsterInsights 10.1.3",
     "date": "2026-04-22",
@@ -74,17 +107,6 @@
     "releaseType": "feature",
     "summary": "Added: SendLayer Quick Connect - allows connecting to SendLayer without DNS setup in 2 minutes\n\nChanged: Improved plugin security",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.19.10",
-    "title": "SeedProd 6.19.10",
-    "date": "2026-04-15",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.19.10.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
@@ -689,17 +711,6 @@
     "brandSlug": "envira-gallery",
     "releaseType": "feature",
     "summary": "Added: Post type meta cap for better compatibility.",
-    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "envira-gallery-lite@1.12.0",
-    "title": "Envira Gallery Lite 1.12.0",
-    "date": "2025-12-18",
-    "brand": "Envira Gallery",
-    "brandSlug": "envira-gallery",
-    "releaseType": "feature",
-    "summary": "Added: Show likes text on comments tab\n\nAdded: TikTok Videos as gallery source\n\nEnhanced: Permission check when converting galleries in bulk",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
@@ -1441,17 +1452,6 @@
     "tags": []
   },
   {
-    "id": "feeds-for-youtube@2.4.0",
-    "title": "Smash Balloon YouTube Feed 2.4.0",
-    "date": "2025-04-23",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New: Added support for a new GDPR consent plugin (WPConsent)[https://wpconsent.com/?utm_campaign=youtube-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement]\n\nNew: Added support for GDPR Cookie Compliance by Moove Agency and Real Cookie Banner GDPR plugins",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
     "id": "cookie-notice-and-consent-banner@1.7.9",
     "title": "WPConsent 1.7.9",
     "date": "2025-04-23",
@@ -1746,17 +1746,6 @@
     "releaseType": "improvement",
     "summary": "Prevents issues with caching plugins in some cases\n\nAdds support for loading a custom template from a user specified directory path",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.2",
-    "title": "Thrive Themes 10.2",
-    "date": "2024-09-26",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: Vertical Tabs in Thrive Architect: Our single most requested feature is finally live for you to use! You can now choose between horizontal and vertical tabs. There&#8217;s also more to come and new exciting templates in the works!\n\nNew Features Added to Thrive Suite: Thrive Notifications in WordPress Dashboard: A brand new notifications engine to keep you informed of all important updates related to your Thrive products\n\nImprovements and fixes: Improvement: Thrive Dashboard API connection parameters are now saved faster and are more reliable\n\nImprovements and fixes: Improvement: Add migration for Group Options table for Thrive Leads\n\nImprovements and fixes: Improvement: A few minor improvements in our licensing software around upgrades and cancellations\n\nImprovements and fixes: Improvement: In the Thrive Apprentice product, access expiry is removed if the access expiry is after purchase and edited after the first save\n\nImprovements and fixes: Improvement: Thrive Apprentice now sends meaningful errors when something goes wrong\n\nImprovements and fixes: Fix: Minor styling changes to the Date and Time Lead Generation field\n\nImprovements and fixes: Fix: Fatal errors while editing assessments in Thrive Apprentice\n\nImprovements and fixes: Fix: Post List Carousel element style fixes\n\nImprovements and fixes: Fix: In Thrive Apprentice, after a Stripe subscription is canceled, some users could still see the course\n\nImprovements and fixes: Fix: The new Members report in Thrive Apprentice now shows the correct tabular data and charts\n\nImprovements and fixes: Fix: CSS styles updates for faster loading time while compiling code",
-    "changelogUrl": "https://changelog.thrivethemes.com/2024/09/version-10-2-released/",
     "tags": []
   },
   {
