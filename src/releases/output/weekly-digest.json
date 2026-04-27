@@ -1,47 +1,52 @@
 {
-  "weekRange": "April 13 – 20, 2026",
-  "greeting": "Well hello there, release enthusiasts and fellow code wranglers!",
-  "introParagraph": "This week's 'Release Radar' pings are a bit quieter on the feature front, but don't let that fool you – there's some solid under-the-hood work happening. From smoothing out checkout bumps to streamlining email delivery and even speeding up email sending, our plugin pals have been busy ensuring our WordPress worlds run a little more efficiently, one update at a time.",
+  "weekRange": "April 20 – 27, 2026",
+  "greeting": "Well hello there, fellow pixel wranglers and code conjurers!",
+  "introParagraph": "This week, the Release Radar caught a mixed bag, proving that while new features are always exciting, a solid foundation built on bug fixes and smooth sailing is equally crucial. We've seen some significant enhancements to core functionalities and a few pesky gremlins banished back to the digital abyss. Let's dive into what's new and noteworthy!",
   "stats": {
-    "releases": 6,
-    "brands": 5,
+    "releases": 7,
+    "brands": 6,
     "features": 1,
-    "fixes": 2
+    "fixes": 3
   },
   "highlights": [
     {
-      "title": "WP Mail SMTP 4.8.0",
+      "title": "Easy Digital Downloads 3.6.7",
       "type": "feature",
-      "summary": "This update introduces SendLayer Quick Connect, promising a two-minute setup without the usual DNS dance. For those tired of wrestling with DNS records just to get their emails flowing, this is a significant quality-of-life improvement."
+      "summary": "EDD just dropped a triple threat with their new Profile Editor Block, a Business Name field for checkout, and secure email login for returning customers. This release is all about making e-commerce smoother and more professional for both vendors and buyers."
     },
     {
-      "title": "All in One SEO 4.9.6.2",
+      "title": "Uncanny Automator 7.2.2.1",
       "type": "fix",
-      "summary": "AIOSEO squashed a pesky bug that could cause fatal errors during WooCommerce checkouts, ensuring your e-commerce funnels remain smooth and error-free. They also patched a potential fatal error when activating licenses, keeping your SEO efforts robust."
+      "summary": "Automator squashed a couple of particularly annoying bugs, including banishing the 'Undefined array key 'ID'' gremlin for MemberPress Courses and resolving authentication conflicts with Uncanny Agent. Keeping those automations flowing smoothly is key!"
     },
     {
-      "title": "Thrive Themes 10.8.10",
-      "type": "improvement",
-      "summary": "Thrive Apprentice users rejoice! This release ensures your course members receive exactly one welcome email instead of a duplicate, saving them from inbox clutter and you from support tickets. Less email, more learning!"
-    },
-    {
-      "title": "Charitable 1.8.10.4",
+      "title": "Smash Balloon YouTube Feed 2.6.5",
       "type": "fix",
-      "summary": "Charitable tackled an issue where multiple Stripe webhook endpoints could accumulate, potentially leading to failed donation signature verifications. This fix ensures your fundraising efforts remain seamless and secure, keeping those donations flowing without a hitch."
+      "summary": "Smash Balloon fixed an Elementor CSS double-prefixing issue that was causing unwanted redirects and tackled a PHP 8.x fatal error for deleted or private YouTube videos. Cleaner code and fewer headaches for developers using Elementor and modern PHP versions – a win-win!"
     }
   ],
   "otherReleases": [
     {
-      "title": "All in One SEO 4.9.6.1",
-      "type": "fix",
-      "shortSummary": "Fixed: Possible fatal error during WooCommerce checkout due to an internal op..."
+      "title": "SeedProd 6.20.0",
+      "type": "improvement",
+      "shortSummary": "Release 6.20.0."
     },
     {
-      "title": "SeedProd 6.19.10",
+      "title": "Envira Gallery Lite 1.12.5",
+      "type": "fix",
+      "shortSummary": "Added: Google Photos option to external gallery type selector (Pro feature up..."
+    },
+    {
+      "title": "MonsterInsights 10.1.3",
+      "type": "fix",
+      "shortSummary": "Fixes: Various bug fixes and updates."
+    },
+    {
+      "title": "Uncanny Automator 7.2.2",
       "type": "improvement",
-      "shortSummary": "Release 6.19.10."
+      "shortSummary": "Gravity Forms - Triggers - Hidden fields now generate tokens. #7153"
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and was always crashing their site! Talk about a fatal error in judgment.",
-  "generatedAt": "2026-04-20T15:34:35.662Z"
+  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because she said he had too many 'unresolved dependencies'!",
+  "generatedAt": "2026-04-27T15:39:05.099Z"
 }
