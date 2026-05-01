@@ -1,5 +1,27 @@
 [
   {
+    "id": "custom-twitter-feeds@2.5.5",
+    "title": "Smash Balloon Twitter Feed 2.5.5",
+    "date": "2026-04-30",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Plugin hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9",
+    "title": "Thrive Themes 10.9",
+    "date": "2026-04-30",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Architect: REST API Content Access: External tools and automations can now read your Thrive Architect page content through the standard WordPress REST API, opening the door to new integrations with AI assistants, content workflows, and custom tooling\n\nThrive Architect: REST API Content Saving: External tools and automations can now save Thrive Architect page content programmatically through the WordPress REST API, secured with WordPress Application Passwords. Your editor and existing workflows are completely unchanged\n\nThrive Apprentice: Drip by Chapter: You can now release course content one chapter at a time, in addition to the existing per-lesson and per-module options. When a chapter unlocks, all of its modules and lessons become available to your students together\n\nThrive Apprentice: Visible Drip Unlock Dates: When content is locked behind a drip schedule, your students now see exactly when each lesson unlocks — both on the locked content page and on locked lesson tiles in the course outline. No more guessing when content becomes available",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/04/v10-9/",
+    "tags": []
+  },
+  {
     "id": "coming-soon@6.20.0",
     "title": "SeedProd 6.20.0",
     "date": "2026-04-23",
@@ -1661,17 +1683,6 @@
     "tags": []
   },
   {
-    "id": "custom-twitter-feeds@2.2.5",
-    "title": "Smash Balloon Twitter Feed 2.2.5",
-    "date": "2024-11-19",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak: Added support for our new [Feed Analytics](https://smashballoon.com/?utm_campaign=twitter-free-readme&utm_source=changelog&utm_medium=feedanalyticsannouncement) product. Get insights as to how your feeds are being used by site visitors.",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.2.2",
     "title": "MonsterInsights 9.2.2",
     "date": "2024-11-13",
@@ -1724,17 +1735,6 @@
     "releaseType": "feature",
     "summary": "New: Country and region report to see where and how your visitors find your website\n\nNew: Advanced tracking options for users of Google Tag Manager\n\nNew: SEO & RankMath Integrations with our Custom Dimensions addon\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.3",
-    "title": "Thrive Themes 10.3",
-    "date": "2024-10-22",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: Vertical Tabs in Thrive Architect: Vertical just got even better with an improve mobile experience for your customers! Read more about Wrap to Toggle View at Breakpoint\n\nNew Features Added to Thrive Suite: New beautiful tab templates &#8211; We have released some new tabs templates for you to check out!\n\nNew Features Added to Thrive Suite: Thrive Notifications in WordPress Dashboard: We further optimized the In-app notification feature\n\nImprovements and fixes: Improvement: Thrive Apprentice optimization work around taxonomy inside pre_get_posts\n\nImprovements and fixes: Improvement: Thrive Apprentice course filtering options is now working as expected when the course is set to hidden\n\nImprovements and fixes: Improvement: Thrive Apprentice REST routes optimization\n\nImprovements and fixes: Improvement: Thrive Apprentice, A few tweaks for Customer Stripe Portal\n\nImprovements and fixes: Fix: Thrive Architect: In-app notification icons are now showing as expected\n\nImprovements and fixes: Fix: Thrive Automator: Instead of showing empty string value in the contact data, it shows the field tags. ex. %checkbox_field%\n\nImprovements and fixes: Fix: Thrive Dashboard: Minor CSS conflict with WPForms\n\nImprovements and fixes: Fix: Thrive Themes Builder: WooCommerce cart quantity shows even when the product is sold individually\n\nImprovements and fixes: Fix: Thrive Architect: The UI issue when Gutenberg plugin is active\n\nImprovements and fixes: Fix: Thrive Architect: The issue with this specific template dropdown28 is now fixed",
-    "changelogUrl": "https://changelog.thrivethemes.com/2024/10/version-10-3-released/",
     "tags": []
   },
   {
