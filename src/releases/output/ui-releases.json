@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.2.3",
+    "title": "Uncanny Automator 7.2.3",
+    "date": "2026-05-01",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Kit - Added a v4 API key option. #7214\n\nClosure – Stopped removing `$` from URL queries during redirects. #7213\n\nLearnDash - Pass/fail quiz triggers now respond to essay grades. #7210\n\nLoopable tokens - Closed leaks in the Action Store to prevent recipe data issues. #7224\n\nLoopable tokens - Fixed phantom results caused by out-of-bounds token hydration. #7222\n\nLoopable tokens - Fixed trigger token child misindexing under loop filters. #7223\n\nApp Integrations - Improved app connected status load order. #7151\n\nLoopable RSS - Added support for Atom feeds (requires the latest Automator Pro). #7200\n\nUncanny Agent - Bearer Auth - Fixed an infinite loop during token metadata update in a specific situation #7234\n\nSwitched to the new framework:\n\nAWeber #6564\n\nKeap #6284",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "custom-twitter-feeds@2.5.5",
     "title": "Smash Balloon Twitter Feed 2.5.5",
     "date": "2026-04-30",
