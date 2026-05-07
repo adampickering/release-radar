@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.2.4",
+    "title": "Uncanny Automator 7.2.4",
+    "date": "2026-05-06",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "feature",
+    "summary": "Uncanny Agent - Officially launched for all Automator Pro users\n\nDashboard - Uncanny Agent Usage meter #6635\n\nUncanny Agent - Default conversation starters based on the page context #7251\n\nCore – Total table size now gets a well-deserved refresh after log table resets. #7272",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.2.3",
     "title": "Uncanny Automator 7.2.3",
     "date": "2026-05-01",
