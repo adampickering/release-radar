@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.2.5",
+    "title": "Uncanny Automator 7.2.5",
+    "date": "2026-05-08",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Uncanny Agent - Support for translating conversation starters into 12 languages #7289\n\nAdvanced - Post meta token now gracefully acknowledges \"0\" with an empty string. #7292\n\nLoopable Tokens bid farewell to their geeky Unicode escape disguises. #7280\n\nTwilio - Send an SMS to a number now sans HTML `<p>` shenanigans. #7282",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.2.4",
     "title": "Uncanny Automator 7.2.4",
     "date": "2026-05-06",
