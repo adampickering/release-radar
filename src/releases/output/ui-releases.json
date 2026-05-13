@@ -1,5 +1,16 @@
 [
   {
+    "id": "thrive-themes@10.9.1",
+    "title": "Thrive Themes 10.9.1",
+    "date": "2026-05-12",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Thrive Architect: Featured Images in Post Lists: Featured images and styles in Post List elements now stay correct across conditional displays after editing and saving a page\n\nThrive Architect: Post List Filter Accuracy: The Post List filter now stays accurate when taxonomy term names overlap across post types, so the right posts always appear\n\nThrive Quiz Builder: GDPR Checkbox on Webhook Forms: The GDPR consent checkbox now correctly blocks Quiz opt-in gate submissions on webhook-connected forms when left unchecked, keeping your forms compliant\n\nThrive Apprentice: Welcome Email Duplicates: Students granted course access through Thrive Automator now receive a single welcome email instead of duplicates\n\nThrive Optimize: Visibility Settings in A/B Tests: Page visibility settings (Top Section, Sidebar, Header, Footer, and more) are now preserved when you create A/B test variations and declare a test winner\n\nThrive Dashboard: Generate & Save Button Display: The Generate & Save button on the API Keys page now displays correctly, and you&#8217;ll see an inline error if you try to save an API key with an empty or invalid name\n\nThrive Dashboard: Zapier on PHP 8.1+: Forms connected to Zapier now work cleanly on PHP 8.1 and above, with no deprecation notices\n\nThrive Theme Builder: Always-Visible Updates: Theme Builder updates now always appear in WordPress admin, even when Thrive Architect has a pending update, so you can keep your sites up to date without getting stuck in an unbreakable update loop",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1/",
+    "tags": []
+  },
+  {
     "id": "charitable@1.8.10.5",
     "title": "Charitable 1.8.10.5",
     "date": "2026-05-11",
@@ -1702,17 +1713,6 @@
     "releaseType": "feature",
     "summary": "New: Advanced Targeting Options\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.4",
-    "title": "Thrive Themes 10.4",
-    "date": "2024-12-11",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: Integrate Zapier with LG Custom Fields: You can now send custom fields to your Zapier zaps for greater flexibility and increased integration opportunities\n\nNew Features Added to Thrive Suite: Course Level Grading in your Thrive Apprentice Courses will provide course owners with structured a way to issue an “overall course grade” for their members based on the results of assessments throughout the course with all the flexibility you expect\n\nNew Features Added to Thrive Suite: Add Country/State Field(s) to your Lead Generation Forms: We&#8217;ve added a Country/state picker with inline-typeahead search for your customers to provide their region easily\n\nNew Features Added to Thrive Suite: Lead Generation fields &#8211; Email subjects now support shortcodes: To enhance email personalization and engagement, we have introduced the shortcode functionality within the email subject field of our Lead Generation element. This would enable you to dynamically incorporate lead data, like the submitter&#8217;s name, into their email subjects, fostering more targeted and relevant communication\n\nNew Features Added to Thrive Suite: Third Party Images: You can now search and insert images directly to your pages, posts and feature images from Unsplash directly from the Media Library and Thrive products, eliminating the need to switch between tabs or image services\n\nImprovements and fixes: Improvement: Font awesome has been updated to the latest version (6.7.1) which brings all the available icons to you (Bluesky Social icon is there, too #spoileralert #watchthisspace)\n\nImprovements and fixes: Improvement: In the Lead Generation element we won&#8217;t display the additional &#8220;Custom fields&#8221; option when it is not supported\n\nImprovements and fixes: Improvement: For both Thrive Architect and Thrive Theme Builder we&#8217;ve improved the conditional displays for course list elements\n\nImprovements and fixes: Improvement: Inside Thrive Apprentice if the last user assessment has no grade yet, we will set the state to pending\n\nImprovements and fixes: Improvement: We are introducing a few Mega menu column improvements when a Conditional Display is applied\n\nImprovements and fixes: Fix: In Thrive Apprentice users can now interact with video lessons as intended in all scenarios\n\nImprovements and fixes: Fix: In Thrive Quiz Builder Social Share Badge image is showing as expected on mobile devices\n\nImprovements and fixes: Fix: Thrive Apprentice: Module index data is now visible\n\nImprovements and fixes: Fix: Thrive Ultimatum, minor fix to settings values being broken in some specific cases\n\nImprovements and fixes: Fix: Thrive Architect, Tabs element was breaking design for Display Testimonial with Carousel, if added twice\n\nImprovements and fixes: Fix: In Thrive Leads lightbox are now aware if there is element already opened, so it won&#8217;t trigger again\n\nImprovements and fixes: Fix: In Thrive Architect, we made a few styling fixes for containers with data attribute selector\n\nImprovements and fixes: Fix: Fix for hidden tab elemet when Google Maps element is added inside Thrive Architect\n\nImprovements and fixes: Fix: Thrive Apprentice mark complete button minor bug is now fixed\n\nImprovements and fixes: Fix: Thrive Architect, we&#8217;ve applied a small fix to prevent infinite load for carousel element when settings are empty\n\nImprovements and fixes: Fix: Thrive Ovation won&#8217;t load some outdated dependancies\n\nImprovements and fixes: Fix: Styling fix for Lead Generation Calendar module for datepicker\n\nImprovements and fixes: Fix: Inside Thrive Architect we&#8217;ve fixed a few underline and line-through checks\n\nImprovements and fixes: Fix: When editing in Block editor &#8220;Launch Thrive Architect&#8221; shows as expected\n\nImprovements and fixes: Fix: Thrive Apprentice, conflict with the tag groups and uncaught error is now resolved\n\nImprovements and fixes: Fix: Thrive Apprentice fixed an issue where in some situations new pages were not visible in the product management screens\n\nImprovements and fixes: Fix: The Thrive Lightbox &#8220;close form&#8221; button action will now work as expected if there&#8217;s an In-Content Thrive Leads opt-in form that contains a Quiz element on a page",
-    "changelogUrl": "https://changelog.thrivethemes.com/2024/12/version-10-4-released/",
     "tags": []
   },
   {
