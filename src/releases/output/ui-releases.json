@@ -1,5 +1,16 @@
 [
   {
+    "id": "pushengage@4.2.2",
+    "title": "PushEngage 4.2.2",
+    "date": "2026-05-13",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "improvement",
+    "summary": "NEW: WordPress Abilities API support — PushEngage now registers 25 abilities for AI assistants and MCP servers, covering plugin info, push notifications, segments, audience groups, analytics, auto-push settings, WooCommerce push automation campaigns, WhatsApp status, and debug logs\n\nNEW: Verified compatibility with WordPress 7.0 and the new abilities framework\n\nImproved: iOS web push notification reliability for subscribers on Safari 16.4+ and iPadOS 16.4+\n\nImproved: Browser notification delivery optimization across Chrome, Firefox, Safari, and Edge\n\nImproved: Click-to-chat button targeting in the multichannel chat widget — show or hide on specific pages, posts, or device types\n\nImproved: Cart abandonment recovery reliability for high-volume WooCommerce stores",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
     "id": "thrive-themes@10.9.1",
     "title": "Thrive Themes 10.9.1",
     "date": "2026-05-12",
@@ -1284,17 +1295,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.1.4.1",
-    "title": "PushEngage 4.1.4.1",
-    "date": "2025-08-04",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "fix",
-    "summary": "Minor bug fixes and improvements.",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
