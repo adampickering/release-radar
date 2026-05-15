@@ -1,5 +1,49 @@
 [
   {
+    "id": "wpforms-lite@1.10.0.5",
+    "title": "WPForms Lite 1.10.0.5",
+    "date": "2026-05-14",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Fixed: Compatibility with WordPress 7.0\n\nFixed: Improved validation of submitted values for Multiple Choice, Checkboxes, Dropdown, and GDPR Checkbox fields to ensure only configured options are accepted",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "all-in-one-seo-pack@4.9.7.1",
+    "title": "All in One SEO 4.9.7.1",
+    "date": "2026-05-14",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Fixed: Resolved an issue where some sites could experience a fatal error and become inaccessible due to a corrupted internal cache entry\n\nFixed: Removed outdated database indexes left over from a previous update that could corrupt cache data on certain MariaDB database versions, leading to site errors",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-facebook-feed@4.7.7",
+    "title": "Smash Balloon Social Post Feed 4.7.7",
+    "date": "2026-05-14",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Additional plugin hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.6.6",
+    "title": "Smash Balloon YouTube Feed 2.6.6",
+    "date": "2026-05-14",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Additional plugin hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.2",
     "title": "PushEngage 4.2.2",
     "date": "2026-05-13",
@@ -528,28 +572,6 @@
     "tags": []
   },
   {
-    "id": "all-in-one-seo-pack@4.9.5.1",
-    "title": "All in One SEO 4.9.5.1",
-    "date": "2026-03-09",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Fixed: Improved title output buffering compatibility with themes that don't declare title-tag support\n\nFixed: AI credits refresh button now preserves the connection state for manually connected Lite users",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.9.9.4",
-    "title": "WPForms Lite 1.9.9.4",
-    "date": "2026-03-03",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: Gutenberg education notice incorrectly showing in Classic Editor when Classic Editor plugin is active\n\nFixed: GDPR agreement field was truncated in the Form Builder",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@10.0.3",
     "title": "MonsterInsights 10.0.3",
     "date": "2026-03-03",
@@ -855,17 +877,6 @@
     "releaseType": "feature",
     "summary": "New - Added support for a new GDPR consent plugin [WPConsent](https://wpconsent.com/?utm_campaign=twitter-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement)\n\nNew - Added support for GDPR Cookie Compliance by Moove Agency and Real Cookie Banner GDPR plugins\n\nFix - Additional plugin hardening",
     "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "feeds-for-youtube@2.6.1",
-    "title": "Smash Balloon YouTube Feed 2.6.1",
-    "date": "2025-12-11",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "fix",
-    "summary": "Tweak: Improved SEO by changing Load More, Close, and Cancel buttons to div elements\n\nFix: Resolved translation loading issue (_load_textdomain_just_in_time warning)\n\nFix: Resolved security vulnerabilities reported by Patchstack and Wordfence",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
     "tags": []
   },
   {
@@ -1372,17 +1383,6 @@
     "releaseType": "fix",
     "summary": "Feature Added: Square payment integration:: More Payment Options for Your Students: Offer a widely recognized and secure way for your users to purchase your courses\n\nFeature Added: Square payment integration:: Seamless Checkout: Provide a smooth and trustworthy payment experience, making it easier for users to enroll\n\nFeature Added: Square payment integration:: Simplified Management: Keep all your course sales streamlined within your existing Square account, making tracking and reconciliation a breeze\n\nImprovements and Fixes:: Fixed: We&#8217;ve fixed an issue that prevented users from selecting recent years in the custom date filter within reports. Users can now easily access and filter by all recent years for more accurate data\n\nImprovements and Fixes:: Fixed: The problem preventing Course Name and Product shortcodes from showing up in emails has been resolved. Your emails will now correctly populate with this dynamic content\n\nImprovements and Fixes:: Fixed: The issue preventing users from being redirected to the proper page upon product expiry has been fixed\n\nImprovements and Fixes:: Fixed: The registration form will now correctly require a password before it can be submitted\n\nImprovements and Fixes:: Fixed: We&#8217;ve fixed an issue where new users registering through opt-in forms weren&#8217;t being assigned the correct user role. Now, users will be automatically set up with the role you&#8217;ve selected, streamlining your user management\n\nImprovements and Fixes:: Fixed: We&#8217;ve resolved an issue where trying to &#8220;View Test&#8221; from the A/B results page would trigger a critical error. Users can now reliably access and review your A/B test details without interruption\n\nImprovements and Fixes:: Fixed: We&#8217;ve resolved an issue where your selected active color for standard menus wasn&#8217;t saving or reflecting on the frontend. Now, your menu&#8217;s active state will consistently display your chosen color, enhancing your site&#8217;s design\n\nImprovements and Fixes:: Fixed: The problem that sometimes prevented products from installing and registering, leading to a &#8220;Please try again!&#8221; warning, has been fixed. All products should now install and register as expected\n\nImprovements and Fixes:: Fixed: The problem causing 404 requests and affecting site speed when local fonts were replaced by their Google Fonts counterparts has been fixed. Site will now properly load fonts without these errors",
     "changelogUrl": "https://changelog.thrivethemes.com/2025/06/version-10-7-released/",
-    "tags": []
-  },
-  {
-    "id": "custom-facebook-feed@4.3.2",
-    "title": "Smash Balloon Social Post Feed 4.3.2",
-    "date": "2025-06-02",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
   {
