@@ -1,5 +1,16 @@
 [
   {
+    "id": "pushengage@4.2.3",
+    "title": "PushEngage 4.2.3",
+    "date": "2026-05-15",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "improvement",
+    "summary": "Fix: Optimized the Abilities API integration so AI assistant and MCP responses follows the output schema\n\nFix: Auto-push allowed post types duplicate results in response\n\nImproved: Strengthened overall plugin security and reliability\n\nTested up to WordPress 7.0",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@1.10.0.5",
     "title": "WPForms Lite 1.10.0.5",
     "date": "2026-05-14",
@@ -1251,17 +1262,6 @@
     "releaseType": "feature",
     "summary": "Added: New transactional mailer: Mandrill integration\n\nFixed: References and In-Reply-To email headers are now correctly preserved for API-based mailers",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.1.5",
-    "title": "PushEngage 4.1.5",
-    "date": "2025-08-27",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "feature",
-    "summary": "Added WooCommerce Automation page, new UI for consistency in managing WooCommerce Integrations\n\nAdded a new tags filter for push broadcast notifications list\n\nAdded a Separator in the PushEngage admin menu to categorize admin screens and settings\n\nMinor bug fixes and performance improvements",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
