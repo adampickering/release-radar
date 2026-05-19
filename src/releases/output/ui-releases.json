@@ -1,5 +1,60 @@
 [
   {
+    "id": "all-in-one-seo-pack@4.9.7.2",
+    "title": "All in One SEO 4.9.7.2",
+    "date": "2026-05-18",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Fixed: Cache table on some sites was left in a corrupted state after the 4.9.7 update due to a race condition during the migration, causing cache writes to silently overwrite unrelated entries. The new migration runner now retries the repair until it verifies the state is clean.",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "coming-soon@6.20.1",
+    "title": "SeedProd 6.20.1",
+    "date": "2026-05-18",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.20.1.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "easy-digital-downloads@3.6.8",
+    "title": "Easy Digital Downloads 3.6.8",
+    "date": "2026-05-18",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "feature",
+    "summary": "NEW: Stripe - Added support for BLIK payments\n\nAdmin: Fixed the orders table filter by total not working with the \"greater than\" condition\n\nAdmin: Fixed manual order tax calculation requiring an address field change to trigger\n\nAdmin: Enhanced select placeholder no longer assumes the field is for downloads\n\nAdmin: Improve UX of Select input search\n\nAdmin: Added a tooltip for the Login link setting option toggle\n\nBlocks: Updated download select fields to use combobox\n\nCheckout: Prevent console warnings when telephone number field is present\n\nEmails: Fixed email log pagination not working as expected\n\nPayPal Standard: Improved IPN handling\n\nSquare: Improved reliability of connection process\n\nStripe: Fixed an uncaught IntegrationError when a 100% discount code is applied with Payment Elements",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.11.0",
+    "title": "Smash Balloon Instagram Feed 6.11.0",
+    "date": "2026-05-18",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New - Added a modern Gutenberg block and Elementor widget for the Instagram feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nTweak - Compatibility with WP 7\n\nFix - Plugin no longer removes the WordPress footer on plugin admin pages\n\nFix - Captions with multiple paragraphs no longer render duplicate anchor tags in screen-reader text\n\nFix - Instagram Trial Reels (test posts shown only to non-followers) are no longer included in feeds",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.6.0",
+    "title": "Smash Balloon Twitter Feed 2.6.0",
+    "date": "2026-05-18",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added a modern Gutenberg block and Elementor widget for the Twitter feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nTweak: Compatibility with WP 7",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.3",
     "title": "PushEngage 4.2.3",
     "date": "2026-05-15",
@@ -140,17 +195,6 @@
     "releaseType": "improvement",
     "summary": "Thrive Architect: REST API Content Access: External tools and automations can now read your Thrive Architect page content through the standard WordPress REST API, opening the door to new integrations with AI assistants, content workflows, and custom tooling\n\nThrive Architect: REST API Content Saving: External tools and automations can now save Thrive Architect page content programmatically through the WordPress REST API, secured with WordPress Application Passwords. Your editor and existing workflows are completely unchanged\n\nThrive Apprentice: Drip by Chapter: You can now release course content one chapter at a time, in addition to the existing per-lesson and per-module options. When a chapter unlocks, all of its modules and lessons become available to your students together\n\nThrive Apprentice: Visible Drip Unlock Dates: When content is locked behind a drip schedule, your students now see exactly when each lesson unlocks — both on the locked content page and on locked lesson tiles in the course outline. No more guessing when content becomes available",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/04/v10-9/",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.0",
-    "title": "SeedProd 6.20.0",
-    "date": "2026-04-23",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.20.0.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
@@ -770,17 +814,6 @@
     "tags": []
   },
   {
-    "id": "easy-digital-downloads@3.6.3",
-    "title": "Easy Digital Downloads 3.6.3",
-    "date": "2025-12-23",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "improvement",
-    "summary": "Blocks: Updating handling of Password Reset redirect\n\nCheckout: Improved form data handling for AJAX based checkouts\n\nCompatibility: Improved license key handling for addons\n\nPayPal: Improve IPN Handling\n\nStripe: Improve Payment Method Configuration handling\n\nDev: Update `edd_die()` for unit test compatibility",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.11.0",
     "title": "MonsterInsights 9.11.0",
     "date": "2025-12-18",
@@ -877,17 +910,6 @@
     "releaseType": "fix",
     "summary": "Fix: Plugin security hardening\n\nFix: Fixed an issue with the review notice not being dismissible\n\nTweak: Improved text domain loading (_load_textdomain_just_in_time fix)\n\nTweak: Various PHP warning and legacy feed compatibility fixes\n\nTweak: Updated the Graph API version",
     "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "custom-twitter-feeds@2.3.0",
-    "title": "Smash Balloon Twitter Feed 2.3.0",
-    "date": "2025-12-11",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New - Added support for a new GDPR consent plugin [WPConsent](https://wpconsent.com/?utm_campaign=twitter-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement)\n\nNew - Added support for GDPR Cookie Compliance by Moove Agency and Real Cookie Banner GDPR plugins\n\nFix - Additional plugin hardening",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
     "tags": []
   },
   {
@@ -1504,17 +1526,6 @@
     "releaseType": "improvement",
     "summary": "Improve video playing experience.",
     "changelogUrl": "https://wordpress.org/plugins/trustpulse-api/#developers",
-    "tags": []
-  },
-  {
-    "id": "instagram-feed@6.8.0",
-    "title": "Smash Balloon Instagram Feed 6.8.0",
-    "date": "2025-04-23",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New - Added a new setting to support Instagram's new 3:4 aspect ratio. Edit your feed, select the \"Layout\" tab and choose among a 1:1 square, 4:5 portrait, or 3:4 Instagram official aspect ratio\n\nNew - Added support for a new GDPR consent plugin [WPConsent](https://wpconsent.com/?utm_campaign=instagram-free-readme&utm_source=changelog&utm_medium=wpconsentannouncement)",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
   {
