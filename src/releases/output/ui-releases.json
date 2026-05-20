@@ -1,5 +1,71 @@
 [
   {
+    "id": "soliloquy-lite@2.8.2",
+    "title": "Soliloquy Lite 2.8.2",
+    "date": "2026-05-20",
+    "brand": "Soliloquy",
+    "brandSlug": "soliloquy",
+    "releaseType": "fix",
+    "summary": "Added: Tested with WordPress 7.0\n\nAdded: Plan badges on the Addons page so you can see at a glance which addons are included with your license\n\nAdded: Friendly upgrade screen when clicking an addon that needs a higher plan\n\nFixed: Security hardening for sliders that are draft, pending, scheduled, or private (reported by Wordfence)\n\nFixed: Button heights looking off on WordPress 7.0\n\nFixed: Error messages now show up properly when a request fails\n\nFixed: Searching for \"Carousel\" in the block inserter now finds the Soliloquy block\n\nUpdated: All Soliloquy links now use https instead of http",
+    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "soliloquy-lite@2.8.1",
+    "title": "Soliloquy Lite 2.8.1",
+    "date": "2026-05-20",
+    "brand": "Soliloquy",
+    "brandSlug": "soliloquy",
+    "releaseType": "feature",
+    "summary": "Added: Map meta cap for better compatibility.",
+    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "soliloquy-lite@2.8.0",
+    "title": "Soliloquy Lite 2.8.0",
+    "date": "2026-05-20",
+    "brand": "Soliloquy",
+    "brandSlug": "soliloquy",
+    "releaseType": "feature",
+    "summary": "Fixed: Render same short code multiple times\n\nAdded: `webp` and `heic` image support\n\nUpdated: Header logo linked to landing page",
+    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "soliloquy-lite@2.7.9",
+    "title": "Soliloquy Lite 2.7.9",
+    "date": "2026-05-20",
+    "brand": "Soliloquy",
+    "brandSlug": "soliloquy",
+    "releaseType": "fix",
+    "summary": "Fixed: Image metadata escaping.",
+    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "soliloquy-lite@2.7.8",
+    "title": "Soliloquy Lite 2.7.8",
+    "date": "2026-05-20",
+    "brand": "Soliloquy",
+    "brandSlug": "soliloquy",
+    "releaseType": "fix",
+    "summary": "Fixed: Gutenberg block not displaying on site editor.",
+    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "pushengage@4.2.4",
+    "title": "PushEngage 4.2.4",
+    "date": "2026-05-19",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "improvement",
+    "summary": "Fix: Optimized response structure for paginated results in Abilities API endpoints\n\nImproved: Strengthened overall plugin security and reliability",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@4.9.7.2",
     "title": "All in One SEO 4.9.7.2",
     "date": "2026-05-18",
@@ -1056,17 +1122,6 @@
     "tags": []
   },
   {
-    "id": "soliloquy-lite@2.8.1",
-    "title": "Soliloquy Lite 2.8.1",
-    "date": "2025-11-13",
-    "brand": "Soliloquy",
-    "brandSlug": "soliloquy",
-    "releaseType": "feature",
-    "summary": "Added: Map meta cap for better compatibility.",
-    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "wp-mail-smtp@4.7.0",
     "title": "WP Mail SMTP 4.7.0",
     "date": "2025-11-12",
@@ -1075,17 +1130,6 @@
     "releaseType": "feature",
     "summary": "Added: New transactional mailer: Resend integration\n\nFixed: Recurring task filling up task meta table",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.1.6",
-    "title": "PushEngage 4.1.6",
-    "date": "2025-11-12",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "feature",
-    "summary": "Added new attributes and subscriber fields UI\n\nAdded support for using shortcodes in WhatsApp templates\n\nMinor bug fixes and performance improvements",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
@@ -1361,17 +1405,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "soliloquy-lite@2.8.0",
-    "title": "Soliloquy Lite 2.8.0",
-    "date": "2025-06-18",
-    "brand": "Soliloquy",
-    "brandSlug": "soliloquy",
-    "releaseType": "feature",
-    "summary": "Fixed: Render same short code multiple times\n\nAdded: `webp` and `heic` image support\n\nUpdated: Header logo linked to landing page",
-    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
     "tags": []
   },
   {
@@ -1738,17 +1771,6 @@
     "tags": []
   },
   {
-    "id": "soliloquy-lite@2.7.9",
-    "title": "Soliloquy Lite 2.7.9",
-    "date": "2024-11-04",
-    "brand": "Soliloquy",
-    "brandSlug": "soliloquy",
-    "releaseType": "fix",
-    "summary": "Fixed: Image metadata escaping.",
-    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.2.1",
     "title": "MonsterInsights 9.2.1",
     "date": "2024-10-31",
@@ -1815,17 +1837,6 @@
     "tags": []
   },
   {
-    "id": "soliloquy-lite@2.7.8",
-    "title": "Soliloquy Lite 2.7.8",
-    "date": "2024-09-05",
-    "brand": "Soliloquy",
-    "brandSlug": "soliloquy",
-    "releaseType": "fix",
-    "summary": "Fixed: Gutenberg block not displaying on site editor.",
-    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.0.1",
     "title": "MonsterInsights 9.0.1",
     "date": "2024-08-21",
@@ -1878,17 +1889,6 @@
     "releaseType": "improvement",
     "summary": "Enhancement: We improved the addons fetch requests.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "soliloquy-lite@2.7.7",
-    "title": "Soliloquy Lite 2.7.7",
-    "date": "2024-07-22",
-    "brand": "Soliloquy",
-    "brandSlug": "soliloquy",
-    "releaseType": "fix",
-    "summary": "Fixed: User permissions.",
-    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
     "tags": []
   },
   {
