@@ -1,5 +1,16 @@
 [
   {
+    "id": "google-analytics-for-wordpress@10.2.0",
+    "title": "MonsterInsights 10.2.0",
+    "date": "2026-05-20",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "feature",
+    "summary": "New: We've added an AI chat to all plans - easily chat with your analytics and get an answer fast.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
     "id": "soliloquy-lite@2.8.2",
     "title": "Soliloquy Lite 2.8.2",
     "date": "2026-05-20",
