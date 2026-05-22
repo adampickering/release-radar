@@ -1,5 +1,38 @@
 [
   {
+    "id": "charitable@1.8.11",
+    "title": "Charitable 1.8.11",
+    "date": "2026-05-21",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "feature",
+    "summary": "NEW: PayPal Commerce gateway — accept one-time donations via PayPal wallet (Venmo, Pay Later) and inline credit/debit card (Advanced Card Processing)\n\nNEW: Site-level PayPal tier lock allows new installs and Commerce-tier sites see PayPal Commerce; existing PayPal Standard sites keep using the legacy gateway\n\nIMPROVED: Test Mode toggle now has descriptive help text explaining sandbox routing. Help icons next to each payment gateway in admin settings, linking to documentation\n\nIMPROVED: Stripe donation flow now self-heals when a previously stored PaymentIntent becomes unreachable (e.g. after a gateway reconnect)",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "sugar-calendar-lite@3.11.1",
+    "title": "Sugar Calendar Lite 3.11.1",
+    "date": "2026-05-21",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "fix",
+    "summary": "Fixed: PHP 8 type error when the filter `wp_insert_post_empty_content` is used with type hinting\n\nFixed: PHP 8.1+ PHP warning logs\n\nFixed: Security improvements\n\nChanged: Google Maps integration optimization",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "userfeedback-lite@1.11.2",
+    "title": "UserFeedback Lite 1.11.2",
+    "date": "2026-05-21",
+    "brand": "UserFeedback",
+    "brandSlug": "userfeedback",
+    "releaseType": "fix",
+    "summary": "Updates: Various bug fixes and improvements.",
+    "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.2.0",
     "title": "MonsterInsights 10.2.0",
     "date": "2026-05-20",
@@ -473,6 +506,17 @@
     "tags": []
   },
   {
+    "id": "sugar-calendar-lite@3.11.0",
+    "title": "Sugar Calendar Lite 3.11.0",
+    "date": "2026-04-01",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "fix",
+    "summary": "Added: Easily get in touch with event attendees through Email Notification for Event Attendees\n\nAdded: Support to `show_past_only` args to Event List Block\n\nAdded: WP7 admin UI compatibility\n\nChanged: Removed cap limit on the \"Events per page\" and \"Max events to show\" fields in the Events List Elementor Widget\n\nChanged: Bump minimum WP version required to v6.2\n\nFixed: Event Content from WPBakery is not saved\n\nFixed: Event Tickets can still be purchased after limit is hit\n\nFixed: Optimized how assets are loaded\n\nFixed: Edge-case in a specific non-english locale that triggers error in some admin pages\n\nFixed: Calendar date badge in Event List Block not converting to Visitor's timezone\n\nFixed: Unintended slash before the apostrophe character in the Ticket and Order receipt emails\n\nFixed: Removed Ghost events",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.1.2",
     "title": "MonsterInsights 10.1.2",
     "date": "2026-03-31",
@@ -503,17 +547,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Dropdown field with a choice label containing quote characters was causing a JavaScript error in the form builder, preventing fields from being added correctly\n\nFixed: Compatibility with Divi Builder",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.10.1",
-    "title": "Charitable 1.8.10.1",
-    "date": "2026-03-26",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "FIX: Improved Stripe webhook verification and resolved several issues with signing secret setup and auto-migration\n\nFIX: Improved license detection on WordPress multisite subsites\n\nFIX: Resolved PHP 8.3 compatibility issue in Stripe gateway\n\nFIX: Fixed Cloudflare Turnstile action string exceeding character limit on password retrieval form\n\nFIX: Fixed padding and alignment in dashboard tab content area for addon status messages",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
@@ -1254,17 +1287,6 @@
     "tags": []
   },
   {
-    "id": "sugar-calendar-lite@3.9.0",
-    "title": "Sugar Calendar Lite 3.9.0",
-    "date": "2025-09-30",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "fix",
-    "summary": "Added: Shortcode generator for the classical editor\n\nChanged: Filter dropdown in Calendar and List blocks/shortcodes\n\nFixed: Event option to open links in new tab\n\nFixed: Import file button. It will now alert the user that file is required to start the import process\n\nFixed: Display for Calendar Block Week and Day mode in 24 hour format\n\nFixed: Timezone conversion and multiday event card presentation in Day view of Calendar block",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.8",
     "title": "Thrive Themes 10.8",
     "date": "2025-09-30",
@@ -1295,17 +1317,6 @@
     "releaseType": "feature",
     "summary": "New: Google Ads Integration! Set up Google Ads campaigns directly from the MonsterInsights dashboard\n\nNew: AI Traffic Report - see what LLMs are sending traffic to your website\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.8.2",
-    "title": "Sugar Calendar Lite 3.8.2",
-    "date": "2025-09-03",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "fix",
-    "summary": "Fixed: Single event page Timezone display, when enabled\n\nFixed: Tags filter in Events Calendar admin page\n\nFixed: Event List Block pagination when Visitor Conversion is enabled\n\nFixed: Filtering for Events List admin page\n\nFixed: Saving events in draft without an event name\n\nFixed: Event List Block pagination for upcoming events\n\nFixed: Clicking the Events number on the Calendars page now opens the correct filtered Events page\n\nFixed: PHP error when accessing TEC migration tab\n\nFixed: GiveWP conflict when editing recurring events\n\nFixed: Dashboard Widget styling issues\n\nFixed: Tags metabox styling in block editor mode\n\nFixed: Search results display across admin pages",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
   {
