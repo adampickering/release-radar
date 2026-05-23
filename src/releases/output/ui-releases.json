@@ -1,12 +1,45 @@
 [
   {
+    "id": "optinmonster@2.16.24",
+    "title": "OptinMonster 2.16.24",
+    "date": "2026-05-22",
+    "brand": "OptinMonster",
+    "brandSlug": "optinmonster",
+    "releaseType": "feature",
+    "summary": "Improved the campaign filtering to allow filtering by status and folder, along with ne sorting options\n\nFixed a scenario where cloned campaigns were not displaying on WordPress sites\n\nFixed a PHP 8.4 compatibility issue in the Rules exception handler\n\nAdded WordPress 6.9 compatibility\n\nAdded WooCommerce 10.5 compatibility\n\nMaintenance updates",
+    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.11.1",
+    "title": "Charitable 1.8.11.1",
+    "date": "2026-05-22",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "IMPROVED: Polished PayPal Settings screen, adding notice and improving readability.",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.1.1",
+    "title": "Thrive Themes 10.9.1.1",
+    "date": "2026-05-22",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "All Thrive Themes Products: License related enhancements and fix.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-1/",
+    "tags": []
+  },
+  {
     "id": "charitable@1.8.11",
     "title": "Charitable 1.8.11",
     "date": "2026-05-21",
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: PayPal Commerce gateway — accept one-time donations via PayPal wallet (Venmo, Pay Later) and inline credit/debit card (Advanced Card Processing)\n\nNEW: Site-level PayPal tier lock allows new installs and Commerce-tier sites see PayPal Commerce; existing PayPal Standard sites keep using the legacy gateway\n\nIMPROVED: Test Mode toggle now has descriptive help text explaining sandbox routing. Help icons next to each payment gateway in admin settings, linking to documentation\n\nIMPROVED: Stripe donation flow now self-heals when a previously stored PaymentIntent becomes unreachable (e.g. after a gateway reconnect)",
+    "summary": "NEW: PayPal Commerce gateway - accept one-time donations via PayPal wallet (Venmo, Pay Later) and inline credit/debit card (Advanced Card Processing)\n\nNEW: Site-level PayPal tier lock allows new installs and Commerce-tier sites see PayPal Commerce; existing PayPal Standard sites keep using the legacy gateway\n\nNEW: Help icons next to each payment gateway in admin settings, linking to documentation\n\nIMPROVED: Test Mode toggle now has descriptive help text explaining sandbox routing\n\nIMPROVED: Stripe donation flow now self-heals when a previously stored PaymentIntent becomes unreachable (e.g. after a gateway reconnect)",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -525,17 +558,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.10.2",
-    "title": "Charitable 1.8.10.2",
-    "date": "2026-03-27",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "feature",
-    "summary": "NEW: Added Sync Pending Stripe Donations tool to gateway settings (beta)\n\nFIX: Fixed minor CSS issues on dashboard\n\nFIX: Fixed some PHP warnings\n\nFIX: Fixed a fatal error involving Stripe webhook migration on sites without an active Stripe connection in certain scenarios",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
@@ -1562,17 +1584,6 @@
     "tags": []
   },
   {
-    "id": "optinmonster@2.16.19",
-    "title": "OptinMonster 2.16.19",
-    "date": "2025-05-05",
-    "brand": "OptinMonster",
-    "brandSlug": "optinmonster",
-    "releaseType": "improvement",
-    "summary": "Improved support for the WPML plugin.",
-    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
-    "tags": []
-  },
-  {
     "id": "trustpulse-api@1.2.4",
     "title": "TrustPulse 1.2.4",
     "date": "2025-05-05",
@@ -1661,17 +1672,6 @@
     "tags": []
   },
   {
-    "id": "optinmonster@2.16.18",
-    "title": "OptinMonster 2.16.18",
-    "date": "2025-03-26",
-    "brand": "OptinMonster",
-    "brandSlug": "optinmonster",
-    "releaseType": "fix",
-    "summary": "Fixed a scenario where the wrong screenshot may load.",
-    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
-    "tags": []
-  },
-  {
     "id": "userfeedback-lite@1.5.0",
     "title": "UserFeedback Lite 1.5.0",
     "date": "2025-03-26",
@@ -1713,17 +1713,6 @@
     "releaseType": "feature",
     "summary": "New: Overview Report Metrics\n\nNew: Cart Abandonment Report\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.5",
-    "title": "Thrive Themes 10.5",
-    "date": "2025-01-28",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: Lead Generation now has a Country/State field(s): You can now add a country field to your form and choose to enable the State field and add states for that country, too. Choose between displaying all of them or just including or excluding some; it&#8217;s your choice\n\nNew Features Added to Thrive Suite: Lead Generation now supports custom fields with Zapier: one of the most requested features is live and ready for you &#8211; Zapier integration with Lead Gen forms and any custom fields that you add to better pass data to your third-party services\n\nNew Features Added to Thrive Suite: Our Thrive Architect Social elements now supports BlueSky Social: Integrating native support for BlueSky Social into our social elements is now super easy, let&#8217;s all get on the BlueSky Social train!\n\nNew Features Added to Thrive Suite: ConstantContact API: To ensure compatibility with future Constant Contact platform enhancements and provide access to new features and functionalities we have updated our Constant Contact API integration to utilize the latest V3 API as V2 API keys creation has been retired\n\nImprovements and fixes: Improvement: We&#8217;ve added a few tweaks to Course-level grading inside Thrive Apprentice focused on performance and more precise calculations\n\nImprovements and fixes: Improvement: We&#8217;ve completely rebuilt our In-app notification system to make sure you get your notifications on time and with zero impact on your website performance\n\nImprovements and fixes: Improvement: Performance improvements to the Display settings of a Thrive Leads group, especially for the larger Leads groups\n\nImprovements and fixes: Fix: WooCommerce error when a site has no products yet and the Woo shop template is edited in TTB\n\nImprovements and fixes: Fix: Thrive Ultimatum, minor fix to the issues with timer not showing up if PHP version is 8.1+ and WP_DEBUG is true\n\nImprovements and fixes: Fix: Mega menu typography is now applied properly to each menu level element separately and also will be saved properly\n\nImprovements and fixes: Fix: In Thrive Ovation we&#8217;ve rebuilt dependencies for the carousel element\n\nImprovements and fixes: Fix: The menu inside the active conditional display is now retaining its styles\n\nImprovements and fixes: Fix: Inside Thrive Theme Builder&#8217;s Site Wizard – Brand color now retains the original hex code",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/01/version-10-5-released/",
     "tags": []
   },
   {
