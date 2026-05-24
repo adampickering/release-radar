@@ -1661,17 +1661,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.6",
-    "title": "Thrive Themes 10.6",
-    "date": "2025-03-27",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: Support WordPress Font Library: We have implemented support for WordPress Font Library features in TAR and TTB. Customers can access native WordPress Fonts Library features from the ThriveThemes Dashboard. Clicking Manage Fonts will redirect users to the Fonts library page, where they can manage their fonts\n\nImprovements and fixes: Fix: TQB quiz takes around 20 25 seconds to show the result page\n\nImprovements and fixes: Fix: MailGun and Brevo uses the site’s Admin Email Address as the Sender Email\n\nImprovements and fixes: Fix: Mark lesson complete button does not save and creates 500 error in the console\n\nImprovements and fixes: Fix: Apprentice certificate download issue\n\nImprovements and fixes: Fix: Dropbox API>File name doesn&#8217;t send the email used in the Lead Generation form",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/03/version-10-6-released/",
-    "tags": []
-  },
-  {
     "id": "userfeedback-lite@1.5.0",
     "title": "UserFeedback Lite 1.5.0",
     "date": "2025-03-26",
