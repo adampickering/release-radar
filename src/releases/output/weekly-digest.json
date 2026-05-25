@@ -1,52 +1,117 @@
 {
-  "weekRange": "April 20 – 27, 2026",
-  "greeting": "Well hello there, fellow pixel wranglers and code conjurers!",
-  "introParagraph": "This week, the Release Radar caught a mixed bag, proving that while new features are always exciting, a solid foundation built on bug fixes and smooth sailing is equally crucial. We've seen some significant enhancements to core functionalities and a few pesky gremlins banished back to the digital abyss. Let's dive into what's new and noteworthy!",
+  "weekRange": "May 18 – 25, 2026",
+  "greeting": "Well hello there, fellow pixel pioneers and code wranglers!",
+  "introParagraph": "This week's 'Release Radar' is buzzing with activity, bringing a solid mix of innovation and crucial fixes to keep your WordPress sites humming. We've got game-changing conditional logic, new payment gateways, and even a dash of AI to spice things up. It seems developers are really pushing the envelope, making our lives easier one update at a time!",
   "stats": {
-    "releases": 7,
-    "brands": 6,
-    "features": 1,
-    "fixes": 3
+    "releases": 19,
+    "brands": 13,
+    "features": 9,
+    "fixes": 6
   },
   "highlights": [
     {
-      "title": "Easy Digital Downloads 3.6.7",
+      "title": "WP Simple Pay 4.17.2",
       "type": "feature",
-      "summary": "EDD just dropped a triple threat with their new Profile Editor Block, a Business Name field for checkout, and secure email login for returning customers. This release is all about making e-commerce smoother and more professional for both vendors and buyers."
+      "summary": "This release introduces conditional logic for form fields, allowing you to dynamically show or hide fields based on user input. This is a massive win for creating smarter, more intuitive forms without custom code."
     },
     {
-      "title": "Uncanny Automator 7.2.2.1",
-      "type": "fix",
-      "summary": "Automator squashed a couple of particularly annoying bugs, including banishing the 'Undefined array key 'ID'' gremlin for MemberPress Courses and resolving authentication conflicts with Uncanny Agent. Keeping those automations flowing smoothly is key!"
+      "title": "Charitable 1.8.11",
+      "type": "feature",
+      "summary": "Charitable steps up its game with a new PayPal Commerce gateway, enabling support for PayPal wallet options like Venmo and Pay Later, alongside advanced inline credit/debit card processing. Diversifying payment options is always a smart move for conversions!"
     },
     {
-      "title": "Smash Balloon YouTube Feed 2.6.5",
+      "title": "MonsterInsights 10.2.0",
+      "type": "feature",
+      "summary": "Get ready to chat with your data! MonsterInsights now includes an AI chat feature across all plans, making it easier than ever to get quick answers and insights from your analytics without sifting through reports."
+    },
+    {
+      "title": "Smash Balloon Instagram Feed 6.11.0 & Twitter Feed 2.6.0",
+      "type": "feature",
+      "summary": "Both Instagram and Twitter Feed plugins from Smash Balloon now boast modern Gutenberg blocks and Elementor widgets. This update significantly streamlines the process of integrating social feeds, offering more flexibility and a smoother user experience for builders."
+    },
+    {
+      "title": "All in One SEO 4.9.7.2",
       "type": "fix",
-      "summary": "Smash Balloon fixed an Elementor CSS double-prefixing issue that was causing unwanted redirects and tackled a PHP 8.x fatal error for deleted or private YouTube videos. Cleaner code and fewer headaches for developers using Elementor and modern PHP versions – a win-win!"
+      "summary": "A critical fix for All in One SEO addresses a race condition that could corrupt cache tables, ensuring your site's SEO data remains intact and performant. This is a reminder that even the smallest fixes can have a huge impact on stability."
     }
   ],
   "otherReleases": [
     {
-      "title": "SeedProd 6.20.0",
+      "title": "OptinMonster 2.16.24",
+      "type": "feature",
+      "shortSummary": "Improved the campaign filtering to allow filtering by status and folder, alon..."
+    },
+    {
+      "title": "Charitable 1.8.11.1",
       "type": "improvement",
-      "shortSummary": "Release 6.20.0."
+      "shortSummary": "IMPROVED: Polished PayPal Settings screen, adding notice and improving readab..."
     },
     {
-      "title": "Envira Gallery Lite 1.12.5",
-      "type": "fix",
-      "shortSummary": "Added: Google Photos option to external gallery type selector (Pro feature up..."
-    },
-    {
-      "title": "MonsterInsights 10.1.3",
-      "type": "fix",
-      "shortSummary": "Fixes: Various bug fixes and updates."
-    },
-    {
-      "title": "Uncanny Automator 7.2.2",
+      "title": "Thrive Themes 10.9.1.1",
       "type": "improvement",
-      "shortSummary": "Gravity Forms - Triggers - Hidden fields now generate tokens. #7153"
+      "shortSummary": "All Thrive Themes Products: License related enhancements and fix."
+    },
+    {
+      "title": "Sugar Calendar Lite 3.11.1",
+      "type": "fix",
+      "shortSummary": "Fixed: PHP 8 type error when the filter `wp_insert_post_empty_content` is use..."
+    },
+    {
+      "title": "UserFeedback Lite 1.11.2",
+      "type": "fix",
+      "shortSummary": "Updates: Various bug fixes and improvements."
+    },
+    {
+      "title": "Soliloquy Lite 2.8.2",
+      "type": "fix",
+      "shortSummary": "Added: Tested with WordPress 7.0"
+    },
+    {
+      "title": "Soliloquy Lite 2.8.1",
+      "type": "feature",
+      "shortSummary": "Added: Map meta cap for better compatibility."
+    },
+    {
+      "title": "Soliloquy Lite 2.8.0",
+      "type": "feature",
+      "shortSummary": "Fixed: Render same short code multiple times"
+    },
+    {
+      "title": "Soliloquy Lite 2.7.9",
+      "type": "fix",
+      "shortSummary": "Fixed: Image metadata escaping."
+    },
+    {
+      "title": "Soliloquy Lite 2.7.8",
+      "type": "fix",
+      "shortSummary": "Fixed: Gutenberg block not displaying on site editor."
+    },
+    {
+      "title": "PushEngage 4.2.4",
+      "type": "improvement",
+      "shortSummary": "Fix: Optimized response structure for paginated results in Abilities API endp..."
+    },
+    {
+      "title": "SeedProd 6.20.1",
+      "type": "improvement",
+      "shortSummary": "Release 6.20.1."
+    },
+    {
+      "title": "Easy Digital Downloads 3.6.8",
+      "type": "feature",
+      "shortSummary": "NEW: Stripe - Added support for BLIK payments"
+    },
+    {
+      "title": "Smash Balloon Instagram Feed 6.11.0",
+      "type": "feature",
+      "shortSummary": "New - Added a modern Gutenberg block and Elementor widget for the Instagram f..."
+    },
+    {
+      "title": "Smash Balloon Twitter Feed 2.6.0",
+      "type": "feature",
+      "shortSummary": "New: Added a modern Gutenberg block and Elementor widget for the Twitter feed..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because she said he had too many 'unresolved dependencies'!",
-  "generatedAt": "2026-04-27T15:39:05.099Z"
+  "closingJoke": "Why did the plugin cross the WordPress site? To get to the other sidebar! Keep those updates flowing, folks.",
+  "generatedAt": "2026-05-25T15:59:45.323Z"
 }
