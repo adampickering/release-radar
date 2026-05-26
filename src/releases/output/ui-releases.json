@@ -1,5 +1,16 @@
 [
   {
+    "id": "stripe@4.17.2",
+    "title": "WP Simple Pay 4.17.2",
+    "date": "2026-05-25",
+    "brand": "WP Simple Pay",
+    "brandSlug": "wp-simple-pay",
+    "releaseType": "feature",
+    "summary": "New: Conditional logic for form fields. Show or hide fields dynamically based on the values of other fields, with support for multiple rules, all/any matching, and a wide range of operators\n\nNew: Added `{billing-country}` and `{billing-zip}` smart tags for use in payment confirmation pages and emails\n\nFix: Required fields are now automatically added for Overlay forms using Klarna, Afterpay/Clearpay, or automatic taxes",
+    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
+    "tags": []
+  },
+  {
     "id": "optinmonster@2.16.24",
     "title": "OptinMonster 2.16.24",
     "date": "2026-05-22",
@@ -1383,17 +1394,6 @@
     "releaseType": "fix",
     "summary": "Improvements and Fixes:: Fixed: Category title size and color persistence issues have been resolved\n\nImprovements and Fixes:: Enhanced: Stripe integration stability for more reliable payments\n\nImprovements and Fixes:: Resolved: Text decoration and animation feature conflicts\n\nImprovements and Fixes:: Fixed: Dropdown/submenu visibility when rounded corners are applied to menu wrappers\n\nImprovements and Fixes:: Fixed: Lesson resources now display properly for hidden courses for users with access\n\nImprovements and Fixes:: Enhanced: Stripe integration stability to prevent plugin activation issues\n\nImprovements and Fixes:: Improved: Search functionality in Product Content now adds selected pages instead of replacing existing lists\n\nImprovements and Fixes:: Fixed: Account creation emails are now sent by default for Stripe and Square payments\n\nImprovements and Fixes:: Resolved: Dropdown/submenu visibility issues with rounded corner menu wrappers\n\nImprovements and Fixes:: Improved: Goal Page setup with clearer instructions for A/B testing\n\nImprovements and Fixes:: Fixed: Graph generation issues in A/B testing for Results Pages and Opt-in Gates\n\nImprovements and Fixes:: Enhanced: Square payment processing with better error handling for negative prices\n\nImprovements and Fixes:: Improved: Stripe checkout with user-friendly error messages\n\nImprovements and Fixes:: Fixed: Certificate formatting issues that caused text to wrap and become hidden in PDF outputs",
     "changelogUrl": "https://changelog.thrivethemes.com/2025/08/v10-7-3/",
-    "tags": []
-  },
-  {
-    "id": "stripe@4.15.0",
-    "title": "WP Simple Pay 4.15.0",
-    "date": "2025-08-14",
-    "brand": "WP Simple Pay",
-    "brandSlug": "wp-simple-pay",
-    "releaseType": "improvement",
-    "summary": "Update: Added more details to the System Report\n\nFix: Added support for 4-digit card numbers in the {card-last4} smart tag for Stripe Checkout one-time payments\n\nFix: Fixed incorrect frontend forms API URL when the wp-api script is deferred",
-    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
   {
