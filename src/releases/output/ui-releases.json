@@ -1,5 +1,38 @@
 [
   {
+    "id": "easy-digital-downloads@3.6.8",
+    "title": "Easy Digital Downloads 3.6.8",
+    "date": "2026-05-26",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "feature",
+    "summary": "NEW: Stripe - Added support for BLIK payments\n\nAdmin: Fixed the orders table filter by total not working with the \"greater than\" condition\n\nAdmin: Fixed manual order tax calculation requiring an address field change to trigger\n\nAdmin: Enhanced select placeholder no longer assumes the field is for downloads\n\nAdmin: Improve UX of Select input search\n\nAdmin: Added a tooltip for the Login link setting option toggle\n\nBlocks: Updated download select fields to use combobox\n\nCheckout: Prevent console warnings when telephone number field is present\n\nEmails: Fixed email log pagination not working as expected\n\nPayPal Standard: Improved IPN handling\n\nSquare: Improved reliability of connection process\n\nStripe: Fixed an uncaught IntegrationError when a 100% discount code is applied with Payment Elements",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
+    "id": "insert-headers-and-footers@2.3.6",
+    "title": "WPCode 2.3.6",
+    "date": "2026-05-26",
+    "brand": "WPCode",
+    "brandSlug": "wpcode",
+    "releaseType": "feature",
+    "summary": "New: You can now easily tell where each library snippet came from — imported snippets show a small cloud badge and the originating library author (WPCode, WPForms, AIOSEO, and more)\n\nTweak: We improved how the snippet library handles unexpected cache or server errors, so the library tab keeps working reliably and failed imports no longer leave behind blank snippets\n\nTweak: We added extra permission checks around snippet creation and editing to ensure only authorized users can make changes",
+    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.1.3",
+    "title": "Thrive Themes 10.9.1.3",
+    "date": "2026-05-26",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Architect: WordPress 7.0 Compatibility: The Launch Thrive Architect notice now appears correctly when editing posts in WordPress 7.0, so you can jump back into Thrive Architect from the standard WordPress post screen.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-3/",
+    "tags": []
+  },
+  {
     "id": "stripe@4.17.2",
     "title": "WP Simple Pay 4.17.2",
     "date": "2026-05-25",
@@ -173,17 +206,6 @@
     "releaseType": "improvement",
     "summary": "Release 6.20.1.",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.8",
-    "title": "Easy Digital Downloads 3.6.8",
-    "date": "2026-05-18",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "feature",
-    "summary": "NEW: Stripe - Added support for BLIK payments\n\nAdmin: Fixed the orders table filter by total not working with the \"greater than\" condition\n\nAdmin: Fixed manual order tax calculation requiring an address field change to trigger\n\nAdmin: Enhanced select placeholder no longer assumes the field is for downloads\n\nAdmin: Improve UX of Select input search\n\nAdmin: Added a tooltip for the Login link setting option toggle\n\nBlocks: Updated download select fields to use combobox\n\nCheckout: Prevent console warnings when telephone number field is present\n\nEmails: Fixed email log pagination not working as expected\n\nPayPal Standard: Improved IPN handling\n\nSquare: Improved reliability of connection process\n\nStripe: Fixed an uncaught IntegrationError when a 100% discount code is applied with Payment Elements",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
@@ -1023,17 +1045,6 @@
     "tags": []
   },
   {
-    "id": "insert-headers-and-footers@2.3.2",
-    "title": "WPCode 2.3.2",
-    "date": "2025-12-16",
-    "brand": "WPCode",
-    "brandSlug": "wpcode",
-    "releaseType": "feature",
-    "summary": "New: Live CSS preview, you can now see the changes you make to a CSS snippet in real-time on the frontend of your website.",
-    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.8.5",
     "title": "Thrive Themes 10.8.5",
     "date": "2025-12-16",
@@ -1614,17 +1625,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.6.1",
-    "title": "Thrive Themes 10.6.1",
-    "date": "2025-04-08",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "feature",
-    "summary": "New Features Added to Thrive Suite: Automator UI changes: As we continue to grow and expand our product suite, We&#8217;ve made the strategic decision to retire Thrive Automator and partner with our sister brand, Uncanny Automator\n\nImprovements and fixes: Fix: Fonts can be installed/uploaded by Admin user role",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/04/version-10-6-1-released/",
     "tags": []
   },
   {
