@@ -1,5 +1,27 @@
 [
   {
+    "id": "google-analytics-for-wordpress@10.2.1",
+    "title": "MonsterInsights 10.2.1",
+    "date": "2026-05-27",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "envira-gallery-lite@1.12.6",
+    "title": "Envira Gallery Lite 1.12.6",
+    "date": "2026-05-27",
+    "brand": "Envira Gallery",
+    "brandSlug": "envira-gallery",
+    "releaseType": "fix",
+    "summary": "Fixed: General security improvements and hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "easy-digital-downloads@3.6.8",
     "title": "Easy Digital Downloads 3.6.8",
     "date": "2026-05-26",
@@ -1008,17 +1030,6 @@
     "brandSlug": "envira-gallery",
     "releaseType": "fix",
     "summary": "Added new Pro templates in layout chooser: Grid Fixed Title and Vertical Line Grid (with new preview images)\n\nAdded improved Gutenberg block empty-state UX: clearer “no galleries” messaging, Create/Add New Gallery CTA, and refreshed upload/media library UI\n\nFixed Envira CDN admin menu item to open in a new tab\n\nFixed/updated admin licensing modal copy and refreshed brand colors/icons\n\nFixed Gutenberg block placeholder/styling issues\n\nFixed admin review notice copy",
-    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "envira-gallery-lite@1.12.1",
-    "title": "Envira Gallery Lite 1.12.1",
-    "date": "2025-12-18",
-    "brand": "Envira Gallery",
-    "brandSlug": "envira-gallery",
-    "releaseType": "feature",
-    "summary": "Added: Post type meta cap for better compatibility.",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
