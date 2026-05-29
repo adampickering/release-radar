@@ -1,5 +1,16 @@
 [
   {
+    "id": "wpforms-lite@1.10.1",
+    "title": "WPForms Lite 1.10.1",
+    "date": "2026-05-28",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Added: Secret key fields in the admin settings are now masked for improved privacy\n\nAdded: Smart Form Editing allows modifying existing forms using natural language through an AI chat interface directly inside the form builder\n\nChanged: Updated `symfony/polyfill-mbstring` library to v1.37.0\n\nChanged: Updated `symfony/polyfill-iconv` library to v1.37.0\n\nChanged: Updated DOMPurify library to v3.4.1\n\nFixed: The wrong PayPal Commerce connection status was displayed in certain cases\n\nFixed: Form Builder was stuck loading when third-party plugins prevented WordPress footer scripts from rendering\n\nFixed: Settings input values were saved with a trailing space, which could cause unexpected behavior\n\nFixed: Smart tag parsing returned an invalid value when no smart tags were present in the content\n\nFixed: Form Builder was not loading on sites with inconsistent URL configurations (e.g., www vs non-www mismatch or root-relative URL plugins)\n\nFixed: PHP fatal errors could occur in some cases on PHP 8.0+\n\nFixed: The Allow/Deny list settings were being cleared when a form had more than one Email field\n\nFixed: Outdated image asset paths were causing 404 errors on sites using the Divi theme\n\nFixed: An incorrect error message was shown when the daily AI request limit was reached, referring to form generation instead of AI usage",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.2.1",
     "title": "MonsterInsights 10.2.1",
     "date": "2026-05-27",
@@ -522,8 +533,8 @@
     "date": "2026-04-10",
     "brand": "WPForms",
     "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: Stripe payment with Link and a 3D Secure card did not trigger the authentication modal, leaving the payment incomplete on Stripe.",
+    "releaseType": "improvement",
+    "summary": "Release 1.10.0.4.",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
@@ -668,17 +679,6 @@
     "releaseType": "feature",
     "summary": "New: We completely updated our overview screen to make it easy to filter and view your stats inside your dashboard without needing to navigate away\n\nNew: We added support for CSV and XLSX reports",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.10.0.1",
-    "title": "WPForms Lite 1.10.0.1",
-    "date": "2026-03-19",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: Users can connect their PayPal Commerce accounts and receive payments via their payment forms\n\nChanged: Refactored the Form Builder JavaScript into modular architecture for improved maintainability and performance\n\nChanged: Refactored and optimized drag fields JavaScript for more consistent field reordering and positioning\n\nChanged: The Lite Connect modals and settings description now include a notice that entry backups expire after 1 year\n\nFixed: The \"Preview\" button on email templates didn't wrap text on the Settings > Email admin page\n\nFixed: Compatibility with Sugar Calendar on the Tools > Export page\n\nFixed: A conflict with Monolog was causing fatal errors on some sites\n\nFixed: PHP warning for templates with an Internal Information Field\n\nFixed: Reply-To email header was silently dropped when using the smart tag widget due to non-breaking space characters\n\nFixed: Console errors could occur when the Icon Choices library was missing or corrupted\n\nFixed: Missing Dependencies errors during new form creation\n\nFixed: The icon library error pop-up was incorrectly shown after a successful icon library installation when interacting with the form builder before the page reloaded\n\nFixed: Admin notice for Lite Connect backup failures was not shown on the WP Dashboard and was missing a direct link to Support for resolving scheduling issues",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
