@@ -1,5 +1,27 @@
 [
   {
+    "id": "google-analytics-for-wordpress@10.2.2",
+    "title": "MonsterInsights 10.2.2",
+    "date": "2026-05-29",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-learndash-toolkit@3.8.0.3",
+    "title": "Uncanny LearnDash Toolkit 3.8.0.3",
+    "date": "2026-05-29",
+    "brand": "Uncanny Owl",
+    "brandSlug": "uncanny-owl",
+    "releaseType": "improvement",
+    "summary": "Release 3.8.0.3.",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@1.10.1",
     "title": "WPForms Lite 1.10.1",
     "date": "2026-05-28",
