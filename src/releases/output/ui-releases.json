@@ -1,5 +1,38 @@
 [
   {
+    "id": "pushengage@4.2.5",
+    "title": "PushEngage 4.2.5",
+    "date": "2026-06-02",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "feature",
+    "summary": "NEW: Role-based post-editor access — non-admin users in selected roles can now use the PushEngage metabox\n\nNEW: Audience filter — date-based operators for attribute predicates for parity with App Dashboard\n\nFix: Auto-push notifications now respect the dashboard's \"Default Expiry for Notifications\" setting\n\nImproved: Typo and grammar fixes across plugin source strings\n\nImproved: Hardened overall plugin security and reliability",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
+    "id": "all-in-one-seo-pack@4.9.7.2",
+    "title": "All in One SEO 4.9.7.2",
+    "date": "2026-06-01",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Fixed: Cache table on some sites was left in a corrupted state after the 4.9.7 update due to a race condition during the migration, causing cache writes to silently overwrite unrelated entries. The new migration runner now retries the repair until it verifies the state is clean.",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.11.2",
+    "title": "Charitable 1.8.11.2",
+    "date": "2026-06-01",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "FIX: Hardened profile avatar handling to prevent unauthorized attachment deletion\n\nFIX: PayPal Commerce onboarding reliability improvements",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@10.2.2",
     "title": "MonsterInsights 10.2.2",
     "date": "2026-05-29",
@@ -30,6 +63,17 @@
     "releaseType": "fix",
     "summary": "Added: Secret key fields in the admin settings are now masked for improved privacy\n\nAdded: Smart Form Editing allows modifying existing forms using natural language through an AI chat interface directly inside the form builder\n\nChanged: Updated `symfony/polyfill-mbstring` library to v1.37.0\n\nChanged: Updated `symfony/polyfill-iconv` library to v1.37.0\n\nChanged: Updated DOMPurify library to v3.4.1\n\nFixed: The wrong PayPal Commerce connection status was displayed in certain cases\n\nFixed: Form Builder was stuck loading when third-party plugins prevented WordPress footer scripts from rendering\n\nFixed: Settings input values were saved with a trailing space, which could cause unexpected behavior\n\nFixed: Smart tag parsing returned an invalid value when no smart tags were present in the content\n\nFixed: Form Builder was not loading on sites with inconsistent URL configurations (e.g., www vs non-www mismatch or root-relative URL plugins)\n\nFixed: PHP fatal errors could occur in some cases on PHP 8.0+\n\nFixed: The Allow/Deny list settings were being cleared when a form had more than one Email field\n\nFixed: Outdated image asset paths were causing 404 errors on sites using the Divi theme\n\nFixed: An incorrect error message was shown when the daily AI request limit was reached, referring to form generation instead of AI usage",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.1.4",
+    "title": "Thrive Themes 10.9.1.4",
+    "date": "2026-05-28",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Ultimatum: Countdown Display on Frontend: Countdown timers now display correctly on the frontend of your pages.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-4/",
     "tags": []
   },
   {
@@ -239,17 +283,6 @@
     "releaseType": "improvement",
     "summary": "Fix: Optimized response structure for paginated results in Abilities API endpoints\n\nImproved: Strengthened overall plugin security and reliability",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@4.9.7.2",
-    "title": "All in One SEO 4.9.7.2",
-    "date": "2026-05-18",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Fixed: Cache table on some sites was left in a corrupted state after the 4.9.7 update due to a race condition during the migration, causing cache writes to silently overwrite unrelated entries. The new migration runner now retries the repair until it verifies the state is clean.",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
   {
@@ -613,17 +646,6 @@
     "releaseType": "feature",
     "summary": "AffiliateWP - An affiliate's unpaid referral count is greater than, less than, or equal to a specific number #7004\n\nAffiliateWP - An affiliate's visit count is greater than, less than, or equal to a specific number #7003\n\nKit - Create a broadcast #6821\n\nKit - Create a custom field #6825\n\nKit - Create a purchase #6822\n\nKit - Create a tag #6824\n\nKit - Unsubscribe a subscriber #6823\n\nLinkedIn - Schedule a post on LinkedIn profile #6683\n\nMautic - Add tags to a contact #6838\n\nMautic - Create a tag #6837\n\nMautic - Remove tags from a contact #6839\n\nMicrosoft Teams - Add a user to a tag in a team #6906\n\nMicrosoft Teams - Add a user to a team as a role #6905\n\nMicrosoft Teams - Archive a team #6907\n\nMicrosoft Teams - Create a group chat #6908\n\nMicrosoft Teams - Create a tag in a team #6910\n\nMicrosoft Teams - Create an online meeting #6909\n\nMicrosoft Teams - Delete a channel from a team #6911\n\nMicrosoft Teams - Remove a user from a team #6912\n\nMicrosoft Teams - Reply to a channel message #6913\n\nMicrosoft Teams - Update settings for a team #6914\n\nLinkedIn - Posting to personal pages now supported! #6769\n\nBluesky - Error messages are improved and external links can now strut without images. #7026\n\nClosure - Only the current tab gets a redirect, others relax. #4486\n\nClosure - Now storing redirects in privacy-friendly sessions, no more cookies. #6870\n\nFluentCRM - Triggers can now play \"Any\" tag/list bingo. #6764\n\nRecipe logs - Paginated loop runs now sprint through large datasets. #6866\n\nRecipe logs - Timestamps now speak human instead of robot. #7005\n\nStripe - Invoices dropped their empty line items—going lean and mean. #6855\n\nSG Optimizer and SG Security got their names updated. #7016\n\nAction conditions - Double quotes no longer play charades. #6997\n\nActivity log - Trigger and action counts now speak the correct language. #6874\n\nBitly - API calls tamed on settings page. #6878\n\nDatabase queries - Action count query's new best friend is a prepared statement. #6875\n\nGravity Forms - Radio fields tuned to parse token labels correctly. #7017\n\nMemberPress - Array key \"ID\" got found in the token hunt. #6988\n\nMemberPress - Trigger now pops for trial subscriptions via Stripe. #6786\n\nOptinMonster - Campaign scripts now know their way home. #6876\n\nScheduled actions no longer stuck when new users are created, user selector mischief managed. #7024\n\nSureCart - Argument counts between checkout and webhook now shake hands. #6817\n\nTwilio - Phone numbers trimmed of HTML frills. #6979\n\nUncaught TypeError - Undefined triggers now politely decline. #7023\n\nWordPress - Profile updates won't retrigger recipes after role changes. #6805\n\n`is_action_or_trigger_active()` - Query streamlined for the data packrats. #6880\n\nWordPress - Titles now truly live up to their unique promise when creating posts with \"Title must be unique\" setting. #7067\n\nMemory leaks plugged, code tightened like a drum. #6755\n\nSecurity improvements - The usual suspects got rounded up. #6976\n\nCore improvements - Smarter integrations, leaner storage, faster caching, safer triggers, lighter memory use, quicker database lookups, speedier plugin loading, more reliable trigger queues, and redirects that finally speak up—everything’s running fitter, faster, and just a bit more chatty. #7034 #6756 #6808 #6868 #6871 #6865 #6867 #6869 #6877 #6853 #6872 #6873\n\nRecipe UI - Sentence tokens now behave when added via API. #7020\n\nRecipe log - Pagination plays nice, and constants got cozy. #6882\n\nAutomator Views Schema - SQL SECURITY INVOKER keeps DEFINER errors at bay during migrations. #6881\n\nRepeater - Textareas keep their formatting cool during edits. #6350\n\nREST functionality is back, even when permalinks are in their plainest form. #7041\n\nNew framework party\n\nDrip #6829\n\nClickUp #6842\n\nKit (ConvertKit) #6832\n\nLinkedIn #6833\n\nMautic #6830\n\nMicrosoft Teams #6844\n\nOpenAI #6843\n\nZoho Campaigns #6307",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.10.3",
-    "title": "Charitable 1.8.10.3",
-    "date": "2026-04-01",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "IMPROVED: Sync Pending Stripe Donations now uses AJAX processing with new dry run and email options\n\nFIX: Improved Stripe webhook reliability, signing secret handling, and notice wording in certain scenarios\n\nFIX: Fixed refund checkbox not appearing when changing donation status to Refunded in certain scenarios",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
@@ -1188,17 +1210,6 @@
     "tags": []
   },
   {
-    "id": "pushengage@4.2.0",
-    "title": "PushEngage 4.2.0",
-    "date": "2025-11-25",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "feature",
-    "summary": "Added a multichannel Chat widget enabling users to start conversations across multiple platforms\n\nAdded filter for WooCommerce Order Push Notification dynamic replacement variables\n\nMinor bug fixes and performance improvements",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
-    "tags": []
-  },
-  {
     "id": "optinmonster@2.16.22",
     "title": "OptinMonster 2.16.22",
     "date": "2025-11-19",
@@ -1570,17 +1581,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.6.2",
-    "title": "Thrive Themes 10.6.2",
-    "date": "2025-05-14",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Improvements and Fixes:: Fix: The date picker is not working when Thrive Theme Builder is active\n\nImprovements and Fixes:: Fix: Importing Users via CSV or List of Names sends multiple &#8220;New Account&#8221; emails from WordPress\n\nImprovements and Fixes:: Fix: Pre-populate email at checkout option causes issues in Stripe&#8217;s Dynamic Buy Now button\n\nImprovements and Fixes:: Fix: Lesson list style in Overview templates is corrupted and this is occurring on a regular basis\n\nImprovements and Fixes:: Fix: Sending an invoice to a customer creates an account on connected websites\n\nImprovements and Fixes:: Fix: When user is logged in, the Stripe checkout page is not working\n\nImprovements and Fixes:: Fix: A backslash before the apostrophe is captured in the email marketing service when the name contains an apostrophe\n\nImprovements and Fixes:: Fix: Cannot access the Comments Moderation dashboard\n\nImprovements and Fixes:: Fix: SendLayer Integration not working with Comment Notifications\n\nImprovements and Fixes:: Fix: PHP Fatal Error: Uncaught Error: Undefined constant &#8220;ABSPATH&#8221;\n\nImprovements and Fixes:: Fix: Simple Mega Menu with Conditional Display &#8211; Active state underline style is not working\n\nImprovements and Fixes:: Fix: Disabling the lazy load on the image gallery element is not working\n\nImprovements and Fixes:: Fix: Conflict with the Divi theme: The testimonial Load More button does not display\n\nImprovements and Fixes:: Fix: Quiz Results Page changes the iFrame&#8217;s src attribute to data-src. Causes the embedded widget to not load inside a Lightbox\n\nImprovements and Fixes:: Fix: Students got access expiry email after 1 year though the access expiry is set to 3 years\n\nImprovements and Fixes:: Fix: Remove/Hide the +/- sign on product when only one (1) item left in the inventory\n\nImprovements and Fixes:: Fix: Error shows on customer site &#8220;Notice: Function _load_textdomain_just_in_time was called incorrectly.&#8221;",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/05/version-10-6-2-released/",
     "tags": []
   },
   {
