@@ -1,5 +1,27 @@
 [
   {
+    "id": "wpforms-lite@1.10.1.1",
+    "title": "WPForms Lite 1.10.1.1",
+    "date": "2026-06-03",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "feature",
+    "summary": "Added: Inline Connect buttons in the Form Builder Payments panel, allowing users to connect their payment accounts without leaving the form editor\n\nChanged: The Payments page has a refreshed design when no payments have been received yet\n\nFixed: Fatal error on form submission when the PayPal Commerce account was disconnected while the form still had the PayPal Commerce payment enabled",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "coming-soon@6.20.2",
+    "title": "SeedProd 6.20.2",
+    "date": "2026-06-03",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.20.2.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.5",
     "title": "PushEngage 4.2.5",
     "date": "2026-06-02",
@@ -283,17 +305,6 @@
     "releaseType": "improvement",
     "summary": "Fix: Optimized response structure for paginated results in Abilities API endpoints\n\nImproved: Strengthened overall plugin security and reliability",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.1",
-    "title": "SeedProd 6.20.1",
-    "date": "2026-05-18",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.20.1.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
@@ -668,17 +679,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.10.0.2",
-    "title": "WPForms Lite 1.10.0.2",
-    "date": "2026-03-26",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: Dropdown field with a choice label containing quote characters was causing a JavaScript error in the form builder, preventing fields from being added correctly\n\nFixed: Compatibility with Divi Builder",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
