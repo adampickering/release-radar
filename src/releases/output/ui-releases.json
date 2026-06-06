@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.3.1",
+    "title": "Uncanny Automator 7.3.1",
+    "date": "2026-06-06",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "Zoom Meetings & Webinar - Registration actions - Registration join link, Registrant ID, Meeting topic / Webinar topic, Start time #7809\n\nGoogle Sheets - Fixed an issue where disconnecting an account did not fully clear the cached connection #7843\n\nGravity Forms - Fixed an issue where lazily fired triggers could fail and leave recipes stuck \"In Progress\" #7859\n\nIntegration Loader & The Events Calendar - Fixed a PHP error that could occur when Event Tickets was not installed #7848\n\nLearnDash - Fixed an issue where some completion date tokens were not resolving correctly #7849\n\nMemberPress - A user purchases a membership - Fixed an issue where the trigger could fire when a membership renewed automatically after purchase #7825\n\nRecipe Logs - Action Tab - Fixed an issue where the Completion Date column displayed dates for actions that had not yet completed #7837\n\nTrigger Engine - Fixed an issue where Gravity Forms non-AJAX submissions could fail to fire triggers in certain situations #7857\n\nUncanny Agent - Fixed an issue where the Agent could appear on the frontend when WPFrontendAdmin plugin was active #7852\n\nWordPress - Fixed an issue where some post-view trigger token pills could become orphaned after migration #7850\n\nRecipe UI - Advanced > Post Meta Universal Token - Resolved UI issues where Loop tokens could appear as invalid or be unavailable in nested token pickers within conditions #7398",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.3.0",
     "title": "Uncanny Automator 7.3.0",
     "date": "2026-06-04",
