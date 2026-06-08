@@ -1,72 +1,57 @@
 {
-  "weekRange": "May 25 – June 1, 2026",
-  "greeting": "Well hello there, fellow pixel-pusher and code conjurer!",
-  "introParagraph": "This week, Release Radar tracked 11 releases from 9 brands, bringing a healthy mix of new features, crucial fixes, and thoughtful improvements. While some plugins were busy patching up the digital equivalent of leaky faucets, others were rolling out some genuinely exciting advancements that could change how you build and manage sites.",
+  "weekRange": "June 1 – 8, 2026",
+  "greeting": "Well hello there, fellow pixel wranglers and code conjurers!",
+  "introParagraph": "This week's 'Release Radar' is pinging with a delightful mix of performance polish and nifty new features. While some plugins were busy patching up the digital equivalent of leaky pipes, others rolled out the red carpet for exciting new functionalities, making your WordPress life just a little bit smoother and more powerful. Let's dive into the bits and bytes!",
   "stats": {
-    "releases": 11,
-    "brands": 9,
-    "features": 3,
-    "fixes": 5
+    "releases": 8,
+    "brands": 6,
+    "features": 2,
+    "fixes": 4
   },
   "highlights": [
     {
-      "title": "WPForms Lite 1.10.1",
+      "title": "WPForms Lite 1.10.1.1",
       "type": "feature",
-      "summary": "WPForms just introduced 'Smart Form Editing' with an AI chat interface, letting you modify forms using natural language. Plus, secret key fields are now masked for better privacy — a win for both innovation and security!"
+      "summary": "WPForms just made payment integration a breeze by adding inline Connect buttons directly in the Form Builder's Payments panel, alongside a sleek, refreshed design for the Payments page. Now, connecting your payment accounts is smoother than ever, without ever leaving the form editor."
     },
     {
-      "title": "WP Simple Pay 4.17.2",
+      "title": "PushEngage 4.2.5",
       "type": "feature",
-      "summary": "WP Simple Pay steps up its game with robust conditional logic for form fields, allowing dynamic display based on user input. They also added custom CSS options, giving developers more control over styling and user experience."
-    },
-    {
-      "title": "Easy Digital Downloads 3.6.8",
-      "type": "feature",
-      "summary": "EDD broadens its payment horizons by adding support for BLIK payments via Stripe, expanding reach for European users. They also squashed a bug with the orders table filter, ensuring smoother admin operations."
-    },
-    {
-      "title": "WPCode 2.3.6",
-      "type": "feature",
-      "summary": "WPCode now makes snippet management a breeze by clearly indicating the origin of each library snippet, complete with cloud badges and author attribution. This small tweak is a big win for organization and traceability in your code library."
+      "summary": "PushEngage is empowering teams with new role-based post-editor access, letting non-admin users utilize the PushEngage metabox. Plus, their audience filters got a significant upgrade with date-based operators for attribute predicates, bringing parity with the App Dashboard."
     },
     {
       "title": "All in One SEO 4.9.7.2",
       "type": "fix",
-      "summary": "AIOSEO tackled a critical race condition that was corrupting cache tables, silently overwriting entries for some users. This fix is crucial for maintaining data integrity and reliable performance on affected sites."
+      "summary": "AIOSEO squashed a rather critical bug, fixing a race condition that could corrupt the cache table on some sites after the 4.9.7 update. This fix ensures your cache writes don't silently overwrite unrelated entries, keeping your SEO data pristine and performant."
+    },
+    {
+      "title": "Uncanny Automator 7.3.1.1",
+      "type": "fix",
+      "summary": "Uncanny Automator ironed out a tricky 'Non-JSON response from API' error that could occur with app actions when vendors sent a 204 No Content status. This fix ensures your automations run smoothly, even when APIs are being a little too minimalist with their responses."
     }
   ],
   "otherReleases": [
     {
-      "title": "MonsterInsights 10.2.2",
+      "title": "Uncanny Automator 7.3.1",
       "type": "fix",
-      "shortSummary": "Fixes: Various bug fixes and updates."
+      "shortSummary": "Zoom Meetings & Webinar - Registration actions - Registration join link, Regi..."
     },
     {
-      "title": "Uncanny LearnDash Toolkit 3.8.0.3",
-      "type": "improvement",
-      "shortSummary": "Release 3.8.0.3."
-    },
-    {
-      "title": "Thrive Themes 10.9.1.4",
-      "type": "improvement",
-      "shortSummary": "Thrive Ultimatum: Countdown Display on Frontend: Countdown timers now display..."
-    },
-    {
-      "title": "MonsterInsights 10.2.1",
+      "title": "Uncanny Automator 7.3.0",
       "type": "fix",
-      "shortSummary": "Fixes: Various bug fixes and updates."
+      "shortSummary": "[SaveTo Wishlist](https://automatorplugin.com/integration/saveto-wishlist/?ut..."
     },
     {
-      "title": "Envira Gallery Lite 1.12.6",
-      "type": "fix",
-      "shortSummary": "Fixed: General security improvements and hardening."
-    },
-    {
-      "title": "Thrive Themes 10.9.1.3",
+      "title": "SeedProd 6.20.2",
       "type": "improvement",
-      "shortSummary": "Thrive Architect: WordPress 7.0 Compatibility: The Launch Thrive Architect no..."
+      "shortSummary": "Release 6.20.2."
+    },
+    {
+      "title": "Charitable 1.8.11.2",
+      "type": "improvement",
+      "shortSummary": "FIX: Hardened profile avatar handling to prevent unauthorized attachment dele..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and wasn't committing enough!",
-  "generatedAt": "2026-06-01T16:55:44.123Z"
+  "closingJoke": "Why did the WordPress plugin break up with the theme? It felt like they just weren't compatible anymore, and the theme was always trying to style its output!",
+  "generatedAt": "2026-06-08T16:27:06.767Z"
 }
