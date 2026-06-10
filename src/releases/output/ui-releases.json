@@ -1,5 +1,16 @@
 [
   {
+    "id": "coming-soon@6.20.3",
+    "title": "SeedProd 6.20.3",
+    "date": "2026-06-09",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.20.3.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.3.1.1",
     "title": "Uncanny Automator 7.3.1.1",
     "date": "2026-06-07",
@@ -41,17 +52,6 @@
     "releaseType": "feature",
     "summary": "Added: Inline Connect buttons in the Form Builder Payments panel, allowing users to connect their payment accounts without leaving the form editor\n\nChanged: The Payments page has a refreshed design when no payments have been received yet\n\nFixed: Fatal error on form submission when the PayPal Commerce account was disconnected while the form still had the PayPal Commerce payment enabled",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.2",
-    "title": "SeedProd 6.20.2",
-    "date": "2026-06-03",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.20.2.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
