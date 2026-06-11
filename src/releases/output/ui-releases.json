@@ -1,5 +1,60 @@
 [
   {
+    "id": "custom-facebook-feed@4.8.1",
+    "title": "Smash Balloon Social Post Feed 4.8.1",
+    "date": "2026-06-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added a modern Gutenberg block and Elementor widget for the Facebook feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nNew: Added a Help widget to the feed builder for in-app access to documentation and support\n\nTweak: Compatibility with WP 7\n\nTweak: Corrected typos and grammar in plugin UI strings, admin notices, and tooltips\n\nFix: Feed blocks now render a live preview correctly inside the WP 7.0+ iframed block editor\n\nFix: Corrupted onboarding data no longer causes a fatal error\n\nFix: The legacy Elementor widget is hidden from the element search, and the widget title is now translatable",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.11.1",
+    "title": "Smash Balloon Instagram Feed 6.11.1",
+    "date": "2026-06-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New - Added a Help widget to the feed builder for in-app access to documentation and support\n\nFix - The legacy Instagram Feed block now renders a live preview correctly inside the WP 7.0+ iframed block editor, and the legacy Elementor widget now renders correctly inside the Elementor preview\n\nFix - The Elementor widget title is now translatable",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.6.1",
+    "title": "Smash Balloon Twitter Feed 2.6.1",
+    "date": "2026-06-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added a Help widget to the feed builder for in-app access to documentation and support\n\nTweak: Corrected typos and grammar in several admin UI strings\n\nFix: Block editor preview interactions and block conflicts with other Smash Balloon plugins are now resolved\n\nFix: The Elementor widget title is now translatable",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.7.0",
+    "title": "Smash Balloon YouTube Feed 2.7.0",
+    "date": "2026-06-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added a modern Gutenberg block for the YouTube feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nNew: WPConsent integration for GDPR cookie consent compliance, including a GDPR step in the onboarding wizard\n\nNew: Added a Help widget for in-app access to documentation and support\n\nTweak: Compatibility with WP 7\n\nTweak: Corrected typos and grammar in plugin UI strings\n\nFix: Feed blocks now render a live preview correctly inside the WP 7.0+ iframed block editor\n\nFix: Setup wizard tooltips now display correctly in the iframed block editor\n\nFix: Legacy Elementor widgets are hidden from the element search, and the widget title is now translatable\n\nFix: Block preview now uses a limited query to prevent unintended data exposure",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.3.1.2",
+    "title": "Uncanny Automator 7.3.1.2",
+    "date": "2026-06-10",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Mailchimp - Credential mapping issue on some older sites now resolved #7885\n\nMailchimp - Create and send a campaign - Fails when 'To name' is empty #7881\n\nWP Job Manager - A user applies for a job - Fixed an issue where some tokens may not parse #7875\n\nWordPress - A post in a taxonomy is published & A user publishes a post in a taxonomy - Only one recipe fires per post due to dedup keyed by code #7883\n\nMultiple integrations - Correct invalid singular `supports_token` definitions to plural `supports_tokens` #7831\n\nNormalize UTM tags on in-plugin links #7880",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "coming-soon@6.20.3",
     "title": "SeedProd 6.20.3",
     "date": "2026-06-09",
@@ -825,28 +880,6 @@
     "tags": []
   },
   {
-    "id": "custom-twitter-feeds@2.3.1",
-    "title": "Smash Balloon Twitter Feed 2.3.1",
-    "date": "2026-02-26",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix - Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "feeds-for-youtube@2.6.2",
-    "title": "Smash Balloon YouTube Feed 2.6.2",
-    "date": "2026-02-26",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.8.7",
     "title": "Thrive Themes 10.8.7",
     "date": "2026-02-24",
@@ -1287,17 +1320,6 @@
     "tags": []
   },
   {
-    "id": "custom-facebook-feed@4.3.3",
-    "title": "Smash Balloon Social Post Feed 4.3.3",
-    "date": "2025-10-09",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Cleaned up legacy code to enhance overall security\n\nFix: Resolved _load_textdomain_just_in_time issue to improve localization handling\n\nFix: Additional plugin hardening",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
-    "tags": []
-  },
-  {
     "id": "optinmonster@2.16.21",
     "title": "OptinMonster 2.16.21",
     "date": "2025-10-03",
@@ -1537,17 +1559,6 @@
     "releaseType": "feature",
     "summary": "New: Requires WordPress 5.2 minimum.",
     "changelogUrl": "https://wordpress.org/plugins/affiliatewp-allowed-products/#developers",
-    "tags": []
-  },
-  {
-    "id": "instagram-feed@6.9.0",
-    "title": "Smash Balloon Instagram Feed 6.9.0",
-    "date": "2025-05-07",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "fix",
-    "summary": "Important - Added accessibility improvements related to the front-end feed display. This may affect custom code applied to the feed. Please check and reach out to support if you need help\n\nImportant - To comply with Meta's security standards, we have raised the minimum PHP version to 7.4\n\nFix - Instagram feed plugin no longer triggers the _load_textdomain_just_in_time warning\n\nFix - Additional code hardening",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
   {
