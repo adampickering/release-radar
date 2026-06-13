@@ -1,5 +1,16 @@
 [
   {
+    "id": "all-in-one-seo-pack@4.9.8",
+    "title": "All in One SEO 4.9.8",
+    "date": "2026-06-12",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "feature",
+    "summary": "New: AIOSEO now integrates with the WordPress Abilities API, exposing your site's SEO data as abilities that AI agents can read and write\n\nNew: AIOSEO now includes an MCP server so AI agents like Claude and Cursor can connect to your site and manage its SEO data directly\n\nNew: The AIOSEO REST API addon has been deprecated as the API is now free for all users!\n\nNew: Added support for Nano Banana 2 and GPT Image 2 to Image Generator\n\nFixed: AI Assistant icons no longer throw React errors or fail to render in the block editor on WordPress 7.0",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
     "id": "custom-facebook-feed@4.8.1",
     "title": "Smash Balloon Social Post Feed 4.8.1",
     "date": "2026-06-10",
@@ -579,17 +590,6 @@
     "brandSlug": "aioseo",
     "releaseType": "fix",
     "summary": "Updated: Removed deprecated internal option references that could cause error on WooCommerce checkouts for some users\n\nFixed: Possible fatal error when activating license via AIOSEO_LICENSE_KEY constant",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@4.9.6.1",
-    "title": "All in One SEO 4.9.6.1",
-    "date": "2026-04-17",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Fixed: Possible fatal error during WooCommerce checkout due to an internal option structure.",
     "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
