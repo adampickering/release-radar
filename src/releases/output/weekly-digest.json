@@ -1,57 +1,52 @@
 {
-  "weekRange": "June 1 – 8, 2026",
-  "greeting": "Well hello there, fellow pixel wranglers and code conjurers!",
-  "introParagraph": "This week's 'Release Radar' is pinging with a delightful mix of performance polish and nifty new features. While some plugins were busy patching up the digital equivalent of leaky pipes, others rolled out the red carpet for exciting new functionalities, making your WordPress life just a little bit smoother and more powerful. Let's dive into the bits and bytes!",
+  "weekRange": "June 8 – 15, 2026",
+  "greeting": "Well hello there, fellow pixel-pushers and code connoisseurs!",
+  "introParagraph": "This week's 'Release Radar' is pinging with a buzzing hive of activity, particularly from the folks over at Smash Balloon, who've been busy giving their social feeds some serious love. We're seeing a strong emphasis on future-proofing and AI integration, signaling an exciting shift in how our plugins interact with the wider digital ecosystem. It's clear developers are not just patching; they're innovating!",
   "stats": {
-    "releases": 8,
-    "brands": 6,
-    "features": 2,
-    "fixes": 4
+    "releases": 7,
+    "brands": 4,
+    "features": 5,
+    "fixes": 0
   },
   "highlights": [
     {
-      "title": "WPForms Lite 1.10.1.1",
+      "title": "All in One SEO 4.9.8",
       "type": "feature",
-      "summary": "WPForms just made payment integration a breeze by adding inline Connect buttons directly in the Form Builder's Payments panel, alongside a sleek, refreshed design for the Payments page. Now, connecting your payment accounts is smoother than ever, without ever leaving the form editor."
+      "summary": "AIOSEO is stepping into the future by integrating with the WordPress Abilities API, allowing AI agents to read and write your site's SEO data. Get ready for your SEO to get a whole lot smarter (and maybe a little sentient)."
     },
     {
-      "title": "PushEngage 4.2.5",
+      "title": "Smash Balloon Social Post Feed 4.8.1",
       "type": "feature",
-      "summary": "PushEngage is empowering teams with new role-based post-editor access, letting non-admin users utilize the PushEngage metabox. Plus, their audience filters got a significant upgrade with date-based operators for attribute predicates, bringing parity with the App Dashboard."
+      "summary": "Smash Balloon is rolling out modern Gutenberg and Elementor blocks for Facebook feeds, ensuring your social content looks sleek and integrates seamlessly with today's page builders without breaking existing setups."
     },
     {
-      "title": "All in One SEO 4.9.7.2",
-      "type": "fix",
-      "summary": "AIOSEO squashed a rather critical bug, fixing a race condition that could corrupt the cache table on some sites after the 4.9.7 update. This fix ensures your cache writes don't silently overwrite unrelated entries, keeping your SEO data pristine and performant."
+      "title": "Smash Balloon YouTube Feed 2.7.0",
+      "type": "feature",
+      "summary": "YouTube feeds get a modern Gutenberg block facelift and crucial WPConsent integration for GDPR compliance, making it easier than ever to embed videos responsibly and beautifully."
     },
     {
-      "title": "Uncanny Automator 7.3.1.1",
-      "type": "fix",
-      "summary": "Uncanny Automator ironed out a tricky 'Non-JSON response from API' error that could occur with app actions when vendors sent a 204 No Content status. This fix ensures your automations run smoothly, even when APIs are being a little too minimalist with their responses."
+      "title": "Uncanny Automator 7.3.1.2",
+      "type": "improvement",
+      "summary": "Uncanny Automator squashed a couple of pesky Mailchimp credential and campaign creation bugs, ensuring your automated workflows keep humming along smoothly without any unexpected email snafus."
     }
   ],
   "otherReleases": [
     {
-      "title": "Uncanny Automator 7.3.1",
-      "type": "fix",
-      "shortSummary": "Zoom Meetings & Webinar - Registration actions - Registration join link, Regi..."
+      "title": "Smash Balloon Instagram Feed 6.11.1",
+      "type": "feature",
+      "shortSummary": "New - Added a Help widget to the feed builder for in-app access to documentat..."
     },
     {
-      "title": "Uncanny Automator 7.3.0",
-      "type": "fix",
-      "shortSummary": "[SaveTo Wishlist](https://automatorplugin.com/integration/saveto-wishlist/?ut..."
+      "title": "Smash Balloon Twitter Feed 2.6.1",
+      "type": "feature",
+      "shortSummary": "New: Added a Help widget to the feed builder for in-app access to documentati..."
     },
     {
-      "title": "SeedProd 6.20.2",
+      "title": "SeedProd 6.20.3",
       "type": "improvement",
-      "shortSummary": "Release 6.20.2."
-    },
-    {
-      "title": "Charitable 1.8.11.2",
-      "type": "improvement",
-      "shortSummary": "FIX: Hardened profile avatar handling to prevent unauthorized attachment dele..."
+      "shortSummary": "Release 6.20.3."
     }
   ],
-  "closingJoke": "Why did the WordPress plugin break up with the theme? It felt like they just weren't compatible anymore, and the theme was always trying to style its output!",
-  "generatedAt": "2026-06-08T16:27:06.767Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and wasn't very stable!",
+  "generatedAt": "2026-06-15T16:41:05.325Z"
 }
