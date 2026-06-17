@@ -1,5 +1,27 @@
 [
   {
+    "id": "uncanny-automator@7.3.1.3",
+    "title": "Uncanny Automator 7.3.1.3",
+    "date": "2026-06-16",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "Events Manager – Resolved a PHP error that could occur when loading registration-related triggers in certain version-mismatched environments #7912\n\nLearnDash - Quiz triggers now correctly resolve quiz score, question-and-answer, and related quiz result tokens #7908\n\nRecipe logs – Delayed and scheduled actions now display the correct scheduled execution dates. #7895\n\nWPForms, MailPoet, and FunnelKit (Autonami) – Improved protection against PHP Object Injection when storing user-submitted trigger token values #7921",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.2",
+    "title": "Thrive Themes 10.9.2",
+    "date": "2026-06-16",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Thrive Architect: New Feature: Navigator Panel! See your entire page as an easy-to-browse list, search for any element, and click to jump straight to it on the canvas\n\nThrive Architect: Fixed: Saving a page could freeze your browser for 30 seconds or more; saving is now fast and smooth\n\nThrive Architect: Fixed: Applying a pre-built template no longer adds unwanted extra spacing around your page\n\nThrive Leads: New Feature: Track button clicks as conversions! Buttons inside your opt-in forms can now count as conversion events, and your reports now show impressions, conversions, and conversion rate at a glance\n\nThrive Dashboard: Improved: Getting help is simpler; the support button is now &#8220;Contact Support&#8221; and takes you straight to the Thrive Themes support page\n\nThrive Apprentice: Fixed: Clicking &#8220;Start Course&#8221; now correctly marks the course as started, so your Uncanny Automator automations fire as expected\n\nThrive Apprentice: Fixed: A harmless but noisy PHP notice related to assessments no longer appears in error logs",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2/",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@4.9.8",
     "title": "All in One SEO 4.9.8",
     "date": "2026-06-12",
@@ -1493,17 +1515,6 @@
     "releaseType": "feature",
     "summary": "IMPORTANT: Support for PHP 7.2 has been discontinued. If you are running this version, you MUST upgrade PHP before installing or upgrading to WP Mail SMTP v4.5. Failure to do that will disable WP Mail SMTP functionality\n\nAdded: New transactional mailer: MailerSend integration\n\nFixed: Microsoft Outlook basic auth deprecation notice dismissal\n\nChanged: Updated the list of conflicting plugins (added Site Mailer, SureMail, Gravity SMTP)",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.7",
-    "title": "Thrive Themes 10.7",
-    "date": "2025-06-03",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Feature Added: Square payment integration:: More Payment Options for Your Students: Offer a widely recognized and secure way for your users to purchase your courses\n\nFeature Added: Square payment integration:: Seamless Checkout: Provide a smooth and trustworthy payment experience, making it easier for users to enroll\n\nFeature Added: Square payment integration:: Simplified Management: Keep all your course sales streamlined within your existing Square account, making tracking and reconciliation a breeze\n\nImprovements and Fixes:: Fixed: We&#8217;ve fixed an issue that prevented users from selecting recent years in the custom date filter within reports. Users can now easily access and filter by all recent years for more accurate data\n\nImprovements and Fixes:: Fixed: The problem preventing Course Name and Product shortcodes from showing up in emails has been resolved. Your emails will now correctly populate with this dynamic content\n\nImprovements and Fixes:: Fixed: The issue preventing users from being redirected to the proper page upon product expiry has been fixed\n\nImprovements and Fixes:: Fixed: The registration form will now correctly require a password before it can be submitted\n\nImprovements and Fixes:: Fixed: We&#8217;ve fixed an issue where new users registering through opt-in forms weren&#8217;t being assigned the correct user role. Now, users will be automatically set up with the role you&#8217;ve selected, streamlining your user management\n\nImprovements and Fixes:: Fixed: We&#8217;ve resolved an issue where trying to &#8220;View Test&#8221; from the A/B results page would trigger a critical error. Users can now reliably access and review your A/B test details without interruption\n\nImprovements and Fixes:: Fixed: We&#8217;ve resolved an issue where your selected active color for standard menus wasn&#8217;t saving or reflecting on the frontend. Now, your menu&#8217;s active state will consistently display your chosen color, enhancing your site&#8217;s design\n\nImprovements and Fixes:: Fixed: The problem that sometimes prevented products from installing and registering, leading to a &#8220;Please try again!&#8221; warning, has been fixed. All products should now install and register as expected\n\nImprovements and Fixes:: Fixed: The problem causing 404 requests and affecting site speed when local fonts were replaced by their Google Fonts counterparts has been fixed. Site will now properly load fonts without these errors",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/06/version-10-7-released/",
     "tags": []
   },
   {
