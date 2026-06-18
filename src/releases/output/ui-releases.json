@@ -1,5 +1,16 @@
 [
   {
+    "id": "instagram-feed@6.11.2",
+    "title": "Smash Balloon Instagram Feed 6.11.2",
+    "date": "2026-06-17",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix - Additional plugin hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.3.1.3",
     "title": "Uncanny Automator 7.3.1.3",
     "date": "2026-06-16",
@@ -1537,17 +1548,6 @@
     "releaseType": "improvement",
     "summary": "Updates deprecated jQuery methods\n\nImproved results' dropdown alignment with Gutenberg search block\n\nAdds minified assets for frontend",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
-    "tags": []
-  },
-  {
-    "id": "instagram-feed@6.9.1",
-    "title": "Smash Balloon Instagram Feed 6.9.1",
-    "date": "2025-05-21",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix - Additional code hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
   {
