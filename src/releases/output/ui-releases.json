@@ -1,5 +1,49 @@
 [
   {
+    "id": "wpforms-lite@1.10.2",
+    "title": "WPForms Lite 1.10.2",
+    "date": "2026-06-18",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Added: The Abilities API now supports creating new forms, editing existing form fields, and editing form settings\n\nChanged: Stripe subscriptions that finish all configured billing cycles are now marked as Completed\n\nFixed: Delete icon overlapped form name in the Bulk Edit Tags field during bulk edits\n\nFixed: Custom CSS configured in the Form Builder was not applied when the form was embedded via the Gutenberg block\n\nFixed: An AbortError: Transition was skipped console error appeared in the Form Builder on WordPress 7.0\n\nFixed: PayPal Credit payment status was not being synchronized in WPForms > Payments\n\nFixed: The Query String Variable smart tag key was unexpectedly reset when the Email field default value was cleared and re-configured in the Form Builder\n\nFixed: Stripe block-editor CSS and JS assets no longer load unconditionally on every Block Editor screen. They now load only when the `wpforms/form-selector` block is present\n\nFixed: The `wpforms_emails_send_email_data` filter silently discarded any changes to the headers key before sending the email\n\nFixed: PHP fatal error when submitting a form with the {page_url} smart tag if the page_url POST field was sent as an array\n\nFixed: An invalid notice about Fastlane and alternative payment methods appeared in Stripe and Square subscription payment settings in the Form Builder",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "easy-digital-downloads@3.6.9",
+    "title": "Easy Digital Downloads 3.6.9",
+    "date": "2026-06-18",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "feature",
+    "summary": "NEW: PayPal - Added support for Fastlane and additional payment methods for newly connected stores\n\nAdmin: Improved notice compatibility\n\nAdmin: Hardened sanitization of the banned emails setting\n\nAdmin: Sorted Checkout fields were not persisting their order in the admin UI\n\nCart: Improved the Cart Preview compatibility with caching layers\n\nCompatibility: Fixed an issue that could cause conflicts with forms added to the homepage of a site\n\nEmails: The email for the one-time login link could be stuck in a disabled state\n\nImports: Improved parsing of import files\n\nStripe: Card Elements was incorrectly adding the new Company field to the legacy Card Elements",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.11.3",
+    "title": "Smash Balloon Instagram Feed 6.11.3",
+    "date": "2026-06-18",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix - Notices now stay dismissed once closed, including on sites with multiple administrators.",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "stripe@4.17.3",
+    "title": "WP Simple Pay 4.17.3",
+    "date": "2026-06-18",
+    "brand": "WP Simple Pay",
+    "brandSlug": "wp-simple-pay",
+    "releaseType": "feature",
+    "summary": "New: PIX and BLIK payment methods for forms in Brazilian Real and Polish Złoty\n\nNew: per-form setting to disable Stripe Link on Stripe Checkout (off-site) forms\n\nNew: `[simpay_manage_subscriptions]` shortcode for the customer subscription portal in the Classic Editor\n\nUpdate: BECS Direct Debit can now be used for subscriptions and recurring payments on AU/AUD forms\n\nFix: Duplicated forms no longer share the original's Stripe Product and Price IDs\n\nFix: Form-style error color now applies to validation errors and required-field highlights\n\nFix: Action Scheduler no longer creates duplicate entries when requests arrive concurrently",
+    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
+    "tags": []
+  },
+  {
     "id": "instagram-feed@6.11.2",
     "title": "Smash Balloon Instagram Feed 6.11.2",
     "date": "2026-06-17",
@@ -682,17 +726,6 @@
     "tags": []
   },
   {
-    "id": "wpforms-lite@1.10.0.3",
-    "title": "WPForms Lite 1.10.0.3",
-    "date": "2026-04-08",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: PayPal Connection URL was cached and contains the old site URL after the site migration.",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "sugar-calendar-lite@3.11.0",
     "title": "Sugar Calendar Lite 3.11.0",
     "date": "2026-04-01",
@@ -902,17 +935,6 @@
     "tags": []
   },
   {
-    "id": "instagram-feed@6.10.0",
-    "title": "Smash Balloon Instagram Feed 6.10.0",
-    "date": "2026-02-26",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New - Added support for Instagram's Media API. This will future-proof the plugin and prevent issues with Instagram deprecating the 'thumbnail_url' from the oEmbed API\n\nFix - Added compatibility with Complianz GDPR plugin\n\nFix - Fixed accessibility issues related to the screenreader text\n\nFix - Additional code hardening",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.8.7",
     "title": "Thrive Themes 10.8.7",
     "date": "2026-02-24",
@@ -1031,17 +1053,6 @@
     "releaseType": "fix",
     "summary": "Thrive Apprentice: Data Cleanup Tool: Bulk delete old reporting and user data to keep your database clean and optimized\n\nThrive Architect: Course List Carousel Updates: The carousel keeps working when you change the number of elements to display\n\nThrive Architect: Rank Math SEO Metabox: The SEO metabox opens properly when Content AI is enabled\n\nThrive Architect: Sticky Header Positioning: Header positioning works correctly on boxed landing pages when full width + sticky behavior are enabled\n\nThrive Architect: Tablet Menu Positioning: The tablet menu displays in the correct horizontal position in editor mode\n\nThrive Architect: Saving with Conditional Display: Pages save normally even when they include elements with conditional display rules\n\nThrive Architect: Sticky Scroll on Mobile: Sticky scroll works with Shapeshift themes without adding extra space above the mobile header\n\nThrive Leads: Smarter Error Messaging: Error messages change based on the exact condition, making it easier to understand what to fix\n\nThrive Leads: Lead Group Priority: Lead group priority works correctly so the right groups are applied in the right order\n\nThrive Leads: Blank Shortcode Error: Error messages display correctly when a shortcode is left blank\n\nThrive Leads: Mailster Single Opt-In: Subscriber confirmations work correctly with single opt-in settings\n\nThrive Quiz Builder: Disable Quiz Statistics: You can completely disable quiz statistics collection for better privacy and performance\n\nThrive Quiz Builder: Minimalist Template Colors: The Minimalist quiz template color palette is updated\n\nThrive Quiz Builder: Answer Hover Colors: Hover colors work correctly after you change typography colors\n\nThrive Comments: Improved Reply Compatibility: The comment reply feature works correctly on newer PHP versions\n\nThrive Comments: More Translation Options: Additional translation keys are available for moderation labels, so it’s easier to customize text in different languages\n\nThrive Comments: Dashboard Replies: Comment replies work correctly in the dashboard without showing error messages\n\nThrive Comments: Translatable Moderation Labels: Moderation labels are available for translation through the Customize & Translate Labels section\n\nThrive Product Manager: Newer PHP Compatibility: Works smoothly on newer PHP versions without errors\n\nPerformance Enhancement: Performance enhancement: We did some database query optimizations under the hood! By sweeping away unnecessary database queries, we’ve made sure all Thrive products feel lighter, snappier, and noticeably faster",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/01/v10-8-6/",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.4",
-    "title": "Easy Digital Downloads 3.6.4",
-    "date": "2026-01-15",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "feature",
-    "summary": "New: Manage logs with the Log Retention Settings\n\nAdmin: Some help icons could get duplicated\n\nBlocks: Login block could prevent WordPress admin email confirmation from working\n\nCheckout: Improved billing address conditional logic and validation\n\nImports: Improved handling of files uploaded for import\n\nReports: Gateway pie charts now only show gateways used during the report date range\n\nReports: Stripe payment method data now respects report date ranges\n\nReports: The vendor script paths for legacy graphs have been updated",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
@@ -1295,17 +1306,6 @@
     "releaseType": "fix",
     "summary": "The Latest And Greatest:: Lightning-Fast Checkout: We&#8217;ve brought the payment process directly onto your site. Your customers can now complete their purchase seamlessly and without leaving the page. Say goodbye to annoying redirects and hello to more completed sales!\n\nThe Latest And Greatest:: More Accurate Access Timing for WooCommerce Drip Campaigns: The drip and expiration timing for courses and products sold via WooCommerce will now start based on when the user actually receives access (e.g., upon successful completion of a bank transfer order), not just the order date. This ensures your customers always get their full access period\n\nThe Latest And Greatest:: Improved Course Progress Recalculation: Fixed a bug affecting course progress: the progress bar will now correctly recalculate if an admin changes the course content after a user had already completed the course. Progress is now always accurately reflected\n\nThe Latest And Greatest:: Video Progress Tracking: Pause When You Need To! We fixed an issue where pausing a video would mess up progress tracking. Now, you can take that much-needed coffee break—the video progress will track correctly whether it&#8217;s paused or playing\n\nThe Latest And Greatest:: Custom HTML Editor Search and Stay: Searching your code in the Custom HTML editor used to be a little&#8230; jumpy. Pressing Enter after searching (Ctrl+F/Cmd+F) would close the modal! Now you can search your code without getting kicked out. Breathe a sigh of relief, developers!\n\nThe Latest And Greatest:: Border Radius is Back in Style:Remember those images with lovely rounded corners that weren&#8217;t displaying quite right? They&#8217;ve been fixed! Your images with border radius now look perfect on every screen\n\nThe Latest And Greatest:: Sticky Buttons That Actually Stick: Sticky buttons were getting confused on different screen sizes. We&#8217;ve smoothed things out, so your sticky buttons will stay exactly where you put them across all viewports\n\nThe Latest And Greatest:: Global Elements Typography Fix: Fixed typography issues affecting global elements to ensure consistent font styling across your site\n\nThe Latest And Greatest:: X (Twitter) Links are Back on Track: We updated the Author Social Links element to correctly support both twitter.com and the newer x.com profile URLs. Connect your social presence effortlessly!\n\nThe Latest And Greatest:: Enhanced Zapier Integration: We&#8217;ve added full Zapier support for Lead Generation forms created using shortcodes, allowing you to seamlessly connect and automate your lead data workflow with third-party applications. And, Custom Fields are now properly captured when using the Zapier API\n\nThe Latest And Greatest:: Evergreen Countdown Timer Display Fix: Resolved an issue that was causing the Evergreen Countdown timer to display an incorrect amount of time remaining, ensuring your scarcity campaigns are always accurate",
     "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-2/",
-    "tags": []
-  },
-  {
-    "id": "stripe@4.16.0",
-    "title": "WP Simple Pay 4.16.0",
-    "date": "2025-10-30",
-    "brand": "WP Simple Pay",
-    "brandSlug": "wp-simple-pay",
-    "releaseType": "feature",
-    "summary": "New: Added support for MobilePay, BECS Direct Debit, PromptPay, and WeChat Pay payment methods\n\nUpdate: Activity & Reports - Stripe Balance component now supports Test Mode\n\nFix: Addressed an issue that incorrectly displayed an \"invalid webhook\" message\n\nFix: Optimized the application fee removal process for Lite to Pro upgrades to prevent unnecessary API calls\n\nDev: Updated Stripe integration for enhanced security and reliability",
-    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
   {
@@ -2417,6 +2417,17 @@
     "releaseType": "improvement",
     "summary": "Fix: EDD and WooCommerce integrations not working properly.",
     "changelogUrl": "https://wordpress.org/plugins/affiliatewp-allowed-products/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@1.0.5",
+    "title": "Thrive Themes 1.0.5",
+    "date": "2017-01-11",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "General: Fix for shortcode editor cache calls.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2017/01/thrive-ovation-version-1-0-5-released/",
     "tags": []
   }
 ]
