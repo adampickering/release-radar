@@ -1,52 +1,52 @@
 {
-  "weekRange": "June 8 – 15, 2026",
-  "greeting": "Well hello there, fellow pixel-pushers and code connoisseurs!",
-  "introParagraph": "This week's 'Release Radar' is pinging with a buzzing hive of activity, particularly from the folks over at Smash Balloon, who've been busy giving their social feeds some serious love. We're seeing a strong emphasis on future-proofing and AI integration, signaling an exciting shift in how our plugins interact with the wider digital ecosystem. It's clear developers are not just patching; they're innovating!",
+  "weekRange": "June 15 – 22, 2026",
+  "greeting": "Well hello there, fellow pixel-pushers and plugin aficionados!",
+  "introParagraph": "This week's 'Release Radar' is buzzing with a mix of essential fixes, intriguing new payment gateways, and even a groundbreaking UI enhancement that could seriously level up your page-building game. While the total count was modest, the impact of some of these updates is anything but.",
   "stats": {
     "releases": 7,
-    "brands": 4,
-    "features": 5,
-    "fixes": 0
+    "brands": 6,
+    "features": 2,
+    "fixes": 3
   },
   "highlights": [
     {
-      "title": "All in One SEO 4.9.8",
+      "title": "Thrive Themes 10.9.2",
       "type": "feature",
-      "summary": "AIOSEO is stepping into the future by integrating with the WordPress Abilities API, allowing AI agents to read and write your site's SEO data. Get ready for your SEO to get a whole lot smarter (and maybe a little sentient)."
+      "summary": "Thrive Architect just dropped the 'Navigator Panel' – a game-changer that transforms how you interact with complex page layouts, letting you easily browse, search, and jump to any element. Say goodbye to endless scrolling and hello to precision editing!"
     },
     {
-      "title": "Smash Balloon Social Post Feed 4.8.1",
+      "title": "WP Simple Pay 4.17.3",
       "type": "feature",
-      "summary": "Smash Balloon is rolling out modern Gutenberg and Elementor blocks for Facebook feeds, ensuring your social content looks sleek and integrates seamlessly with today's page builders without breaking existing setups."
+      "summary": "Expanding its global reach, WP Simple Pay now supports PIX and BLIK payment methods for forms in Brazilian Real and Polish Złoty, respectively. Plus, you get a new per-form setting to disable Stripe Link on off-site Checkout forms, offering more control over your payment flows."
     },
     {
-      "title": "Smash Balloon YouTube Feed 2.7.0",
+      "title": "Easy Digital Downloads 3.6.9",
       "type": "feature",
-      "summary": "YouTube feeds get a modern Gutenberg block facelift and crucial WPConsent integration for GDPR compliance, making it easier than ever to embed videos responsibly and beautifully."
+      "summary": "EDD is streamlining the checkout experience with new PayPal support for Fastlane and additional payment methods for newly connected stores. This update promises smoother transactions and fewer abandoned carts for your digital products."
     },
     {
-      "title": "Uncanny Automator 7.3.1.2",
-      "type": "improvement",
-      "summary": "Uncanny Automator squashed a couple of pesky Mailchimp credential and campaign creation bugs, ensuring your automated workflows keep humming along smoothly without any unexpected email snafus."
+      "title": "WPForms Lite 1.10.2",
+      "type": "fix",
+      "summary": "WPForms has beefed up its Abilities API, now supporting the creation of new forms, editing existing fields, and tweaking form settings directly. This opens up a world of possibilities for custom integrations and programmatic form management."
     }
   ],
   "otherReleases": [
     {
-      "title": "Smash Balloon Instagram Feed 6.11.1",
-      "type": "feature",
-      "shortSummary": "New - Added a Help widget to the feed builder for in-app access to documentat..."
-    },
-    {
-      "title": "Smash Balloon Twitter Feed 2.6.1",
-      "type": "feature",
-      "shortSummary": "New: Added a Help widget to the feed builder for in-app access to documentati..."
-    },
-    {
-      "title": "SeedProd 6.20.3",
+      "title": "Smash Balloon Instagram Feed 6.11.3",
       "type": "improvement",
-      "shortSummary": "Release 6.20.3."
+      "shortSummary": "Fix - Notices now stay dismissed once closed, including on sites with multipl..."
+    },
+    {
+      "title": "Smash Balloon Instagram Feed 6.11.2",
+      "type": "improvement",
+      "shortSummary": "Fix - Additional plugin hardening."
+    },
+    {
+      "title": "Uncanny Automator 7.3.1.3",
+      "type": "fix",
+      "shortSummary": "Events Manager – Resolved a PHP error that could occur when loading registrat..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and wasn't very stable!",
-  "generatedAt": "2026-06-15T16:41:05.325Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies and kept crashing their production site!",
+  "generatedAt": "2026-06-22T16:36:44.818Z"
 }
