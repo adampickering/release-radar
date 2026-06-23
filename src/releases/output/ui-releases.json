@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.3.1.4",
+    "title": "Uncanny Automator 7.3.1.4",
+    "date": "2026-06-22",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Google Sheets, Calendar and Gemini icons updated #7798\n\nHardened WP Event Manager, FluentCRM, Gravity Forms, and WS Form Lite trigger token handling against PHP Object Injection by safely handling user-submitted values #7939\n\nInstagram - Catch `Throwable` instead of only `Exception` when publishing posts #7940",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@1.10.2",
     "title": "WPForms Lite 1.10.2",
     "date": "2026-06-18",
