@@ -1,5 +1,16 @@
 [
   {
+    "id": "pushengage@4.2.6",
+    "title": "PushEngage 4.2.6",
+    "date": "2026-06-24",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "improvement",
+    "summary": "Improved: Strengthened plugin security across onboarding, WhatsApp, and credential handling\n\nImproved: Upgraded stored WhatsApp access tokens to authenticated AES-256-GCM encryption\n\nImproved: Smarter value typing for Audience Filters — attribute filter values now keep their correct type (number, date, boolean, text), fixing a class of silent mismatches where values were sent to the backend with the wrong type\n\nNotice: PushEngage now requires PHP 7.4 or higher",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.3.1.4",
     "title": "Uncanny Automator 7.3.1.4",
     "date": "2026-06-22",
@@ -844,17 +855,6 @@
     "releaseType": "fix",
     "summary": "Fix: Switching a snippet from shortcode back to auto-insert mode now correctly restores the selected location\n\nFix: Changes made in the Text tab of the visual editor for text snippets are now saved correctly\n\nFix: Resolved a fatal error that could occur when the snippet library cache returns invalid data",
     "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.2.1",
-    "title": "PushEngage 4.2.1",
-    "date": "2026-03-16",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "feature",
-    "summary": "Added a new Chat Widget Analytics feature for tracking widget and Channel Interactions\n\nEnhancements in PushEngage WP Admin screens for better visibility and usability\n\nMinor bug fixes and performance improvements",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
