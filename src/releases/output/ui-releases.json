@@ -1,5 +1,27 @@
 [
   {
+    "id": "wp-mail-smtp@4.9.0",
+    "title": "WP Mail SMTP 4.9.0",
+    "date": "2026-06-25",
+    "brand": "WP Mail SMTP",
+    "brandSlug": "wp-mail-smtp",
+    "releaseType": "feature",
+    "summary": "Added: WP-CLI commands to configure WP Mail SMTP from the command line, including SMTP and API-key mailer setup and individual setting management\n\nAdded: Code Snippets tab on the Tools page to browse, preview, and install WP Mail SMTP's WPCode snippets\n\nAdded: Support for the WordPress Abilities API (WordPress 6.9), letting connected tools and AI assistants securely read your debug events\n\nAdded: A one-click option to deactivate a conflicting plugin directly from the conflict notice\n\nAdded: Confirmation prompt before enabling the \"Hide Email Delivery Errors\" option, so the setting is not turned on by accident\n\nChanged: Improved error handling and troubleshooting guidance when an email fails to send\n\nChanged: Updated Action Scheduler library to 4.0.0\n\nFixed: The \"Last week\" stat in the Lite weekly summary email showed the just-started current week's count instead of the actual previous week's total, because the email is sent on Monday at 2pm\n\nFixed: Hardened permission checks and request handling across several admin features to address potential security issues",
+    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
+    "id": "all-in-one-seo-pack@4.9.9",
+    "title": "All in One SEO 4.9.9",
+    "date": "2026-06-24",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "New: SEO Alerts feature to notify site owners of critical SEO issues via email and Slack\n\nNew: New `#event_start_date` and `#event_end_date` smart tags for events when The Events Calendar plugin is active\n\nUpdated: Sitemap hreflang alternates when using the Universally translation plugin\n\nUpdated: .htaccess editor error messages are now clearer and more actionable\n\nUpdated: Setup wizard now triggers after bulk plugin activation instead of being skipped\n\nUpdated: Improved the posts-list URL Inspection status with clearer messages and a Refresh Status action\n\nFixed: PHP 8.2+ dynamic property creation deprecation notice when loading addons\n\nFixed: PHP 8.5 deprecation notice when generating descriptions from classic or freeform post content\n\nFixed: Elementor's internal post type was included in LLMs.txt by default\n\nFixed: Primary Category dropdown was clipped when WooCommerce was active\n\nFixed: PHP warnings on taxonomy archives when get_queried_object() returned a WP_Post_Type\n\nFixed: Fatal error on the WordPress dashboard when the SEO News widget returned an unexpected response\n\nFixed: Divi 5+ layouts displaying stray borders, padding, or alignment issues when AIOSEO Pro is active\n\nFixed: PHP warning in sitemap generation for sitemap types that don't support taxonomies\n\nFixed: Multisite sub-sites with \"Discourage search engines from indexing this site\" enabled were missing from the Domain Activation list in Network Admin\n\nFixed: Console errors in the Avada Frontend Editor during initialization\n\nFixed: PHP warning in Social Networks image handling on non-singular pages\n\nFixed: REST API clients can now update the custom canonical using the snake_case field name in addition to the camelCase version\n\nFixed: WooCommerce Product schema's valueAddedTaxIncluded now reflects the store's actual tax configuration, and is omitted when taxes are disabled\n\nFixed: Editing a page via the Classic Editor could show another post's content when a third-party page builder ran a post loop on the same page\n\nFixed: Site Audit scan fatal error on servers where the PHP intl extension is not installed\n\nFixed: A conflict where third-party plugins filtering could rename the generated llms.txt or llms-full.txt files\n\nFixed: Opening the redirect modal from the side panel when the Metabox Redirects tab is active\n\nFixed: Regex redirects no longer produce double slashes mid-path when a capture group matches an empty string\n\nFixed: Regex redirects for media files\n\nFixed: Regex redirects producing a double trailing slash when the target URL contains a capture group placeholder\n\nFixed: Keyword Cannibalization checker was displaying private posts in the results list",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.6",
     "title": "PushEngage 4.2.6",
     "date": "2026-06-24",
@@ -679,17 +701,6 @@
     "releaseType": "feature",
     "summary": "NEW: Blocks - Introducing the Profile Editor Block\n\nNEW: Checkout - Added a Business Name field to checkout addresses\n\nNEW: Checkout - Returning customers can now log in via a secure email link at checkout\n\nNEW: Purchase Links - Discount codes can now be added to the buy button block\n\nAdmin: Improved customer detail page markup and layout\n\nAdmin: Customer counts are now accurate when searching the list table\n\nAdmin: Updated the user search input field\n\nBlocks: Fixed the Checkout block setting an incorrect page ID\n\nCheckout: Fixed profile editor layout with multiple email addresses\n\nCLI: Added support for setting a specific gateway when generating orders\n\nCustomers: Customer notes now include user created order notes\n\nDatabase: Fixed an issue where JOIN queries could cause an error in newer PHP versions\n\nEmails: Fixed the email description not displaying in the editor\n\nEmails: Fixed the toggle \"updating\" indicator positioning\n\nMigration: Fixed a potential loop when migrating orders that no longer exist\n\nPayPal: Fixed PHP compatibility in PayPal Commerce\n\nStripe: Modernized checkout to use the FormData API\n\nStripe: Fixed card elements not displaying on Firefox/Windows\n\nDev: Fixed file protection symlink detection with trailing slashes\n\nDev: Fixed multicheck field error when label is not set\n\nDev: Fixed AJAX-backed select fields showing \"No results found\" incorrectly\n\nDev: Improved compatibility with LSCache\n\nDev: Improved nocache headers for important EDD pages\n\nDev: Removed legacy jQuery UI CSS\n\nDev: Reset Store now properly resets download sales and revenue data",
     "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@4.9.6.2",
-    "title": "All in One SEO 4.9.6.2",
-    "date": "2026-04-18",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Updated: Removed deprecated internal option references that could cause error on WooCommerce checkouts for some users\n\nFixed: Possible fatal error when activating license via AIOSEO_LICENSE_KEY constant",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
   {
@@ -1526,17 +1537,6 @@
     "releaseType": "fix",
     "summary": "Enhancement: Updated Forms Report to include more metrics and stats\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "wp-mail-smtp@4.5.0",
-    "title": "WP Mail SMTP 4.5.0",
-    "date": "2025-06-05",
-    "brand": "WP Mail SMTP",
-    "brandSlug": "wp-mail-smtp",
-    "releaseType": "feature",
-    "summary": "IMPORTANT: Support for PHP 7.2 has been discontinued. If you are running this version, you MUST upgrade PHP before installing or upgrading to WP Mail SMTP v4.5. Failure to do that will disable WP Mail SMTP functionality\n\nAdded: New transactional mailer: MailerSend integration\n\nFixed: Microsoft Outlook basic auth deprecation notice dismissal\n\nChanged: Updated the list of conflicting plugins (added Site Mailer, SureMail, Gravity SMTP)",
-    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
     "tags": []
   },
   {
