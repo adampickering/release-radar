@@ -1,52 +1,52 @@
 {
-  "weekRange": "June 15 – 22, 2026",
-  "greeting": "Well hello there, fellow pixel-pushers and plugin aficionados!",
-  "introParagraph": "This week's 'Release Radar' is buzzing with a mix of essential fixes, intriguing new payment gateways, and even a groundbreaking UI enhancement that could seriously level up your page-building game. While the total count was modest, the impact of some of these updates is anything but.",
+  "weekRange": "June 22 – 29, 2026",
+  "greeting": "Well hello there, fellow digital artisans!",
+  "introParagraph": "Another week, another wave of plugin updates has crashed upon our shores! This week, we saw a modest but mighty collection of releases, proving that even a quieter week can deliver some significant punches, especially for those who love efficiency and robust site management. From command-line wizardry to critical SEO alerts, it's clear developers are focusing on empowering site owners with more control and smarter diagnostics.",
   "stats": {
     "releases": 7,
     "brands": 6,
-    "features": 2,
-    "fixes": 3
+    "features": 1,
+    "fixes": 2
   },
   "highlights": [
     {
-      "title": "Thrive Themes 10.9.2",
+      "title": "WP Mail SMTP 4.9.0",
       "type": "feature",
-      "summary": "Thrive Architect just dropped the 'Navigator Panel' – a game-changer that transforms how you interact with complex page layouts, letting you easily browse, search, and jump to any element. Say goodbye to endless scrolling and hello to precision editing!"
+      "summary": "WP Mail SMTP just dropped a game-changer for agencies and dev teams with new WP-CLI commands! Now you can configure mailer settings, including SMTP and API-key setups, directly from the command line, making automated deployments and server management a breeze."
     },
     {
-      "title": "WP Simple Pay 4.17.3",
-      "type": "feature",
-      "summary": "Expanding its global reach, WP Simple Pay now supports PIX and BLIK payment methods for forms in Brazilian Real and Polish Złoty, respectively. Plus, you get a new per-form setting to disable Stripe Link on off-site Checkout forms, offering more control over your payment flows."
-    },
-    {
-      "title": "Easy Digital Downloads 3.6.9",
-      "type": "feature",
-      "summary": "EDD is streamlining the checkout experience with new PayPal support for Fastlane and additional payment methods for newly connected stores. This update promises smoother transactions and fewer abandoned carts for your digital products."
-    },
-    {
-      "title": "WPForms Lite 1.10.2",
+      "title": "All in One SEO 4.9.9",
       "type": "fix",
-      "summary": "WPForms has beefed up its Abilities API, now supporting the creation of new forms, editing existing fields, and tweaking form settings directly. This opens up a world of possibilities for custom integrations and programmatic form management."
+      "summary": "AIOSEO is stepping up its proactive game with a new 'SEO Alerts' feature, notifying site owners of critical SEO issues via email and Slack. This release also adds handy new smart tags for event dates, ensuring your structured data is always on point."
+    },
+    {
+      "title": "WPForms Lite 1.10.2.1",
+      "type": "fix",
+      "summary": "WPForms squashed an annoying bug where forms scrolled back to the first input when adjusting a Number Slider on Chrome for Android. Plus, they've added an AI MCP settings section, hinting at future innovations in form management."
+    },
+    {
+      "title": "Uncanny Automator 7.3.1.4",
+      "type": "improvement",
+      "summary": "Uncanny Automator continues to fortify its integrations, hardening trigger token handling for several popular plugins like WP Event Manager, FluentCRM, and Gravity Forms against PHP Object Injection. This release is all about making your automations more secure and robust."
     }
   ],
   "otherReleases": [
     {
-      "title": "Smash Balloon Instagram Feed 6.11.3",
+      "title": "PushEngage 4.2.7",
       "type": "improvement",
-      "shortSummary": "Fix - Notices now stay dismissed once closed, including on sites with multipl..."
+      "shortSummary": "Improved: Web SDK script URL now includes the plugin version as a query param..."
     },
     {
-      "title": "Smash Balloon Instagram Feed 6.11.2",
+      "title": "Thrive Themes 10.9.2.1",
       "type": "improvement",
-      "shortSummary": "Fix - Additional plugin hardening."
+      "shortSummary": "Thrive Leads: Refresh From Cloud: A new &#8220;Refresh from cloud&#8221; butt..."
     },
     {
-      "title": "Uncanny Automator 7.3.1.3",
-      "type": "fix",
-      "shortSummary": "Events Manager – Resolved a PHP error that could occur when loading registrat..."
+      "title": "PushEngage 4.2.6",
+      "type": "improvement",
+      "shortSummary": "Improved: Strengthened plugin security across onboarding, WhatsApp, and crede..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies and kept crashing their production site!",
-  "generatedAt": "2026-06-22T16:36:44.818Z"
+  "closingJoke": "Why did the plugin cross the road? To get to the other API! (And probably to fetch some new data, securely of course.)",
+  "generatedAt": "2026-06-29T16:21:09.519Z"
 }
