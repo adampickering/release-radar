@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.3.2",
+    "title": "Uncanny Automator 7.3.2",
+    "date": "2026-06-30",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "Status -> Tools - \"Resend App Actions\" tool to find and bulk resend failed app actions from one place. #8012\n\nApp Actions - Increased the default outgoing request timeout to better support longer-running app responses. #8009\n\nKit - Removed the unsupported OAuth connection flow and now support V4 connections by API key only. #8006\n\nStripe - Improved product and price dropdown performance in the recipe builder with cached remote loading and refresh support. #7999\n\nStripe - Product refunded trigger now correctly respects the selected price instead of firing for every refunded product. #7999\n\nActiveCampaign - Fixed an issue where custom fields could be omitted from the Add a contact action when field definitions needed to be refreshed. #7949\n\nApp Actions - Fixed an issue where resending a logged app action could trigger a PHP error on some sites. #8011\n\nApp Actions - Fixed an issue where successful app action responses could be incorrectly reported as \"Failed with status code - 200\". #8010\n\nGoogle Contacts - Fixed an issue where the Create a contact action could include internal Automator action metadata in outgoing API requests. #8004\n\nRecipe UI - Fixed an issue where select fields in the recipe builder could stop rendering when another plugin loaded a conflicting Select2 library. #8001\n\nRecipe Templates - Fixed an issue where the requirements sidebar could stretch past the window edge and cut off text. #7941\n\nTrigger Engine - Improved handling of high-frequency WordPress meta hooks to reduce unnecessary trigger checks and loopback requests. #7929",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.7",
     "title": "PushEngage 4.2.7",
     "date": "2026-06-26",
@@ -66,17 +77,6 @@
     "tags": []
   },
   {
-    "id": "uncanny-automator@7.3.1.4",
-    "title": "Uncanny Automator 7.3.1.4",
-    "date": "2026-06-22",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "Google Sheets, Calendar and Gemini icons updated #7798\n\nHardened WP Event Manager, FluentCRM, Gravity Forms, and WS Form Lite trigger token handling against PHP Object Injection by safely handling user-submitted values #7939\n\nInstagram - Catch `Throwable` instead of only `Exception` when publishing posts #7940",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
     "id": "wpforms-lite@1.10.2",
     "title": "WPForms Lite 1.10.2",
     "date": "2026-06-18",
@@ -129,17 +129,6 @@
     "releaseType": "improvement",
     "summary": "Fix - Additional plugin hardening.",
     "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.3.1.3",
-    "title": "Uncanny Automator 7.3.1.3",
-    "date": "2026-06-16",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "Events Manager – Resolved a PHP error that could occur when loading registration-related triggers in certain version-mismatched environments #7912\n\nLearnDash - Quiz triggers now correctly resolve quiz score, question-and-answer, and related quiz result tokens #7908\n\nRecipe logs – Delayed and scheduled actions now display the correct scheduled execution dates. #7895\n\nWPForms, MailPoet, and FunnelKit (Autonami) – Improved protection against PHP Object Injection when storing user-submitted trigger token values #7921",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
@@ -209,17 +198,6 @@
     "tags": []
   },
   {
-    "id": "uncanny-automator@7.3.1.2",
-    "title": "Uncanny Automator 7.3.1.2",
-    "date": "2026-06-10",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "Mailchimp - Credential mapping issue on some older sites now resolved #7885\n\nMailchimp - Create and send a campaign - Fails when 'To name' is empty #7881\n\nWP Job Manager - A user applies for a job - Fixed an issue where some tokens may not parse #7875\n\nWordPress - A post in a taxonomy is published & A user publishes a post in a taxonomy - Only one recipe fires per post due to dedup keyed by code #7883\n\nMultiple integrations - Correct invalid singular `supports_token` definitions to plural `supports_tokens` #7831\n\nNormalize UTM tags on in-plugin links #7880",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
     "id": "coming-soon@6.20.3",
     "title": "SeedProd 6.20.3",
     "date": "2026-06-09",
@@ -228,39 +206,6 @@
     "releaseType": "improvement",
     "summary": "Release 6.20.3.",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.3.1.1",
-    "title": "Uncanny Automator 7.3.1.1",
-    "date": "2026-06-07",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "App Actions - Fixed an issue where some app actions could fail with \"Non-JSON response from API\" when the vendor responds with a 204 No Content status and an empty body #7872\n\nBackground Actions - Fixed an issue where a completed action could revert to \"In progress\" in rare situations #7871\n\nDelayed/Scheduled Actions - Fixed an issue where actions were marked as \"Skipped\" and never ran after updating to 7.3.0 #7866\n\nMailchimp - Add a contact to an audience - Fixed an issue where the action could fail with \"User already subscribed to the list\" in recipes #7860\n\nRecipe Logs - Fixed an issue where the log details could fail to load when a delayed action had a malformed date value #7868\n\nTrigger Engine - Fixed a PHP error that could occur when a trigger returned malformed token data #7869\n\nWordPress - A user publishes a post & A user publishes a post in a taxonomy - Fixed an issue where the trigger did not fire for scheduled posts #7862",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.3.1",
-    "title": "Uncanny Automator 7.3.1",
-    "date": "2026-06-06",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "Zoom Meetings & Webinar - Registration actions - Registration join link, Registrant ID, Meeting topic / Webinar topic, Start time #7809\n\nGoogle Sheets - Fixed an issue where disconnecting an account did not fully clear the cached connection #7843\n\nGravity Forms - Fixed an issue where lazily fired triggers could fail and leave recipes stuck \"In Progress\" #7859\n\nIntegration Loader & The Events Calendar - Fixed a PHP error that could occur when Event Tickets was not installed #7848\n\nLearnDash - Fixed an issue where some completion date tokens were not resolving correctly #7849\n\nMemberPress - A user purchases a membership - Fixed an issue where the trigger could fire when a membership renewed automatically after purchase #7825\n\nRecipe Logs - Action Tab - Fixed an issue where the Completion Date column displayed dates for actions that had not yet completed #7837\n\nTrigger Engine - Fixed an issue where Gravity Forms non-AJAX submissions could fail to fire triggers in certain situations #7857\n\nUncanny Agent - Fixed an issue where the Agent could appear on the frontend when WPFrontendAdmin plugin was active #7852\n\nWordPress - Fixed an issue where some post-view trigger token pills could become orphaned after migration #7850\n\nRecipe UI - Advanced > Post Meta Universal Token - Resolved UI issues where Loop tokens could appear as invalid or be unavailable in nested token pickers within conditions #7398",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.3.0",
-    "title": "Uncanny Automator 7.3.0",
-    "date": "2026-06-04",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "[SaveTo Wishlist](https://automatorplugin.com/integration/saveto-wishlist/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7260\n\nCharitable - A campaign ends #7086\n\nCharitable - A campaign reaches its goal #7087\n\nCharitable - A donation to a campaign is completed #7082\n\nCharitable - A donation to a campaign is refunded #7083\n\nCharitable - A donation's status is changed to a status #7081\n\nCharitable - A donor is created #7084\n\nCharitable - A user registers as a donor #7085\n\nFluentCommunity - A user achieves a percentage greater than, less than or equal to a value on a quiz #6859\n\nFluentCommunity - A user completes a quiz in a course #6860\n\nFluentCommunity - A user passes or fails a quiz in a course #6860\n\nPopup Maker - A conversion is recorded on a popup #7353\n\nPopup Maker - A form provider is submitted in a popup #7355\n\nPopup Maker - A newsletter form is submitted in a popup #7357\n\nPopup Maker - A popup is opened #7352\n\nPopup Maker - A user submits a form provider in a popup #7354\n\nPopup Maker - A user submits a newsletter form in a popup #7356\n\nSaveTo Wishlist - A guest wishlist is synced to a user account on login #7424\n\nSaveTo Wishlist - A user adds a product from their wishlist to their cart #7423\n\nSaveTo Wishlist - A user adds a product to a wishlist #7420\n\nSaveTo Wishlist - A user creates a wishlist #7421\n\nSaveTo Wishlist - A user removes a product from a wishlist #7422\n\nThe Events Calendar - A venue is created #7099\n\nThe Events Calendar - A venue is updated #7100\n\nThe Events Calendar - An event is linked to a related post #7101\n\nThe Events Calendar - An event is unlinked from a related post #7102\n\nThe Events Calendar - An organizer is created #7097\n\nThe Events Calendar - An organizer is updated #7098\n\nThe Events Calendar - Event Tickets - A check-in for an event is reversed #7104\n\nThe Events Calendar - Event Tickets - A ticket is added to an event #7106\n\nThe Events Calendar - Event Tickets - A ticket is removed from an event #7107\n\nThe Events Calendar - Event Tickets - An attendee is checked in to an event #7103\n\nThe Events Calendar - Event Tickets - RSVP tickets are generated for a ticket type on an event with a status #7105\n\nCharitable - Add a tag to a donor #7092\n\nCharitable - Create a donor #7090\n\nCharitable - Create an offline donation to a campaign #7088\n\nCharitable - Update a donation's status to a status #7089\n\nCharitable - Update a donor's profile #7091\n\nGroundhogg - Add a note to a contact #6986\n\nSaveTo Wishlist - Add a product to a wishlist #7425\n\nSaveTo Wishlist - Create a wishlist #7427\n\nSaveTo Wishlist - Remove a product from a wishlist #7426\n\nThe Events Calendar - Add a venue to an event #7114\n\nThe Events Calendar - Add an organizer to an event #7113\n\nThe Events Calendar - Create a venue #7112\n\nThe Events Calendar - Create an event #7108\n\nThe Events Calendar - Create an organizer #7111\n\nThe Events Calendar - Delete an event #7110\n\nThe Events Calendar - Event Tickets - Check in an attendee #7115\n\nThe Events Calendar - Event Tickets - Create an RSVP attendee for an event #7117\n\nThe Events Calendar - Event Tickets - Reset the check-in for an attendee #7116\n\nThe Events Calendar - Update an event #7109\n\nWordPress Core - Add a file to the media library #6951\n\nWordPress Core - Add a menu #6932\n\nWordPress Core - Add an item to a menu #6935\n\nWordPress Core - Assign a menu to a location #6938\n\nWordPress Core - Create a term in a taxonomy #6945\n\nWordPress Core - Delete a comment #6960\n\nWordPress Core - Delete a media item from the media library #6953\n\nWordPress Core - Delete a menu #6934\n\nWordPress Core - Delete a term from a taxonomy #6956\n\nWordPress Core - Delete an item from a menu #6937\n\nWordPress Core - Delete a meta key from a post #6955\n\nWordPress Core - Generate a password reset link for a user #6964\n\nWordPress Core - Get a media item from the media library #6952\n\nWordPress Core - Get the value of a meta key from a post #6971\n\nWordPress Core - Get the value of a meta key from a user #6972\n\nWordPress Core - Rename a menu to a new name #6933\n\nWordPress Core - Restore a post from trash #6958\n\nWordPress Core - Set the password of a post to a password #6959\n\nWordPress Core - Set the status of a comment to a status #6961\n\nWordPress Core - Update a term in a taxonomy #6957\n\nWordPress Core - Update an item in a menu #6936\n\nWordPress Core - Update a media item in the media library #6931\n\nAI Integrations - Refreshed model options for Claude, Cohere, Gemini and Mistral. Claude Opus 4.7 and 4.8 no longer error out, since Automator no longer sends the temperature parameter those models don't support. #7792\n\nAsana and GitHub integrations moved from Automator Pro to Automator Lite. #7236\n\nGroundhogg - Create or update a contact - Now supports address fields and custom contact properties. #6985\n\nRSS - Thumbnail URL token now resolves correctly when restoring media. #7244\n\nTelegram - A text message is received from a chat/channel - New Text (HTML) token preserves message formatting. #7466\n\nBrevo - Create or update a contact - Now loads your account's actual contact attributes, so default attributes work on non-English accounts. #7408\n\nBricks Builder - Banished the deprecation warning ghost. #7126\n\nDivi - Forms created in Divi 5 and later now appear in the form selection dropdown. #7454\n\nLicensing - Plan names on the Addons page no longer living in an alternate reality. #7794\n\nMemberPress - A user is added to a membership - Trigger stopped firing after a hook change, so users weren't added. #7793\n\nRecipe Import - Tokens that reference another action's output now remap to the new action IDs, so they no longer appear broken. #7410\n\nRecipe Import - Common tokens now resolve correctly in imported recipes. #7384\n\nRecipe status toggle - Live/Draft checkbox value now serializes and saves correctly. #7469\n\nRun JavaScript code & Trigger Engine - Action firing after wp_loaded run too late #7797\n\nTrigger Engine - Triggers queued late in the shutdown sequence (e.g. delayed triggers) are now processed instead of being dropped. #7407\n\nWP Job Manager - A user applies for a job / A user submits a resume - Triggers fire again for user-owned submissions. #7378\n\nCore - Restored missing option dropdowns on legacy trigger and integration settings. #7315\n\nCore - Improved recipe completion and reliability with the new execution Pipeline. #6889, #7047, #7048, #7049, #7050, #7051, #7052, #7053, #7054, #7055, #7056, #7198, #7208, #7209\n\nUncanny Automator Lite users no longer seeing Uncanny Agent launcher tab. #7308\n\nRecipe UI - A loop token group now nests where it belongs. #7394\n\nRecipe UI - Divi Supreme Pro no longer clashes with Select2. #7404\n\nRecipe import now feels the love from automator_migrate_recipe_part_meta hook. #7385\n\nUncanny Agent link added to WP Admin Bar. #7306\n\nFramework migrations - Integrations modernized to the new framework:\n\nFluent Forms #7072\n\nGoTo Training #6294\n\nGroundhogg #6928\n\nLearnDash #7377\n\nMailchimp #6299\n\nPopup Maker #7339\n\nThrive Ovation #7340\n\nUncanny CEUs #7343\n\nUserFeedback #7341\n\nWhatsApp #6285\n\nWordPress #5920\n\nWP Webhooks #7342",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
