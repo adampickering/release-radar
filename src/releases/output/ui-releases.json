@@ -1,5 +1,38 @@
 [
   {
+    "id": "insert-headers-and-footers@2.3.7",
+    "title": "WPCode 2.3.7",
+    "date": "2026-07-02",
+    "brand": "WPCode",
+    "brandSlug": "wpcode",
+    "releaseType": "feature",
+    "summary": "New: Set up a whole group of related snippets at once with Snippet Packs — pick a pack and install every snippet in it with a single click, then manage or remove a pack anytime while keeping any snippets you use across other packs.",
+    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
+    "tags": []
+  },
+  {
+    "id": "coming-soon@6.20.4",
+    "title": "SeedProd 6.20.4",
+    "date": "2026-07-01",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.20.4.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.3",
+    "title": "Thrive Themes 10.9.3",
+    "date": "2026-07-01",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Apprentice: Accept PayPal Payments Directly: You can now take PayPal payments natively in Thrive Apprentice, alongside Stripe and Square, without routing sales through a third-party checkout\n\nThrive Apprentice: Connect PayPal From Your Dashboard: Connect and disconnect your PayPal account from Settings > Payments > PayPal, with per-account connection status, a payment-method capability grid, and guidance if your PayPal email still needs confirming\n\nThrive Apprentice: Embedded PayPal Checkout: Buyers can purchase one-time products through an embedded PayPal checkout, paying with their PayPal balance or card (including guest checkout), without leaving your course page\n\nThrive Apprentice: PayPal Subscriptions: Sell recurring access with PayPal subscriptions, including automatic renewals, a grace period for failed payments, and automatic access revocation once retries are exhausted\n\nThrive Apprentice: Free Trials for Subscriptions: Offer a free-trial period on PayPal subscriptions, so buyers get access for a set number of days before their first payment is taken\n\nThrive Apprentice: Buyers Can Cancel Their Own Subscription: Members can cancel their PayPal subscription themselves from the front end\n\nThrive Apprentice: Subscriptions on the Edit Member Screen: PayPal subscriptions appear as a single grouped entry on the Edit Member screen, with trial and subscription badges and an expandable charge history\n\nThrive Apprentice: Google Pay & Venmo: Buyers can pay with Google Pay in the PayPal checkout, and the Venmo button now follows its checkout-method toggle\n\nThrive Apprentice: Pay Later Messaging: Eligible buyers see PayPal Pay Later messaging on the product page and in the checkout when their PayPal account supports it\n\nThrive Apprentice: Checkout Method Controls: Choose which payment methods appear at checkout, and the card form is collapsed by default and expands when a buyer selects it\n\nThrive Apprentice: Refund From the Order Admin: You can issue a full PayPal refund directly from a member&#8217;s access screen; refunding removes the member&#8217;s access and cancels any linked subscription\n\nThrive Apprentice: PayPal Debug ID in Orders: PayPal transactions now record and display PayPal&#8217;s Debug ID in the order admin, so support can locate any transaction in PayPal&#8217;s logs\n\nThrive Apprentice: Clean Wind-Down on Disconnect: Disconnecting PayPal cleanly winds down active subscriptions: they are cancelled at the end of their current billing period, and you are shown how many will be affected before you confirm",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/07/v10-9-3/",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.3.2",
     "title": "Uncanny Automator 7.3.2",
     "date": "2026-06-30",
@@ -195,17 +228,6 @@
     "releaseType": "feature",
     "summary": "New: Added a modern Gutenberg block for the YouTube feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nNew: WPConsent integration for GDPR cookie consent compliance, including a GDPR step in the onboarding wizard\n\nNew: Added a Help widget for in-app access to documentation and support\n\nTweak: Compatibility with WP 7\n\nTweak: Corrected typos and grammar in plugin UI strings\n\nFix: Feed blocks now render a live preview correctly inside the WP 7.0+ iframed block editor\n\nFix: Setup wizard tooltips now display correctly in the iframed block editor\n\nFix: Legacy Elementor widgets are hidden from the element search, and the widget title is now translatable\n\nFix: Block preview now uses a limited query to prevent unintended data exposure",
     "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.3",
-    "title": "SeedProd 6.20.3",
-    "date": "2026-06-09",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.20.3.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
@@ -1075,17 +1097,6 @@
     "releaseType": "feature",
     "summary": "Added: Massive improvements to our Elementor integration. This includes many new Sugar Calendar Widgets for Elementor, Theme Builder support, and Loop Grid support\n\nAdded: Support to Excerpt in Events\n\nAdded: Support defining the license key using a PHP constant\n\nAdded: View number of ticket purchased directly in the Event List table\n\nChanged: Events and Calendars archive page is now showing a page with Event List block for better user experience. This can still be overriden via theme files\n\nChanged: Admin Events Calendar View QoL and UX improvements\n\nFixed: Event description with HTML like links `<a>` is not displaying properly in Event List and Event Calendar blocks\n\nFixed: Security improvement",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "insert-headers-and-footers@2.3.2.1",
-    "title": "WPCode 2.3.2.1",
-    "date": "2025-12-16",
-    "brand": "WPCode",
-    "brandSlug": "wpcode",
-    "releaseType": "fix",
-    "summary": "Fix: Fixed an issue where users who can't edit snippets saw an error message.",
-    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
     "tags": []
   },
   {
