@@ -1,5 +1,16 @@
 [
   {
+    "id": "pushengage@4.2.8",
+    "title": "PushEngage 4.2.8",
+    "date": "2026-07-02",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "feature",
+    "summary": "NEW: Workflows — Manage your automation workflows directly in WordPress with powerful analytics, revenue tracking, and one-click campaign management\n\nImproved: Reorganized the PushEngage admin menu for faster navigation across Push Broadcasts, Drip, Triggers, and the new Workflows screen",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
     "id": "insert-headers-and-footers@2.3.7",
     "title": "WPCode 2.3.7",
     "date": "2026-07-02",
@@ -547,17 +558,6 @@
     "releaseType": "feature",
     "summary": "New: Added a modern Gutenberg block and Elementor widget for the Twitter feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nTweak: Compatibility with WP 7",
     "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.2.3",
-    "title": "PushEngage 4.2.3",
-    "date": "2026-05-15",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "improvement",
-    "summary": "Fix: Optimized the Abilities API integration so AI assistant and MCP responses follows the output schema\n\nFix: Auto-push allowed post types duplicate results in response\n\nImproved: Strengthened overall plugin security and reliability\n\nTested up to WordPress 7.0",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
