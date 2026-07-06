@@ -1,52 +1,47 @@
 {
-  "weekRange": "June 22 – 29, 2026",
-  "greeting": "Well hello there, fellow digital artisans!",
-  "introParagraph": "Another week, another wave of plugin updates has crashed upon our shores! This week, we saw a modest but mighty collection of releases, proving that even a quieter week can deliver some significant punches, especially for those who love efficiency and robust site management. From command-line wizardry to critical SEO alerts, it's clear developers are focusing on empowering site owners with more control and smarter diagnostics.",
+  "weekRange": "June 29 – July 6, 2026",
+  "greeting": "Well hello there, fellow pixel wranglers and code conjurers!",
+  "introParagraph": "This week's 'Release Radar' is buzzing with some seriously cool updates that promise to streamline your workflows and expand your toolkit. From native payment integrations to an ingenious way to manage your snippets, it seems plugin developers are really listening to our collective cries for efficiency and more power under the hood. Let's dive into the bits and bytes!",
   "stats": {
-    "releases": 7,
-    "brands": 6,
-    "features": 1,
-    "fixes": 2
+    "releases": 5,
+    "brands": 5,
+    "features": 2,
+    "fixes": 1
   },
   "highlights": [
     {
-      "title": "WP Mail SMTP 4.9.0",
+      "title": "PushEngage 4.2.8",
       "type": "feature",
-      "summary": "WP Mail SMTP just dropped a game-changer for agencies and dev teams with new WP-CLI commands! Now you can configure mailer settings, including SMTP and API-key setups, directly from the command line, making automated deployments and server management a breeze."
+      "summary": "PushEngage just dropped a bombshell with NEW Workflows, allowing you to manage automation, track revenue, and launch campaigns directly within WordPress. This is a game-changer for anyone looking to supercharge their engagement without ever leaving the dashboard."
     },
     {
-      "title": "All in One SEO 4.9.9",
-      "type": "fix",
-      "summary": "AIOSEO is stepping up its proactive game with a new 'SEO Alerts' feature, notifying site owners of critical SEO issues via email and Slack. This release also adds handy new smart tags for event dates, ensuring your structured data is always on point."
+      "title": "WPCode 2.3.7",
+      "type": "feature",
+      "summary": "Say goodbye to snippet chaos! WPCode introduces Snippet Packs, letting you install and manage entire groups of related code snippets with a single click. This is a brilliant addition for developers and agencies who often deploy similar sets of functionalities across multiple sites."
     },
     {
-      "title": "WPForms Lite 1.10.2.1",
-      "type": "fix",
-      "summary": "WPForms squashed an annoying bug where forms scrolled back to the first input when adjusting a Number Slider on Chrome for Android. Plus, they've added an AI MCP settings section, hinting at future innovations in form management."
-    },
-    {
-      "title": "Uncanny Automator 7.3.1.4",
+      "title": "Thrive Themes 10.9.3 (Thrive Apprentice)",
       "type": "improvement",
-      "summary": "Uncanny Automator continues to fortify its integrations, hardening trigger token handling for several popular plugins like WP Event Manager, FluentCRM, and Gravity Forms against PHP Object Injection. This release is all about making your automations more secure and robust."
+      "summary": "Thrive Apprentice users, rejoice! You can now accept PayPal payments directly within your courses, alongside Stripe and Square. This native integration significantly simplifies the checkout process, boosting conversion rates and reducing reliance on third-party solutions."
+    },
+    {
+      "title": "Uncanny Automator 7.3.2",
+      "type": "fix",
+      "summary": "Uncanny Automator has rolled out a handy 'Resend App Actions' tool, making it a breeze to find and bulk resend failed app actions from one centralized location. This fix is a lifesaver for ensuring your automations run smoothly and consistently."
     }
   ],
   "otherReleases": [
     {
-      "title": "PushEngage 4.2.7",
+      "title": "SeedProd 6.20.4",
       "type": "improvement",
-      "shortSummary": "Improved: Web SDK script URL now includes the plugin version as a query param..."
+      "shortSummary": "Release 6.20.4."
     },
     {
-      "title": "Thrive Themes 10.9.2.1",
+      "title": "Thrive Themes 10.9.3",
       "type": "improvement",
-      "shortSummary": "Thrive Leads: Refresh From Cloud: A new &#8220;Refresh from cloud&#8221; butt..."
-    },
-    {
-      "title": "PushEngage 4.2.6",
-      "type": "improvement",
-      "shortSummary": "Improved: Strengthened plugin security across onboarding, WhatsApp, and crede..."
+      "shortSummary": "Thrive Apprentice: Accept PayPal Payments Directly: You can now take PayPal p..."
     }
   ],
-  "closingJoke": "Why did the plugin cross the road? To get to the other API! (And probably to fetch some new data, securely of course.)",
-  "generatedAt": "2026-06-29T16:21:09.519Z"
+  "closingJoke": "Why did the WordPress developer break up with their plugin? Because it had too many unresolved dependencies! Always good to keep things updated, folks.",
+  "generatedAt": "2026-07-06T16:09:38.231Z"
 }
