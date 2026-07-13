@@ -1,47 +1,21 @@
 {
-  "weekRange": "June 29 – July 6, 2026",
-  "greeting": "Well hello there, fellow pixel wranglers and code conjurers!",
-  "introParagraph": "This week's 'Release Radar' is buzzing with some seriously cool updates that promise to streamline your workflows and expand your toolkit. From native payment integrations to an ingenious way to manage your snippets, it seems plugin developers are really listening to our collective cries for efficiency and more power under the hood. Let's dive into the bits and bytes!",
+  "weekRange": "July 6 – 13, 2026",
+  "greeting": "Well hello there, fellow code wranglers and pixel pushers!",
+  "introParagraph": "This week, Release Radar picked up a single, solitary blip on the radar. It seems many dev teams were either deep in the trenches on something huge for next week, or perhaps enjoying a well-deserved, quiet week. We did catch an interesting improvement from SeedProd, proving that even a single update can make a difference in your toolkit.",
   "stats": {
-    "releases": 5,
-    "brands": 5,
-    "features": 2,
-    "fixes": 1
+    "releases": 1,
+    "brands": 1,
+    "features": 0,
+    "fixes": 0
   },
   "highlights": [
     {
-      "title": "PushEngage 4.2.8",
-      "type": "feature",
-      "summary": "PushEngage just dropped a bombshell with NEW Workflows, allowing you to manage automation, track revenue, and launch campaigns directly within WordPress. This is a game-changer for anyone looking to supercharge their engagement without ever leaving the dashboard."
-    },
-    {
-      "title": "WPCode 2.3.7",
-      "type": "feature",
-      "summary": "Say goodbye to snippet chaos! WPCode introduces Snippet Packs, letting you install and manage entire groups of related code snippets with a single click. This is a brilliant addition for developers and agencies who often deploy similar sets of functionalities across multiple sites."
-    },
-    {
-      "title": "Thrive Themes 10.9.3 (Thrive Apprentice)",
+      "title": "SeedProd 6.20.5",
       "type": "improvement",
-      "summary": "Thrive Apprentice users, rejoice! You can now accept PayPal payments directly within your courses, alongside Stripe and Square. This native integration significantly simplifies the checkout process, boosting conversion rates and reducing reliance on third-party solutions."
-    },
-    {
-      "title": "Uncanny Automator 7.3.2",
-      "type": "fix",
-      "summary": "Uncanny Automator has rolled out a handy 'Resend App Actions' tool, making it a breeze to find and bulk resend failed app actions from one centralized location. This fix is a lifesaver for ensuring your automations run smoothly and consistently."
+      "summary": "While the changelog keeps its cards close, SeedProd's continuous iteration often means subtle yet impactful enhancements to their drag-and-drop page builder, ensuring smoother workflows and better design control for your landing pages."
     }
   ],
-  "otherReleases": [
-    {
-      "title": "SeedProd 6.20.4",
-      "type": "improvement",
-      "shortSummary": "Release 6.20.4."
-    },
-    {
-      "title": "Thrive Themes 10.9.3",
-      "type": "improvement",
-      "shortSummary": "Thrive Apprentice: Accept PayPal Payments Directly: You can now take PayPal p..."
-    }
-  ],
-  "closingJoke": "Why did the WordPress developer break up with their plugin? Because it had too many unresolved dependencies! Always good to keep things updated, folks.",
-  "generatedAt": "2026-07-06T16:09:38.231Z"
+  "otherReleases": [],
+  "closingJoke": "Why did the WordPress plugin break up with the theme? It felt like it was always being taken for granted, and frankly, it needed more 'space' in the sidebar.",
+  "generatedAt": "2026-07-13T17:13:03.396Z"
 }
