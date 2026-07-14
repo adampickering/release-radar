@@ -1,5 +1,16 @@
 [
   {
+    "id": "coming-soon@6.20.5",
+    "title": "SeedProd 6.20.5",
+    "date": "2026-07-13",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "improvement",
+    "summary": "Release 6.20.5.",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.8",
     "title": "PushEngage 4.2.8",
     "date": "2026-07-02",
@@ -19,17 +30,6 @@
     "releaseType": "feature",
     "summary": "New: Set up a whole group of related snippets at once with Snippet Packs — pick a pack and install every snippet in it with a single click, then manage or remove a pack anytime while keeping any snippets you use across other packs.",
     "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.4",
-    "title": "SeedProd 6.20.4",
-    "date": "2026-07-01",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.20.4.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
