@@ -1,5 +1,27 @@
 [
   {
+    "id": "envira-gallery-lite@1.13.0",
+    "title": "Envira Gallery Lite 1.13.0",
+    "date": "2026-07-14",
+    "brand": "Envira Gallery",
+    "brandSlug": "envira-gallery",
+    "releaseType": "feature",
+    "summary": "Added: AI Image Assistant preview in the gallery editor.",
+    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.4.0",
+    "title": "Uncanny Automator 7.4.0",
+    "date": "2026-07-14",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "[GoTo Meeting](https://automatorplugin.com/integration/gotomeeting/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7993\n\n[Beaver Builder](https://automatorplugin.com/integration/beaver-builder/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7476\n\n[Redirection](https://automatorplugin.com/integration/redirection/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7533\n\n[WP Activity Log](https://automatorplugin.com/integration/wp-activity-log/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7522\n\n[WP Fastest Cache](https://automatorplugin.com/integration/wp-fastest-cache/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7534\n\n[Wordfence Security](https://automatorplugin.com/integration/wordfence/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7506\n\nBeaver Builder - A user submits a contact form #7477\n\nBeaver Builder - A user submits a subscribe form #7478\n\nRedirection - A 404 error is logged #7532\n\nRedirection - A redirect in a group is matched #7529\n\nRedirection - A redirect is created by the URL monitor #7530\n\nRedirection - A redirect is deleted #7531\n\nWP Activity Log - A failed login is logged #7520\n\nWP Activity Log - An event for an object type is logged #7518\n\nWP Activity Log - An event is logged #7521\n\nWP Activity Log - An event of a type is logged #7517\n\nWP Activity Log - An event with a severity is logged #7519\n\nWP Fastest Cache - All cache is cleared #7535\n\nWordfence Security - A blocking rule is deleted #7513\n\nWordfence Security - A login with a breached password is blocked #7509\n\nWordfence Security - A user activates two-factor authentication #7510\n\nWordfence Security - A user deactivates two-factor authentication #7511\n\nWordfence Security - An IP is blocked/throttled #7508\n\nWordfence Security - An IP is locked out #7507\n\nWordfence Security - An admin/non-admin user logs in #7512\n\nGoTo Meeting - Create a meeting #7994\n\nGoTo Meeting - Delete a meeting #7995\n\nGoTo Training - Add an attendee #7996\n\nGoTo Training - Remove an attendee #7997\n\nWP Fastest Cache - Purge all caches #7537\n\nWP Fastest Cache - Purge the cache for a post #7538\n\nWordfence Security - Block an IP address #7514\n\nWordfence Security - Remove an IP block #7515\n\nWordfence Security - Remove an IP lockout #7516\n\nAutomator review - Added capability and nonce checks to the review settings handler, keeping unauthorized option changes firmly off the guest list. #8159\n\nBluesky - Protected post embed URL requests against SSRF, including redirects that tried to take the scenic route somewhere unsafe. #8157\n\nCredits notifications - Added a capability check so lower-privileged users can no longer dismiss site-wide credit notices. #8161\n\nFacebook Lead Ads - Added payload validation and optional authorization controls to webhooks, giving unexpected requests a proper ID check. #8155\n\nGravity Forms - Blank List fields no longer stop recipes during form submission. Empty lists can now pass quietly without causing a scene. #8019\n\nHubSpot, Brevo, Constant Contact - Deprecated actions - Prevented deprecated actions from loading when demand-driven loading is enabled. Retired means retired. #8035\n\nLearnDash - Create a group / Make the user the leader of a group - Fixed legacy option data that prevented the action configuration from opening. #8170\n\nLearnDash - Restored the missing loopable tokens to the Token Loop, where they belong. #8021\n\nLearnDash - Triggers - Restored the \"Number of times\" option for affected triggers. The counter is back on duty. #8168\n\nModern Events Calendar - Added authorization and nonce checks to event and ticket AJAX handlers for safer request handling. #8163\n\nRecipe log - Secured the \"View preview\" popup against stored XSS by rendering its HTML inside a sandboxed iframe. The preview now stays in its lane. #8165\n\nWordPress - Restored the missing loopable tokens to the Token Loop. #8028\n\nGoogle Contacts & Mautic - Added capability and nonce checks to option fetchers, ensuring only authorized requests get through. CVE-2026-15025 #8152\n\nForminator and related token reads - Hardened token handling against PHP Object Injection. CVE-2026-15008 #8150\n\nLoopable integrations (CSV/XML/JSON) - Blocked private-network requests in loopable URL fetchers and hardened token-alias migrations against object injection. #8151\n\nCore - Corrected app-credit limits for legacy Pro and Lifetime licenses. The numbers now behave as their licenses intended. #8138\n\nDivi - Modernized the integrations using the new framework, giving the foundations a well-earned refresh. #7458\n\nUncanny Agent - Database select tool - Secured WHERE and JOIN handling with validated predicates and prepared values. Database queries now follow a stricter dress code. #8014\n\nUncanny Agent - Secured component requests with encrypted license credentials, request binding, and fail-closed handling. When verification fails, the door stays closed. #8174",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "coming-soon@6.20.5",
     "title": "SeedProd 6.20.5",
     "date": "2026-07-13",
@@ -41,17 +63,6 @@
     "releaseType": "improvement",
     "summary": "Thrive Apprentice: Accept PayPal Payments Directly: You can now take PayPal payments natively in Thrive Apprentice, alongside Stripe and Square, without routing sales through a third-party checkout\n\nThrive Apprentice: Connect PayPal From Your Dashboard: Connect and disconnect your PayPal account from Settings > Payments > PayPal, with per-account connection status, a payment-method capability grid, and guidance if your PayPal email still needs confirming\n\nThrive Apprentice: Embedded PayPal Checkout: Buyers can purchase one-time products through an embedded PayPal checkout, paying with their PayPal balance or card (including guest checkout), without leaving your course page\n\nThrive Apprentice: PayPal Subscriptions: Sell recurring access with PayPal subscriptions, including automatic renewals, a grace period for failed payments, and automatic access revocation once retries are exhausted\n\nThrive Apprentice: Free Trials for Subscriptions: Offer a free-trial period on PayPal subscriptions, so buyers get access for a set number of days before their first payment is taken\n\nThrive Apprentice: Buyers Can Cancel Their Own Subscription: Members can cancel their PayPal subscription themselves from the front end\n\nThrive Apprentice: Subscriptions on the Edit Member Screen: PayPal subscriptions appear as a single grouped entry on the Edit Member screen, with trial and subscription badges and an expandable charge history\n\nThrive Apprentice: Google Pay & Venmo: Buyers can pay with Google Pay in the PayPal checkout, and the Venmo button now follows its checkout-method toggle\n\nThrive Apprentice: Pay Later Messaging: Eligible buyers see PayPal Pay Later messaging on the product page and in the checkout when their PayPal account supports it\n\nThrive Apprentice: Checkout Method Controls: Choose which payment methods appear at checkout, and the card form is collapsed by default and expands when a buyer selects it\n\nThrive Apprentice: Refund From the Order Admin: You can issue a full PayPal refund directly from a member&#8217;s access screen; refunding removes the member&#8217;s access and cancels any linked subscription\n\nThrive Apprentice: PayPal Debug ID in Orders: PayPal transactions now record and display PayPal&#8217;s Debug ID in the order admin, so support can locate any transaction in PayPal&#8217;s logs\n\nThrive Apprentice: Clean Wind-Down on Disconnect: Disconnecting PayPal cleanly winds down active subscriptions: they are cancelled at the end of their current billing period, and you are shown how many will be affected before you confirm",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/07/v10-9-3/",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.3.2",
-    "title": "Uncanny Automator 7.3.2",
-    "date": "2026-06-30",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "Status -> Tools - \"Resend App Actions\" tool to find and bulk resend failed app actions from one place. #8012\n\nApp Actions - Increased the default outgoing request timeout to better support longer-running app responses. #8009\n\nKit - Removed the unsupported OAuth connection flow and now support V4 connections by API key only. #8006\n\nStripe - Improved product and price dropdown performance in the recipe builder with cached remote loading and refresh support. #7999\n\nStripe - Product refunded trigger now correctly respects the selected price instead of firing for every refunded product. #7999\n\nActiveCampaign - Fixed an issue where custom fields could be omitted from the Add a contact action when field definitions needed to be refreshed. #7949\n\nApp Actions - Fixed an issue where resending a logged app action could trigger a PHP error on some sites. #8011\n\nApp Actions - Fixed an issue where successful app action responses could be incorrectly reported as \"Failed with status code - 200\". #8010\n\nGoogle Contacts - Fixed an issue where the Create a contact action could include internal Automator action metadata in outgoing API requests. #8004\n\nRecipe UI - Fixed an issue where select fields in the recipe builder could stop rendering when another plugin loaded a conflicting Select2 library. #8001\n\nRecipe Templates - Fixed an issue where the requirements sidebar could stretch past the window edge and cut off text. #7941\n\nTrigger Engine - Improved handling of high-frequency WordPress meta hooks to reduce unnecessary trigger checks and loopback requests. #7929",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
@@ -1042,17 +1053,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Update URLs.",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "envira-gallery-lite@1.12.2",
-    "title": "Envira Gallery Lite 1.12.2",
-    "date": "2025-12-18",
-    "brand": "Envira Gallery",
-    "brandSlug": "envira-gallery",
-    "releaseType": "fix",
-    "summary": "Added new Pro templates in layout chooser: Grid Fixed Title and Vertical Line Grid (with new preview images)\n\nAdded improved Gutenberg block empty-state UX: clearer “no galleries” messaging, Create/Add New Gallery CTA, and refreshed upload/media library UI\n\nFixed Envira CDN admin menu item to open in a new tab\n\nFixed/updated admin licensing modal copy and refreshed brand colors/icons\n\nFixed Gutenberg block placeholder/styling issues\n\nFixed admin review notice copy",
-    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
   {
