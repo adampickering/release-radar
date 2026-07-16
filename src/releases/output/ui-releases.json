@@ -1,5 +1,27 @@
 [
   {
+    "id": "userfeedback-lite@1.11.3",
+    "title": "UserFeedback Lite 1.11.3",
+    "date": "2026-07-15",
+    "brand": "UserFeedback",
+    "brandSlug": "userfeedback",
+    "releaseType": "fix",
+    "summary": "Fixed: Improved plugin stability and reduced license verification requests when userfeedback.com is unreachable.",
+    "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.3.1",
+    "title": "Thrive Themes 10.9.3.1",
+    "date": "2026-07-15",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Thrive Architect: Editor Loading Fix: Thrive Architect now opens correctly even when the global colors option is missing or corrupted\n\nThrive Architect: Footer Vertical Position: The footer’s Vertical Position setting now applies and saves correctly\n\nThrive Architect: Help Tooltips: The in-editor help tooltips now open correctly — no more console errors or endless loading — and link to the current documentation\n\nThrive Architect: Social Follow X Link: X no longer disappears from the Social Follow element when its Dynamic link is set to Author\n\nThrive Theme Builder: Inherit Font Setting: The Content Area’s Typography “Inherit” setting now persists after you save your template\n\nThrive Theme Builder: Link Trailing Slashes: Author and date archive links now include the trailing slash for consistent URLs\n\nThrive Leads: Impression Tracking Accuracy: Impressions are now counted only when a form is actually visible on screen, so your analytics and A/B test data reflect real views\n\nThrive Leads: Turnstile Widget Fix: The Cloudflare Turnstile widget no longer appears twice on Lead Generation forms when Lazy Load is enabled\n\nThrive Quiz Builder: ConvertKit Quiz Answer Tags: Numeric quiz answer tags (like “2024”) are now applied correctly to your Kit (ConvertKit) subscribers\n\nThrive Quiz Builder: Impression Tracking Accuracy: Quiz splash page impressions are now counted only when the page is actually visible on screen, for more accurate analytics\n\nThrive Apprentice: PayPal Checkout Options: PayPal checkout now respects your Card and Google Pay visibility toggles, and the card form stays collapsed until the buyer chooses it\n\nThrive Apprentice: One Welcome Email Per Purchase: Buying a bundle or membership now sends a single welcome email listing every included course, instead of one email per course. Existing customers also receive a welcome email when a new course is added to their product\n\nThrive Apprentice: Certificate Download Fix: The Download Certificate button no longer logs browser errors, and certificates with missing size settings now generate as proper full-page PDFs\n\nThrive Apprentice: Certificate Names After Duplication: Duplicated course certificates and completion pages now pick up the new course name when you rename the course\n\nThrive Apprentice: Square Payment Stability: Square payment processing no longer triggers a critical error when API credentials are missing or invalid\n\nThrive Ultimatum: Impression Tracking Accuracy: Campaign widget and shortcode impressions are now counted only when they’re actually visible on screen, for more accurate analytics\n\nThrive Comments: Dismissible Admin Notice: The “Thrive Comments is ready to use” notice can now be dismissed — and it stays dismissed\n\nThrive Dashboard: Google Drive Uploads: Lead Generation file uploads now work with Shared Drives and manually created folders — no more “File not found” errors. Action required: reconnect your Google Drive connection under Thrive Dashboard → API Connections so the new permissions take effect\n\nThrive Dashboard: ConvertKit Quiz Answer Tags: Numeric quiz answer tags (like “2024”) are now applied correctly to your Kit (ConvertKit) subscribers\n\nThrive Product Manager: Product Description Formatting: Product descriptions on the processing screen no longer show stray spaces, and “WordPress” is spelled correctly throughout\n\nThrive Product Manager: Security Improvements: This release includes security and stability improvements to keep your site protected",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/07/10-9-3-1/",
+    "tags": []
+  },
+  {
     "id": "envira-gallery-lite@1.13.0",
     "title": "Envira Gallery Lite 1.13.0",
     "date": "2026-07-14",
