@@ -1,5 +1,38 @@
 [
   {
+    "id": "wpforms-lite@2.0.0.2",
+    "title": "WPForms Lite 2.0.0.2",
+    "date": "2026-07-16",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Fixed: Form submissions could still be blocked by stricter web application firewall configurations that flagged the JSON structure of the Form Analytics data; the data attached to each submission is now base64-encoded\n\nFixed: A cross-site scripting vulnerability when a page combined a WPForms captcha with a specially crafted OptinMonster campaign",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "wpforms-lite@2.0.0.1",
+    "title": "WPForms Lite 2.0.0.1",
+    "date": "2026-07-16",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Fixed: Form submissions could be blocked by a web application firewall, such as Cloudflare's OWASP ruleset, because of the format of the Form Analytics data attached to each submission.",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "sugar-calendar-lite@3.12.0",
+    "title": "Sugar Calendar Lite 3.12.0",
+    "date": "2026-07-16",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "feature",
+    "summary": "Added: **NEW** Online Meetings: connect your Zoom account with a guided one-click setup and add a Zoom meeting to any event, right from the event editor\n\nAdded: **NEW** AI-ready events: AI assistants and automation tools can now work with your events (via the WordPress Abilities API)\n\nAdded: Redesigned Integrations settings area that shows all your connections in one place\n\nAdded: New License & Usage tab: see your license details and integration usage at a glance\n\nAdded: Unified Location tab in the event editor: set the venue address, the online meeting, or both in one place\n\nAdded: Online events now include structured data, so Google can display them properly in search results\n\nAdded: Visitors can now click \"Register Now\" or \"Buy Tickets\" directly in the calendar popup\n\nAdded: Event images in the Event List and Event Calendar blocks now load faster and look sharper on any screen size\n\nAdded: New developer actions and filters for Event Ticketing\n\nChanged: Events spanning multiple hours now show their real length in the Calendar block week view\n\nChanged: Design consistency and quality-of-life improvements across the admin\n\nFixed: Compatibility issues with the WPML translation plugin\n\nFixed: Links were being removed from the Email Message field\n\nFixed: Deleted events no longer leave \"ghost\" entries behind\n\nFixed: Checkout with multiple tickets could fail at the payment step\n\nFixed: Error when opening the admin Day view with an invalid date in the link\n\nFixed: All-day events now display correctly in the Calendar block week and day views\n\nFixed: Restored the missing \"Edit Tag\" link on the Events list view\n\nFixed: PHP warning that could appear in event blocks when an event had no tag\n\nFixed: Security improvements",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "userfeedback-lite@1.11.3",
     "title": "UserFeedback Lite 1.11.3",
     "date": "2026-07-15",
@@ -264,17 +297,6 @@
     "tags": []
   },
   {
-    "id": "wpforms-lite@1.10.1.1",
-    "title": "WPForms Lite 1.10.1.1",
-    "date": "2026-06-03",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "feature",
-    "summary": "Added: Inline Connect buttons in the Form Builder Payments panel, allowing users to connect their payment accounts without leaving the form editor\n\nChanged: The Payments page has a refreshed design when no payments have been received yet\n\nFixed: Fatal error on form submission when the PayPal Commerce account was disconnected while the form still had the PayPal Commerce payment enabled",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "pushengage@4.2.5",
     "title": "PushEngage 4.2.5",
     "date": "2026-06-02",
@@ -316,17 +338,6 @@
     "releaseType": "improvement",
     "summary": "Release 3.8.0.3.",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.10.1",
-    "title": "WPForms Lite 1.10.1",
-    "date": "2026-05-28",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: Secret key fields in the admin settings are now masked for improved privacy\n\nAdded: Smart Form Editing allows modifying existing forms using natural language through an AI chat interface directly inside the form builder\n\nChanged: Updated `symfony/polyfill-mbstring` library to v1.37.0\n\nChanged: Updated `symfony/polyfill-iconv` library to v1.37.0\n\nChanged: Updated DOMPurify library to v3.4.1\n\nFixed: The wrong PayPal Commerce connection status was displayed in certain cases\n\nFixed: Form Builder was stuck loading when third-party plugins prevented WordPress footer scripts from rendering\n\nFixed: Settings input values were saved with a trailing space, which could cause unexpected behavior\n\nFixed: Smart tag parsing returned an invalid value when no smart tags were present in the content\n\nFixed: Form Builder was not loading on sites with inconsistent URL configurations (e.g., www vs non-www mismatch or root-relative URL plugins)\n\nFixed: PHP fatal errors could occur in some cases on PHP 8.0+\n\nFixed: The Allow/Deny list settings were being cleared when a form had more than one Email field\n\nFixed: Outdated image asset paths were causing 404 errors on sites using the Divi theme\n\nFixed: An incorrect error message was shown when the daily AI request limit was reached, referring to form generation instead of AI usage",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
@@ -1328,17 +1339,6 @@
     "releaseType": "improvement",
     "summary": "Maintenance updates\n\nPreparation for ShareASale to AWIN migration",
     "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.9.1",
-    "title": "Sugar Calendar Lite 3.9.1",
-    "date": "2025-10-03",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "fix",
-    "summary": "Fixed: Fatal error on new post or CPT creation.",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
   {
