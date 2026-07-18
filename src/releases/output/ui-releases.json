@@ -1,5 +1,16 @@
 [
   {
+    "id": "sugar-calendar-lite@3.12.1",
+    "title": "Sugar Calendar Lite 3.12.1",
+    "date": "2026-07-17",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "fix",
+    "summary": "Fixed: The First Event Creation Guide no longer blocks the event editor when using the Block editor.",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.0.2",
     "title": "WPForms Lite 2.0.0.2",
     "date": "2026-07-16",
@@ -1085,17 +1096,6 @@
     "brandSlug": "sugar-calendar",
     "releaseType": "fix",
     "summary": "Fixed: Update URLs.",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.10.0",
-    "title": "Sugar Calendar Lite 3.10.0",
-    "date": "2025-12-17",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "feature",
-    "summary": "Added: Massive improvements to our Elementor integration. This includes many new Sugar Calendar Widgets for Elementor, Theme Builder support, and Loop Grid support\n\nAdded: Support to Excerpt in Events\n\nAdded: Support defining the license key using a PHP constant\n\nAdded: View number of ticket purchased directly in the Event List table\n\nChanged: Events and Calendars archive page is now showing a page with Event List block for better user experience. This can still be overriden via theme files\n\nChanged: Admin Events Calendar View QoL and UX improvements\n\nFixed: Event description with HTML like links `<a>` is not displaying properly in Event List and Event Calendar blocks\n\nFixed: Security improvement",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
