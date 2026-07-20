@@ -1,21 +1,67 @@
 {
-  "weekRange": "July 6 – 13, 2026",
-  "greeting": "Well hello there, fellow code wranglers and pixel pushers!",
-  "introParagraph": "This week, Release Radar picked up a single, solitary blip on the radar. It seems many dev teams were either deep in the trenches on something huge for next week, or perhaps enjoying a well-deserved, quiet week. We did catch an interesting improvement from SeedProd, proving that even a single update can make a difference in your toolkit.",
+  "weekRange": "July 13 – 20, 2026",
+  "greeting": "Greetings, fellow plugin enthusiasts and code whisperers!",
+  "introParagraph": "This week, the 'Release Radar' pings are showing a mixed bag: a handful of crucial fixes keeping things stable, alongside some intriguing new features that hint at the future of WordPress interactivity. It seems some plugins were busy shoring up their defenses against pesky WAFs, while others were busy inviting AI to the party. Let's dive into the details!",
   "stats": {
-    "releases": 1,
-    "brands": 1,
-    "features": 0,
-    "fixes": 0
+    "releases": 9,
+    "brands": 7,
+    "features": 2,
+    "fixes": 6
   },
   "highlights": [
     {
-      "title": "SeedProd 6.20.5",
-      "type": "improvement",
-      "summary": "While the changelog keeps its cards close, SeedProd's continuous iteration often means subtle yet impactful enhancements to their drag-and-drop page builder, ensuring smoother workflows and better design control for your landing pages."
+      "title": "Sugar Calendar Lite 3.12.0",
+      "type": "feature",
+      "summary": "Sugar Calendar is making your events even sweeter with new Zoom integration for online meetings and 'AI-ready events.' Get ready to streamline your virtual gatherings and potentially let AI assistants help manage your calendar – the future is here, and it's scheduled!"
+    },
+    {
+      "title": "WPForms Lite 2.0.0.1 & 2.0.0.2",
+      "type": "fix",
+      "summary": "WPForms swooped in with a critical double-fix, ensuring your form submissions don't get blocked by overzealous web application firewalls. It's a vital update for anyone who's ever wondered why their precious form data wasn't making it through the digital bouncer."
+    },
+    {
+      "title": "Envira Gallery Lite 1.13.0",
+      "type": "feature",
+      "summary": "Envira Gallery is jumping on the AI bandwagon, introducing an 'AI Image Assistant preview' directly within the gallery editor. This looks like a promising step towards making image management and optimization even smarter and more efficient for your visual content."
+    },
+    {
+      "title": "Thrive Themes 10.9.3.1",
+      "type": "fix",
+      "summary": "Thrive Architect users can rejoice as a crucial fix ensures the editor now loads correctly, even if global colors go rogue. No more staring blankly at a broken editor – your design workflow is back on track!"
     }
   ],
-  "otherReleases": [],
-  "closingJoke": "Why did the WordPress plugin break up with the theme? It felt like it was always being taken for granted, and frankly, it needed more 'space' in the sidebar.",
-  "generatedAt": "2026-07-13T17:13:03.396Z"
+  "otherReleases": [
+    {
+      "title": "Sugar Calendar Lite 3.12.1",
+      "type": "fix",
+      "shortSummary": "Fixed: The First Event Creation Guide no longer blocks the event editor when ..."
+    },
+    {
+      "title": "WPForms Lite 2.0.0.2",
+      "type": "fix",
+      "shortSummary": "Fixed: Form submissions could still be blocked by stricter web application fi..."
+    },
+    {
+      "title": "WPForms Lite 2.0.0.1",
+      "type": "fix",
+      "shortSummary": "Fixed: Form submissions could be blocked by a web application firewall, such ..."
+    },
+    {
+      "title": "UserFeedback Lite 1.11.3",
+      "type": "fix",
+      "shortSummary": "Fixed: Improved plugin stability and reduced license verification requests wh..."
+    },
+    {
+      "title": "Uncanny Automator 7.4.0",
+      "type": "fix",
+      "shortSummary": "[GoTo Meeting](https://automatorplugin.com/integration/gotomeeting/?utm_sourc..."
+    },
+    {
+      "title": "SeedProd 6.20.5",
+      "type": "improvement",
+      "shortSummary": "Release 6.20.5."
+    }
+  ],
+  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he felt like he was just a dependency, and she was always asynchronously loading!",
+  "generatedAt": "2026-07-20T16:24:35.128Z"
 }
