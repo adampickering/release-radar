@@ -1,5 +1,27 @@
 [
   {
+    "id": "google-analytics-for-wordpress@11.1.0",
+    "title": "MonsterInsights 11.1.0",
+    "date": "2026-07-21",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "feature",
+    "summary": "New: Introducing new AI-Powered Headline Analyser\n\nEnhancements: Various Performance Improvements and Bug Fixes",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.11.3",
+    "title": "Charitable 1.8.11.3",
+    "date": "2026-07-21",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "FIX: Hardened Square (Core) payment webhook processing.",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "sugar-calendar-lite@3.12.1",
     "title": "Sugar Calendar Lite 3.12.1",
     "date": "2026-07-17",
@@ -96,6 +118,17 @@
     "releaseType": "improvement",
     "summary": "Release 6.20.5.",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "google-analytics-for-wordpress@11.0.1",
+    "title": "MonsterInsights 11.0.1",
+    "date": "2026-07-07",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
   {
@@ -261,6 +294,28 @@
     "releaseType": "fix",
     "summary": "Thrive Architect: New Feature: Navigator Panel! See your entire page as an easy-to-browse list, search for any element, and click to jump straight to it on the canvas\n\nThrive Architect: Fixed: Saving a page could freeze your browser for 30 seconds or more; saving is now fast and smooth\n\nThrive Architect: Fixed: Applying a pre-built template no longer adds unwanted extra spacing around your page\n\nThrive Leads: New Feature: Track button clicks as conversions! Buttons inside your opt-in forms can now count as conversion events, and your reports now show impressions, conversions, and conversion rate at a glance\n\nThrive Dashboard: Improved: Getting help is simpler; the support button is now &#8220;Contact Support&#8221; and takes you straight to the Thrive Themes support page\n\nThrive Apprentice: Fixed: Clicking &#8220;Start Course&#8221; now correctly marks the course as started, so your Uncanny Automator automations fire as expected\n\nThrive Apprentice: Fixed: A harmless but noisy PHP notice related to assessments no longer appears in error logs",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2/",
+    "tags": []
+  },
+  {
+    "id": "google-analytics-for-wordpress@11.0.0",
+    "title": "MonsterInsights 11.0.0",
+    "date": "2026-06-15",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "google-analytics-for-wordpress@10.2.99",
+    "title": "MonsterInsights 10.2.99",
+    "date": "2026-06-11",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
     "tags": []
   },
   {
@@ -723,17 +778,6 @@
     "releaseType": "improvement",
     "summary": "Thrive Apprentice: Course Welcome Email: When you add a new member to a course with the welcome email enabled, they now receive exactly one welcome email instead of two\n\nThrive Theme Builder and Thrive Architect: Google SiteKit GTM: Google Tag Manager configured through Google SiteKit now fires correctly on Thrive landing pages\n\nIntegrations: Behind the scenes, we&#8217;ve laid the groundwork for a new way for Thrive products to connect with each other and with external tools for more powerful and flexible integrations and automations. Stay tuned for what&#8217;s coming",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/04/v10-8-10/",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.10.4",
-    "title": "Charitable 1.8.10.4",
-    "date": "2026-04-13",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "FIX: Fixed an issue where multiple Stripe webhook endpoints could accumulate over time, causing donation webhook events to fail signature verification in certain scenarios.",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
@@ -1405,17 +1449,6 @@
     "releaseType": "feature",
     "summary": "Added: New transactional mailer: Mandrill integration\n\nFixed: References and In-Reply-To email headers are now correctly preserved for API-based mailers",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.7.3",
-    "title": "Thrive Themes 10.7.3",
-    "date": "2025-08-19",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Improvements and Fixes:: Fixed: Category title size and color persistence issues have been resolved\n\nImprovements and Fixes:: Enhanced: Stripe integration stability for more reliable payments\n\nImprovements and Fixes:: Resolved: Text decoration and animation feature conflicts\n\nImprovements and Fixes:: Fixed: Dropdown/submenu visibility when rounded corners are applied to menu wrappers\n\nImprovements and Fixes:: Fixed: Lesson resources now display properly for hidden courses for users with access\n\nImprovements and Fixes:: Enhanced: Stripe integration stability to prevent plugin activation issues\n\nImprovements and Fixes:: Improved: Search functionality in Product Content now adds selected pages instead of replacing existing lists\n\nImprovements and Fixes:: Fixed: Account creation emails are now sent by default for Stripe and Square payments\n\nImprovements and Fixes:: Resolved: Dropdown/submenu visibility issues with rounded corner menu wrappers\n\nImprovements and Fixes:: Improved: Goal Page setup with clearer instructions for A/B testing\n\nImprovements and Fixes:: Fixed: Graph generation issues in A/B testing for Results Pages and Opt-in Gates\n\nImprovements and Fixes:: Enhanced: Square payment processing with better error handling for negative prices\n\nImprovements and Fixes:: Improved: Stripe checkout with user-friendly error messages\n\nImprovements and Fixes:: Fixed: Certificate formatting issues that caused text to wrap and become hidden in PDF outputs",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/08/v10-7-3/",
     "tags": []
   },
   {
