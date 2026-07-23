@@ -1,5 +1,49 @@
 [
   {
+    "id": "google-analytics-for-wordpress@11.1.1",
+    "title": "MonsterInsights 11.1.1",
+    "date": "2026-07-22",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Various bug fixes and updates.",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-facebook-feed@4.9.0",
+    "title": "Smash Balloon Social Post Feed 4.9.0",
+    "date": "2026-07-22",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Prevented block editor typography from reverting to serif fonts when the Facebook feed block is active\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.11.4",
+    "title": "Smash Balloon Instagram Feed 6.11.4",
+    "date": "2026-07-22",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New - Photos, Videos, and Reels filter toggles are now available in Instagram Feed Free\n\nFix - Instagram images now honor the intended image quality, and the Thumbnail feed size now uses the cached thumbnail file\n\nFix - Resolved an editor typography issue on WordPress versions below 7.0 caused by legacy block iframe styles\n\nFix - Additional plugin hardening",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.7.0",
+    "title": "Smash Balloon Twitter Feed 2.7.0",
+    "date": "2026-07-22",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Staggered feed update cron jobs to help balance server load\n\nFix: Plugin hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@11.1.0",
     "title": "MonsterInsights 11.1.0",
     "date": "2026-07-21",
@@ -913,17 +957,6 @@
     "tags": []
   },
   {
-    "id": "instagram-feed@6.10.1",
-    "title": "Smash Balloon Instagram Feed 6.10.1",
-    "date": "2026-03-12",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak - Added optional deactivation feedback survey to help us improve the plugin\n\nTweak - Various PHP 8.4 compatibility enhancements",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
     "id": "custom-twitter-feeds@2.5.4",
     "title": "Smash Balloon Twitter Feed 2.5.4",
     "date": "2026-03-12",
@@ -1152,17 +1185,6 @@
     "releaseType": "fix",
     "summary": "What&#8217;s New:: Advanced Tag Management: You can now create, select, and manage tags directly within Thrive Architect for supported platforms. No need to switch back and forth between your email service provider and WordPress!\n\nWhat&#8217;s New:: Enhanced Custom Field Mapping: Map your form fields to custom fields in your email service provider, giving you more control over the data you collect and how it&#8217;s organized in your marketing platform\n\nWhat&#8217;s New:: *Improved Platform Support: We&#8217;ve added enhanced integration capabilities including tag synching for:\n\nActiveCampaign\n\nWhat&#8217;s New:: AWeber (now supports migration to OAuth2 authentication)\n\nWhat&#8217;s New:: ConvertKit (Kit)\n\nWhat&#8217;s New:: Constant Contact\n\nWhat&#8217;s New:: FluentCRM\n\nWhat&#8217;s New:: Keap (Infusionsoft)\n\nWhat&#8217;s New:: KlickTipp\n\nWhat&#8217;s New:: Mailchimp\n\nWhat&#8217;s New:: MailRelay\n\nWhat&#8217;s New:: SendLane\n\nWhat&#8217;s New:: Zoho Campaigns\n\nWhat&#8217;s New:: Better Performance: We&#8217;ve added intelligent caching for API requests, reducing redundant calls and speeding up your workflow when configuring forms!\n\nWhat&#8217;s New:: Refined User Interface: Tag dropdowns now feature improved styling, better scrollbars, and cleaner selection rendering. Already-selected tags are automatically hidden from the dropdown for a cleaner experience!\n\nWhat&#8217;s New:: Social Share Preview Images Now Display Correctly on Twitter/X: We&#8217;ve updated share URL generation to ensure Twitter&#8217;s crawler properly caches your quiz badge images, so they now display reliably when shared!\n\nWhat&#8217;s New:: Shop Element Pagination Now Works Properly in Quiz Results: We&#8217;ve rebuilt the pagination system to work smoothly with dynamically loaded content. Products now load correctly and all buttons work as expected!\n\nWhat&#8217;s New:: Custom HTML Element Preview in Dynamic Content: Custom HTML elements inside Dynamic Content now properly display their &#8220;No preview available&#8221; placeholder in the editor, even when switching between different dynamic content states\n\nWhat&#8217;s New:: PHP 8.3 Compatibility for Quiz Settings: Enhanced quiz settings handling to ensure seamless compatibility with PHP 8.3. Quiz pages now load and edit smoothly regardless of your PHP version!\n\nWhat&#8217;s New:: Fixed Error with Questions Missing Answers: Quiz calculations no longer crash when a question has no answers defined. The system now handles empty answer arrays gracefully, preventing fatal errors when calculating quiz scores!\n\nWhat&#8217;s New:: AWeber Now Supports OAuth 2.0 Authentication with Full Tags Management: You can now select, create, and manage AWeber tags directly within Thrive Architect when using OAuth 2.0 connections. OAuth 1.0 connections continue to work as before, and API credentials are now managed via wp-config.php for improved security\n\nWhat&#8217;s New:: Pages with Carousel Elements Now Save Correctly: We&#8217;ve added backward compatibility to automatically detect and fix broken carousel configurations when pages load, so everything saves smoothly now!\n\nWhat&#8217;s New:: SureCart Cart Menu Icon Now Works on Landing Pages: We&#8217;ve added the necessary initialization so the cart icon now functions properly and opens the cart drawer as expected!\n\nWhat&#8217;s New:: Image Gallery Manual Height Adjustments Now Work Correctly: We&#8217;ve rebuilt height handling using CSS variables that automatically adapt to each viewport, so custom heights now work as expected across all devices!\n\nWhat&#8217;s New:: Sticky Elements Now Respect Alignment Settings: Sticky elements now maintain their configured horizontal alignment (left, center, or right) when scrolling. Previously, all sticky elements would center themselves regardless of your alignment settings!\n\nWhat&#8217;s New:: Image Gallery Captions Now Sync with WordPress Media Library: When you update image captions in the WordPress Media Library, those changes now automatically reflect in your Thrive Architect Image Gallery elements. Previously, galleries would continue showing old captions even after updating them in the media library. This applies to all image gallery displays including lightboxes and carousels!\n\nWhat&#8217;s New:: Fixed PHP Warnings in Square Payment Integration: We&#8217;ve added proper null checking for token expiration data to resolve PHP warnings in error logs!\n\nWhat&#8217;s New:: Fixed Conflict with Brevo Plugin: If you had the Brevo plugin installed, it was causing design elements in Thrive Apprentice to break due to conflicting Select2 library versions. We&#8217;ve updated Thrive Apprentice to prevent this conflict, so your course designs now display correctly!\n\nWhat&#8217;s New:: Author Image No Longer Affects Image Gallery Images in Post Lists: We&#8217;ve updated the code to only modify the specific Author Image being inserted, leaving your Image Gallery images untouched!\n\nWhat&#8217;s New:: ThriveBox Impressions Now Track More Accurately: Impressions are now only counted when the ThriveBox is actually opened and viewed, giving you more accurate tracking data!\n\nWhat&#8217;s New:: ActiveCampaign Forms Handle Datetime Fields Correctly: Form submissions to ActiveCampaign no longer fail when updating contacts with empty or invalid datetime field values. The integration now automatically sanitizes datetime fields by removing empty values or formatting them to the correct ISO 8601 format!\n\nWhat&#8217;s New:: Constant Contact and iContact Forms Handle Apostrophes Correctly: Form submissions to Constant Contact and iContact now properly handle apostrophes and special characters without adding unwanted backslashes. Your subscriber data is now stored cleanly in your accounts!\n\nWhat&#8217;s New:: All Mailing Lists and Custom Fields Now Load in Forms: We&#8217;ve increased the query limit from 20 to 200 when loading mailing lists and custom fields. If you have more than 20 lists or custom fields in your email service provider, they&#8217;ll now all appear in the dropdowns instead of being cut off!\n\nWhat&#8217;s New:: Constant Contact Expired Tokens Now Handled Gracefully: Pages with Lead Generation forms connected to Constant Contact no longer display fatal errors when the refresh token expires. The integration now handles expired tokens properly, allowing your page to load normally so you can reconnect your account!\n\nWhat&#8217;s New:: Google Fonts Now Load Correctly on Subdirectory Sites: Google Fonts can now be properly fetched in the font library for WordPress installations using subdirectory configurations with plain text permalink structures. Previously, these sites would encounter errors when trying to load Google Fonts!\n\nWhat&#8217;s New:: Automator No Longer Installs When Selecting All Products: When using the &#8220;Select All&#8221; option in Thrive Product Manager, Thrive Automator will now correctly remain unchecked and won&#8217;t be installed. This ensures you have full control over which products are installed on your site!",
     "changelogUrl": "https://changelog.thrivethemes.com/2025/12/v10-8-5/",
-    "tags": []
-  },
-  {
-    "id": "custom-facebook-feed@4.3.4",
-    "title": "Smash Balloon Social Post Feed 4.3.4",
-    "date": "2025-12-11",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "fix",
-    "summary": "Fix: Plugin security hardening\n\nFix: Fixed an issue with the review notice not being dismissible\n\nTweak: Improved text domain loading (_load_textdomain_just_in_time fix)\n\nTweak: Various PHP warning and legacy feed compatibility fixes\n\nTweak: Updated the Graph API version",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
   {
