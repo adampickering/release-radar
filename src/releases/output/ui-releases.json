@@ -1,5 +1,27 @@
 [
   {
+    "id": "coming-soon@6.20.6",
+    "title": "SeedProd 6.20.6",
+    "date": "2026-07-23",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "fix",
+    "summary": "Added - Manage with AI page: connect Claude, ChatGPT, or any AI assistant to manage your site with the free WPVibe plugin\n\nAdded - WPVibe in Recommended Plugins with one-click install\n\nFixed - Setup wizard completion now installs plugins selected in the wizard reliably\n\nFixed - License update checks no longer clear a valid license\n\nFixed - Import shows a clearer message when a ZIP of the wrong type is uploaded\n\nFixed - PHP warnings when bypass settings were missing keys\n\nTweak - Security hardening: output escaping, ABSPATH guards, and text domain corrections\n\nTweak - Removed an unused bundled script library",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "insert-headers-and-footers@2.3.8",
+    "title": "WPCode 2.3.8",
+    "date": "2026-07-23",
+    "brand": "WPCode",
+    "brandSlug": "wpcode",
+    "releaseType": "improvement",
+    "summary": "Tweak: You can now resize the code editor on the Live CSS Preview screen by dragging the divider between it and the preview, and it remembers the size you set\n\nTweak: Editing an active snippet now requires permission to activate snippets; without it the editor is read-only",
+    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@11.1.1",
     "title": "MonsterInsights 11.1.1",
     "date": "2026-07-22",
@@ -151,17 +173,6 @@
     "releaseType": "fix",
     "summary": "[GoTo Meeting](https://automatorplugin.com/integration/gotomeeting/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7993\n\n[Beaver Builder](https://automatorplugin.com/integration/beaver-builder/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7476\n\n[Redirection](https://automatorplugin.com/integration/redirection/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7533\n\n[WP Activity Log](https://automatorplugin.com/integration/wp-activity-log/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7522\n\n[WP Fastest Cache](https://automatorplugin.com/integration/wp-fastest-cache/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7534\n\n[Wordfence Security](https://automatorplugin.com/integration/wordfence/?utm_source=wp_repo_automator&utm_medium=readme&utm_content=changelog) #7506\n\nBeaver Builder - A user submits a contact form #7477\n\nBeaver Builder - A user submits a subscribe form #7478\n\nRedirection - A 404 error is logged #7532\n\nRedirection - A redirect in a group is matched #7529\n\nRedirection - A redirect is created by the URL monitor #7530\n\nRedirection - A redirect is deleted #7531\n\nWP Activity Log - A failed login is logged #7520\n\nWP Activity Log - An event for an object type is logged #7518\n\nWP Activity Log - An event is logged #7521\n\nWP Activity Log - An event of a type is logged #7517\n\nWP Activity Log - An event with a severity is logged #7519\n\nWP Fastest Cache - All cache is cleared #7535\n\nWordfence Security - A blocking rule is deleted #7513\n\nWordfence Security - A login with a breached password is blocked #7509\n\nWordfence Security - A user activates two-factor authentication #7510\n\nWordfence Security - A user deactivates two-factor authentication #7511\n\nWordfence Security - An IP is blocked/throttled #7508\n\nWordfence Security - An IP is locked out #7507\n\nWordfence Security - An admin/non-admin user logs in #7512\n\nGoTo Meeting - Create a meeting #7994\n\nGoTo Meeting - Delete a meeting #7995\n\nGoTo Training - Add an attendee #7996\n\nGoTo Training - Remove an attendee #7997\n\nWP Fastest Cache - Purge all caches #7537\n\nWP Fastest Cache - Purge the cache for a post #7538\n\nWordfence Security - Block an IP address #7514\n\nWordfence Security - Remove an IP block #7515\n\nWordfence Security - Remove an IP lockout #7516\n\nAutomator review - Added capability and nonce checks to the review settings handler, keeping unauthorized option changes firmly off the guest list. #8159\n\nBluesky - Protected post embed URL requests against SSRF, including redirects that tried to take the scenic route somewhere unsafe. #8157\n\nCredits notifications - Added a capability check so lower-privileged users can no longer dismiss site-wide credit notices. #8161\n\nFacebook Lead Ads - Added payload validation and optional authorization controls to webhooks, giving unexpected requests a proper ID check. #8155\n\nGravity Forms - Blank List fields no longer stop recipes during form submission. Empty lists can now pass quietly without causing a scene. #8019\n\nHubSpot, Brevo, Constant Contact - Deprecated actions - Prevented deprecated actions from loading when demand-driven loading is enabled. Retired means retired. #8035\n\nLearnDash - Create a group / Make the user the leader of a group - Fixed legacy option data that prevented the action configuration from opening. #8170\n\nLearnDash - Restored the missing loopable tokens to the Token Loop, where they belong. #8021\n\nLearnDash - Triggers - Restored the \"Number of times\" option for affected triggers. The counter is back on duty. #8168\n\nModern Events Calendar - Added authorization and nonce checks to event and ticket AJAX handlers for safer request handling. #8163\n\nRecipe log - Secured the \"View preview\" popup against stored XSS by rendering its HTML inside a sandboxed iframe. The preview now stays in its lane. #8165\n\nWordPress - Restored the missing loopable tokens to the Token Loop. #8028\n\nGoogle Contacts & Mautic - Added capability and nonce checks to option fetchers, ensuring only authorized requests get through. CVE-2026-15025 #8152\n\nForminator and related token reads - Hardened token handling against PHP Object Injection. CVE-2026-15008 #8150\n\nLoopable integrations (CSV/XML/JSON) - Blocked private-network requests in loopable URL fetchers and hardened token-alias migrations against object injection. #8151\n\nCore - Corrected app-credit limits for legacy Pro and Lifetime licenses. The numbers now behave as their licenses intended. #8138\n\nDivi - Modernized the integrations using the new framework, giving the foundations a well-earned refresh. #7458\n\nUncanny Agent - Database select tool - Secured WHERE and JOIN handling with validated predicates and prepared values. Database queries now follow a stricter dress code. #8014\n\nUncanny Agent - Secured component requests with encrypted license credentials, request binding, and fail-closed handling. When verification fails, the door stays closed. #8174",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.5",
-    "title": "SeedProd 6.20.5",
-    "date": "2026-07-13",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Release 6.20.5.",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
@@ -1119,17 +1130,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Added ABSPATH security checks to all admin and partial files to prevent direct file access\n\nFixed: Added missing text domain parameters to all translation strings throughout the plugin\n\nFixed: removed some submenus\n\nUpdated: Plugin readme title and description for clarity\n\nUpdated: Minimum WordPress version requirement from 5.5.0 to 5.5\n\nRemoved: Unused textdomain loading function",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "insert-headers-and-footers@2.3.3",
-    "title": "WPCode 2.3.3",
-    "date": "2026-01-21",
-    "brand": "WPCode",
-    "brandSlug": "wpcode",
-    "releaseType": "improvement",
-    "summary": "Tweak: Improved PHP 8.5 compatibility.",
-    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
     "tags": []
   },
   {
