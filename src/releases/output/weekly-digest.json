@@ -1,67 +1,62 @@
 {
-  "weekRange": "July 13 – 20, 2026",
-  "greeting": "Greetings, fellow plugin enthusiasts and code whisperers!",
-  "introParagraph": "This week, the 'Release Radar' pings are showing a mixed bag: a handful of crucial fixes keeping things stable, alongside some intriguing new features that hint at the future of WordPress interactivity. It seems some plugins were busy shoring up their defenses against pesky WAFs, while others were busy inviting AI to the party. Let's dive into the details!",
+  "weekRange": "July 20 – 27, 2026",
+  "greeting": "Well hello there, fellow pixel-pushers and code connoisseurs!",
+  "introParagraph": "This week's Release Radar is buzzing with a blend of AI-infused innovations and crucial stability enhancements. While some plugins are getting smarter with artificial intelligence, others are ensuring your sites stay secure and performant. It seems the WordPress ecosystem is both evolving and solidifying its foundations, which is always a good sign for us all.",
   "stats": {
     "releases": 9,
-    "brands": 7,
+    "brands": 5,
     "features": 2,
-    "fixes": 6
+    "fixes": 3
   },
   "highlights": [
     {
-      "title": "Sugar Calendar Lite 3.12.0",
+      "title": "MonsterInsights 11.1.0",
       "type": "feature",
-      "summary": "Sugar Calendar is making your events even sweeter with new Zoom integration for online meetings and 'AI-ready events.' Get ready to streamline your virtual gatherings and potentially let AI assistants help manage your calendar – the future is here, and it's scheduled!"
+      "summary": "MonsterInsights just dropped a shiny new AI-Powered Headline Analyser! This sounds like a fantastic tool to help boost your content's click-through rates, making your analytics even more actionable beyond just numbers."
     },
     {
-      "title": "WPForms Lite 2.0.0.1 & 2.0.0.2",
-      "type": "fix",
-      "summary": "WPForms swooped in with a critical double-fix, ensuring your form submissions don't get blocked by overzealous web application firewalls. It's a vital update for anyone who's ever wondered why their precious form data wasn't making it through the digital bouncer."
-    },
-    {
-      "title": "Envira Gallery Lite 1.13.0",
+      "title": "Smash Balloon Instagram Feed 6.11.4",
       "type": "feature",
-      "summary": "Envira Gallery is jumping on the AI bandwagon, introducing an 'AI Image Assistant preview' directly within the gallery editor. This looks like a promising step towards making image management and optimization even smarter and more efficient for your visual content."
+      "summary": "Big news for Instagram Feed Free users! You can now filter by Photos, Videos, and Reels, giving your users more control over their feed experience. Plus, they've ensured your Instagram images will finally honor their intended quality."
     },
     {
-      "title": "Thrive Themes 10.9.3.1",
+      "title": "SeedProd 6.20.7",
       "type": "fix",
-      "summary": "Thrive Architect users can rejoice as a crucial fix ensures the editor now loads correctly, even if global colors go rogue. No more staring blankly at a broken editor – your design workflow is back on track!"
+      "summary": "SeedProd is jumping on the AI train, integrating a 'Manage with AI' page and recommending WPVibe for AI assistance. While technically a fix in this iteration, the underlying feature push towards AI site management is definitely noteworthy and worth keeping an eye on."
+    },
+    {
+      "title": "WPCode 2.3.8",
+      "type": "improvement",
+      "summary": "For those of us constantly tweaking CSS, WPCode now lets you resize and remember the size of the code editor on the Live CSS Preview screen. A small tweak, perhaps, but a mighty one for workflow efficiency and developer happiness!"
     }
   ],
   "otherReleases": [
     {
-      "title": "Sugar Calendar Lite 3.12.1",
+      "title": "SeedProd 6.20.6",
       "type": "fix",
-      "shortSummary": "Fixed: The First Event Creation Guide no longer blocks the event editor when ..."
+      "shortSummary": "Added - Manage with AI page: connect Claude, ChatGPT, or any AI assistant to ..."
     },
     {
-      "title": "WPForms Lite 2.0.0.2",
+      "title": "MonsterInsights 11.1.1",
       "type": "fix",
-      "shortSummary": "Fixed: Form submissions could still be blocked by stricter web application fi..."
+      "shortSummary": "Fixes: Various bug fixes and updates."
     },
     {
-      "title": "WPForms Lite 2.0.0.1",
-      "type": "fix",
-      "shortSummary": "Fixed: Form submissions could be blocked by a web application firewall, such ..."
-    },
-    {
-      "title": "UserFeedback Lite 1.11.3",
-      "type": "fix",
-      "shortSummary": "Fixed: Improved plugin stability and reduced license verification requests wh..."
-    },
-    {
-      "title": "Uncanny Automator 7.4.0",
-      "type": "fix",
-      "shortSummary": "[GoTo Meeting](https://automatorplugin.com/integration/gotomeeting/?utm_sourc..."
-    },
-    {
-      "title": "SeedProd 6.20.5",
+      "title": "Smash Balloon Social Post Feed 4.9.0",
       "type": "improvement",
-      "shortSummary": "Release 6.20.5."
+      "shortSummary": "Fix: Prevented block editor typography from reverting to serif fonts when the..."
+    },
+    {
+      "title": "Smash Balloon Twitter Feed 2.7.0",
+      "type": "improvement",
+      "shortSummary": "Tweak: Staggered feed update cron jobs to help balance server load"
+    },
+    {
+      "title": "Charitable 1.8.11.3",
+      "type": "improvement",
+      "shortSummary": "FIX: Hardened Square (Core) payment webhook processing."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he felt like he was just a dependency, and she was always asynchronously loading!",
-  "generatedAt": "2026-07-20T16:24:35.128Z"
+  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he needed more commitment, and it just kept reacting! Don't worry, your plugins are more stable than my love life.",
+  "generatedAt": "2026-07-27T16:58:35.482Z"
 }
