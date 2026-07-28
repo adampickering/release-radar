@@ -1,5 +1,27 @@
 [
   {
+    "id": "coming-soon@6.20.7",
+    "title": "SeedProd 6.20.7",
+    "date": "2026-07-27",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "fix",
+    "summary": "Added - Manage with AI page: connect Claude, ChatGPT, or any AI assistant to manage your site with the free WPVibe plugin\n\nAdded - WPVibe in Recommended Plugins with one-click install\n\nFixed - Setup wizard completion now installs plugins selected in the wizard reliably\n\nFixed - License update checks no longer clear a valid license\n\nFixed - Import shows a clearer message when a ZIP of the wrong type is uploaded\n\nFixed - PHP warnings when bypass settings were missing keys\n\nTweak - Security hardening: output escaping, ABSPATH guards, and text domain corrections\n\nTweak - Removed an unused bundled script library",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "easy-digital-downloads@3.6.9.1",
+    "title": "Easy Digital Downloads 3.6.9.1",
+    "date": "2026-07-27",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "fix",
+    "summary": "Admin: Hardened the display of payment gateway error and API request log messages\n\nImports: Improved hardening and validation of uploaded import files",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
     "id": "coming-soon@6.20.6",
     "title": "SeedProd 6.20.6",
     "date": "2026-07-23",
@@ -1064,17 +1086,6 @@
     "releaseType": "improvement",
     "summary": "Added: Empty state on the All Galleries screen when you have no galleries, with a clear call-to-action to create your first gallery\n\nFixed: Access to the justified gallery theme parameter\n\nFixed: Gallery selector in the block editor now shows gallery titles with readable characters (e.g. ampersands and quotes) instead of HTML entity codes\n\nImproved: Cosmetic updates and UI improvements across the plugin: overview page, create gallery tabs, top bar styling, and upgrade button consistency\n\nImproved: Plugin name and description updated for clarity",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.5",
-    "title": "Easy Digital Downloads 3.6.5",
-    "date": "2026-02-18",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "feature",
-    "summary": "NEW: Cron - Cron events are now more reliable and based on Action Scheduler\n\nCart: Fixed an unused variable in the cart class\n\nCart: The error handler has been improved to show messages more consistently\n\nCheckout: Improved checkout accessibility\n\nDiscounts: Discount Select field now supports filtering out invalid discounts\n\nDownloads: Improved the accuracy of the Download select field\n\nEmails: Fixed documentation link\n\nEmails: Introduced new 'Styles' feature to the email editor\n\nEmails: Base email class now passes the Email Type to the template part\n\nLabs: Cart Caching - Corrected an issue with tax recalculation not invalidating cache\n\nLogs: Added filters for the LogStorageCalculator to support extensions\n\nLogs: Improved log filter navigation\n\nNotifications: Improved the flexibility of store notifications\n\nOrders: Improved order status logic when processing a refund\n\nPrivacy: Personal data exports could fatal error if a product no longer exists\n\nStripe: Removed Sofort as an individual gateway (now supported in Klarna)\n\nStripe: Prevent a console error on the Stripe settings page\n\nDev: Added the cookie name to the `edd_cookie_options` filter\n\nDev: Fixed incorrect usage of `echo` with `esc_html_e`\n\nDev: Introduced base `edd-modal` styles and scripts\n\nDev: Introduced the `edd_cart_tax_recalculated` hook",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
@@ -2405,17 +2416,6 @@
     "brandSlug": "seedprod",
     "releaseType": "feature",
     "summary": "Added - Column Alignment Controls\n\nAdded - Divice Visibility Controls\n\nAdded - Full Length Template Previews\n\nTweak - Version Sync with Pro",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.2.1",
-    "title": "SeedProd 6.2.1",
-    "date": "2021-03-30",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "improvement",
-    "summary": "Tweak - Clarify External Service is used for license upgrades\n\nTweak - Removed helper function that was set for pre-release",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
