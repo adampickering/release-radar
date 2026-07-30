@@ -1,5 +1,16 @@
 [
   {
+    "id": "google-analytics-for-wordpress@11.1.2",
+    "title": "MonsterInsights 11.1.2",
+    "date": "2026-07-29",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Enhancements: Security hardening across admin and reporting requests\n\nFixes: Charts no longer break when another plugin loads its own copy of ApexCharts\n\nFixes: Reduced admin notification requests that could trip firewall rate limits\n\nFixes: Various bug fixes and updates",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.4.1",
     "title": "Uncanny Automator 7.4.1",
     "date": "2026-07-29",
