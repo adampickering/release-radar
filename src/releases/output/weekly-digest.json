@@ -1,62 +1,52 @@
 {
-  "weekRange": "July 20 – 27, 2026",
-  "greeting": "Well hello there, fellow pixel-pushers and code connoisseurs!",
-  "introParagraph": "This week's Release Radar is buzzing with a blend of AI-infused innovations and crucial stability enhancements. While some plugins are getting smarter with artificial intelligence, others are ensuring your sites stay secure and performant. It seems the WordPress ecosystem is both evolving and solidifying its foundations, which is always a good sign for us all.",
+  "weekRange": "July 27 – August 3, 2026",
+  "greeting": "Well, hello there, fellow WordPress aficionados!",
+  "introParagraph": "This week's Release Radar scans show a bit of a mixed bag, with a strong emphasis on shoring up our digital foundations. While a few major players were busy patching things up and tightening security bolts, we also caught a glimpse of the AI future peeking into our gallery editors. It seems everyone's either battening down the hatches or plugging into the matrix!",
   "stats": {
-    "releases": 9,
-    "brands": 5,
-    "features": 2,
-    "fixes": 3
+    "releases": 6,
+    "brands": 6,
+    "features": 1,
+    "fixes": 4
   },
   "highlights": [
     {
-      "title": "MonsterInsights 11.1.0",
+      "title": "Envira Gallery Lite 1.14.0",
       "type": "feature",
-      "summary": "MonsterInsights just dropped a shiny new AI-Powered Headline Analyser! This sounds like a fantastic tool to help boost your content's click-through rates, making your analytics even more actionable beyond just numbers."
+      "summary": "Get ready for a sneak peek into the future of image management! Envira Gallery Lite introduced an AI Image Assistant preview directly in the gallery editor, promising to streamline your creative workflow with smart suggestions and automation."
     },
     {
-      "title": "Smash Balloon Instagram Feed 6.11.4",
-      "type": "feature",
-      "summary": "Big news for Instagram Feed Free users! You can now filter by Photos, Videos, and Reels, giving your users more control over their feed experience. Plus, they've ensured your Instagram images will finally honor their intended quality."
-    },
-    {
-      "title": "SeedProd 6.20.7",
-      "type": "fix",
-      "summary": "SeedProd is jumping on the AI train, integrating a 'Manage with AI' page and recommending WPVibe for AI assistance. While technically a fix in this iteration, the underlying feature push towards AI site management is definitely noteworthy and worth keeping an eye on."
-    },
-    {
-      "title": "WPCode 2.3.8",
+      "title": "Uncanny Automator 7.4.1",
       "type": "improvement",
-      "summary": "For those of us constantly tweaking CSS, WPCode now lets you resize and remember the size of the code editor on the Live CSS Preview screen. A small tweak, perhaps, but a mighty one for workflow efficiency and developer happiness!"
+      "summary": "Uncanny Automator continues to refine its integration game, modernizing its connections with Kadence and Pretty Links. This means smoother automations and more reliable workflows for those crucial cross-plugin interactions."
+    },
+    {
+      "title": "Soliloquy Lite 2.8.3 & MonsterInsights 11.1.2",
+      "type": "fix",
+      "summary": "Both Soliloquy Lite and MonsterInsights rolled out significant security hardening across their admin screens and reporting. It's a clear signal that plugin developers are prioritizing a robust defense against potential vulnerabilities, keeping our sites safer one patch at a time."
+    },
+    {
+      "title": "Easy Digital Downloads 3.6.9.1",
+      "type": "fix",
+      "summary": "EDD tightened its security belt, hardening the display of payment gateway error messages and improving validation for uploaded import files. This is great news for store owners, ensuring more secure data handling and transparency during crucial operations."
     }
   ],
   "otherReleases": [
     {
-      "title": "SeedProd 6.20.6",
+      "title": "Soliloquy Lite 2.8.3",
+      "type": "fix",
+      "shortSummary": "Fixed: Security hardening across the admin screens — every action now verifie..."
+    },
+    {
+      "title": "MonsterInsights 11.1.2",
+      "type": "fix",
+      "shortSummary": "Enhancements: Security hardening across admin and reporting requests"
+    },
+    {
+      "title": "SeedProd 6.20.7",
       "type": "fix",
       "shortSummary": "Added - Manage with AI page: connect Claude, ChatGPT, or any AI assistant to ..."
-    },
-    {
-      "title": "MonsterInsights 11.1.1",
-      "type": "fix",
-      "shortSummary": "Fixes: Various bug fixes and updates."
-    },
-    {
-      "title": "Smash Balloon Social Post Feed 4.9.0",
-      "type": "improvement",
-      "shortSummary": "Fix: Prevented block editor typography from reverting to serif fonts when the..."
-    },
-    {
-      "title": "Smash Balloon Twitter Feed 2.7.0",
-      "type": "improvement",
-      "shortSummary": "Tweak: Staggered feed update cron jobs to help balance server load"
-    },
-    {
-      "title": "Charitable 1.8.11.3",
-      "type": "improvement",
-      "shortSummary": "FIX: Hardened Square (Core) payment webhook processing."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the JavaScript framework? Because he needed more commitment, and it just kept reacting! Don't worry, your plugins are more stable than my love life.",
-  "generatedAt": "2026-07-27T16:58:35.482Z"
+  "closingJoke": "Why did the WordPress plugin break up with its database? Because it had too many unresolved dependencies! Always keep your relationships updated, folks.",
+  "generatedAt": "2026-08-03T17:09:17.573Z"
 }
