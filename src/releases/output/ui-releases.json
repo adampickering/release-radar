@@ -1,5 +1,16 @@
 [
   {
+    "id": "all-in-one-seo-pack@5.0.0.1",
+    "title": "All in One SEO 5.0.0.1",
+    "date": "2026-08-03",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Updated: Made Search Appearance and Social Appearance cards in metabox collapsible\n\nFixed: Focus keyword and additional keywords sometimes not appearing in TruSEO after 5.0.0 update\n\nFixed: Resurfaced missing product ID, SKU and image alt text checks in TruSEO",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
     "id": "soliloquy-lite@2.8.3",
     "title": "Soliloquy Lite 2.8.3",
     "date": "2026-07-30",
