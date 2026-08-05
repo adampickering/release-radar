@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.5.0",
+    "title": "Uncanny Automator 7.5.0",
+    "date": "2026-08-04",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Uncanny Page Builder - Create and refine beautiful pages through conversation with Uncanny Agent (requires an Uncanny Automator Pro AI + Automation plan) #8330\n\n[Site Kit by Google](https://automatorplugin.com/integration/site-kit-by-google/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7528\n\nSite Kit by Google - A module is activated #7526\n\nSite Kit by Google - A module is deactivated #7525\n\nSite Kit by Google - Activate a module #7524\n\nSite Kit by Google - Deactivate a module #7523\n\nClosures - Restored the \"Redirect when all triggers are completed\" checkbox for all recipes. #8285\n\nForminator - Fixed an issue where Time field tokens rendered as \"10:30 am\" instead of \"10 - 30 am\". #8284\n\nCore - Fixed an issue where the \"Immediately delete log entries when recipes are completed\" setting never purged logs. #8294",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@5.0.0.1",
     "title": "All in One SEO 5.0.0.1",
     "date": "2026-08-03",
@@ -30,17 +41,6 @@
     "releaseType": "fix",
     "summary": "Enhancements: Security hardening across admin and reporting requests\n\nFixes: Charts no longer break when another plugin loads its own copy of ApexCharts\n\nFixes: Reduced admin notification requests that could trip firewall rate limits\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.4.1",
-    "title": "Uncanny Automator 7.4.1",
-    "date": "2026-07-29",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "Kadence - Modernized the integration to use the latest framework. #8228\n\nPrettyLinks - Modernized the integration with unified support for Pretty Links v3 and v4. #8219\n\nAI settings - Closed an arbitrary code execution path by ensuring the provider settings save handler no longer executes request-supplied callbacks. #8273\n\nDiscord and Asana credentials - Replaced XOR encryption with authenticated AES-256-GCM to provide stronger protection for stored credentials. #8274\n\nFacebook Groups - Repaired the nonce check on the app install verification handler to help prevent cross-site request forgery. #8272\n\nKadence - All triggers - Fixed an issue where forms would not fire recipes when gated loading was enabled. #8228\n\nRecipe logs - Long-running multi-trigger recipes that became stuck are now correctly terminated by the recovery process. #8227\n\nSetup wizard - Added a capability check to prevent lower-privileged users from changing the wizard's connection status. #8271\n\nTranslations - Fixed an issue where Recipe Builder strings were not loading correctly in Spanish. #7392\n\nCore - Added automatic retries for app actions that fail before reaching the server, improving reliability without risking duplicate actions. #8225\n\nCore - Missing classmap files no longer result in PHP errors when the fallback autoloader is used. #8175\n\nCore - Internal OAuth tokens are now encrypted for improved security. #8230\n\nCore - Trigger hooks fired during raw shutdown callbacks are now properly captured and delivered. #8221",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
