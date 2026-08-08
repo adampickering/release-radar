@@ -1,12 +1,23 @@
 [
   {
-    "id": "uncanny-automator@7.5.0.1",
-    "title": "Uncanny Automator 7.5.0.1",
-    "date": "2026-08-06",
+    "id": "uncanny-automator@7.5.0.3",
+    "title": "Uncanny Automator 7.5.0.3",
+    "date": "2026-08-07",
     "brand": "Uncanny Automator",
     "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "Uncanny Agent - Fixed an issue where the Agent could disappear from the WordPress admin until the Automator settings page was visited. #8341\n\nUncanny Agent - Improved recovery when WordPress security keys change to prevent the Agent from becoming unavailable. #8341\n\nCore - Improved transient cleanup to prevent stale cached data after plugin deactivation. #8287\n\nUncanny Agent - Added Site Health diagnostics to help administrators identify Agent configuration issues. #8341\n\nUncanny Agent - Improved site identity, verification, and protection for information exchanged with the Agent. #8341",
+    "releaseType": "fix",
+    "summary": "Uncanny Agent - Page Builder - Improved validation of page, section, canvas, reusable-part, and other request identifiers to prevent malformed data from causing errors or targeting unintended content\n\nUncanny Agent - Page Builder - Hardened WordPress hooks, administration callbacks, meta boxes, editor requests, and cleanup operations against missing or unexpected data\n\nUncanny Agent - Page Builder - Improved rendering safeguards to prevent invalid dynamic or conditional content, unintended published content, and stale page data from affecting output\n\nUncanny Agent - Page Builder - Improved validation and reliability of import, export, shell analysis, and static export operations\n\nUncanny Agent - Page Builder - Added permission checks for canvas deletion and improved handling of sensitive error information\n\nUncanny Agent - Page Builder - Improved compatibility and error handling on sites with missing server extensions or unexpected request data",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.5.0.2",
+    "title": "Uncanny Automator 7.5.0.2",
+    "date": "2026-08-07",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "Uncanny Agent - Page Builder - Fixed a fatal error on some sites when themes did not provide a current post ID for singular page requests. #8348\n\nUncanny Agent - Fixed a Sodium compatibility fatal error on hosts without the native Sodium extension. #8348",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
