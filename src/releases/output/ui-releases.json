@@ -1,5 +1,16 @@
 [
   {
+    "id": "searchwp-live-ajax-search@1.8.8",
+    "title": "SearchWP Live Ajax Search 1.8.8",
+    "date": "2026-08-08",
+    "brand": "SearchWP",
+    "brandSlug": "searchwp",
+    "releaseType": "improvement",
+    "summary": "Improved compatibility with the WordPress 7.0 block editor so the search form's styles no longer affect the editor canvas.",
+    "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.5.0.3",
     "title": "Uncanny Automator 7.5.0.3",
     "date": "2026-08-07",
@@ -1856,17 +1867,6 @@
     "releaseType": "feature",
     "summary": "New: Country and region report to see where and how your visitors find your website\n\nNew: Advanced tracking options for users of Google Tag Manager\n\nNew: SEO & RankMath Integrations with our Custom Dimensions addon\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "searchwp-live-ajax-search@1.8.3",
-    "title": "SearchWP Live Ajax Search 1.8.3",
-    "date": "2024-10-14",
-    "brand": "SearchWP",
-    "brandSlug": "searchwp",
-    "releaseType": "improvement",
-    "summary": "Prevents issues with caching plugins in some cases\n\nAdds support for loading a custom template from a user specified directory path",
-    "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
     "tags": []
   },
   {
