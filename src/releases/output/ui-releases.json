@@ -1,5 +1,49 @@
 [
   {
+    "id": "custom-facebook-feed@4.10.0",
+    "title": "Smash Balloon Social Post Feed 4.10.0",
+    "date": "2026-08-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Renamed the plugin on the WordPress Plugins screen to \"Smash Balloon Facebook Feed\" to match the product name used elsewhere\n\nFix: Corrected the post author date styling inside the lightbox so it matches the feed\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.12.0",
+    "title": "Smash Balloon Instagram Feed 6.12.0",
+    "date": "2026-08-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New - The feed builder and your feeds are now far easier to use with a keyboard and a screen reader. Controls are properly labelled and reachable by Tab, popups can be closed with Escape, feeds announce newly loaded posts, and focus outlines are visible throughout\n\nFix - Corrected a number of typos and grammatical errors in text throughout the settings and admin screens, including three places that referred to \"tweets\" instead of Instagram posts\n\nFix - Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.8.0",
+    "title": "Smash Balloon Twitter Feed 2.8.0",
+    "date": "2026-08-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: The plugin is now named \"Smash Balloon X (Twitter) Feed\" on the Plugins screen so all Smash Balloon plugins are listed together\n\nTweak: Improved accessibility across the feed builder and feed output, including keyboard navigation, screen reader support and focus handling\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.8.0",
+    "title": "Smash Balloon YouTube Feed 2.8.0",
+    "date": "2026-08-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Improved accessibility of the YouTube feed to meet WCAG 2.x requirements, including screen reader landmarks and list semantics, headings for video titles, a visible keyboard focus indicator on the feed, and correct focus handling on Load More\n\nTweak: The plugin now appears as \"Smash Balloon YouTube Feed\" on the WordPress Plugins screen so all Smash Balloon plugins group together\n\nFix: Keyboard focus is now visible on all plugin admin screens, including Settings, About, and Support\n\nFix: Screen readers now announce a video's title instead of its internal post ID when reading feed video links\n\nFix: Resolved a \"translation loading was triggered too early\" notice caused by the custom cron schedule labels\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
     "id": "searchwp-live-ajax-search@1.8.8",
     "title": "SearchWP Live Ajax Search 1.8.8",
     "date": "2026-08-08",
@@ -759,17 +803,6 @@
     "tags": []
   },
   {
-    "id": "instagram-feed@6.11.0",
-    "title": "Smash Balloon Instagram Feed 6.11.0",
-    "date": "2026-05-18",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New - Added a modern Gutenberg block and Elementor widget for the Instagram feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nTweak - Compatibility with WP 7\n\nFix - Plugin no longer removes the WordPress footer on plugin admin pages\n\nFix - Captions with multiple paragraphs no longer render duplicate anchor tags in screen-reader text\n\nFix - Instagram Trial Reels (test posts shown only to non-followers) are no longer included in feeds",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
     "id": "custom-twitter-feeds@2.6.0",
     "title": "Smash Balloon Twitter Feed 2.6.0",
     "date": "2026-05-18",
@@ -1045,28 +1078,6 @@
     "tags": []
   },
   {
-    "id": "custom-twitter-feeds@2.5.4",
-    "title": "Smash Balloon Twitter Feed 2.5.4",
-    "date": "2026-03-12",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak: Added optional deactivation feedback survey to help us improve the plugin\n\nFix - Additional plugin hardening",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "feeds-for-youtube@2.6.3",
-    "title": "Smash Balloon YouTube Feed 2.6.3",
-    "date": "2026-03-12",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak: Added optional deactivation feedback survey to help us improve the plugin.",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
     "id": "userfeedback-lite@1.11.1",
     "title": "UserFeedback Lite 1.11.1",
     "date": "2026-03-12",
@@ -1119,17 +1130,6 @@
     "releaseType": "fix",
     "summary": "Thrive Architect: Post list sticky posts handling: Fixed an error that occurred when using post lists in Thrive Architect on PHP 8.2+ environments\n\nThrive Architect: Include sticky header height if present to the offset calculation: When clicking on jumplinks or table of contents items, content now properly scrolls into view below the sticky header instead of being hidden behind it\n\nThrive Leads: Impression tracking to count only when forms are visible: Improved impression tracking accuracy for Thrive Leads forms. Impressions are now counted only when forms actually become visible to users, not on page load. This provides more accurate conversion rate data, especially for trigger-based forms (lightbox, slide-in, ribbon, screen filler) and forms placed below the fold\n\nThrive Leads: Create-tag UI in Select2 dropdown: Improved the tag creation experience in lead generation forms with a redesigned interface. The create-tag button is now positioned in a dedicated section for easier access, and you can quickly create new tags by pressing Enter\n\nThrive Apprentice: New Course Welcome Email template with per-course toggle: New &#8220;Course Welcome Email&#8221; feature allows you to automatically send personalized welcome emails when students gain access to your courses. Each course has an individual toggle to enable/disable this feature, and the new `[course_url]` shortcode is now available in all email templates\n\nThrive Theme Builder: Improved ConvertKit compatibility: Resolved a conflict that could occur when running multiple Thrive products with ConvertKit, connected, ensuring seamless integration across your Thrive suite\n\nThrive Dashboard: Duplicate subscriber errors for MailPoet, AWeber, Constant Contact V3, and Sendy: Fixed an issue where existing subscribers would see error messages when submitting lead generation forms connected to MailPoet, AWeber, Constant Contact V3, or Sendy\n\nThrive Dashboard: Error in ActiveCampaign integration: Fixed a critical PHP 8+ compatibility issue in the ActiveCampaign integration that caused errors when API responses were empty\n\nThrive Product Manager: Improved PHP 8.2 compatibility: Resolved an issue that could cause errors during license verification in Thrive Product Manager on newer PHP versions\n\nThrive Ultimatum: Implement viewport-based impression tracking: Improved impression tracking accuracy for Thrive Ultimatum widgets/shortcodes, Thrive Leads forms, and Thrive Quiz Builder splash pages. Impressions are now only counted when elements are actually visible to users (50% viewport visibility), ensuring more accurate analytics and A/B testing data\n\nUncategorized: AWeber connection reliability: Fixed an issue where reconnecting your AWeber account could fail if the authentication token hadexpired, requiring a fresh login",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/02/v10-8-7/",
-    "tags": []
-  },
-  {
-    "id": "custom-facebook-feed@4.7.5",
-    "title": "Smash Balloon Social Post Feed 4.7.5",
-    "date": "2026-02-19",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Updated placeholder text with actual content.",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
   {
