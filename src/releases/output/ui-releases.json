@@ -1,5 +1,27 @@
 [
   {
+    "id": "wpforms-lite@2.0.0.3",
+    "title": "WPForms Lite 2.0.0.3",
+    "date": "2026-08-11",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Added: New supported currencies\n\nFixed: Permission handling in the Export Forms tool was improved\n\nFixed: Form data handling in the Block Editor was improved",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.8.1",
+    "title": "Smash Balloon YouTube Feed 2.8.1",
+    "date": "2026-08-11",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Plugin hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
     "id": "custom-facebook-feed@4.10.0",
     "title": "Smash Balloon Social Post Feed 4.10.0",
     "date": "2026-08-10",
@@ -415,17 +437,6 @@
     "releaseType": "improvement",
     "summary": "Improved: Strengthened plugin security across onboarding, WhatsApp, and credential handling\n\nImproved: Upgraded stored WhatsApp access tokens to authenticated AES-256-GCM encryption\n\nImproved: Smarter value typing for Audience Filters — attribute filter values now keep their correct type (number, date, boolean, text), fixing a class of silent mismatches where values were sent to the backend with the wrong type\n\nNotice: PushEngage now requires PHP 7.4 or higher",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.10.2",
-    "title": "WPForms Lite 1.10.2",
-    "date": "2026-06-18",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: The Abilities API now supports creating new forms, editing existing form fields, and editing form settings\n\nChanged: Stripe subscriptions that finish all configured billing cycles are now marked as Completed\n\nFixed: Delete icon overlapped form name in the Bulk Edit Tags field during bulk edits\n\nFixed: Custom CSS configured in the Form Builder was not applied when the form was embedded via the Gutenberg block\n\nFixed: An AbortError: Transition was skipped console error appeared in the Form Builder on WordPress 7.0\n\nFixed: PayPal Credit payment status was not being synchronized in WPForms > Payments\n\nFixed: The Query String Variable smart tag key was unexpectedly reset when the Email field default value was cleared and re-configured in the Form Builder\n\nFixed: Stripe block-editor CSS and JS assets no longer load unconditionally on every Block Editor screen. They now load only when the `wpforms/form-selector` block is present\n\nFixed: The `wpforms_emails_send_email_data` filter silently discarded any changes to the headers key before sending the email\n\nFixed: PHP fatal error when submitting a form with the {page_url} smart tag if the page_url POST field was sent as an array\n\nFixed: An invalid notice about Fastlane and alternative payment methods appeared in Stripe and Square subscription payment settings in the Form Builder",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
@@ -1020,17 +1031,6 @@
     "releaseType": "feature",
     "summary": "New: We completely updated our overview screen to make it easy to filter and view your stats inside your dashboard without needing to navigate away\n\nNew: We added support for CSV and XLSX reports",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "feeds-for-youtube@2.6.4",
-    "title": "Smash Balloon YouTube Feed 2.6.4",
-    "date": "2026-03-19",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
     "tags": []
   },
   {
