@@ -1,5 +1,27 @@
 [
   {
+    "id": "wpforms-lite@2.0.0.4",
+    "title": "WPForms Lite 2.0.0.4",
+    "date": "2026-08-12",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Fixed: Lite Connect site registration failed permanently when the admin user profile had an empty first or last name, blocking entry backups\n\nFixed: The Onboarding Wizard would time out in some cases",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "envira-gallery-lite@1.15.0",
+    "title": "Envira Gallery Lite 1.15.0",
+    "date": "2026-08-12",
+    "brand": "Envira Gallery",
+    "brandSlug": "envira-gallery",
+    "releaseType": "feature",
+    "summary": "Added: AI Image Assistant preview in the gallery editor.",
+    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.0.3",
     "title": "WPForms Lite 2.0.0.3",
     "date": "2026-08-11",
@@ -129,17 +151,6 @@
     "releaseType": "fix",
     "summary": "Enhancements: Security hardening across admin and reporting requests\n\nFixes: Charts no longer break when another plugin loads its own copy of ApexCharts\n\nFixes: Reduced admin notification requests that could trip firewall rate limits\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "envira-gallery-lite@1.14.0",
-    "title": "Envira Gallery Lite 1.14.0",
-    "date": "2026-07-28",
-    "brand": "Envira Gallery",
-    "brandSlug": "envira-gallery",
-    "releaseType": "feature",
-    "summary": "Added: AI Image Assistant preview in the gallery editor.",
-    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
   {
@@ -382,17 +393,6 @@
     "releaseType": "improvement",
     "summary": "Improved: Web SDK script URL now includes the plugin version as a query parameter for reliable cache-busting after updates.",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@1.10.2.1",
-    "title": "WPForms Lite 1.10.2.1",
-    "date": "2026-06-25",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: AI MCP settings section in the Form Builder with the MCP write-access toggle\n\nFixed: Forms scrolled back to the first text input when adjusting a Number Slider in Chrome on Android\n\nFixed: Email notification header sanitization was improved for better security",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
