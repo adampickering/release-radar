@@ -1,5 +1,49 @@
 [
   {
+    "id": "optinmonster@2.17.0",
+    "title": "OptinMonster 2.17.0",
+    "date": "2026-08-14",
+    "brand": "OptinMonster",
+    "brandSlug": "optinmonster",
+    "releaseType": "fix",
+    "summary": "Added WordPress 7.0 compatibility\n\nBumped the minimum supported versions to PHP 7.4 and WordPress 6.0\n\nFixed a fatal error on PHP 8.0+ during campaign sync when the API response omitted the page-limit header\n\nFixed a PHP 8.1+ deprecation notice in the MailPoet integration when a form submission omitted the campaign slug\n\nFixed a PHP 8.2+ \"dynamic property\" deprecation notice triggered by the Elementor widget\n\nFixed a PHP warning shown in the Elementor editor when the account has no inline campaigns\n\nFixed a JavaScript error when adding the OptinMonster widget in the Elementor editor on a site with no inline campaigns\n\nFixed broken image paths for the Elementor widget icon and the loading spinner\n\nSecurity hardening",
+    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
+    "tags": []
+  },
+  {
+    "id": "easy-digital-downloads@3.7.0",
+    "title": "Easy Digital Downloads 3.7.0",
+    "date": "2026-08-14",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "feature",
+    "summary": "NEW: Checkout - The block editor checkout now supports customization with inner blocks\n\nNEW: Checkout - New composable checkout widgets for finer control of the Elementor checkout\n\nNEW: Stripe - Added support for UPI payments\n\nAdmin: Fixed compatibility with WordPress 7.1 for admin list tables and bulk invoice generation\n\nAdmin: Prevented EDD's admin styles from overriding other plugins' meta box styling in the block editor\n\nAdmin: Added a spam-protection recommendation to the Misc settings\n\nAdmin: Changed the telemetry opt-in to a toggle\n\nCheckout: Updated the checkout loading indicator\n\nCheckout: Updated the shortcode checkout to use the same address fields as the block checkout\n\nCLI: Fixed detection of available EDD and extension updates via WP-CLI\n\nDiscounts: Fixed preset discount links losing the coupon when a cart hook removed items during add-to-cart\n\nDownloads: Hardened redirect handling during file downloads\n\nPayPal: Improved compatibility with staging and cloned sites\n\nPayPal: Improved PayPal Connect reliability\n\nPayPal: Improved the Apple Pay domain registration process\n\nPayPal: Improved compatibility with PayPal's brand name attribute\n\nPayPal: Skipped fetching the Fastlane token on non-checkout pages\n\nPayPal: Improved the PayPal Connect buttons\n\nPayPal Standard: Improved legacy IPN handling\n\nSquare: Fixed the checkout button staying disabled for cards from countries where Square hides the postal code field\n\nStripe: Improved error message handling for failed payments\n\nStripe: Updated the \"Connect with Stripe\" button to match Stripe's current branding\n\nStripe: Added an admin notice for stores still using the legacy card elements\n\nStripe: Rebranded the iDEAL gateway\n\nDev: Replaced the legacy browser-detection library with modern user-agent parsing\n\nDev: Improved filesystem handling to better match WordPress core conventions\n\nDev: Fixed exception handling when registering service providers\n\nDev: Declared edd-tom-select as an explicit dependency of the admin scripts\n\nDev: Centralized request-context detection (cron, AJAX, REST)\n\nDev: Updated blocks script handling and asset building\n\nDev: Migrated cart events to native CustomEvents\n\nDev: Switched Mozart to a global install for build stability\n\nDev: Updated the minimum requirements to PHP 8.0 and WordPress 6.7\n\nDev: Registered EDD blocks as a metadata collection\n\nDev: Addressed a WordPress 6.6 deprecation (PluginPostStatusInfo)",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
+    "id": "coming-soon@6.20.8",
+    "title": "SeedProd 6.20.8",
+    "date": "2026-08-13",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "fix",
+    "summary": "Added - Per-device font size controls on more blocks in the builder\n\nFixed - PHP 8 fatal error when saving certain pages\n\nFixed - reCAPTCHA now executes on optin forms inside theme templates\n\nFixed - Importing a landing page now includes its Global CSS instead of silently dropping it\n\nFixed - Deleting a saved template from the template chooser works again\n\nFixed - Template previews no longer show a raw placeholder in the fallback text\n\nFixed - WP-CLI imports now report failures instead of exiting successfully\n\nTweak - Hardened the import path and removed unused import/export code\n\nTweak - Removed Pro theme builder files from the Lite build",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.12",
+    "title": "Charitable 1.8.12",
+    "date": "2026-08-13",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "NEW: Beacon (2 Columns) campaign template - includes Campaign Hero block and Mini Donation Widget (used internally)\n\nNEW: Free Site Analysis (Reports > Site Analysis). Get a free Fundraising Score across four areas (Activation, Health, Growth, and Optimization) with specific, prioritized recommendations\n\nIMPROVED: Campaign builder rows now support a `background_image` property (renders as a CSS background on the row wrapper) and a `locked` property (prevents the row and its contents from being moved or deleted in the builder)\n\nIMPROVED: Live-preview updates for campaign-hero settings — background image, logo, title, accent (theme primary), donation amounts, and donate button all reflect in the builder preview as you edit\n\nIMPROVED: Cross-tab goal sync — changing the campaign goal in the Settings tab updates the Campaign Hero raised band in the Design tab preview, even before saving\n\nFIX: Square — donations and refunds now handle zero-decimal currencies, and dashboard-initiated refunds are logged in the site currency\n\nFIX: Donation forms on block themes now honor the `amount` and `period` URL parameters\n\nFIX: Security hardening across the addon installer, campaign builder debug endpoint, and donation import/donor-lookup handling\n\nFIX: Square (Core) - unsigned webhooks are now rejected, closing a donation-status forgery on sites with no signing secret stored",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.0.4",
     "title": "WPForms Lite 2.0.0.4",
     "date": "2026-08-12",
@@ -151,17 +195,6 @@
     "releaseType": "fix",
     "summary": "Enhancements: Security hardening across admin and reporting requests\n\nFixes: Charts no longer break when another plugin loads its own copy of ApexCharts\n\nFixes: Reduced admin notification requests that could trip firewall rate limits\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.20.7",
-    "title": "SeedProd 6.20.7",
-    "date": "2026-07-27",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "fix",
-    "summary": "Added - Manage with AI page: connect Claude, ChatGPT, or any AI assistant to manage your site with the free WPVibe plugin\n\nAdded - WPVibe in Recommended Plugins with one-click install\n\nFixed - Setup wizard completion now installs plugins selected in the wizard reliably\n\nFixed - License update checks no longer clear a valid license\n\nFixed - Import shows a clearer message when a ZIP of the wrong type is uploaded\n\nFixed - PHP warnings when bypass settings were missing keys\n\nTweak - Security hardening: output escaping, ABSPATH guards, and text domain corrections\n\nTweak - Removed an unused bundled script library",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
@@ -858,17 +891,6 @@
     "tags": []
   },
   {
-    "id": "charitable@1.8.10.5",
-    "title": "Charitable 1.8.10.5",
-    "date": "2026-05-11",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "feature",
-    "summary": "NEW: Redesigned the \"What's New\" splash screen with a new hero section, video, and upgrade buttons\n\nNEW: Added a Form navigation icon in the campaign builder with an upgrade prompt for the Charitable Pro visual form builder\n\nIMPROVED: System Info now includes a Hosting Environment section\n\nFIX: Hardened input handling in the donations admin search to improve query safety\n\nFIX: Resolved a custom donation amount parsing issue with the decimal separator on non-US currency sites in certain scenarios",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
-    "tags": []
-  },
-  {
     "id": "custom-twitter-feeds@2.5.5",
     "title": "Smash Balloon Twitter Feed 2.5.5",
     "date": "2026-04-30",
@@ -1031,17 +1053,6 @@
     "releaseType": "feature",
     "summary": "New: We completely updated our overview screen to make it easy to filter and view your stats inside your dashboard without needing to navigate away\n\nNew: We added support for CSV and XLSX reports",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.6",
-    "title": "Easy Digital Downloads 3.6.6",
-    "date": "2026-03-18",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "fix",
-    "summary": "Admin: Added compatibility with WordPress 7.0 admin changes\n\nCart: Fixed cart validation when adding multiple items at the same time\n\nCart: Improved mixed cart behavior with Stripe\n\nCart: Fixed a potential fatal error when checking cart discounts repeatedly\n\nCron: Reduced database queries for event handling\n\nEmails: Preview function did not show the email heading\n\nEmails: Improved bounce notification handling\n\nMessaging: Removed dependency on Alpine library\n\nStripe: Improved PaymentIntent handling\n\nDev: Removed a number of unnecessary files from dependencies",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
@@ -1548,17 +1559,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Minor updates and bug fixes.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "optinmonster@2.16.20",
-    "title": "OptinMonster 2.16.20",
-    "date": "2025-07-24",
-    "brand": "OptinMonster",
-    "brandSlug": "optinmonster",
-    "releaseType": "improvement",
-    "summary": "Maintenance updates.",
-    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
     "tags": []
   },
   {
