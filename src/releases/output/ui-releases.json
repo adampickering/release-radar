@@ -1,5 +1,16 @@
 [
   {
+    "id": "optinmonster@2.17.1",
+    "title": "OptinMonster 2.17.1",
+    "date": "2026-08-14",
+    "brand": "OptinMonster",
+    "brandSlug": "optinmonster",
+    "releaseType": "fix",
+    "summary": "Fixed campaign embed code printing on the page as visible text.",
+    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
+    "tags": []
+  },
+  {
     "id": "optinmonster@2.17.0",
     "title": "OptinMonster 2.17.0",
     "date": "2026-08-14",
@@ -1460,17 +1471,6 @@
     "releaseType": "feature",
     "summary": "New: Easily send survey notifications and results to Slack (or any webhook)!\n\nFixed: Various bug fixes and enhancements",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "optinmonster@2.16.21",
-    "title": "OptinMonster 2.16.21",
-    "date": "2025-10-03",
-    "brand": "OptinMonster",
-    "brandSlug": "optinmonster",
-    "releaseType": "improvement",
-    "summary": "Maintenance updates\n\nPreparation for ShareASale to AWIN migration",
-    "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
     "tags": []
   },
   {
