@@ -1,5 +1,16 @@
 [
   {
+    "id": "uncanny-automator@7.5.1.1",
+    "title": "Uncanny Automator 7.5.1.1",
+    "date": "2026-08-15",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Page Builder - Preserved the last published page content when Automator is deactivated or deleted, and improved file system safety checks. #8385\n\nRecipe UI - Condition field values lost on save, reverting to the first dropdown option. #8366\n\nSetup wizard - Fixed an issue with the \"Build my first page\" button failing to create a page. #8379",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "optinmonster@2.17.1",
     "title": "OptinMonster 2.17.1",
     "date": "2026-08-14",
@@ -52,6 +63,17 @@
     "releaseType": "improvement",
     "summary": "NEW: Beacon (2 Columns) campaign template - includes Campaign Hero block and Mini Donation Widget (used internally)\n\nNEW: Free Site Analysis (Reports > Site Analysis). Get a free Fundraising Score across four areas (Activation, Health, Growth, and Optimization) with specific, prioritized recommendations\n\nIMPROVED: Campaign builder rows now support a `background_image` property (renders as a CSS background on the row wrapper) and a `locked` property (prevents the row and its contents from being moved or deleted in the builder)\n\nIMPROVED: Live-preview updates for campaign-hero settings — background image, logo, title, accent (theme primary), donation amounts, and donate button all reflect in the builder preview as you edit\n\nIMPROVED: Cross-tab goal sync — changing the campaign goal in the Settings tab updates the Campaign Hero raised band in the Design tab preview, even before saving\n\nFIX: Square — donations and refunds now handle zero-decimal currencies, and dashboard-initiated refunds are logged in the site currency\n\nFIX: Donation forms on block themes now honor the `amount` and `period` URL parameters\n\nFIX: Security hardening across the addon installer, campaign builder debug endpoint, and donation import/donor-lookup handling\n\nFIX: Square (Core) - unsigned webhooks are now rejected, closing a donation-status forgery on sites with no signing secret stored",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.5.1",
+    "title": "Uncanny Automator 7.5.1",
+    "date": "2026-08-13",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "Uncanny Agent - Lite users now get free starter usage of Uncanny Agent\n\nSetup wizard - Improved the setup flow, navigation, security, and interface for a smoother onboarding experience. #8332\n\nUncanny Agent - Page Builder - Improved editor reliability, including saving, Undo and Redo, canvas refreshes, and working across multiple browser tabs. #8370\n\nUncanny Agent - Page Builder - Fixed issues with publishing, downloads, reusable sections, dynamic content, and design style changes. #8370\n\nUncanny Agent - Page Builder - Improved compatibility with different database configurations, screen sizes, and third-party extensions. #8370\n\nUncanny Agent - Page Builder - Improved error handling and recovery to prevent unexpected failures from interrupting Page Builder operations. #8370",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
@@ -151,28 +173,6 @@
     "releaseType": "improvement",
     "summary": "Improved compatibility with the WordPress 7.0 block editor so the search form's styles no longer affect the editor canvas.",
     "changelogUrl": "https://wordpress.org/plugins/searchwp-live-ajax-search/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.5.0.3",
-    "title": "Uncanny Automator 7.5.0.3",
-    "date": "2026-08-07",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "Uncanny Agent - Page Builder - Improved validation of page, section, canvas, reusable-part, and other request identifiers to prevent malformed data from causing errors or targeting unintended content\n\nUncanny Agent - Page Builder - Hardened WordPress hooks, administration callbacks, meta boxes, editor requests, and cleanup operations against missing or unexpected data\n\nUncanny Agent - Page Builder - Improved rendering safeguards to prevent invalid dynamic or conditional content, unintended published content, and stale page data from affecting output\n\nUncanny Agent - Page Builder - Improved validation and reliability of import, export, shell analysis, and static export operations\n\nUncanny Agent - Page Builder - Added permission checks for canvas deletion and improved handling of sensitive error information\n\nUncanny Agent - Page Builder - Improved compatibility and error handling on sites with missing server extensions or unexpected request data",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.5.0.2",
-    "title": "Uncanny Automator 7.5.0.2",
-    "date": "2026-08-07",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "Uncanny Agent - Page Builder - Fixed a fatal error on some sites when themes did not provide a current post ID for singular page requests. #8348\n\nUncanny Agent - Fixed a Sodium compatibility fatal error on hosts without the native Sodium extension. #8348",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
