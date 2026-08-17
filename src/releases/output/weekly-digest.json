@@ -1,52 +1,92 @@
 {
-  "weekRange": "July 27 – August 3, 2026",
-  "greeting": "Well, hello there, fellow WordPress aficionados!",
-  "introParagraph": "This week's Release Radar scans show a bit of a mixed bag, with a strong emphasis on shoring up our digital foundations. While a few major players were busy patching things up and tightening security bolts, we also caught a glimpse of the AI future peeking into our gallery editors. It seems everyone's either battening down the hatches or plugging into the matrix!",
+  "weekRange": "August 10 – 17, 2026",
+  "greeting": "Welcome back to Release Radar, where we track the WordPress plugin universe so you don't have to!",
+  "introParagraph": "This week, the plugin landscape saw a healthy mix of significant feature rollouts and crucial bug fixes, ensuring our favorite tools are not just getting more powerful but also more robust. Accessibility was a major theme, alongside some exciting checkout and AI innovations that promise to streamline workflows and boost conversions. Let's dive into what's new and noteworthy!",
   "stats": {
-    "releases": 6,
-    "brands": 6,
-    "features": 1,
-    "fixes": 4
+    "releases": 15,
+    "brands": 8,
+    "features": 3,
+    "fixes": 6
   },
   "highlights": [
     {
-      "title": "Envira Gallery Lite 1.14.0",
+      "title": "Easy Digital Downloads 3.7.0",
       "type": "feature",
-      "summary": "Get ready for a sneak peek into the future of image management! Envira Gallery Lite introduced an AI Image Assistant preview directly in the gallery editor, promising to streamline your creative workflow with smart suggestions and automation."
+      "summary": "EDD just leveled up its checkout game! With new block editor support for customization and composable Elementor widgets, you now have finer-grained control over your checkout experience, promising a smoother purchase journey for your customers."
     },
     {
-      "title": "Uncanny Automator 7.4.1",
-      "type": "improvement",
-      "summary": "Uncanny Automator continues to refine its integration game, modernizing its connections with Kadence and Pretty Links. This means smoother automations and more reliable workflows for those crucial cross-plugin interactions."
+      "title": "Smash Balloon Instagram Feed 6.12.0",
+      "type": "feature",
+      "summary": "Huge applause for Smash Balloon! This release brings significant accessibility improvements, making the Instagram feed builder and your actual feeds much easier to use for everyone, including those relying on keyboards and screen readers. Inclusivity wins!"
     },
     {
-      "title": "Soliloquy Lite 2.8.3 & MonsterInsights 11.1.2",
+      "title": "Envira Gallery Lite 1.15.0",
+      "type": "feature",
+      "summary": "Get ready for a glimpse into the future with Envira Gallery Lite, which now includes an AI Image Assistant preview directly in the gallery editor. This could be a game-changer for streamlining image management and enhancement within your galleries."
+    },
+    {
+      "title": "OptinMonster 2.17.0",
       "type": "fix",
-      "summary": "Both Soliloquy Lite and MonsterInsights rolled out significant security hardening across their admin screens and reporting. It's a clear signal that plugin developers are prioritizing a robust defense against potential vulnerabilities, keeping our sites safer one patch at a time."
-    },
-    {
-      "title": "Easy Digital Downloads 3.6.9.1",
-      "type": "fix",
-      "summary": "EDD tightened its security belt, hardening the display of payment gateway error messages and improving validation for uploaded import files. This is great news for store owners, ensuring more secure data handling and transparency during crucial operations."
+      "summary": "OptinMonster has bumped its minimum supported PHP and WordPress versions, ensuring better performance and security moving forward. This update also squashes a fatal error on PHP 8.0+ during campaign sync, keeping your lead generation humming along nicely."
     }
   ],
   "otherReleases": [
     {
-      "title": "Soliloquy Lite 2.8.3",
-      "type": "fix",
-      "shortSummary": "Fixed: Security hardening across the admin screens — every action now verifie..."
+      "title": "Uncanny Automator 7.5.1.1",
+      "type": "improvement",
+      "shortSummary": "Page Builder - Preserved the last published page content when Automator is de..."
     },
     {
-      "title": "MonsterInsights 11.1.2",
+      "title": "OptinMonster 2.17.1",
       "type": "fix",
-      "shortSummary": "Enhancements: Security hardening across admin and reporting requests"
+      "shortSummary": "Fixed campaign embed code printing on the page as visible text."
     },
     {
-      "title": "SeedProd 6.20.7",
+      "title": "SeedProd 6.20.8",
       "type": "fix",
-      "shortSummary": "Added - Manage with AI page: connect Claude, ChatGPT, or any AI assistant to ..."
+      "shortSummary": "Added - Per-device font size controls on more blocks in the builder"
+    },
+    {
+      "title": "Charitable 1.8.12",
+      "type": "improvement",
+      "shortSummary": "NEW: Beacon (2 Columns) campaign template - includes Campaign Hero block and ..."
+    },
+    {
+      "title": "Uncanny Automator 7.5.1",
+      "type": "fix",
+      "shortSummary": "Uncanny Agent - Lite users now get free starter usage of Uncanny Agent"
+    },
+    {
+      "title": "WPForms Lite 2.0.0.4",
+      "type": "fix",
+      "shortSummary": "Fixed: Lite Connect site registration failed permanently when the admin user ..."
+    },
+    {
+      "title": "WPForms Lite 2.0.0.3",
+      "type": "fix",
+      "shortSummary": "Added: New supported currencies"
+    },
+    {
+      "title": "Smash Balloon YouTube Feed 2.8.1",
+      "type": "improvement",
+      "shortSummary": "Fix: Plugin hardening."
+    },
+    {
+      "title": "Smash Balloon Social Post Feed 4.10.0",
+      "type": "improvement",
+      "shortSummary": "Tweak: Renamed the plugin on the WordPress Plugins screen to \"Smash Balloon F..."
+    },
+    {
+      "title": "Smash Balloon Twitter Feed 2.8.0",
+      "type": "improvement",
+      "shortSummary": "Tweak: The plugin is now named \"Smash Balloon X (Twitter) Feed\" on the Plugin..."
+    },
+    {
+      "title": "Smash Balloon YouTube Feed 2.8.0",
+      "type": "improvement",
+      "shortSummary": "Tweak: Improved accessibility of the YouTube feed to meet WCAG 2.x requiremen..."
     }
   ],
-  "closingJoke": "Why did the WordPress plugin break up with its database? Because it had too many unresolved dependencies! Always keep your relationships updated, folks.",
-  "generatedAt": "2026-08-03T17:09:17.573Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many 'hooks' in its life! Guess it just wasn't compatible.",
+  "generatedAt": "2026-08-17T15:25:59.379Z"
 }
