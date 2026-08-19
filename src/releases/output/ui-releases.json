@@ -1,5 +1,38 @@
 [
   {
+    "id": "wpforms-lite@2.0.0.5",
+    "title": "WPForms Lite 2.0.0.5",
+    "date": "2026-08-18",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "improvement",
+    "summary": "The WPForms admin menu left a large empty gap below it on mobile screens when viewing non-WPForms admin pages.",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "envira-gallery-lite@1.15.1",
+    "title": "Envira Gallery Lite 1.15.1",
+    "date": "2026-08-18",
+    "brand": "Envira Gallery",
+    "brandSlug": "envira-gallery",
+    "releaseType": "feature",
+    "summary": "Added: AI Image Assistant preview in the gallery editor.",
+    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "soliloquy-lite@2.8.4",
+    "title": "Soliloquy Lite 2.8.4",
+    "date": "2026-08-18",
+    "brand": "Soliloquy",
+    "brandSlug": "soliloquy",
+    "releaseType": "feature",
+    "summary": "Fixed: The slider dropdown in the Soliloquy block now closes correctly when you click outside it in the block editor\n\nAdded: Tested with WordPress 7.1",
+    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.5.1.1",
     "title": "Uncanny Automator 7.5.1.1",
     "date": "2026-08-15",
@@ -85,17 +118,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Lite Connect site registration failed permanently when the admin user profile had an empty first or last name, blocking entry backups\n\nFixed: The Onboarding Wizard would time out in some cases",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "envira-gallery-lite@1.15.0",
-    "title": "Envira Gallery Lite 1.15.0",
-    "date": "2026-08-12",
-    "brand": "Envira Gallery",
-    "brandSlug": "envira-gallery",
-    "releaseType": "feature",
-    "summary": "Added: AI Image Assistant preview in the gallery editor.",
-    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
   {
@@ -832,17 +854,6 @@
     "brandSlug": "soliloquy",
     "releaseType": "feature",
     "summary": "Fixed: Render same short code multiple times\n\nAdded: `webp` and `heic` image support\n\nUpdated: Header logo linked to landing page",
-    "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "soliloquy-lite@2.7.9",
-    "title": "Soliloquy Lite 2.7.9",
-    "date": "2026-05-20",
-    "brand": "Soliloquy",
-    "brandSlug": "soliloquy",
-    "releaseType": "fix",
-    "summary": "Fixed: Image metadata escaping.",
     "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
     "tags": []
   },
