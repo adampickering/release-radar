@@ -1,5 +1,38 @@
 [
   {
+    "id": "google-analytics-for-wordpress@11.1.3",
+    "title": "MonsterInsights 11.1.3",
+    "date": "2026-08-19",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "WP 7.1: Popular Posts blocks work in the iframed block editor\n\nFixes: Report tables show row numbers again and the expand arrow is back on the right side\n\nFixes: Report table empty and loading states are centered again\n\nFixes: Older report links no longer land on a blank screen\n\nFixes: Headline Analyzer no longer crashes synced patterns in the block editor\n\nFixes: Setup wizard no longer lands on another plugin's onboarding screen\n\nFixes: Security hardening for license actions and credential handling\n\nFixes: Various bug fixes and updates",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.12.1",
+    "title": "Charitable 1.8.12.1",
+    "date": "2026-08-19",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "feature",
+    "summary": "NEW: Added a `charitable_campaign_description_limit` filter so developers can change the word limit on the campaign description shown on the campaign page\n\nIMPROVED: More consistent brand colors in admin UI\n\nFIX: Improvements to Site Analysis that effect The 24-hour limit on re-running, rate-limiting your site, and improved security\n\nFIX: Donation CSV export no longer shows inflated \"Donation Total\" and \"Donation Subtotal\" amounts on sites that use a comma as the decimal separator\n\nFIX: Campaign Hero background images now appear on the front end for every campaign template\n\nFIX: Campaigns created with a duplicate title now have the campaign ID appended, so the two can be told apart\n\nFIX: Removed PHP warnings logged the first time a campaign containing a Progress Bar block was saved\n\nFIX: The fundraising progress bar now displays correctly with themes that apply their own global progress bar styles (for example Avada)\n\nFIX: The login prompt on the donation form now returns a failed login to your custom Charitable login page instead of the default WordPress login screen",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "sugar-calendar-lite@3.13.0",
+    "title": "Sugar Calendar Lite 3.13.0",
+    "date": "2026-08-19",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "feature",
+    "summary": "Added: **NEW** Registration Form: collect extra details from attendees during ticket checkout or RSVP registration, like meal choice, t-shirt size, or a company name\n\nAdded: Export your events as a CSV file, ready to open in Excel or Google Sheets\n\nAdded: Free events with tickets: turn on ticketing and let visitors claim free tickets without setting up a payment provider\n\nAdded: Zoom meetings can now be added to recurring events, with one join link that works for every occurrence\n\nAdded: New AI tab under Tools: install the WPVibe.ai plugin in one click and see what AI assistants can do with your events\n\nAdded: Pick a date range when exporting, so you only export the events you need\n\nChanged: Setup Wizard improvements, including a new welcome screen in your WordPress admin\n\nFixed: The Notify Attendees panel did not open when using the Block editor\n\nFixed: Notify Attendees emailed only the person who paid instead of every ticket holder\n\nFixed: Ticket and order emails showed the event start time in place of the end time\n\nFixed: Dropdowns in the event editor did not work when using the Block editor\n\nFixed: The Event List block could hide all events from visitors who were not logged in when filtering by tag\n\nFixed: Security improvements",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.0.5",
     "title": "WPForms Lite 2.0.0.5",
     "date": "2026-08-18",
@@ -781,17 +814,6 @@
     "tags": []
   },
   {
-    "id": "charitable@1.8.11",
-    "title": "Charitable 1.8.11",
-    "date": "2026-05-21",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "feature",
-    "summary": "NEW: PayPal Commerce gateway - accept one-time donations via PayPal wallet (Venmo, Pay Later) and inline credit/debit card (Advanced Card Processing)\n\nNEW: Site-level PayPal tier lock allows new installs and Commerce-tier sites see PayPal Commerce; existing PayPal Standard sites keep using the legacy gateway\n\nNEW: Help icons next to each payment gateway in admin settings, linking to documentation\n\nIMPROVED: Test Mode toggle now has descriptive help text explaining sandbox routing\n\nIMPROVED: Stripe donation flow now self-heals when a previously stored PaymentIntent becomes unreachable (e.g. after a gateway reconnect)",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
-    "tags": []
-  },
-  {
     "id": "sugar-calendar-lite@3.11.1",
     "title": "Sugar Calendar Lite 3.11.1",
     "date": "2026-05-21",
@@ -1251,17 +1273,6 @@
     "releaseType": "feature",
     "summary": "New: Year In Review Report\n\nEnhancements: Various Performance Improvements and Bug Fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.10.1",
-    "title": "Sugar Calendar Lite 3.10.1",
-    "date": "2025-12-18",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "fix",
-    "summary": "Fixed: Update URLs.",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
   {
