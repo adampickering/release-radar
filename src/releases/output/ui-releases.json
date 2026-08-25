@@ -1,5 +1,49 @@
 [
   {
+    "id": "pushengage@4.2.9",
+    "title": "PushEngage 4.2.9",
+    "date": "2026-08-25",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "feature",
+    "summary": "NEW: Tools page — explore PushEngage's AI toolkit (WordPress Abilities, MCP, Skills, and the Chrome extension) with live status detection for the Abilities API and MCP Adapter plugin\n\nNEW: Dashboard Strategies card now highlights your site's AI readiness — set up the MCP Adapter in a click, or open live usage details once agents are connected\n\nImproved: PushEngage abilities now declare the unified `public` exposure flag introduced in WordPress 7.1 and are grouped by domain for AI clients\n\nImproved: Tested up to WordPress 7.1",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
+    "id": "coming-soon@6.20.9",
+    "title": "SeedProd 6.20.9",
+    "date": "2026-08-24",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "fix",
+    "summary": "Fixed - The Back to WordPress option works again for pages edited with SeedProd\n\nFixed - The Comment Form block no longer prints hardcoded comment policy text\n\nFixed - Pro opens the subscriber table instead of a \"coming soon\" placeholder\n\nFixed - The two buttons in the SeedProd-managed page notice no longer sit flush together",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.12.2",
+    "title": "Charitable 1.8.12.2",
+    "date": "2026-08-24",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "fix",
+    "summary": "FIX: Reports > Overview no longer times out on long date ranges. If a report does fail, the figures are cleared and an error shown\n\nFIX: The Refunds and Net columns in the Reports > Overview breakdown read zero for ranges outside the current year, and merged refunds across years\n\nFIX: The optional description beside each suggested donation amount now appears in the Donate Amount block\n\nFIX: Campaign template stylesheets now locate their shared helper reliably, so a campaign's colours no longer depend on the server's working directory\n\nFIX: Security: the sort setting on the donor list shortcode is now restricted to standard sort directions, so it cannot be used to read information from the database\n\nFIX: The setup wizard no longer says you have been logged out when its final step cannot reach your site. It now explains what happened and offers to retry or finish from the dashboard\n\nFIX: A campaign embedding a shortcode that points back at itself, or two campaigns referencing each other, no longer loops until memory runs out\n\nFIX: Removed PHP warnings and general cleanup",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
+    "id": "sugar-calendar-lite@3.13.0",
+    "title": "Sugar Calendar Lite 3.13.0",
+    "date": "2026-08-24",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "feature",
+    "summary": "Added: **NEW** Registration Form: collect extra details from attendees during ticket checkout or RSVP registration, like meal choice, t-shirt size, or a company name\n\nAdded: Export your events as a CSV file, ready to open in Excel or Google Sheets\n\nAdded: Free events with tickets: turn on ticketing and let visitors claim free tickets without setting up a payment provider\n\nAdded: Zoom meetings can now be added to recurring events, with one join link that works for every occurrence\n\nAdded: New AI tab under Tools: install the WPVibe.ai plugin in one click and see what AI assistants can do with your events\n\nAdded: Pick a date range when exporting, so you only export the events you need\n\nChanged: Setup Wizard improvements, including a new welcome screen in your WordPress admin\n\nFixed: The Notify Attendees panel did not open when using the Block editor\n\nFixed: Notify Attendees emailed only the person who paid instead of every ticket holder\n\nFixed: Ticket and order emails showed the event start time in place of the end time\n\nFixed: Dropdowns in the event editor did not work when using the Block editor\n\nFixed: The Event List block could hide all events from visitors who were not logged in when filtering by tag\n\nFixed: Security improvements",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "custom-facebook-feed@4.12.0",
     "title": "Smash Balloon Social Post Feed 4.12.0",
     "date": "2026-08-20",
@@ -22,17 +66,6 @@
     "tags": []
   },
   {
-    "id": "sugar-calendar-lite@3.13.0",
-    "title": "Sugar Calendar Lite 3.13.0",
-    "date": "2026-08-20",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "feature",
-    "summary": "Added: **NEW** Registration Form: collect extra details from attendees during ticket checkout or RSVP registration, like meal choice, t-shirt size, or a company name\n\nAdded: Export your events as a CSV file, ready to open in Excel or Google Sheets\n\nAdded: Free events with tickets: turn on ticketing and let visitors claim free tickets without setting up a payment provider\n\nAdded: Zoom meetings can now be added to recurring events, with one join link that works for every occurrence\n\nAdded: New AI tab under Tools: install the WPVibe.ai plugin in one click and see what AI assistants can do with your events\n\nAdded: Pick a date range when exporting, so you only export the events you need\n\nChanged: Setup Wizard improvements, including a new welcome screen in your WordPress admin\n\nFixed: The Notify Attendees panel did not open when using the Block editor\n\nFixed: Notify Attendees emailed only the person who paid instead of every ticket holder\n\nFixed: Ticket and order emails showed the event start time in place of the end time\n\nFixed: Dropdowns in the event editor did not work when using the Block editor\n\nFixed: The Event List block could hide all events from visitors who were not logged in when filtering by tag\n\nFixed: Security improvements",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@11.1.3",
     "title": "MonsterInsights 11.1.3",
     "date": "2026-08-19",
@@ -50,7 +83,7 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: Added a `charitable_campaign_description_limit` filter so developers can change the word limit on the campaign description shown on the campaign page\n\nIMPROVED: More consistent brand colors in admin UI\n\nFIX: Improvements to Site Analysis that effect The 24-hour limit on re-running, rate-limiting your site, and improved security\n\nFIX: Donation CSV export no longer shows inflated \"Donation Total\" and \"Donation Subtotal\" amounts on sites that use a comma as the decimal separator\n\nFIX: Campaign Hero background images now appear on the front end for every campaign template\n\nFIX: Campaigns created with a duplicate title now have the campaign ID appended, so the two can be told apart\n\nFIX: Removed PHP warnings logged the first time a campaign containing a Progress Bar block was saved\n\nFIX: The fundraising progress bar now displays correctly with themes that apply their own global progress bar styles (for example Avada)\n\nFIX: The login prompt on the donation form now returns a failed login to your custom Charitable login page instead of the default WordPress login screen",
+    "summary": "NEW: Added a `charitable_campaign_description_limit` filter so developers can change the word limit on the campaign description shown on the campaign page\n\nIMPROVED: More consistent brand colors in admin UI\n\nFIX: The 24-hour limit on re-running Site Analysis is no longer reset by clearing Charitable's cache from Settings > Advanced, or by changing a setting, a campaign, or an add-on\n\nFIX: Site Analysis now tells you that you have reached the analysis limit when the service is rate-limiting your site, instead of reporting that the service is unavailable and inviting a retry that keeps the limit in place\n\nFIX: Security: links on Site Analysis recommendations are now restricted to standard web addresses, so a spoofed or compromised response cannot place a script link on the screen\n\nFIX: Donation CSV export no longer shows inflated \"Donation Total\" and \"Donation Subtotal\" amounts (such as 10 178,00 instead of 101,78) on sites that use a comma as the decimal separator\n\nFIX: Campaign Hero background images now appear on the front end for every campaign template\n\nFIX: Campaigns created with a duplicate title now have the campaign ID appended, so the two can be told apart\n\nFIX: Removed PHP warnings logged the first time a campaign containing a Progress Bar block was saved\n\nFIX: The fundraising progress bar now displays correctly with themes that apply their own global progress bar styles (for example Avada)\n\nFIX: The login prompt on the donation form now returns a failed login to your custom Charitable login page instead of the default WordPress login screen",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -814,17 +847,6 @@
     "tags": []
   },
   {
-    "id": "charitable@1.8.11.1",
-    "title": "Charitable 1.8.11.1",
-    "date": "2026-05-22",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "IMPROVED: Polished PayPal Settings screen, adding notice and improving readability.",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.9.1.1",
     "title": "Thrive Themes 10.9.1.1",
     "date": "2026-05-22",
@@ -899,17 +921,6 @@
     "releaseType": "feature",
     "summary": "Fixed: Render same short code multiple times\n\nAdded: `webp` and `heic` image support\n\nUpdated: Header logo linked to landing page",
     "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.2.4",
-    "title": "PushEngage 4.2.4",
-    "date": "2026-05-19",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "improvement",
-    "summary": "Fix: Optimized response structure for paginated results in Abilities API endpoints\n\nImproved: Strengthened overall plugin security and reliability",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
@@ -2461,17 +2472,6 @@
     "releaseType": "improvement",
     "summary": "Confirm referral products is an array before attempting to iterate them.",
     "changelogUrl": "https://wordpress.org/plugins/affiliatewp-allowed-products/#developers",
-    "tags": []
-  },
-  {
-    "id": "coming-soon@6.6.0",
-    "title": "SeedProd 6.6.0",
-    "date": "2021-07-21",
-    "brand": "SeedProd",
-    "brandSlug": "seedprod",
-    "releaseType": "feature",
-    "summary": "Added - Column Alignment Controls\n\nAdded - Divice Visibility Controls\n\nAdded - Full Length Template Previews\n\nTweak - Version Sync with Pro",
-    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
     "tags": []
   },
   {
