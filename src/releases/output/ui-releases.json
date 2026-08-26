@@ -1,5 +1,27 @@
 [
   {
+    "id": "instagram-feed@6.12.0",
+    "title": "Smash Balloon Instagram Feed 6.12.0",
+    "date": "2026-08-25",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New - The feed builder and your feeds are now far easier to use with a keyboard and a screen reader. Controls are properly labelled and reachable by Tab, popups can be closed with Escape, feeds announce newly loaded posts, and focus outlines are visible throughout\n\nFix - Corrected a number of typos and grammatical errors in text throughout the settings and admin screens, including three places that referred to \"tweets\" instead of Instagram posts\n\nFix - Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.8.0",
+    "title": "Smash Balloon Twitter Feed 2.8.0",
+    "date": "2026-08-25",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: The plugin is now named \"Smash Balloon X (Twitter) Feed\" on the Plugins screen so all Smash Balloon plugins are listed together\n\nTweak: Improved accessibility across the feed builder and feed output, including keyboard navigation, screen reader support and focus handling\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.9",
     "title": "PushEngage 4.2.9",
     "date": "2026-08-25",
@@ -8,6 +30,28 @@
     "releaseType": "feature",
     "summary": "NEW: Tools page — explore PushEngage's AI toolkit (WordPress Abilities, MCP, Skills, and the Chrome extension) with live status detection for the Abilities API and MCP Adapter plugin\n\nNEW: Dashboard Strategies card now highlights your site's AI readiness — set up the MCP Adapter in a click, or open live usage details once agents are connected\n\nImproved: PushEngage abilities now declare the unified `public` exposure flag introduced in WordPress 7.1 and are grouped by domain for AI clients\n\nImproved: Tested up to WordPress 7.1",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.6.0",
+    "title": "Uncanny Automator 7.6.0",
+    "date": "2026-08-25",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "[All-in-One WP Migration](https://automatorplugin.com/integration/all-in-one-wp-migration/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7539\n\n[FluentBoards](https://automatorplugin.com/integration/fluentboards/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7479\n\n[FluentCart](https://automatorplugin.com/integration/fluentcart/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7494\n\n[Really Simple Security](https://automatorplugin.com/integration/really-simple-security/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7555\n\nAll-in-One WP Migration - A backup file is deleted #7580\n\nAll-in-One WP Migration - A site backup fails #7581\n\nAll-in-One WP Migration - A site backup is created #7563\n\nFluentBoards - A board is created #7486\n\nFluentBoards - A comment is added to a task on a board #7483\n\nFluentBoards - A label is added to or removed from a task on a board #7485\n\nFluentBoards - A task is created on a board #7480\n\nFluentBoards - A task on a board is completed or reopened #7481\n\nFluentBoards - A task on a board's due date is set or changed #7484\n\nFluentBoards - A user is assigned to a task on a board #7482\n\nFluentBoards - A user is unassigned from a task on a board #7487\n\nFluentCart - A user's order changes to a status #7497\n\nFluentCart - A user's order for a product is paid #7495\n\nFluentCart - A user's subscription changes to a status #7501\n\nFluentCart - A user's subscription to a product is activated #7496\n\nFluentCart - A user's subscription to a product is cancelled #7498\n\nFluentCart - A user's subscription to a product is renewed #7499\n\nReally Simple Security - A vulnerability scan is completed #7639\n\nAll-in-One WP Migration - Delete a backup file #7579\n\nAll-in-One WP Migration - Set a backup file's label to a specific value #7578\n\nFluentBoards - Add a comment to a task #7493\n\nFluentBoards - Add a user to a board #7490\n\nFluentBoards - Assign a user to a task #7491\n\nFluentBoards - Create a board #7489\n\nFluentBoards - Create a task on a board #7488\n\nFluentBoards - Update a task's properties #7492\n\nFluentCart - Add a note to an order #7505\n\nFluentCart - Cancel a subscription #7504\n\nFluentCart - Set an order to a status #7503\n\nApp Integrations - Fixed webhook keys being reset when integration settings were saved. #8438\n\nCore - Custom trigger and action label fields not loading. #8416\n\nCore - Log action resend drops per-request credential scope. #8413\n\nDiscord - Settings - Server disconnect leaves stale connected status. #8422\n\nFacebook - Settings - Connected account avatar 403s after the stored CDN URL expires. #8424\n\nGravity Forms - Added consolidated checkbox field tokens and fixed Form title and ID tokens in submission triggers. #8397\n\nHubSpot - Create/Update a contact - Enumeration fields drop token values matching option labels. #8418\n\nPage Builder - Fixed styling issues with reusable sections added by users or Agents. #8434\n\nPage Builder - Improved Save Draft reliability and canvas consistency. #8433\n\nPage Builder - Improved reusable section previews, copying, and style persistence. #8432\n\nRecipe Builder - Fixed sentence pills displaying outdated values after fields were updated. #8435\n\nRecipe Builder - Fixed the editor failing to load or save recipes with actions using custom values. #8391\n\nImproved in-plugin notifications. #8177",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@10.9.3.3",
+    "title": "Thrive Themes 10.9.3.3",
+    "date": "2026-08-25",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "fix",
+    "summary": "Thrive Architect: Registration Avatar Picker: The Registration element&#8217;s Avatar field is now a real avatar picker instead of a plain text field\n\nThrive Architect: Section Corner Rounding: Background Section rounded corners now clip the background layer correctly instead of the inner content\n\nThrive Architect: Correct Error Labels: The URL and YouTube-URL field labels on error messages are no longer swapped\n\nThrive Architect: Social Wall Stability: Removing Social Wall while it&#8217;s still referenced no longer causes a fatal error\n\nThrive Architect: Template Loading: The editor no longer errors when a stored option isn&#8217;t an array, so pages load reliably\n\nThrive Theme Builder: Author Template Filtering: Filtering posts no longer breaks the page when a default author template is assigned to a user with no posts\n\nThrive Theme Builder: PHP 8.2 Compatibility: Resolved a PHP 8.2 warning that could trigger &#8220;headers already sent&#8221; errors\n\nThrive Leads: ActiveCampaign Date Fields: The ActiveCampaign integration now sends custom date fields in the correct format, so opt-in submissions no longer fail\n\nThrive Leads: Template Previews: Template previews are now available via the service API, with expanded template filtering\n\nThrive Leads: PHP 8.2 Compatibility: Resolved PHP 8.2 deprecation warnings in the editor-URL and front-end form rendering\n\nThrive Quiz Builder: FluentCRM Field Mapping: FluentCRM now keeps the &#8220;Result of quiz&#8221; field mapping instead of dropping it\n\nThrive Apprentice: Accurate Welcome Emails: New-course welcome emails now go only to current members, not cancelled or expired ones\n\nThrive Apprentice: Course URL Stability: Course URLs no longer desync from rewrite rules, preventing site-wide 404s on courses\n\nThrive Apprentice: Faster Student Pages: Student-facing course pages now load faster and more reliably\n\nThrive Apprentice: Assessment Grade Button: The grade button now stays visible for re-submitted assessments when switching between status tabs\n\nThrive Apprentice: Drip Condition Summary: The drip-unlock condition summary now shows the actual date/time instead of raw placeholders\n\nThrive Apprentice: Unlock Date on New Locked Pages: Newly created drip-protected content pages now show the scheduled unlock date\n\nThrive Optimize: PHP 8.2 Compatibility: Resolved a PHP 8.2 deprecation warning in the test menu\n\nThrive Ultimatum: FluentCRM Trigger Fix: A FluentCRM tag triggering a campaign no longer causes a critical error\n\nThrive Comments: Reliable Comment Loading: The comments endpoint no longer exhausts memory when a link points to an invalid comment\n\nThrive Comments: Admin Redirect Fix: Resolved a &#8220;headers already sent&#8221; issue caused by the admin SVG sprite\n\nSecurity & Stability: Security Improvements: This release includes security and stability improvements to keep your site protected",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/08/v10-9-3-3/",
     "tags": []
   },
   {
@@ -121,17 +165,6 @@
     "tags": []
   },
   {
-    "id": "uncanny-automator@7.5.1.1",
-    "title": "Uncanny Automator 7.5.1.1",
-    "date": "2026-08-15",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "Page Builder - Preserved the last published page content when Automator is deactivated or deleted, and improved file system safety checks. #8385\n\nRecipe UI - Condition field values lost on save, reverting to the first dropdown option. #8366\n\nSetup wizard - Fixed an issue with the \"Build my first page\" button failing to create a page. #8379",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
     "id": "optinmonster@2.17.1",
     "title": "OptinMonster 2.17.1",
     "date": "2026-08-14",
@@ -187,17 +220,6 @@
     "tags": []
   },
   {
-    "id": "uncanny-automator@7.5.1",
-    "title": "Uncanny Automator 7.5.1",
-    "date": "2026-08-13",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "Uncanny Agent - Lite users now get free starter usage of Uncanny Agent\n\nSetup wizard - Improved the setup flow, navigation, security, and interface for a smoother onboarding experience. #8332\n\nUncanny Agent - Page Builder - Improved editor reliability, including saving, Undo and Redo, canvas refreshes, and working across multiple browser tabs. #8370\n\nUncanny Agent - Page Builder - Fixed issues with publishing, downloads, reusable sections, dynamic content, and design style changes. #8370\n\nUncanny Agent - Page Builder - Improved compatibility with different database configurations, screen sizes, and third-party extensions. #8370\n\nUncanny Agent - Page Builder - Improved error handling and recovery to prevent unexpected failures from interrupting Page Builder operations. #8370",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
     "id": "wpforms-lite@2.0.0.4",
     "title": "WPForms Lite 2.0.0.4",
     "date": "2026-08-12",
@@ -239,28 +261,6 @@
     "releaseType": "improvement",
     "summary": "Tweak: Renamed the plugin on the WordPress Plugins screen to \"Smash Balloon Facebook Feed\" to match the product name used elsewhere\n\nFix: Corrected the post author date styling inside the lightbox so it matches the feed\n\nFix: Plugin security hardening",
     "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "instagram-feed@6.12.0",
-    "title": "Smash Balloon Instagram Feed 6.12.0",
-    "date": "2026-08-10",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New - The feed builder and your feeds are now far easier to use with a keyboard and a screen reader. Controls are properly labelled and reachable by Tab, popups can be closed with Escape, feeds announce newly loaded posts, and focus outlines are visible throughout\n\nFix - Corrected a number of typos and grammatical errors in text throughout the settings and admin screens, including three places that referred to \"tweets\" instead of Instagram posts\n\nFix - Plugin security hardening",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "custom-twitter-feeds@2.8.0",
-    "title": "Smash Balloon Twitter Feed 2.8.0",
-    "date": "2026-08-10",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak: The plugin is now named \"Smash Balloon X (Twitter) Feed\" on the Plugins screen so all Smash Balloon plugins are listed together\n\nTweak: Improved accessibility across the feed builder and feed output, including keyboard navigation, screen reader support and focus handling\n\nFix: Plugin security hardening",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
     "tags": []
   },
   {
@@ -1548,17 +1548,6 @@
     "releaseType": "feature",
     "summary": "New: Google Spreadsheets integration! Automatically store your Survey replies in a Google Spreadsheet\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.7.4",
-    "title": "Thrive Themes 10.7.4",
-    "date": "2025-09-02",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Improvements and Fixes:: Fixed: Post list carousels inside conditional displays now properly show featured images\n\nImprovements and Fixes:: Enhanced: Testimonial carousel functionality within Conditional Display Blocks to prevent parsing conflicts\n\nImprovements and Fixes:: Fixed: Custom scripts data now syncs properly before saving in WordPress settings modal\n\nImprovements and Fixes:: Improved: Hamburger menu now scrollable on tablet devices for better mobile experience\n\nImprovements and Fixes:: Fixed: Stripe provider validation message when negative price is entered\n\nImprovements and Fixes:: Enhanced: Dropdown click behavior in customer courses view to prevent unwanted navigation\n\nImprovements and Fixes:: Improved: Resources are now viewable for archived lessons\n\nImprovements and Fixes:: Fixed: Duplicate course completion counts in reports have been resolved\n\nImprovements and Fixes:: Fixed: Comment moderation dashboard loading issues for administrators viewing comments with parent-child relationships\n\nImprovements and Fixes:: Enhanced: Notification component optimized to prevent unnecessary post creation on frontend for improved performance",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-7-4/",
     "tags": []
   },
   {
