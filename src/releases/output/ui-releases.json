@@ -1,5 +1,49 @@
 [
   {
+    "id": "wpforms-lite@2.0.1.1",
+    "title": "WPForms Lite 2.0.1.1",
+    "date": "2026-08-27",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Added: New QR Code setting generates a downloadable code for a chosen page or URL\n\nAdded: New Add Media button in the Confirmation Message editor allows inserting images from the Media Library\n\nAdded: Buttons in the Form Builder and on WPForms admin pages now show a visible focus indicator during keyboard navigation, and it no longer appears on mouse click\n\nChanged: Stripe Radar-blocked payments now appear in the payment log with a distinct label instead of the generic decline message\n\nChanged: Updated DOMPurify library to 3.4.13\n\nFixed: The Smart Tags widget in the Form Builder did not highlight required fields with a red border when validation failed\n\nFixed: A PHP notice was logged on the front-end when a payment field (Multiple Items, Checkbox Items, or Dropdown Items) contained a choice saved without a label\n\nFixed: Form templates in the Form Builder Setup panel were not filtered by the form's selected category, showing all templates instead\n\nFixed: Some button icons were misaligned on WordPress 7.0\n\nFixed: Incorrect spacing between the icon and text in the Form Builder top bar buttons\n\nFixed: Choice checkboxes and radio buttons in the Form Builder had no visible border and appeared stretched into ovals in Safari\n\nFixed: Collapsible settings sections in the Form Builder, such as AI MCP, did not stay closed after the page was reloaded\n\nFixed: Reordering choices in a Checkbox field in the Form Builder caused a browser console error and stopped the field preview from updating\n\nFixed: Square payments failed on every retry after a submission with an invalid credit card expiration date, even once the card details were corrected\n\nFixed: The Payments page showed too much space between elements when no payments had been collected yet\n\nFixed: PayPal Commerce subscription checkout failed with a fatal error when the account was disconnected while the form was loaded\n\nFixed: Visitors were not taken to the destination set in the form's Confirmations settings after submitting a form when a plugin or custom code supplied an invalid redirect address\n\nFixed: No warning appeared for empty or invalid notification email addresses in the Form Builder\n\nFixed: Various buttons across plugin admin pages showed the default blue focus outline instead of their custom focus styles after being clicked\n\nFixed: Pages rendered in response to a form submission are no longer cacheable, and submitted values are no longer written back into the form when a submission is rejected",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.8.3",
+    "title": "Smash Balloon YouTube Feed 2.8.3",
+    "date": "2026-08-27",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Plugin security hardening.",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
+    "id": "insert-headers-and-footers@2.3.9",
+    "title": "WPCode 2.3.9",
+    "date": "2026-08-27",
+    "brand": "WPCode",
+    "brandSlug": "wpcode",
+    "releaseType": "fix",
+    "summary": "Fix: PHP fatal error when a snippet error was logged on a frontend or REST request while the logs folder was missing\n\nFix: Snippets no longer get overwritten with visual editor content when other plugins trigger editor events in the admin\n\nFix: Library snippet previews now always start at the top of the code\n\nFix: PHP fatal error on some admin AJAX requests from the library connect notice",
+    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
+    "tags": []
+  },
+  {
+    "id": "all-in-one-seo-pack@5.0.1",
+    "title": "All in One SEO 5.0.1",
+    "date": "2026-08-26",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "New: TruSEO content analysis for taxonomy terms, starting with WooCommerce product categories\n\nFixed: SEO Analysis now shows a clear \"Preview unavailable\" message when a firewall blocks the homepage or competitor screenshot\n\nFixed: Sitemap image URLs being duplicated on WordPress subdirectory installations\n\nFixed: Redirects no longer create cache entries on sites that don't use the Redirects feature\n\nFixed: Overlapping redirects now apply in the correct order\n\nFixed: A textdomain loading notice that could appear when checking for addon updates on WordPress 6.7 and later\n\nFixed: Table of Contents block sometimes reset custom heading text and pointed to incorrect links\n\nFixed: Added a warning when a redirect's destination URL contains invalid characters in the domain\n\nFixed: Redirects from child pages to parent pages not working for smart 404 redirects",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
     "id": "instagram-feed@6.12.0",
     "title": "Smash Balloon Instagram Feed 6.12.0",
     "date": "2026-08-25",
@@ -137,8 +181,8 @@
     "date": "2026-08-18",
     "brand": "WPForms",
     "brandSlug": "wpforms",
-    "releaseType": "improvement",
-    "summary": "The WPForms admin menu left a large empty gap below it on mobile screens when viewing non-WPForms admin pages.",
+    "releaseType": "fix",
+    "summary": "Fixed: The WPForms admin menu left a large empty gap below it on mobile screens when viewing non-WPForms admin pages.",
     "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
@@ -440,17 +484,6 @@
     "tags": []
   },
   {
-    "id": "wpforms-lite@2.0.0.1",
-    "title": "WPForms Lite 2.0.0.1",
-    "date": "2026-07-16",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: Form submissions could be blocked by a web application firewall, such as Cloudflare's OWASP ruleset, because of the format of the Form Analytics data attached to each submission.",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "sugar-calendar-lite@3.12.0",
     "title": "Sugar Calendar Lite 3.12.0",
     "date": "2026-07-16",
@@ -569,17 +602,6 @@
     "releaseType": "improvement",
     "summary": "Thrive Leads: Refresh From Cloud: A new &#8220;Refresh from cloud&#8221; button lets you re-fetch opt-in form templates on demand, so newly available templates show up right away instead of waiting for the cached list to update\n\nSecurity Improvements: Security Improvements: This release includes security and stability improvements to keep your site protected",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2-1/",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@4.9.9",
-    "title": "All in One SEO 4.9.9",
-    "date": "2026-06-24",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "New: SEO Alerts feature to notify site owners of critical SEO issues via email and Slack\n\nNew: New `#event_start_date` and `#event_end_date` smart tags for events when The Events Calendar plugin is active\n\nUpdated: Sitemap hreflang alternates when using the Universally translation plugin\n\nUpdated: .htaccess editor error messages are now clearer and more actionable\n\nUpdated: Setup wizard now triggers after bulk plugin activation instead of being skipped\n\nUpdated: Improved the posts-list URL Inspection status with clearer messages and a Refresh Status action\n\nFixed: PHP 8.2+ dynamic property creation deprecation notice when loading addons\n\nFixed: PHP 8.5 deprecation notice when generating descriptions from classic or freeform post content\n\nFixed: Elementor's internal post type was included in LLMs.txt by default\n\nFixed: Primary Category dropdown was clipped when WooCommerce was active\n\nFixed: PHP warnings on taxonomy archives when get_queried_object() returned a WP_Post_Type\n\nFixed: Fatal error on the WordPress dashboard when the SEO News widget returned an unexpected response\n\nFixed: Divi 5+ layouts displaying stray borders, padding, or alignment issues when AIOSEO Pro is active\n\nFixed: PHP warning in sitemap generation for sitemap types that don't support taxonomies\n\nFixed: Multisite sub-sites with \"Discourage search engines from indexing this site\" enabled were missing from the Domain Activation list in Network Admin\n\nFixed: Console errors in the Avada Frontend Editor during initialization\n\nFixed: PHP warning in Social Networks image handling on non-singular pages\n\nFixed: REST API clients can now update the custom canonical using the snake_case field name in addition to the camelCase version\n\nFixed: WooCommerce Product schema's valueAddedTaxIncluded now reflects the store's actual tax configuration, and is omitted when taxes are disabled\n\nFixed: Editing a page via the Classic Editor could show another post's content when a third-party page builder ran a post loop on the same page\n\nFixed: Site Audit scan fatal error on servers where the PHP intl extension is not installed\n\nFixed: A conflict where third-party plugins filtering could rename the generated llms.txt or llms-full.txt files\n\nFixed: Opening the redirect modal from the side panel when the Metabox Redirects tab is active\n\nFixed: Regex redirects no longer produce double slashes mid-path when a capture group matches an empty string\n\nFixed: Regex redirects for media files\n\nFixed: Regex redirects producing a double trailing slash when the target URL contains a capture group placeholder\n\nFixed: Keyword Cannibalization checker was displaying private posts in the results list",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
   {
@@ -946,17 +968,6 @@
     "tags": []
   },
   {
-    "id": "feeds-for-youtube@2.6.6",
-    "title": "Smash Balloon YouTube Feed 2.6.6",
-    "date": "2026-05-14",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.9.1",
     "title": "Thrive Themes 10.9.1",
     "date": "2026-05-12",
@@ -1207,17 +1218,6 @@
     "releaseType": "improvement",
     "summary": "Added: Empty state on the All Galleries screen when you have no galleries, with a clear call-to-action to create your first gallery\n\nFixed: Access to the justified gallery theme parameter\n\nFixed: Gallery selector in the block editor now shows gallery titles with readable characters (e.g. ampersands and quotes) instead of HTML entity codes\n\nImproved: Cosmetic updates and UI improvements across the plugin: overview page, create gallery tabs, top bar styling, and upgrade button consistency\n\nImproved: Plugin name and description updated for clarity",
     "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "insert-headers-and-footers@2.3.4",
-    "title": "WPCode 2.3.4",
-    "date": "2026-02-12",
-    "brand": "WPCode",
-    "brandSlug": "wpcode",
-    "releaseType": "feature",
-    "summary": "New: Integration with the WordPress Abilities API (requires WordPress 6.9+).",
-    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
     "tags": []
   },
   {
