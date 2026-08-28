@@ -1,5 +1,38 @@
 [
   {
+    "id": "all-in-one-seo-pack@5.0.1.1",
+    "title": "All in One SEO 5.0.1.1",
+    "date": "2026-08-28",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Fixed: The link toolbar's nofollow, sponsored and UGC options were missing from the editor, and the Classic Editor's Insert/Edit Link dialog did not open\n\nFixed: The link toolbar could crash the block editor on WordPress 6.5 and older\n\nFixed: Links were saved with an empty title attribute, and the title field could be cut off in the link popover",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-facebook-feed@4.12.0",
+    "title": "Smash Balloon Social Post Feed 4.12.0",
+    "date": "2026-08-28",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Confirmed compatibility with WordPress 7.1\n\nTweak: The feed builder and the Facebook feed are now far more accessible to keyboard and screen reader users, meeting WCAG 2.1 AA. Controls throughout the builder, onboarding and settings screens can be reached and operated by keyboard and announce their purpose; the feed and its posts describe their structure to screen readers; dialogs keep focus where it belongs and close with Escape; notices are announced as they appear; links that open a new tab say so; and decorative icons and images are hidden from screen readers",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "charitable@1.8.12.3",
+    "title": "Charitable 1.8.12.3",
+    "date": "2026-08-28",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "FIX: Improved support for Campaign builder text fields and non-Latin characters such as Japanese, Chinese, Korean, etc\n\nFIX: Updates involving campaign headline color in the builder and resolved builder preview memory issue, which was happening in some scenarios\n\nFIX: Improved Donate Button block's label in terms of readability in certain scenarios",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.1.1",
     "title": "WPForms Lite 2.0.1.1",
     "date": "2026-08-27",
@@ -129,17 +162,6 @@
     "releaseType": "feature",
     "summary": "Added: **NEW** Registration Form: collect extra details from attendees during ticket checkout or RSVP registration, like meal choice, t-shirt size, or a company name\n\nAdded: Export your events as a CSV file, ready to open in Excel or Google Sheets\n\nAdded: Free events with tickets: turn on ticketing and let visitors claim free tickets without setting up a payment provider\n\nAdded: Zoom meetings can now be added to recurring events, with one join link that works for every occurrence\n\nAdded: New AI tab under Tools: install the WPVibe.ai plugin in one click and see what AI assistants can do with your events\n\nAdded: Pick a date range when exporting, so you only export the events you need\n\nChanged: Setup Wizard improvements, including a new welcome screen in your WordPress admin\n\nFixed: The Notify Attendees panel did not open when using the Block editor\n\nFixed: Notify Attendees emailed only the person who paid instead of every ticket holder\n\nFixed: Ticket and order emails showed the event start time in place of the end time\n\nFixed: Dropdowns in the event editor did not work when using the Block editor\n\nFixed: The Event List block could hide all events from visitors who were not logged in when filtering by tag\n\nFixed: Security improvements",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "custom-facebook-feed@4.12.0",
-    "title": "Smash Balloon Social Post Feed 4.12.0",
-    "date": "2026-08-20",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak: Confirmed compatibility with WordPress 7.1\n\nTweak: The feed builder and the Facebook feed are now far more accessible to keyboard and screen reader users, meeting WCAG 2.1 AA. Controls throughout the builder, onboarding and settings screens can be reached and operated by keyboard and announce their purpose; the feed and its posts describe their structure to screen readers; dialogs keep focus where it belongs and close with Escape; notices are announced as they appear; links that open a new tab say so; and decorative icons and images are hidden from screen readers",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
   {
@@ -745,17 +767,6 @@
     "releaseType": "feature",
     "summary": "NEW: Role-based post-editor access — non-admin users in selected roles can now use the PushEngage metabox\n\nNEW: Audience filter — date-based operators for attribute predicates for parity with App Dashboard\n\nFix: Auto-push notifications now respect the dashboard's \"Default Expiry for Notifications\" setting\n\nImproved: Typo and grammar fixes across plugin source strings\n\nImproved: Hardened overall plugin security and reliability",
     "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.11.2",
-    "title": "Charitable 1.8.11.2",
-    "date": "2026-06-01",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "FIX: Hardened profile avatar handling to prevent unauthorized attachment deletion\n\nFIX: PayPal Commerce onboarding reliability improvements",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
