@@ -1,5 +1,16 @@
 [
   {
+    "id": "instagram-feed@6.13.0",
+    "title": "Smash Balloon Instagram Feed 6.13.0",
+    "date": "2026-08-31",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "fix",
+    "summary": "New - A notice now warns you when a feed has quietly been showing an older saved copy of its posts because Instagram could not be reached, so you find out before your visitors do. The notice becomes more urgent if the connection stays broken\n\nTweak - Confirmed compatibility with WordPress 7.1\n\nTweak - The weekly Feed Issue Email Report now also tells you when a feed has quietly been showing an older saved copy of its posts for days, not just when there is an outright connection error\n\nFix - Rate limits and temporary throttling from Instagram no longer make a working connection look broken or ask you to reconnect. Your feed keeps showing its saved posts and retries on its own once the limit clears\n\nFix - Repeated failures to refresh a connected account's access token are now recorded properly, so a connection that keeps failing no longer appears up to date\n\nFix - Keyboard navigation in the feed customizer no longer gets stuck: with a color picker open, Tab moves through the page normally, switching settings sections no longer pulls focus into the open picker, and tabbing no longer detours into the feed preview\n\nFix - The connection error notice no longer keeps showing an out-of-date message - including a warning that your Instagram data would be deleted within 7 days - after the problem has changed or been resolved. It now reflects the current state of your connection and clears when there is nothing wrong\n\nFix - Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@5.0.1.1",
     "title": "All in One SEO 5.0.1.1",
     "date": "2026-08-28",
@@ -723,17 +734,6 @@
     "releaseType": "feature",
     "summary": "New: Added a modern Gutenberg block and Elementor widget for the Facebook feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nNew: Added a Help widget to the feed builder for in-app access to documentation and support\n\nTweak: Compatibility with WP 7\n\nTweak: Corrected typos and grammar in plugin UI strings, admin notices, and tooltips\n\nFix: Feed blocks now render a live preview correctly inside the WP 7.0+ iframed block editor\n\nFix: Corrupted onboarding data no longer causes a fatal error\n\nFix: The legacy Elementor widget is hidden from the element search, and the widget title is now translatable",
     "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "instagram-feed@6.11.1",
-    "title": "Smash Balloon Instagram Feed 6.11.1",
-    "date": "2026-06-10",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New - Added a Help widget to the feed builder for in-app access to documentation and support\n\nFix - The legacy Instagram Feed block now renders a live preview correctly inside the WP 7.0+ iframed block editor, and the legacy Elementor widget now renders correctly inside the Elementor preview\n\nFix - The Elementor widget title is now translatable",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
   {
