@@ -1,12 +1,56 @@
 [
   {
+    "id": "wpforms-lite@2.0.1.1",
+    "title": "WPForms Lite 2.0.1.1",
+    "date": "2026-09-04",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Added: New QR Code setting generates a downloadable code for a chosen page or URL\n\nAdded: New Add Media button in the Confirmation Message editor allows inserting images from the Media Library\n\nAdded: Buttons in the Form Builder and on WPForms admin pages now show a visible focus indicator during keyboard navigation, and it no longer appears on mouse click\n\nChanged: Stripe Radar-blocked payments now appear in the payment log with a distinct label instead of the generic decline message\n\nChanged: Updated DOMPurify library to 3.4.13\n\nFixed: The Smart Tags widget in the Form Builder did not highlight required fields with a red border when validation failed\n\nFixed: A PHP notice was logged on the front-end when a payment field (Multiple Items, Checkbox Items, or Dropdown Items) contained a choice saved without a label\n\nFixed: Form templates in the Form Builder Setup panel were not filtered by the form's selected category, showing all templates instead\n\nFixed: Some button icons were misaligned on WordPress 7.0\n\nFixed: Incorrect spacing between the icon and text in the Form Builder top bar buttons\n\nFixed: Choice checkboxes and radio buttons in the Form Builder had no visible border and appeared stretched into ovals in Safari\n\nFixed: Collapsible settings sections in the Form Builder, such as AI MCP, did not stay closed after the page was reloaded\n\nFixed: Reordering choices in a Checkbox field in the Form Builder caused a browser console error and stopped the field preview from updating\n\nFixed: Square payments failed on every retry after a submission with an invalid credit card expiration date, even once the card details were corrected\n\nFixed: The Payments page showed too much space between elements when no payments had been collected yet\n\nFixed: PayPal Commerce subscription checkout failed with a fatal error when the account was disconnected while the form was loaded\n\nFixed: Visitors were not taken to the destination set in the form's Confirmations settings after submitting a form when a plugin or custom code supplied an invalid redirect address\n\nFixed: No warning appeared for empty or invalid notification email addresses in the Form Builder\n\nFixed: Various buttons across plugin admin pages showed the default blue focus outline instead of their custom focus styles after being clicked\n\nFixed: Pages rendered in response to a form submission are no longer cacheable, and submitted values are no longer written back into the form when a submission is rejected",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "google-analytics-for-wordpress@11.2.0",
+    "title": "MonsterInsights 11.2.0",
+    "date": "2026-09-03",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Fixes: Every report view honours the sample-data toggle, so sample rows no longer mix in with your real numbers\n\nFixes: Rows in sample reports no longer link out to live pages\n\nFixes: An expired Google connection now prompts you to reconnect instead of showing a report error\n\nFixes: Dashboard widget shows the upgrade prompt for reports your plan doesn't include, instead of an error\n\nFixes: Upgrade links on paid plans now open the pricing page instead of the account area\n\nFixes: Dashboard widget no longer links to reports that have been disabled\n\nFixes: No more false \"multiple tracking codes\" notice on eCommerce homepages\n\nFixes: Previous-period totals now match the rows the table actually shows\n\nFixes: The AMP addon notice no longer appears on report screens\n\nFixes: Various bug fixes and updates",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "userfeedback-lite@1.11.4",
+    "title": "UserFeedback Lite 1.11.4",
+    "date": "2026-09-03",
+    "brand": "UserFeedback",
+    "brandSlug": "userfeedback",
+    "releaseType": "fix",
+    "summary": "Fixed: Deactivating the Heatmaps addon no longer causes a fatal error when UserFeedback Pro is inactive\n\nFixed: Network-activating UserFeedback Premium no longer causes a fatal error on multisite when Lite is active on individual sites\n\nFixed: The \"Disable All UserFeedback Surveys\" setting is now applied when a specific survey is selected\n\nFixed: Improved the permission checks on the survey search and logic type endpoints\n\nFixed: The Lite \"Support\" link on the Plugins screen now points to the WordPress.org support forum",
+    "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.6.1.1",
+    "title": "Uncanny Automator 7.6.1.1",
+    "date": "2026-09-03",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "LearnDash - Restored \"Any\" option handling across multiple triggers and dropdowns. #8514\n\nMemberium for Keap and SureCart - Fixed triggers and actions failing to run on frontend requests. #8523\n\nUncanny Agent and Page Builder - Improved feature availability during temporary connection issues. #8501",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "uncanny-automator@7.6.1",
     "title": "Uncanny Automator 7.6.1",
     "date": "2026-09-01",
     "brand": "Uncanny Automator",
     "brandSlug": "uncanny-automator",
     "releaseType": "improvement",
-    "summary": "Fluent Forms - Added value and label tokens for choice fields, making selections more flexible. #8455\n\nFormidable - Restored the shared helpers instance to keep things running smoothly. #8518\n\nFormidable Forms - Submission triggers now ignore incomplete and abandoned entries. #8509\n\nHardened PeepSo and related token processing against unsafe serialized data. #8505\n\nLearnDash - A user has completed X% of a course - Fixed \"0f\" to correctly display \"% of\". #8516\n\nPage Builder - Removed the unnecessary \"Reload editor\" option from the Uncanny Agent notice. #8506\n\nUncanny Agent - Strengthened security for legacy admin-AJAX requests. #8499\n\nWordPress - Create a post - Parent posts now appear in the dropdown instead of playing hide-and-seek. #8491\n\nCore - Removed unnecessary license API response logging for cleaner logs. #8495",
+    "summary": "Fluent Forms - Added value and label tokens for choice fields, making selections more flexible. #8455\n\nFormidable Forms - Restored the shared helpers instance to keep things running smoothly. #8518\n\nFormidable Forms - Submission triggers now ignore incomplete and abandoned entries. #8509\n\nHardened PeepSo and related token processing against unsafe serialized data. #8505\n\nLearnDash - A user has completed X% of a course - Fixed \"0f\" to correctly display \"% of\". #8516\n\nPage Builder - Removed the unnecessary \"Reload editor\" option from the Uncanny Agent notice. #8506\n\nUncanny Agent - Strengthened security for legacy admin-AJAX requests. #8499\n\nWordPress - Create a post - Parent posts now appear in the dropdown instead of playing hide-and-seek. #8491\n\nCore - Removed unnecessary license API response logging for cleaner logs. #8495",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
@@ -52,17 +96,6 @@
     "releaseType": "improvement",
     "summary": "FIX: Improved support for Campaign builder text fields and non-Latin characters such as Japanese, Chinese, Korean, etc\n\nFIX: Updates involving campaign headline color in the builder and resolved builder preview memory issue, which was happening in some scenarios\n\nFIX: Improved Donate Button block's label in terms of readability in certain scenarios",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@2.0.1.1",
-    "title": "WPForms Lite 2.0.1.1",
-    "date": "2026-08-27",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: New QR Code setting generates a downloadable code for a chosen page or URL\n\nAdded: New Add Media button in the Confirmation Message editor allows inserting images from the Media Library\n\nAdded: Buttons in the Form Builder and on WPForms admin pages now show a visible focus indicator during keyboard navigation, and it no longer appears on mouse click\n\nChanged: Stripe Radar-blocked payments now appear in the payment log with a distinct label instead of the generic decline message\n\nChanged: Updated DOMPurify library to 3.4.13\n\nFixed: The Smart Tags widget in the Form Builder did not highlight required fields with a red border when validation failed\n\nFixed: A PHP notice was logged on the front-end when a payment field (Multiple Items, Checkbox Items, or Dropdown Items) contained a choice saved without a label\n\nFixed: Form templates in the Form Builder Setup panel were not filtered by the form's selected category, showing all templates instead\n\nFixed: Some button icons were misaligned on WordPress 7.0\n\nFixed: Incorrect spacing between the icon and text in the Form Builder top bar buttons\n\nFixed: Choice checkboxes and radio buttons in the Form Builder had no visible border and appeared stretched into ovals in Safari\n\nFixed: Collapsible settings sections in the Form Builder, such as AI MCP, did not stay closed after the page was reloaded\n\nFixed: Reordering choices in a Checkbox field in the Form Builder caused a browser console error and stopped the field preview from updating\n\nFixed: Square payments failed on every retry after a submission with an invalid credit card expiration date, even once the card details were corrected\n\nFixed: The Payments page showed too much space between elements when no payments had been collected yet\n\nFixed: PayPal Commerce subscription checkout failed with a fatal error when the account was disconnected while the form was loaded\n\nFixed: Visitors were not taken to the destination set in the form's Confirmations settings after submitting a form when a plugin or custom code supplied an invalid redirect address\n\nFixed: No warning appeared for empty or invalid notification email addresses in the Form Builder\n\nFixed: Various buttons across plugin admin pages showed the default blue focus outline instead of their custom focus styles after being clicked\n\nFixed: Pages rendered in response to a form submission are no longer cacheable, and submitted values are no longer written back into the form when a submission is rejected",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
