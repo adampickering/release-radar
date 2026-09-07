@@ -1,97 +1,52 @@
 {
-  "weekRange": "August 24 – 31, 2026",
-  "greeting": "Welcome back to Release Radar, where we track the WordPress plugin universe so you don't have to!",
-  "introParagraph": "This week, the plugin landscape was a vibrant mix of accessibility enhancements, crucial bug fixes, and some genuinely exciting new features. We saw a strong push towards making feeds more inclusive, a few 'oopsie' moments in core editor functionality getting patched, and some clever additions to form and event management. It seems developers are not just patching holes, but also paving new, more accessible roads.",
+  "weekRange": "August 31 – September 7, 2026",
+  "greeting": "Well hello there, fellow WordPress whisperers!",
+  "introParagraph": "This week's Release Radar might seem a bit 'fix-it-focused' at first glance, but don't let that fool you. While major feature splashes were few, we saw some crucial under-the-hood refinements and clever additions that make our favorite plugins even more robust and user-friendly. It's all about smoothing out those wrinkles and ensuring a seamless experience for you and your clients.",
   "stats": {
-    "releases": 16,
-    "brands": 10,
-    "features": 3,
-    "fixes": 8
+    "releases": 6,
+    "brands": 5,
+    "features": 0,
+    "fixes": 4
   },
   "highlights": [
     {
-      "title": "Sugar Calendar Lite 3.13.0",
-      "type": "feature",
-      "summary": "This release introduces a brand-new Registration Form feature, allowing you to collect extra attendee details like meal choices or company names during ticket checkout or RSVP registration. It's a sweet addition for event organizers looking to streamline their data collection."
-    },
-    {
       "title": "WPForms Lite 2.0.1.1",
-      "type": "feature",
-      "summary": "WPForms is stepping up its game with a new QR Code setting for easy page sharing and an 'Add Media' button in the Confirmation Message editor. These small but mighty additions enhance user experience and form flexibility."
-    },
-    {
-      "title": "All in One SEO 5.0.1.1",
       "type": "fix",
-      "summary": "A critical fix here, as the link toolbar's nofollow, sponsored, and UGC options were playing hide-and-seek in the editor. This update ensures your SEO attributes are back where they belong, preventing any accidental \"follow\" faux pas."
+      "summary": "This release might be labeled a 'fix,' but it sneaks in some handy new features: a QR Code generator for your forms and an 'Add Media' button in the confirmation message editor. Now you can easily direct users or spice up your post-submission experience without breaking a sweat."
     },
     {
-      "title": "Smash Balloon Instagram Feed 6.12.0",
-      "type": "feature",
-      "summary": "Smash Balloon continues its accessibility drive, making the Instagram feed builder and your feeds significantly easier to use for keyboard and screen reader users. This commitment to inclusivity is a big win for everyone."
+      "title": "Smash Balloon Instagram Feed 6.13.0",
+      "type": "fix",
+      "summary": "Ever had your Instagram feed silently showing outdated posts? Smash Balloon's latest update introduces a much-needed warning system, alerting you when your feed is serving stale content due to connection issues. No more embarrassing 'blast from the past' moments for your visitors!"
     },
     {
-      "title": "PushEngage 4.2.9",
-      "type": "feature",
-      "summary": "PushEngage launches a new 'Tools' page to explore its AI toolkit, including WordPress Abilities and the MCP Adapter plugin, complete with live status detection. It's a glimpse into the future of intelligent marketing automation for your WordPress site."
+      "title": "Uncanny Automator 7.6.1.1 & 7.6.1",
+      "type": "improvement",
+      "summary": "Uncanny Automator continues its quest for ultimate automation, with two releases bringing key improvements. From restoring 'Any' options in LearnDash triggers to enhancing Fluent Forms choice field tokens and fixing critical integration issues with Memberium and SureCart, your automated workflows just got a whole lot more reliable and flexible."
+    },
+    {
+      "title": "MonsterInsights 11.2.0",
+      "type": "fix",
+      "summary": "For those of us who appreciate clean data, MonsterInsights delivered a solid fix ensuring sample data no longer mingles with your real numbers in reports. This means clearer insights and no more accidental clicks on 'sample' links leading nowhere. Pure, unadulterated analytics goodness!"
     }
   ],
   "otherReleases": [
     {
-      "title": "Smash Balloon Instagram Feed 6.13.0",
+      "title": "UserFeedback Lite 1.11.4",
       "type": "fix",
-      "shortSummary": "New - A notice now warns you when a feed has quietly been showing an older sa..."
+      "shortSummary": "Fixed: Deactivating the Heatmaps addon no longer causes a fatal error when Us..."
     },
     {
-      "title": "Smash Balloon Social Post Feed 4.12.0",
+      "title": "Uncanny Automator 7.6.1.1",
       "type": "improvement",
-      "shortSummary": "Tweak: Confirmed compatibility with WordPress 7.1"
+      "shortSummary": "LearnDash - Restored \"Any\" option handling across multiple triggers and dropd..."
     },
     {
-      "title": "Charitable 1.8.12.3",
+      "title": "Uncanny Automator 7.6.1",
       "type": "improvement",
-      "shortSummary": "FIX: Improved support for Campaign builder text fields and non-Latin characte..."
-    },
-    {
-      "title": "Smash Balloon YouTube Feed 2.8.3",
-      "type": "improvement",
-      "shortSummary": "Fix: Plugin security hardening."
-    },
-    {
-      "title": "WPCode 2.3.9",
-      "type": "fix",
-      "shortSummary": "Fix: PHP fatal error when a snippet error was logged on a frontend or REST re..."
-    },
-    {
-      "title": "All in One SEO 5.0.1",
-      "type": "fix",
-      "shortSummary": "New: TruSEO content analysis for taxonomy terms, starting with WooCommerce pr..."
-    },
-    {
-      "title": "Smash Balloon Twitter Feed 2.8.0",
-      "type": "improvement",
-      "shortSummary": "Tweak: The plugin is now named \"Smash Balloon X (Twitter) Feed\" on the Plugin..."
-    },
-    {
-      "title": "Uncanny Automator 7.6.0",
-      "type": "improvement",
-      "shortSummary": "[All-in-One WP Migration](https://automatorplugin.com/integration/all-in-one-..."
-    },
-    {
-      "title": "Thrive Themes 10.9.3.3",
-      "type": "fix",
-      "shortSummary": "Thrive Architect: Registration Avatar Picker: The Registration element&#8217;..."
-    },
-    {
-      "title": "SeedProd 6.20.9",
-      "type": "fix",
-      "shortSummary": "Fixed - The Back to WordPress option works again for pages edited with SeedProd"
-    },
-    {
-      "title": "Charitable 1.8.12.2",
-      "type": "fix",
-      "shortSummary": "FIX: Reports > Overview no longer times out on long date ranges. If a report ..."
+      "shortSummary": "Fluent Forms - Added value and label tokens for choice fields, making selecti..."
     }
   ],
-  "closingJoke": "Why did the WordPress plugin break up with the theme? It felt like it was always getting parent-zoned! Good thing our releases are more compatible.",
-  "generatedAt": "2026-08-31T20:41:32.946Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies! Always keep your relationships, and your plugins, up to date.",
+  "generatedAt": "2026-09-07T19:01:17.626Z"
 }
