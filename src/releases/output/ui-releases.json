@@ -165,17 +165,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.9.3.3",
-    "title": "Thrive Themes 10.9.3.3",
-    "date": "2026-08-25",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: Registration Avatar Picker: The Registration element&#8217;s Avatar field is now a real avatar picker instead of a plain text field\n\nThrive Architect: Section Corner Rounding: Background Section rounded corners now clip the background layer correctly instead of the inner content\n\nThrive Architect: Correct Error Labels: The URL and YouTube-URL field labels on error messages are no longer swapped\n\nThrive Architect: Social Wall Stability: Removing Social Wall while it&#8217;s still referenced no longer causes a fatal error\n\nThrive Architect: Template Loading: The editor no longer errors when a stored option isn&#8217;t an array, so pages load reliably\n\nThrive Theme Builder: Author Template Filtering: Filtering posts no longer breaks the page when a default author template is assigned to a user with no posts\n\nThrive Theme Builder: PHP 8.2 Compatibility: Resolved a PHP 8.2 warning that could trigger &#8220;headers already sent&#8221; errors\n\nThrive Leads: ActiveCampaign Date Fields: The ActiveCampaign integration now sends custom date fields in the correct format, so opt-in submissions no longer fail\n\nThrive Leads: Template Previews: Template previews are now available via the service API, with expanded template filtering\n\nThrive Leads: PHP 8.2 Compatibility: Resolved PHP 8.2 deprecation warnings in the editor-URL and front-end form rendering\n\nThrive Quiz Builder: FluentCRM Field Mapping: FluentCRM now keeps the &#8220;Result of quiz&#8221; field mapping instead of dropping it\n\nThrive Apprentice: Accurate Welcome Emails: New-course welcome emails now go only to current members, not cancelled or expired ones\n\nThrive Apprentice: Course URL Stability: Course URLs no longer desync from rewrite rules, preventing site-wide 404s on courses\n\nThrive Apprentice: Faster Student Pages: Student-facing course pages now load faster and more reliably\n\nThrive Apprentice: Assessment Grade Button: The grade button now stays visible for re-submitted assessments when switching between status tabs\n\nThrive Apprentice: Drip Condition Summary: The drip-unlock condition summary now shows the actual date/time instead of raw placeholders\n\nThrive Apprentice: Unlock Date on New Locked Pages: Newly created drip-protected content pages now show the scheduled unlock date\n\nThrive Optimize: PHP 8.2 Compatibility: Resolved a PHP 8.2 deprecation warning in the test menu\n\nThrive Ultimatum: FluentCRM Trigger Fix: A FluentCRM tag triggering a campaign no longer causes a critical error\n\nThrive Comments: Reliable Comment Loading: The comments endpoint no longer exhausts memory when a link points to an invalid comment\n\nThrive Comments: Admin Redirect Fix: Resolved a &#8220;headers already sent&#8221; issue caused by the admin SVG sprite\n\nSecurity & Stability: Security Improvements: This release includes security and stability improvements to keep your site protected",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/08/v10-9-3-3/",
-    "tags": []
-  },
-  {
     "id": "coming-soon@6.20.9",
     "title": "SeedProd 6.20.9",
     "date": "2026-08-24",
@@ -572,17 +561,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.9.3.1",
-    "title": "Thrive Themes 10.9.3.1",
-    "date": "2026-07-15",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: Editor Loading Fix: Thrive Architect now opens correctly even when the global colors option is missing or corrupted\n\nThrive Architect: Footer Vertical Position: The footer’s Vertical Position setting now applies and saves correctly\n\nThrive Architect: Help Tooltips: The in-editor help tooltips now open correctly — no more console errors or endless loading — and link to the current documentation\n\nThrive Architect: Social Follow X Link: X no longer disappears from the Social Follow element when its Dynamic link is set to Author\n\nThrive Theme Builder: Inherit Font Setting: The Content Area’s Typography “Inherit” setting now persists after you save your template\n\nThrive Theme Builder: Link Trailing Slashes: Author and date archive links now include the trailing slash for consistent URLs\n\nThrive Leads: Impression Tracking Accuracy: Impressions are now counted only when a form is actually visible on screen, so your analytics and A/B test data reflect real views\n\nThrive Leads: Turnstile Widget Fix: The Cloudflare Turnstile widget no longer appears twice on Lead Generation forms when Lazy Load is enabled\n\nThrive Quiz Builder: ConvertKit Quiz Answer Tags: Numeric quiz answer tags (like “2024”) are now applied correctly to your Kit (ConvertKit) subscribers\n\nThrive Quiz Builder: Impression Tracking Accuracy: Quiz splash page impressions are now counted only when the page is actually visible on screen, for more accurate analytics\n\nThrive Apprentice: PayPal Checkout Options: PayPal checkout now respects your Card and Google Pay visibility toggles, and the card form stays collapsed until the buyer chooses it\n\nThrive Apprentice: One Welcome Email Per Purchase: Buying a bundle or membership now sends a single welcome email listing every included course, instead of one email per course. Existing customers also receive a welcome email when a new course is added to their product\n\nThrive Apprentice: Certificate Download Fix: The Download Certificate button no longer logs browser errors, and certificates with missing size settings now generate as proper full-page PDFs\n\nThrive Apprentice: Certificate Names After Duplication: Duplicated course certificates and completion pages now pick up the new course name when you rename the course\n\nThrive Apprentice: Square Payment Stability: Square payment processing no longer triggers a critical error when API credentials are missing or invalid\n\nThrive Ultimatum: Impression Tracking Accuracy: Campaign widget and shortcode impressions are now counted only when they’re actually visible on screen, for more accurate analytics\n\nThrive Comments: Dismissible Admin Notice: The “Thrive Comments is ready to use” notice can now be dismissed — and it stays dismissed\n\nThrive Dashboard: Google Drive Uploads: Lead Generation file uploads now work with Shared Drives and manually created folders — no more “File not found” errors. Action required: reconnect your Google Drive connection under Thrive Dashboard → API Connections so the new permissions take effect\n\nThrive Dashboard: ConvertKit Quiz Answer Tags: Numeric quiz answer tags (like “2024”) are now applied correctly to your Kit (ConvertKit) subscribers\n\nThrive Product Manager: Product Description Formatting: Product descriptions on the processing screen no longer show stray spaces, and “WordPress” is spelled correctly throughout\n\nThrive Product Manager: Security Improvements: This release includes security and stability improvements to keep your site protected",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/07/10-9-3-1/",
-    "tags": []
-  },
-  {
     "id": "envira-gallery-lite@1.13.0",
     "title": "Envira Gallery Lite 1.13.0",
     "date": "2026-07-14",
@@ -627,17 +605,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.9.3",
-    "title": "Thrive Themes 10.9.3",
-    "date": "2026-07-01",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Apprentice: Accept PayPal Payments Directly: You can now take PayPal payments natively in Thrive Apprentice, alongside Stripe and Square, without routing sales through a third-party checkout\n\nThrive Apprentice: Connect PayPal From Your Dashboard: Connect and disconnect your PayPal account from Settings > Payments > PayPal, with per-account connection status, a payment-method capability grid, and guidance if your PayPal email still needs confirming\n\nThrive Apprentice: Embedded PayPal Checkout: Buyers can purchase one-time products through an embedded PayPal checkout, paying with their PayPal balance or card (including guest checkout), without leaving your course page\n\nThrive Apprentice: PayPal Subscriptions: Sell recurring access with PayPal subscriptions, including automatic renewals, a grace period for failed payments, and automatic access revocation once retries are exhausted\n\nThrive Apprentice: Free Trials for Subscriptions: Offer a free-trial period on PayPal subscriptions, so buyers get access for a set number of days before their first payment is taken\n\nThrive Apprentice: Buyers Can Cancel Their Own Subscription: Members can cancel their PayPal subscription themselves from the front end\n\nThrive Apprentice: Subscriptions on the Edit Member Screen: PayPal subscriptions appear as a single grouped entry on the Edit Member screen, with trial and subscription badges and an expandable charge history\n\nThrive Apprentice: Google Pay & Venmo: Buyers can pay with Google Pay in the PayPal checkout, and the Venmo button now follows its checkout-method toggle\n\nThrive Apprentice: Pay Later Messaging: Eligible buyers see PayPal Pay Later messaging on the product page and in the checkout when their PayPal account supports it\n\nThrive Apprentice: Checkout Method Controls: Choose which payment methods appear at checkout, and the card form is collapsed by default and expands when a buyer selects it\n\nThrive Apprentice: Refund From the Order Admin: You can issue a full PayPal refund directly from a member&#8217;s access screen; refunding removes the member&#8217;s access and cancels any linked subscription\n\nThrive Apprentice: PayPal Debug ID in Orders: PayPal transactions now record and display PayPal&#8217;s Debug ID in the order admin, so support can locate any transaction in PayPal&#8217;s logs\n\nThrive Apprentice: Clean Wind-Down on Disconnect: Disconnecting PayPal cleanly winds down active subscriptions: they are cancelled at the end of their current billing period, and you are shown how many will be affected before you confirm",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/07/v10-9-3/",
-    "tags": []
-  },
-  {
     "id": "pushengage@4.2.7",
     "title": "PushEngage 4.2.7",
     "date": "2026-06-26",
@@ -657,17 +624,6 @@
     "releaseType": "feature",
     "summary": "Added: WP-CLI commands to configure WP Mail SMTP from the command line, including SMTP and API-key mailer setup and individual setting management\n\nAdded: Code Snippets tab on the Tools page to browse, preview, and install WP Mail SMTP's WPCode snippets\n\nAdded: Support for the WordPress Abilities API (WordPress 6.9), letting connected tools and AI assistants securely read your debug events\n\nAdded: A one-click option to deactivate a conflicting plugin directly from the conflict notice\n\nAdded: Confirmation prompt before enabling the \"Hide Email Delivery Errors\" option, so the setting is not turned on by accident\n\nChanged: Improved error handling and troubleshooting guidance when an email fails to send\n\nChanged: Updated Action Scheduler library to 4.0.0\n\nFixed: The \"Last week\" stat in the Lite weekly summary email showed the just-started current week's count instead of the actual previous week's total, because the email is sent on Monday at 2pm\n\nFixed: Hardened permission checks and request handling across several admin features to address potential security issues",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.9.2.1",
-    "title": "Thrive Themes 10.9.2.1",
-    "date": "2026-06-25",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Leads: Refresh From Cloud: A new &#8220;Refresh from cloud&#8221; button lets you re-fetch opt-in form templates on demand, so newly available templates show up right away instead of waiting for the cached list to update\n\nSecurity Improvements: Security Improvements: This release includes security and stability improvements to keep your site protected",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2-1/",
     "tags": []
   },
   {
@@ -723,17 +679,6 @@
     "releaseType": "improvement",
     "summary": "Fix - Additional plugin hardening.",
     "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.9.2",
-    "title": "Thrive Themes 10.9.2",
-    "date": "2026-06-16",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: New Feature: Navigator Panel! See your entire page as an easy-to-browse list, search for any element, and click to jump straight to it on the canvas\n\nThrive Architect: Fixed: Saving a page could freeze your browser for 30 seconds or more; saving is now fast and smooth\n\nThrive Architect: Fixed: Applying a pre-built template no longer adds unwanted extra spacing around your page\n\nThrive Leads: New Feature: Track button clicks as conversions! Buttons inside your opt-in forms can now count as conversion events, and your reports now show impressions, conversions, and conversion rate at a glance\n\nThrive Dashboard: Improved: Getting help is simpler; the support button is now &#8220;Contact Support&#8221; and takes you straight to the Thrive Themes support page\n\nThrive Apprentice: Fixed: Clicking &#8220;Start Course&#8221; now correctly marks the course as started, so your Uncanny Automator automations fire as expected\n\nThrive Apprentice: Fixed: A harmless but noisy PHP notice related to assessments no longer appears in error logs",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2/",
     "tags": []
   },
   {
@@ -825,17 +770,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.9.1.4",
-    "title": "Thrive Themes 10.9.1.4",
-    "date": "2026-05-28",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Ultimatum: Countdown Display on Frontend: Countdown timers now display correctly on the frontend of your pages.",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-4/",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@10.2.1",
     "title": "MonsterInsights 10.2.1",
     "date": "2026-05-27",
@@ -880,17 +814,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.9.1.3",
-    "title": "Thrive Themes 10.9.1.3",
-    "date": "2026-05-26",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Architect: WordPress 7.0 Compatibility: The Launch Thrive Architect notice now appears correctly when editing posts in WordPress 7.0, so you can jump back into Thrive Architect from the standard WordPress post screen.",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-3/",
-    "tags": []
-  },
-  {
     "id": "stripe@4.17.2",
     "title": "WP Simple Pay 4.17.2",
     "date": "2026-05-25",
@@ -910,17 +833,6 @@
     "releaseType": "feature",
     "summary": "Improved the campaign filtering to allow filtering by status and folder, along with ne sorting options\n\nFixed a scenario where cloned campaigns were not displaying on WordPress sites\n\nFixed a PHP 8.4 compatibility issue in the Rules exception handler\n\nAdded WordPress 6.9 compatibility\n\nAdded WooCommerce 10.5 compatibility\n\nMaintenance updates",
     "changelogUrl": "https://wordpress.org/plugins/optinmonster/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.9.1.1",
-    "title": "Thrive Themes 10.9.1.1",
-    "date": "2026-05-22",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "All Thrive Themes Products: License related enhancements and fix.",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-1/",
     "tags": []
   },
   {
@@ -1012,17 +924,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.9.1",
-    "title": "Thrive Themes 10.9.1",
-    "date": "2026-05-12",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: Featured Images in Post Lists: Featured images and styles in Post List elements now stay correct across conditional displays after editing and saving a page\n\nThrive Architect: Post List Filter Accuracy: The Post List filter now stays accurate when taxonomy term names overlap across post types, so the right posts always appear\n\nThrive Quiz Builder: GDPR Checkbox on Webhook Forms: The GDPR consent checkbox now correctly blocks Quiz opt-in gate submissions on webhook-connected forms when left unchecked, keeping your forms compliant\n\nThrive Apprentice: Welcome Email Duplicates: Students granted course access through Thrive Automator now receive a single welcome email instead of duplicates\n\nThrive Optimize: Visibility Settings in A/B Tests: Page visibility settings (Top Section, Sidebar, Header, Footer, and more) are now preserved when you create A/B test variations and declare a test winner\n\nThrive Dashboard: Generate & Save Button Display: The Generate & Save button on the API Keys page now displays correctly, and you&#8217;ll see an inline error if you try to save an API key with an empty or invalid name\n\nThrive Dashboard: Zapier on PHP 8.1+: Forms connected to Zapier now work cleanly on PHP 8.1 and above, with no deprecation notices\n\nThrive Theme Builder: Always-Visible Updates: Theme Builder updates now always appear in WordPress admin, even when Thrive Architect has a pending update, so you can keep your sites up to date without getting stuck in an unbreakable update loop",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1/",
-    "tags": []
-  },
-  {
     "id": "custom-twitter-feeds@2.5.5",
     "title": "Smash Balloon Twitter Feed 2.5.5",
     "date": "2026-04-30",
@@ -1031,17 +932,6 @@
     "releaseType": "improvement",
     "summary": "Fix: Plugin hardening.",
     "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.9",
-    "title": "Thrive Themes 10.9",
-    "date": "2026-04-30",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Architect: REST API Content Access: External tools and automations can now read your Thrive Architect page content through the standard WordPress REST API, opening the door to new integrations with AI assistants, content workflows, and custom tooling\n\nThrive Architect: REST API Content Saving: External tools and automations can now save Thrive Architect page content programmatically through the WordPress REST API, secured with WordPress Application Passwords. Your editor and existing workflows are completely unchanged\n\nThrive Apprentice: Drip by Chapter: You can now release course content one chapter at a time, in addition to the existing per-lesson and per-module options. When a chapter unlocks, all of its modules and lessons become available to your students together\n\nThrive Apprentice: Visible Drip Unlock Dates: When content is locked behind a drip schedule, your students now see exactly when each lesson unlocks — both on the locked content page and on locked lesson tiles in the course outline. No more guessing when content becomes available",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/04/v10-9/",
     "tags": []
   },
   {
@@ -1089,17 +979,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.8.10",
-    "title": "Thrive Themes 10.8.10",
-    "date": "2026-04-14",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Apprentice: Course Welcome Email: When you add a new member to a course with the welcome email enabled, they now receive exactly one welcome email instead of two\n\nThrive Theme Builder and Thrive Architect: Google SiteKit GTM: Google Tag Manager configured through Google SiteKit now fires correctly on Thrive landing pages\n\nIntegrations: Behind the scenes, we&#8217;ve laid the groundwork for a new way for Thrive products to connect with each other and with external tools for more powerful and flexible integrations and automations. Stay tuned for what&#8217;s coming",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/04/v10-8-10/",
-    "tags": []
-  },
-  {
     "id": "stripe@4.17.1",
     "title": "WP Simple Pay 4.17.1",
     "date": "2026-04-09",
@@ -1133,17 +1012,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.8.9.1",
-    "title": "Thrive Themes 10.8.9.1",
-    "date": "2026-03-26",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "General: Lightspeed Compatibility: Element styles now display correctly when using the Lightspeed caching plugin\n\nGeneral: Link Typography: Link styling in text elements has been restored to its previous behavior. An improved version will be included in a future update",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/03/v10-8-9-1/",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@10.1.1",
     "title": "MonsterInsights 10.1.1",
     "date": "2026-03-24",
@@ -1152,17 +1020,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.9",
-    "title": "Thrive Themes 10.8.9",
-    "date": "2026-03-24",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Architect: WooCommerce View Cart Button: The View Cart button renders correctly in WooCommerce shop pages so your store looks exactly as intended\n\nThrive Theme Builder: Link Typography Consistency: Links in text elements now inherit the correct line-height from surrounding text, keeping your typography consistent without manual adjustments\n\nThrive Quiz Builder: Accurate Quiz Scores: Quiz final scores correctly count all question types — including multiple choice, image choice, and numeric — so your learners always see accurate results\n\nThrive Apprentice: Emoji Support in Content: Content with emojis displays correctly even after multiple edits\n\nThrive Apprentice: Independent Cloned Lessons: Cloning a lesson creates a fully independent copy so changes to one never affect the other\n\nThrive Ultimatum: OptimizePress Compatibility: Thrive Ultimatum works correctly alongside OptimizePress 3 without blocking its live editor",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/03/v10-8-9/",
     "tags": []
   },
   {
@@ -1210,17 +1067,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.8.8",
-    "title": "Thrive Themes 10.8.8",
-    "date": "2026-03-12",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: Expandable Right Sidebar: The right sidebar now has an expanded view that shows text labels alongside icons, making tools easier to find at a glance. Your preference is saved automatically, so the sidebar stays the way you like it every time you open it\n\nThrive Architect: Cleaner Post List Excerpts: Excerpts in the Post List element display with correct spacing between words and sentences, regardless of how the source content is formatted\n\nThrive Architect: Localized Date Picker: Date picker fields in your forms automatically display month and day names in your site&#8217;s language. No extra configuration needed — if your WordPress site is set to German, visitors see &#8220;Januar&#8221; and &#8220;Montag&#8221; instead of English\n\nThrive Leads: Correct Product Name in Expanded Sidebar: The expanded right sidebar correctly shows the product name — Thrive Leads, Quiz Builder, or Ultimatum — instead of your site&#8217;s URL when editing those forms and designs\n\nThrive Leads: State Controls Always Visible: The state selector and state management controls stay fully accessible when the right sidebar is expanded, with no overlap or hidden elements\n\nThrive Leads: One-Click Duplication: You can now duplicate Lead Groups, Form Types, Lead Shortcodes, and ThriveBoxes in a single click. All variations and child states are copied automatically\n\nThrive Quiz Builder: Correct Product Name in Expanded Sidebar: The expanded right sidebar correctly shows the product name — Thrive Leads, Quiz Builder, or Ultimatum — instead of your site&#8217;s URL when editing those forms and designs\n\nThrive Quiz Builder: State Controls Always Visible: The state selector and state management controls stay fully accessible when the right sidebar is expanded, with no overlap or hidden elements\n\nThrive Quiz Builder: Faster Quiz Submissions: Quiz submissions are processed faster and more reliably, especially for quizzes with many questions or high traffic volumes\n\nThrive Quiz Builder: Faster Quizzes Page Load: The Quizzes page loads significantly faster. Usage statistics load in the background so the page is ready to use right away\n\nThrive Quiz Builder: Detailed Quiz Result Breakdowns: Personality quizzes can now display individual category scores, percentages, and a full category list — with customizable sorting so visitors see results in the most meaningful order\n\nThrive Quiz Builder: Export Quiz Responses: A new Export Results button in the Quiz Builder Users report lets you download all quiz submission data as a CSV file. Large exports run in the background while you keep working. You can also insert quiz result data — scores, category names, and percentages — directly into your pages using a visual shortcode picker in Thrive Architect\n\nThrive Apprentice: Expanded Sidebar Opens by Default: The right sidebar now opens in expanded mode by default, and the Thrive Optimize &#8220;Create New Test&#8221; button displays its label correctly when the sidebar is expanded\n\nThrive Apprentice: Accurate Notification Counter: The notification counter shows the correct number of active notifications and disappears when there are none — no more &#8220;99+&#8221; showing on an empty inbox\n\nThrive Apprentice: Faster Courses Page Load: The Courses page loads significantly faster. Enrollment statistics load in the background so the page is ready to use right away\n\nThrive Dashboard: Expanded Amazon SES Region Support: Amazon SES connections now display clear, helpful error messages when something goes wrong. Support has also been added for 18 additional sending regions, including US-East-2 (Ohio), multiple European locations (London, Paris, Stockholm, Milan), and Asia Pacific regions (Mumbai, Singapore, Sydney, Tokyo, Seoul, Osaka, Jakarta)\n\nThrive Ultimatum: Correct Product Name in Expanded Sidebar: The expanded right sidebar correctly shows the product name — Thrive Leads, Quiz Builder, or Ultimatum — instead of your site&#8217;s URL when editing those forms and designs\n\nThrive Ultimatum: State Controls Always Visible: The state selector and state management controls stay fully accessible when the right sidebar is expanded, with no overlap or hidden elements",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/03/v10-8-8/",
-    "tags": []
-  },
-  {
     "id": "userfeedback-lite@1.11.0",
     "title": "UserFeedback Lite 1.11.0",
     "date": "2026-03-11",
@@ -1240,17 +1086,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.7",
-    "title": "Thrive Themes 10.8.7",
-    "date": "2026-02-24",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: Post list sticky posts handling: Fixed an error that occurred when using post lists in Thrive Architect on PHP 8.2+ environments\n\nThrive Architect: Include sticky header height if present to the offset calculation: When clicking on jumplinks or table of contents items, content now properly scrolls into view below the sticky header instead of being hidden behind it\n\nThrive Leads: Impression tracking to count only when forms are visible: Improved impression tracking accuracy for Thrive Leads forms. Impressions are now counted only when forms actually become visible to users, not on page load. This provides more accurate conversion rate data, especially for trigger-based forms (lightbox, slide-in, ribbon, screen filler) and forms placed below the fold\n\nThrive Leads: Create-tag UI in Select2 dropdown: Improved the tag creation experience in lead generation forms with a redesigned interface. The create-tag button is now positioned in a dedicated section for easier access, and you can quickly create new tags by pressing Enter\n\nThrive Apprentice: New Course Welcome Email template with per-course toggle: New &#8220;Course Welcome Email&#8221; feature allows you to automatically send personalized welcome emails when students gain access to your courses. Each course has an individual toggle to enable/disable this feature, and the new `[course_url]` shortcode is now available in all email templates\n\nThrive Theme Builder: Improved ConvertKit compatibility: Resolved a conflict that could occur when running multiple Thrive products with ConvertKit, connected, ensuring seamless integration across your Thrive suite\n\nThrive Dashboard: Duplicate subscriber errors for MailPoet, AWeber, Constant Contact V3, and Sendy: Fixed an issue where existing subscribers would see error messages when submitting lead generation forms connected to MailPoet, AWeber, Constant Contact V3, or Sendy\n\nThrive Dashboard: Error in ActiveCampaign integration: Fixed a critical PHP 8+ compatibility issue in the ActiveCampaign integration that caused errors when API responses were empty\n\nThrive Product Manager: Improved PHP 8.2 compatibility: Resolved an issue that could cause errors during license verification in Thrive Product Manager on newer PHP versions\n\nThrive Ultimatum: Implement viewport-based impression tracking: Improved impression tracking accuracy for Thrive Ultimatum widgets/shortcodes, Thrive Leads forms, and Thrive Quiz Builder splash pages. Impressions are now only counted when elements are actually visible to users (50% viewport visibility), ensuring more accurate analytics and A/B testing data\n\nUncategorized: AWeber connection reliability: Fixed an issue where reconnecting your AWeber account could fail if the authentication token hadexpired, requiring a fresh login",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/02/v10-8-7/",
     "tags": []
   },
   {
@@ -1298,17 +1133,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.8.6",
-    "title": "Thrive Themes 10.8.6",
-    "date": "2026-01-21",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Apprentice: Data Cleanup Tool: Bulk delete old reporting and user data to keep your database clean and optimized\n\nThrive Architect: Course List Carousel Updates: The carousel keeps working when you change the number of elements to display\n\nThrive Architect: Rank Math SEO Metabox: The SEO metabox opens properly when Content AI is enabled\n\nThrive Architect: Sticky Header Positioning: Header positioning works correctly on boxed landing pages when full width + sticky behavior are enabled\n\nThrive Architect: Tablet Menu Positioning: The tablet menu displays in the correct horizontal position in editor mode\n\nThrive Architect: Saving with Conditional Display: Pages save normally even when they include elements with conditional display rules\n\nThrive Architect: Sticky Scroll on Mobile: Sticky scroll works with Shapeshift themes without adding extra space above the mobile header\n\nThrive Leads: Smarter Error Messaging: Error messages change based on the exact condition, making it easier to understand what to fix\n\nThrive Leads: Lead Group Priority: Lead group priority works correctly so the right groups are applied in the right order\n\nThrive Leads: Blank Shortcode Error: Error messages display correctly when a shortcode is left blank\n\nThrive Leads: Mailster Single Opt-In: Subscriber confirmations work correctly with single opt-in settings\n\nThrive Quiz Builder: Disable Quiz Statistics: You can completely disable quiz statistics collection for better privacy and performance\n\nThrive Quiz Builder: Minimalist Template Colors: The Minimalist quiz template color palette is updated\n\nThrive Quiz Builder: Answer Hover Colors: Hover colors work correctly after you change typography colors\n\nThrive Comments: Improved Reply Compatibility: The comment reply feature works correctly on newer PHP versions\n\nThrive Comments: More Translation Options: Additional translation keys are available for moderation labels, so it’s easier to customize text in different languages\n\nThrive Comments: Dashboard Replies: Comment replies work correctly in the dashboard without showing error messages\n\nThrive Comments: Translatable Moderation Labels: Moderation labels are available for translation through the Customize & Translate Labels section\n\nThrive Product Manager: Newer PHP Compatibility: Works smoothly on newer PHP versions without errors\n\nPerformance Enhancement: Performance enhancement: We did some database query optimizations under the hood! By sweeping away unnecessary database queries, we’ve made sure all Thrive products feel lighter, snappier, and noticeably faster",
-    "changelogUrl": "https://changelog.thrivethemes.com/2026/01/v10-8-6/",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.11.1",
     "title": "MonsterInsights 9.11.1",
     "date": "2026-01-06",
@@ -1328,17 +1152,6 @@
     "releaseType": "feature",
     "summary": "New: Year In Review Report\n\nEnhancements: Various Performance Improvements and Bug Fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.5",
-    "title": "Thrive Themes 10.8.5",
-    "date": "2025-12-16",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "What&#8217;s New:: Advanced Tag Management: You can now create, select, and manage tags directly within Thrive Architect for supported platforms. No need to switch back and forth between your email service provider and WordPress!\n\nWhat&#8217;s New:: Enhanced Custom Field Mapping: Map your form fields to custom fields in your email service provider, giving you more control over the data you collect and how it&#8217;s organized in your marketing platform\n\nWhat&#8217;s New:: *Improved Platform Support: We&#8217;ve added enhanced integration capabilities including tag synching for:\n\nActiveCampaign\n\nWhat&#8217;s New:: AWeber (now supports migration to OAuth2 authentication)\n\nWhat&#8217;s New:: ConvertKit (Kit)\n\nWhat&#8217;s New:: Constant Contact\n\nWhat&#8217;s New:: FluentCRM\n\nWhat&#8217;s New:: Keap (Infusionsoft)\n\nWhat&#8217;s New:: KlickTipp\n\nWhat&#8217;s New:: Mailchimp\n\nWhat&#8217;s New:: MailRelay\n\nWhat&#8217;s New:: SendLane\n\nWhat&#8217;s New:: Zoho Campaigns\n\nWhat&#8217;s New:: Better Performance: We&#8217;ve added intelligent caching for API requests, reducing redundant calls and speeding up your workflow when configuring forms!\n\nWhat&#8217;s New:: Refined User Interface: Tag dropdowns now feature improved styling, better scrollbars, and cleaner selection rendering. Already-selected tags are automatically hidden from the dropdown for a cleaner experience!\n\nWhat&#8217;s New:: Social Share Preview Images Now Display Correctly on Twitter/X: We&#8217;ve updated share URL generation to ensure Twitter&#8217;s crawler properly caches your quiz badge images, so they now display reliably when shared!\n\nWhat&#8217;s New:: Shop Element Pagination Now Works Properly in Quiz Results: We&#8217;ve rebuilt the pagination system to work smoothly with dynamically loaded content. Products now load correctly and all buttons work as expected!\n\nWhat&#8217;s New:: Custom HTML Element Preview in Dynamic Content: Custom HTML elements inside Dynamic Content now properly display their &#8220;No preview available&#8221; placeholder in the editor, even when switching between different dynamic content states\n\nWhat&#8217;s New:: PHP 8.3 Compatibility for Quiz Settings: Enhanced quiz settings handling to ensure seamless compatibility with PHP 8.3. Quiz pages now load and edit smoothly regardless of your PHP version!\n\nWhat&#8217;s New:: Fixed Error with Questions Missing Answers: Quiz calculations no longer crash when a question has no answers defined. The system now handles empty answer arrays gracefully, preventing fatal errors when calculating quiz scores!\n\nWhat&#8217;s New:: AWeber Now Supports OAuth 2.0 Authentication with Full Tags Management: You can now select, create, and manage AWeber tags directly within Thrive Architect when using OAuth 2.0 connections. OAuth 1.0 connections continue to work as before, and API credentials are now managed via wp-config.php for improved security\n\nWhat&#8217;s New:: Pages with Carousel Elements Now Save Correctly: We&#8217;ve added backward compatibility to automatically detect and fix broken carousel configurations when pages load, so everything saves smoothly now!\n\nWhat&#8217;s New:: SureCart Cart Menu Icon Now Works on Landing Pages: We&#8217;ve added the necessary initialization so the cart icon now functions properly and opens the cart drawer as expected!\n\nWhat&#8217;s New:: Image Gallery Manual Height Adjustments Now Work Correctly: We&#8217;ve rebuilt height handling using CSS variables that automatically adapt to each viewport, so custom heights now work as expected across all devices!\n\nWhat&#8217;s New:: Sticky Elements Now Respect Alignment Settings: Sticky elements now maintain their configured horizontal alignment (left, center, or right) when scrolling. Previously, all sticky elements would center themselves regardless of your alignment settings!\n\nWhat&#8217;s New:: Image Gallery Captions Now Sync with WordPress Media Library: When you update image captions in the WordPress Media Library, those changes now automatically reflect in your Thrive Architect Image Gallery elements. Previously, galleries would continue showing old captions even after updating them in the media library. This applies to all image gallery displays including lightboxes and carousels!\n\nWhat&#8217;s New:: Fixed PHP Warnings in Square Payment Integration: We&#8217;ve added proper null checking for token expiration data to resolve PHP warnings in error logs!\n\nWhat&#8217;s New:: Fixed Conflict with Brevo Plugin: If you had the Brevo plugin installed, it was causing design elements in Thrive Apprentice to break due to conflicting Select2 library versions. We&#8217;ve updated Thrive Apprentice to prevent this conflict, so your course designs now display correctly!\n\nWhat&#8217;s New:: Author Image No Longer Affects Image Gallery Images in Post Lists: We&#8217;ve updated the code to only modify the specific Author Image being inserted, leaving your Image Gallery images untouched!\n\nWhat&#8217;s New:: ThriveBox Impressions Now Track More Accurately: Impressions are now only counted when the ThriveBox is actually opened and viewed, giving you more accurate tracking data!\n\nWhat&#8217;s New:: ActiveCampaign Forms Handle Datetime Fields Correctly: Form submissions to ActiveCampaign no longer fail when updating contacts with empty or invalid datetime field values. The integration now automatically sanitizes datetime fields by removing empty values or formatting them to the correct ISO 8601 format!\n\nWhat&#8217;s New:: Constant Contact and iContact Forms Handle Apostrophes Correctly: Form submissions to Constant Contact and iContact now properly handle apostrophes and special characters without adding unwanted backslashes. Your subscriber data is now stored cleanly in your accounts!\n\nWhat&#8217;s New:: All Mailing Lists and Custom Fields Now Load in Forms: We&#8217;ve increased the query limit from 20 to 200 when loading mailing lists and custom fields. If you have more than 20 lists or custom fields in your email service provider, they&#8217;ll now all appear in the dropdowns instead of being cut off!\n\nWhat&#8217;s New:: Constant Contact Expired Tokens Now Handled Gracefully: Pages with Lead Generation forms connected to Constant Contact no longer display fatal errors when the refresh token expires. The integration now handles expired tokens properly, allowing your page to load normally so you can reconnect your account!\n\nWhat&#8217;s New:: Google Fonts Now Load Correctly on Subdirectory Sites: Google Fonts can now be properly fetched in the font library for WordPress installations using subdirectory configurations with plain text permalink structures. Previously, these sites would encounter errors when trying to load Google Fonts!\n\nWhat&#8217;s New:: Automator No Longer Installs When Selecting All Products: When using the &#8220;Select All&#8221; option in Thrive Product Manager, Thrive Automator will now correctly remain unchecked and won&#8217;t be installed. This ensures you have full control over which products are installed on your site!",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/12/v10-8-5/",
     "tags": []
   },
   {
@@ -1383,17 +1196,6 @@
     "releaseType": "improvement",
     "summary": "Frontend Login Plus - Added a check to ensure 2FA hooks are only enabled when module is active, preventing unnecessary hook registration #465.",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.4",
-    "title": "Thrive Themes 10.8.4",
-    "date": "2025-12-03",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Apprentice: Members List Access Display: Fixed an issue where the Members list wouldn&#8217;t display users who have access when a product isn&#8217;t restricting a course. Your member access information now appears correctly in all scenarios\n\nThrive Apprentice: Video Cover Play Button Fix: Videos with video covers now play immediately when you click the play button!\n\nThrive Apprentice: Member Import Name Splitting: When manually importing members, names are now properly split into first name and last name fields. Previously, the full name was saved only to the first name field, which could cause issues with automations. Now everything splits correctly for seamless integrations\n\nThrive Apprentice: Assessment Grading Error Fix: Resolved a fatal error that occurred when grading quiz assessments. The grading process now completes successfully and sends assessment notification emails without any issues\n\nThrive Architect: Post List Pagination Filter Fix: Resolved an issue affecting post list filters when using pagination. Your filtered post lists now work smoothly across all pages!\n\nThrive Architect: Country Field and Quiz Compatibility: Fixed a conflict that caused the country field dropdown to stop working when both a Lead Generation element with a country field and a Quiz appeared on the same page. Now they play nicely together!\n\nThrive Architect: Mega Menu Column Styling: Fixed an issue where mega menu column styles wouldn&#8217;t persist when re-editing headers. Your mega menu formatting now stays exactly as you set it, every time you edit!\n\nThrive Architect: Form Field Tooltip Error Fix: Clicking on form field info tooltips no longer triggers console errors or causes infinite loading modals. Tooltips now work seamlessly without any hiccups!\n\nThrive Architect: Query Monitor Compatibility: Fixed a 403 Forbidden error when fetching notifications with Query Monitor active. Your notifications now load properly without any conflicts!\n\nThrive Architect: Form Success Message Emoji Support: Form success messages now display emojis correctly! You can safely add personality to your confirmation messages with emojis!\n\nThrive Theme Builder: Dynamic List Icon Display Fix: The Dynamic List icon now displays correctly in templates\n\nThrive Leads: New Tab Redirect Option: You can now choose to open redirect URLs in a new window! This gives you more control over the user experience after form submission. Keep your site open while redirecting users to thank you pages or additional resources\n\nThrive Leads: Lead Shortcode Compatibility Fix: Resolved an error that occurred when adding a Lead Shortcode inside Thrive Architect\n\nThrive Quiz Builder: KlickTipp Integration Fix: Resolved an error affecting the KlickTipp integration. Your quiz results now sync smoothly with KlickTipp!\n\nThrive Quiz Builder: Post Grid Block Display: Quiz content now appears correctly in Post Grid Blocks. Your quizzes are now fully included when displaying posts in grid layouts!",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/12/v10-8-4/",
     "tags": []
   },
   {
@@ -1452,17 +1254,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.8.3",
-    "title": "Thrive Themes 10.8.3",
-    "date": "2025-11-18",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Thrive Architect: Countdown Evergreen Timer Fixed: Fixed an issue where the Evergreen Countdown timer would show &#8220;NaN&#8221; instead of the correct time remaining\n\nThrive Architect: MemberMouse Smart Tags Working Again: Fixed an issue where MemberMouse smart tags weren&#8217;t working properly in pages created with Thrive Architect. Your dynamic content will now display exactly as expected\n\nThrive Architect: Live Color Updates for Testimonial Forms: Fixed an issue where color changes for testimonial capture buttons and other CSS variable-based elements would not display in real-time while dragging the color picker. Colors now update immediately during editing—no more guessing!\n\nThrive Theme Builder: Custom Taxonomy Support in Post Lists: The Post List Element now supports custom taxonomies, giving you even more flexibility in how you organize and display your content. Build exactly the content displays you&#8217;ve been dreaming of!\n\nThrive Leads: ThriveBox Form Validation Improved: Fixed an issue where custom HTML forms inside ThriveBoxes could fail to submit with browser validation errors. Forms now properly validate and focus invalid fields when submitted, ensuring a smooth experience for your visitors\n\nGlobal Updates: Complete Google Fonts Control for GDPR Compliance: Google fonts can now be completely disabled from your site to ensure GDPR compliance. Take full control of your site&#8217;s privacy settings with confidence",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-3/",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.10.0",
     "title": "MonsterInsights 9.10.0",
     "date": "2025-11-17",
@@ -1496,28 +1287,6 @@
     "tags": []
   },
   {
-    "id": "thrive-themes@10.8.2",
-    "title": "Thrive Themes 10.8.2",
-    "date": "2025-11-04",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "The Latest And Greatest:: Lightning-Fast Checkout: We&#8217;ve brought the payment process directly onto your site. Your customers can now complete their purchase seamlessly and without leaving the page. Say goodbye to annoying redirects and hello to more completed sales!\n\nThe Latest And Greatest:: More Accurate Access Timing for WooCommerce Drip Campaigns: The drip and expiration timing for courses and products sold via WooCommerce will now start based on when the user actually receives access (e.g., upon successful completion of a bank transfer order), not just the order date. This ensures your customers always get their full access period\n\nThe Latest And Greatest:: Improved Course Progress Recalculation: Fixed a bug affecting course progress: the progress bar will now correctly recalculate if an admin changes the course content after a user had already completed the course. Progress is now always accurately reflected\n\nThe Latest And Greatest:: Video Progress Tracking: Pause When You Need To! We fixed an issue where pausing a video would mess up progress tracking. Now, you can take that much-needed coffee break—the video progress will track correctly whether it&#8217;s paused or playing\n\nThe Latest And Greatest:: Custom HTML Editor Search and Stay: Searching your code in the Custom HTML editor used to be a little&#8230; jumpy. Pressing Enter after searching (Ctrl+F/Cmd+F) would close the modal! Now you can search your code without getting kicked out. Breathe a sigh of relief, developers!\n\nThe Latest And Greatest:: Border Radius is Back in Style:Remember those images with lovely rounded corners that weren&#8217;t displaying quite right? They&#8217;ve been fixed! Your images with border radius now look perfect on every screen\n\nThe Latest And Greatest:: Sticky Buttons That Actually Stick: Sticky buttons were getting confused on different screen sizes. We&#8217;ve smoothed things out, so your sticky buttons will stay exactly where you put them across all viewports\n\nThe Latest And Greatest:: Global Elements Typography Fix: Fixed typography issues affecting global elements to ensure consistent font styling across your site\n\nThe Latest And Greatest:: X (Twitter) Links are Back on Track: We updated the Author Social Links element to correctly support both twitter.com and the newer x.com profile URLs. Connect your social presence effortlessly!\n\nThe Latest And Greatest:: Enhanced Zapier Integration: We&#8217;ve added full Zapier support for Lead Generation forms created using shortcodes, allowing you to seamlessly connect and automate your lead data workflow with third-party applications. And, Custom Fields are now properly captured when using the Zapier API\n\nThe Latest And Greatest:: Evergreen Countdown Timer Display Fix: Resolved an issue that was causing the Evergreen Countdown timer to display an incorrect amount of time remaining, ensuring your scarcity campaigns are always accurate",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-2/",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.1.1",
-    "title": "Thrive Themes 10.8.1.1",
-    "date": "2025-10-28",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: The Case of the Missing Lists and Tags: We fixed an issue where available lists and tags were playing hide-and-seek when you tried to connect your forms to your email provider. They&#8217;re back, they&#8217;re accounted for, and all your existing forms will automatically work correctly without you having to lift a finger!\n\nThrive Architect: Webhook Power-Up for File Uploads: A genuine improvement this time! You can now send any files uploaded via your Thrive Architect forms straight to external services using webhooks. More flexibility for collecting all the user data you need!\n\nThrive Architect: Webhook Configuration Drama Resolved: The configuration pages for webhooks were having a moment &#8211; hiding Submit Options and Spam Prevention settings, messing up URL previews, and not resetting correctly. Everything is now displaying correctly, consistently, and reliably. Phew!\n\nThrive Architect: Sidebar Visibility: We resolved the strange bug that caused parts of the form sidebar to disappear if you weren&#8217;t using an API connection. Now, your entire form interface is always consistent and accessible, no matter how you connect it\n\nThrive Quiz Builder: Speed Optimization Plugin Peace Treaty: We fixed a critical error that popped up when Thrive Quiz Builder was running alongside some unfriendly speed optimization plugins. This fix ensures that your Quiz Builder notifications now play nicely and work perfectly, even when your site is running at warp speed!",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/10/v10-8-1-1/",
-    "tags": []
-  },
-  {
     "id": "google-analytics-for-wordpress@9.9.1",
     "title": "MonsterInsights 9.9.1",
     "date": "2025-10-16",
@@ -1548,28 +1317,6 @@
     "releaseType": "feature",
     "summary": "New: Easily send survey notifications and results to Slack (or any webhook)!\n\nFixed: Various bug fixes and enhancements",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8",
-    "title": "Thrive Themes 10.8",
-    "date": "2025-09-30",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "What’s New:: Expanded Field Mapping: Map system fields (Email, Name, etc.,) and custom fields across the 11 platforms below, when supported by the platform, directly in the Form’s settings\n\nWhat’s New:: Lists & Tags Management: Assign submissions to specific lists and tags directly through API connections. Select from existing options or create new ones where the platform allows\n\nWhat’s New:: Webhooks Everywhere: Webhooks are now available as connection option for all forms alongside API integrations and HTML Code\n\nWhy This Matters:: Simplified Workflows: Enhanced data mapping capabilities are now built directly into Thrive Dashboard for more Connections\n\nWhy This Matters:: Consistent Experience: Enjoy the same powerful field mapping capabilities across supported integrations\n\nWhy This Matters:: Reduced Complexity: Set up your most critical data flows with fewer steps and less need for automation plugin\n\nWhy This Matters:: Constant Contact\n\nWhy This Matters:: Fluent CRM\n\nWhy This Matters:: HubSpot\n\nWhy This Matters:: iContact\n\nWhy This Matters:: Keap (Infusionsoft)\n\nWhy This Matters:: KlickTipp\n\nWhy This Matters:: MailPoet\n\nWhy This Matters:: MailRelay\n\nWhy This Matters:: SendFox\n\nWhy This Matters:: Zoho Campaigns\n\nWhy This Matters:: Active Campaign\n\nWhy This Matters:: AWeber\n\nWhy This Matters:: Brevo\n\nWhy This Matters:: Campaign Monitor\n\nWhy This Matters:: Drip\n\nWhy This Matters:: Get Response\n\nWhy This Matters:: Kit\n\nWhy This Matters:: MailChimp\n\nWhy This Matters:: MailerLite\n\nWhy This Matters:: Zapier\n\nYour Existing Automator Workflows Are Safe: Setting up Webhooks\n\nYour Existing Automator Workflows Are Safe: Using custom fields\n\nYour Existing Automator Workflows Are Safe: Assigning leads to specific lists, tags, or segments\n\nYour Existing Automator Workflows Are Safe: Fixed: Custom HTML Element now properly displays &#8220;No preview available&#8221; message when saved as a template\n\nYour Existing Automator Workflows Are Safe: Fixed: Vimeo video preset for title and byline (author) settings now correctly respect the hidden setting instead of always showing as true\n\nYour Existing Automator Workflows Are Safe: Fixed: Square integration reports now properly update after processing refunds\n\nYour Existing Automator Workflows Are Safe: Fixed: New recurring prices added in Square now remain saved after page refresh, preventing data loss",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-8/",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.7.5",
-    "title": "Thrive Themes 10.7.5",
-    "date": "2025-09-16",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "Improvements and Fixes:: Fixed: Dynamic post permalink shortcodes now work correctly without causing 404 errors\n\nImprovements and Fixes:: Enhanced: Featured Content list now supports &#8220;Filter Posts&#8221; functionality, enabling sticky posts on Blog index pages\n\nImprovements and Fixes:: Improved: Image gallery carousel heights now maintain proper responsive behavior across desktop, tablet, and mobile devices\n\nImprovements and Fixes:: Fixed: Hamburger menu icons no longer reset when editing menu configurations\n\nImprovements and Fixes:: Enhanced: Sticky elements now function consistently across all devices with smooth positioning\n\nImprovements and Fixes:: Fixed: Quiz results now display properly when submitting opt-in gate forms within Thriveboxes, preventing premature closure\n\nImprovements and Fixes:: Improved: Enhanced Fluent CRM integration for more reliable data handling",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-7-5/",
     "tags": []
   },
   {
