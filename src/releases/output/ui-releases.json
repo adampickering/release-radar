@@ -1,5 +1,27 @@
 [
   {
+    "id": "custom-facebook-feed@4.13.0",
+    "title": "Smash Balloon Social Post Feed 4.13.0",
+    "date": "2026-09-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix: Feeds now honor the \"Check for new posts every...\" caching setting instead of only checking once every 7 days.",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.9.0",
+    "title": "Smash Balloon YouTube Feed 2.9.0",
+    "date": "2026-09-10",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: The upgrade link in the plugin's admin menu now reads \"Upgrade to Pro\" and opens the YouTube Feed upgrade page\n\nFix: Improved the colour contrast of the \"Upgrade to Pro\" button in the admin menu so it meets accessibility requirements\n\nFix: Colour settings left empty in the feed customizer no longer appear as blank boxes; the swatch again shows its empty-state fill",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
+    "tags": []
+  },
+  {
     "id": "envira-gallery-lite@1.16.0",
     "title": "Envira Gallery Lite 1.16.0",
     "date": "2026-09-08",
@@ -825,17 +847,6 @@
     "tags": []
   },
   {
-    "id": "feeds-for-youtube@2.7.0",
-    "title": "Smash Balloon YouTube Feed 2.7.0",
-    "date": "2026-06-10",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New: Added a modern Gutenberg block for the YouTube feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nNew: WPConsent integration for GDPR cookie consent compliance, including a GDPR step in the onboarding wizard\n\nNew: Added a Help widget for in-app access to documentation and support\n\nTweak: Compatibility with WP 7\n\nTweak: Corrected typos and grammar in plugin UI strings\n\nFix: Feed blocks now render a live preview correctly inside the WP 7.0+ iframed block editor\n\nFix: Setup wizard tooltips now display correctly in the iframed block editor\n\nFix: Legacy Elementor widgets are hidden from the element search, and the widget title is now translatable\n\nFix: Block preview now uses a limited query to prevent unintended data exposure",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
     "id": "pushengage@4.2.5",
     "title": "PushEngage 4.2.5",
     "date": "2026-06-02",
@@ -1031,17 +1042,6 @@
     "releaseType": "feature",
     "summary": "New: Added a modern Gutenberg block and Elementor widget for the Twitter feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nTweak: Compatibility with WP 7",
     "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "custom-facebook-feed@4.7.7",
-    "title": "Smash Balloon Social Post Feed 4.7.7",
-    "date": "2026-05-14",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
   {
