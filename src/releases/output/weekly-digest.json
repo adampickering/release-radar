@@ -1,52 +1,47 @@
 {
-  "weekRange": "August 31 – September 7, 2026",
-  "greeting": "Well hello there, fellow WordPress whisperers!",
-  "introParagraph": "This week's Release Radar might seem a bit 'fix-it-focused' at first glance, but don't let that fool you. While major feature splashes were few, we saw some crucial under-the-hood refinements and clever additions that make our favorite plugins even more robust and user-friendly. It's all about smoothing out those wrinkles and ensuring a seamless experience for you and your clients.",
+  "weekRange": "September 7 – 14, 2026",
+  "greeting": "Well hello there, fellow WordPress whisperers and agency alchemists!",
+  "introParagraph": "This week, the Release Radar is pinging with some seriously reimagined experiences and a few polished gems. While fixes were in short supply, the focus was firmly on enhancing user journeys and laying groundwork for future awesomeness, with one major player dropping a complete admin overhaul.",
   "stats": {
     "releases": 6,
-    "brands": 5,
-    "features": 0,
-    "fixes": 4
+    "brands": 4,
+    "features": 2,
+    "fixes": 0
   },
   "highlights": [
     {
-      "title": "WPForms Lite 2.0.1.1",
-      "type": "fix",
-      "summary": "This release might be labeled a 'fix,' but it sneaks in some handy new features: a QR Code generator for your forms and an 'Add Media' button in the confirmation message editor. Now you can easily direct users or spice up your post-submission experience without breaking a sweat."
+      "title": "Thrive Themes 11.0",
+      "type": "feature",
+      "summary": "Thrive Themes didn't just update; they 'reimagined' their entire admin experience! This massive overhaul promises a faster, sleeker, and more efficient workflow, built on a modern stack from dashboard to settings."
     },
     {
-      "title": "Smash Balloon Instagram Feed 6.13.0",
-      "type": "fix",
-      "summary": "Ever had your Instagram feed silently showing outdated posts? Smash Balloon's latest update introduces a much-needed warning system, alerting you when your feed is serving stale content due to connection issues. No more embarrassing 'blast from the past' moments for your visitors!"
+      "title": "Envira Gallery Lite 1.16.0",
+      "type": "feature",
+      "summary": "Envira Gallery Lite is giving us a peek into the Pro world with a new 'Submissions' tab. This addition cleverly showcases how visitor photo submissions work, enticing users to explore the full power of Envira Pro."
     },
     {
-      "title": "Uncanny Automator 7.6.1.1 & 7.6.1",
+      "title": "Smash Balloon Social Post Feed 4.13.0",
       "type": "improvement",
-      "summary": "Uncanny Automator continues its quest for ultimate automation, with two releases bringing key improvements. From restoring 'Any' options in LearnDash triggers to enhancing Fluent Forms choice field tokens and fixing critical integration issues with Memberium and SureCart, your automated workflows just got a whole lot more reliable and flexible."
+      "summary": "No more waiting a week for your social feeds to refresh! This update ensures Smash Balloon Social Post Feed now correctly honors your caching settings, keeping your content fresh and your visitors engaged."
     },
     {
-      "title": "MonsterInsights 11.2.0",
-      "type": "fix",
-      "summary": "For those of us who appreciate clean data, MonsterInsights delivered a solid fix ensuring sample data no longer mingles with your real numbers in reports. This means clearer insights and no more accidental clicks on 'sample' links leading nowhere. Pure, unadulterated analytics goodness!"
+      "title": "PushEngage 4.2.10",
+      "type": "improvement",
+      "summary": "Mobile users rejoice! PushEngage has tidied up its Tools page, ensuring the Abilities detail drawer no longer spills off-screen, making management on the go much smoother. They've also improved documentation for MCP servers, which is always a win."
     }
   ],
   "otherReleases": [
     {
-      "title": "UserFeedback Lite 1.11.4",
-      "type": "fix",
-      "shortSummary": "Fixed: Deactivating the Heatmaps addon no longer causes a fatal error when Us..."
+      "title": "Smash Balloon Twitter Feed 2.9.0",
+      "type": "improvement",
+      "shortSummary": "Tweak: Tested and supported on WordPress 7.1"
     },
     {
-      "title": "Uncanny Automator 7.6.1.1",
+      "title": "Smash Balloon YouTube Feed 2.9.0",
       "type": "improvement",
-      "shortSummary": "LearnDash - Restored \"Any\" option handling across multiple triggers and dropd..."
-    },
-    {
-      "title": "Uncanny Automator 7.6.1",
-      "type": "improvement",
-      "shortSummary": "Fluent Forms - Added value and label tokens for choice fields, making selecti..."
+      "shortSummary": "Tweak: The upgrade link in the plugin's admin menu now reads \"Upgrade to Pro\"..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies! Always keep your relationships, and your plugins, up to date.",
-  "generatedAt": "2026-09-07T19:01:17.626Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies! Hopefully, your week's releases are more compatible.",
+  "generatedAt": "2026-09-14T19:45:34.781Z"
 }
