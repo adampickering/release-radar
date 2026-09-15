@@ -1,5 +1,27 @@
 [
   {
+    "id": "thrive-themes@11.0.0.1",
+    "title": "Thrive Themes 11.0.0.1",
+    "date": "2026-09-15",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Architect: Device-Specific Visibility Fixed: Elements set to display only on desktop, tablet, or mobile now show correctly on your published pages — saving a page with &#8220;Show all hidden elements&#8221; turned on no longer causes hidden versions to appear when Project Lightspeed optimization is enabled.",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/09/11-0-0-1/",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.9.0",
+    "title": "Smash Balloon Twitter Feed 2.9.0",
+    "date": "2026-09-14",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Tweak: Tested and supported on WordPress 7.1\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.10",
     "title": "PushEngage 4.2.10",
     "date": "2026-09-11",
@@ -1056,17 +1078,6 @@
     "tags": []
   },
   {
-    "id": "custom-twitter-feeds@2.5.5",
-    "title": "Smash Balloon Twitter Feed 2.5.5",
-    "date": "2026-04-30",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix: Plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
     "id": "thrive-themes@10.9",
     "title": "Thrive Themes 10.9",
     "date": "2026-04-30",
@@ -1559,17 +1570,6 @@
     "releaseType": "feature",
     "summary": "New: Easily send survey notifications and results to Slack (or any webhook)!\n\nFixed: Various bug fixes and enhancements",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8",
-    "title": "Thrive Themes 10.8",
-    "date": "2025-09-30",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "improvement",
-    "summary": "What’s New:: Expanded Field Mapping: Map system fields (Email, Name, etc.,) and custom fields across the 11 platforms below, when supported by the platform, directly in the Form’s settings\n\nWhat’s New:: Lists & Tags Management: Assign submissions to specific lists and tags directly through API connections. Select from existing options or create new ones where the platform allows\n\nWhat’s New:: Webhooks Everywhere: Webhooks are now available as connection option for all forms alongside API integrations and HTML Code\n\nWhy This Matters:: Simplified Workflows: Enhanced data mapping capabilities are now built directly into Thrive Dashboard for more Connections\n\nWhy This Matters:: Consistent Experience: Enjoy the same powerful field mapping capabilities across supported integrations\n\nWhy This Matters:: Reduced Complexity: Set up your most critical data flows with fewer steps and less need for automation plugin\n\nWhy This Matters:: Constant Contact\n\nWhy This Matters:: Fluent CRM\n\nWhy This Matters:: HubSpot\n\nWhy This Matters:: iContact\n\nWhy This Matters:: Keap (Infusionsoft)\n\nWhy This Matters:: KlickTipp\n\nWhy This Matters:: MailPoet\n\nWhy This Matters:: MailRelay\n\nWhy This Matters:: SendFox\n\nWhy This Matters:: Zoho Campaigns\n\nWhy This Matters:: Active Campaign\n\nWhy This Matters:: AWeber\n\nWhy This Matters:: Brevo\n\nWhy This Matters:: Campaign Monitor\n\nWhy This Matters:: Drip\n\nWhy This Matters:: Get Response\n\nWhy This Matters:: Kit\n\nWhy This Matters:: MailChimp\n\nWhy This Matters:: MailerLite\n\nWhy This Matters:: Zapier\n\nYour Existing Automator Workflows Are Safe: Setting up Webhooks\n\nYour Existing Automator Workflows Are Safe: Using custom fields\n\nYour Existing Automator Workflows Are Safe: Assigning leads to specific lists, tags, or segments\n\nYour Existing Automator Workflows Are Safe: Fixed: Custom HTML Element now properly displays &#8220;No preview available&#8221; message when saved as a template\n\nYour Existing Automator Workflows Are Safe: Fixed: Vimeo video preset for title and byline (author) settings now correctly respect the hidden setting instead of always showing as true\n\nYour Existing Automator Workflows Are Safe: Fixed: Square integration reports now properly update after processing refunds\n\nYour Existing Automator Workflows Are Safe: Fixed: New recurring prices added in Square now remain saved after page refresh, preventing data loss",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/09/v10-8/",
     "tags": []
   },
   {
