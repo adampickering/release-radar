@@ -1,5 +1,27 @@
 [
   {
+    "id": "google-analytics-for-wordpress@11.3.0",
+    "title": "MonsterInsights 11.3.0",
+    "date": "2026-09-16",
+    "brand": "MonsterInsights",
+    "brandSlug": "monsterinsights",
+    "releaseType": "fix",
+    "summary": "Enhancements: Page Insights now opens instantly in the editor sidebar, the admin bar panel, and the classic editor metabox\n\nEnhancements: The Overview report loads faster and shows the Pages widget even without the Page Insights addon\n\nEnhancements: Update checks for your addons are faster, with one request covering all of them instead of one for each\n\nEnhancements: The form conversion upgrade prompt now names the form plugin you already use, and appears far less often\n\nEnhancements: Sites already using Contact Form 7 or Jotform are no longer prompted to install WPForms\n\nFixes: Subsites on a network license can now connect to Google Analytics\n\nFixes: Saving Google settings no longer overwrites a working connection with another site's credentials or with blank ones\n\nFixes: A damaged Google Analytics connection now explains the problem and lets you reconnect\n\nFixes: Connecting a new property now clears the cached reports, so you no longer see the previous property's numbers\n\nFixes: Larger translation catalogues are no longer truncated, so languages such as German, Brazilian Portuguese and Korean now translate fully in reports and blocks\n\nFixes: Translations now also load in contexts that previously skipped them, including WP-CLI, REST requests and cron\n\nFixes: The eCommerce funnel report and Overview widget now say when there is no funnel data, instead of drawing a chart of zeros\n\nFixes: The Measurement Protocol API Secret field is hidden on sites connected through Google\n\nFixes: Screen readers no longer announce the verified badge twice\n\nFixes: The verified badge no longer shifts the page layout while it loads\n\nFixes: Corrected wording and spacing on several admin screens\n\nFixes: A single failing report section no longer blanks the rest of the Overview report\n\nFixes: License actions in the network admin now show confirmation and error messages instead of appearing to do nothing\n\nFixes: An expired network license no longer appears active on subsites\n\nFixes: The network admin no longer reports \"No license key activated on this subsite\" while a network license is active\n\nFixes: The admin bar insights panel now shows a clear message instead of \"-1\" when its session has expired\n\nFixes: The admin bar no longer shows zeros for pages that do have data\n\nFixes: The Page Insights metabox no longer gets stuck on \"Loading Page Insights\" when a request fails\n\nFixes: Various bug fixes and updates",
+    "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "userfeedback-lite@1.12.0",
+    "title": "UserFeedback Lite 1.12.0",
+    "date": "2026-09-16",
+    "brand": "UserFeedback",
+    "brandSlug": "userfeedback",
+    "releaseType": "fix",
+    "summary": "New: You can now show the comment box only when specific answers are selected\n\nNew: You can now customize the low and high score labels on Net Promoter Score questions\n\nFixed: Survey widget and admin translations now reach the browser, so built-in text appears in your language\n\nFixed: The \"Show Specific Survey\" setting now explains that the Targeting addon is required instead of being silently disabled\n\nFixed: Opening a response that belongs to a different survey no longer shows a blank screen\n\nFixed: Admin screens no longer get stuck loading when a network request fails\n\nFixed: The comment box no longer appears before a question has been answered\n\nFixed: The comment box now appears on Image Radio and Icon Choice questions, where it previously never showed\n\nFixed: Choosing a score of 0 no longer hides the follow-up comment box",
+    "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "thrive-themes@11.0.0.1",
     "title": "Thrive Themes 11.0.0.1",
     "date": "2026-09-15",
