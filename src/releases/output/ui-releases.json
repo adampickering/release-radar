@@ -1,5 +1,16 @@
 [
   {
+    "id": "wpforms-lite@2.0.2",
+    "title": "WPForms Lite 2.0.2",
+    "date": "2026-09-17",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Added: New Dashboard that displays form views and recommended next steps across all forms at a glance is now the first page you see when opening WPForms\n\nAdded: Links in AI Chat responses are now clickable and open in a new tab\n\nAdded: The AI form editing chat can now restore the form to its previous state when asked — reverting the most recent change, the same way as pressing Undo\n\nAdded: The `{all_fields}` smart tag now accepts an `exclude` parameter to omit specific fields by ID from notification emails, e.g. `{all_fields exclude=\"4,5\"}`\n\nAdded: Suggested privacy policy text for the AI features now appears on the WordPress Privacy Policy Guide screen (Settings > Privacy > Policy Guide), so site owners can adopt it into their own policy\n\nChanged: The \"Minimum time to submit\" spam protection is now measured on the server, so it can no longer be bypassed by bots\n\nChanged: The Form Builder no longer saves the form and creates a revision when a WPForms AI editing prompt makes no changes to the form\n\nFixed: Installing an addon or plugin from WPForms was reported as failed when it printed a message during activation, even though it was successfully installed and active\n\nFixed: A Cloudflare Turnstile warning appeared in the browser console after a form was successfully submitted\n\nFixed: On right-to-left sites, the back arrow and card arrows in the Form Embed Wizard's Add to a New Page popup pointed the wrong way, and the QR Code icon was separated from its accompanying text\n\nFixed: Form submissions were silently marked as spam when the CAPTCHA provider rejected the site's secret key. An admin notice now reports the problem so it can be corrected, and the notice disappears once the CAPTCHA is reconfigured or disabled\n\nFixed: The Form Builder opened from the Get Started button in the WPForms block stayed stuck on a loading spinner on some sites and could not be saved or closed\n\nFixed: Saving a form showed a popup warning that AJAX form submissions are required for the PayPal Commerce field even after that field had been deleted\n\nFixed: The submit button did not switch to the processing text and stayed unchanged while a PayPal Commerce card payment was being processed\n\nFixed: The Email Summary email contained no form entries or trends data on sites running MySQL 5.7\n\nFixed: The Email Summary showed a blank trend percentage for a form that received exactly one entry in the previous week\n\nFixed: Security hardening for the Stripe payment refund process\n\nFixed: The AI chat displayed raw technical error messages (such as browser exceptions and connection timeouts) instead of user-friendly error notices\n\nFixed: On right-to-left sites, the AI chat window opened anchored to the wrong side of the screen instead of mirroring to the left, and the stop button lost its padding and stuck to the corner of the message field during response generation\n\nFixed: Undo and Redo controls in the Form Builder could disappear after two quick changes to the same setting\n\nFixed: The standard Submit button appeared next to the PayPal Commerce payment buttons in the Form Builder preview after editing a form with the AI Smart Form Editor\n\nFixed: Adding or removing a row in the Stripe Custom Meta table in the Form Builder was not tracked by Undo and Redo\n\nFixed: Email Summaries in some cases sent the same info block every week instead of rotating through the available blocks\n\nFixed: Extra small padding was displayed on the right side of the AI chat when using a Mac browser",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "google-analytics-for-wordpress@11.3.0",
     "title": "MonsterInsights 11.3.0",
     "date": "2026-09-16",
@@ -8,6 +19,17 @@
     "releaseType": "fix",
     "summary": "Enhancements: Page Insights now opens instantly in the editor sidebar, the admin bar panel, and the classic editor metabox\n\nEnhancements: The Overview report loads faster and shows the Pages widget even without the Page Insights addon\n\nEnhancements: Update checks for your addons are faster, with one request covering all of them instead of one for each\n\nEnhancements: The form conversion upgrade prompt now names the form plugin you already use, and appears far less often\n\nEnhancements: Sites already using Contact Form 7 or Jotform are no longer prompted to install WPForms\n\nFixes: Subsites on a network license can now connect to Google Analytics\n\nFixes: Saving Google settings no longer overwrites a working connection with another site's credentials or with blank ones\n\nFixes: A damaged Google Analytics connection now explains the problem and lets you reconnect\n\nFixes: Connecting a new property now clears the cached reports, so you no longer see the previous property's numbers\n\nFixes: Larger translation catalogues are no longer truncated, so languages such as German, Brazilian Portuguese and Korean now translate fully in reports and blocks\n\nFixes: Translations now also load in contexts that previously skipped them, including WP-CLI, REST requests and cron\n\nFixes: The eCommerce funnel report and Overview widget now say when there is no funnel data, instead of drawing a chart of zeros\n\nFixes: The Measurement Protocol API Secret field is hidden on sites connected through Google\n\nFixes: Screen readers no longer announce the verified badge twice\n\nFixes: The verified badge no longer shifts the page layout while it loads\n\nFixes: Corrected wording and spacing on several admin screens\n\nFixes: A single failing report section no longer blanks the rest of the Overview report\n\nFixes: License actions in the network admin now show confirmation and error messages instead of appearing to do nothing\n\nFixes: An expired network license no longer appears active on subsites\n\nFixes: The network admin no longer reports \"No license key activated on this subsite\" while a network license is active\n\nFixes: The admin bar insights panel now shows a clear message instead of \"-1\" when its session has expired\n\nFixes: The admin bar no longer shows zeros for pages that do have data\n\nFixes: The Page Insights metabox no longer gets stuck on \"Loading Page Insights\" when a request fails\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
+    "tags": []
+  },
+  {
+    "id": "sugar-calendar-lite@3.14.0",
+    "title": "Sugar Calendar Lite 3.14.0",
+    "date": "2026-09-16",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "feature",
+    "summary": "Added: **NEW** Modern email template: choose a header image and colors, preview every email, and receive it styled to match your site\n\nAdded: **NEW** Featured Events: star any event to highlight it in the admin and in the Month, Week and Day views, and filter the Events list by featured\n\nAdded: Redesigned Ticket Receipt and Ticket Details pages, with new controls under Settings → Event Ticketing → Pages to pick the pages and what they show\n\nAdded: Admin notification emails for ticket sales and RSVPs, per-attendee ticket emails, and an on/off switch for every email\n\nAdded: Smart Tags in the email editors: insert dynamic values like the event title, date or order total from a searchable dropdown\n\nAdded: Nine new Abilities for AI agents: create and update events, create calendars and tags, list tags, and get registration stats. Every ability now publishes its output schema\n\nFixed: Calendar and single-event ICS feed URLs returned the wrong events or none at all\n\nFixed: WPBakery event content was missing from event excerpts\n\nFixed: Security improvements",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
   {
@@ -303,7 +325,7 @@
     "brand": "Sugar Calendar",
     "brandSlug": "sugar-calendar",
     "releaseType": "feature",
-    "summary": "Added: **NEW** Registration Form: collect extra details from attendees during ticket checkout or RSVP registration, like meal choice, t-shirt size, or a company name\n\nAdded: Export your events as a CSV file, ready to open in Excel or Google Sheets\n\nAdded: Free events with tickets: turn on ticketing and let visitors claim free tickets without setting up a payment provider\n\nAdded: Zoom meetings can now be added to recurring events, with one join link that works for every occurrence\n\nAdded: New AI tab under Tools: install the WPVibe.ai plugin in one click and see what AI assistants can do with your events\n\nAdded: Pick a date range when exporting, so you only export the events you need\n\nChanged: Setup Wizard improvements, including a new welcome screen in your WordPress admin\n\nFixed: The Notify Attendees panel did not open when using the Block editor\n\nFixed: Notify Attendees emailed only the person who paid instead of every ticket holder\n\nFixed: Ticket and order emails showed the event start time in place of the end time\n\nFixed: Dropdowns in the event editor did not work when using the Block editor\n\nFixed: The Event List block could hide all events from visitors who were not logged in when filtering by tag\n\nFixed: Security improvements",
+    "summary": "Added: Native Event Ticketing checkout now automatically emails each attendee their individual ticket after purchase. Turn “Ticket Email To Attendee” off under Settings → Emails to stop automatic delivery; manual Send Email actions remain available\n\nAdded: **NEW** Admin notification emails: get an email when a ticket is sold, and when someone RSVPs. Edit the subject and message for each under Sugar Calendar → Settings → Emails, or switch any of them off there\n\nAdded: Turn any email on or off individually under Sugar Calendar → Settings → Emails\n\nAdded: Smart Tags in the email editors: pick dynamic values like the event title, date or order total from a searchable dropdown and insert them where your cursor is\n\nAdded: **NEW** Registration Form: collect extra details from attendees during ticket checkout or RSVP registration, like meal choice, t-shirt size, or a company name\n\nAdded: Export your events as a CSV file, ready to open in Excel or Google Sheets\n\nAdded: Free events with tickets: turn on ticketing and let visitors claim free tickets without setting up a payment provider\n\nAdded: Zoom meetings can now be added to recurring events, with one join link that works for every occurrence\n\nAdded: New AI tab under Tools: install the WPVibe.ai plugin in one click and see what AI assistants can do with your events\n\nAdded: Pick a date range when exporting, so you only export the events you need\n\nChanged: The new admin notification emails are turned ON after updating. If you would rather not receive them, switch them off under Sugar Calendar → Settings → Emails\n\nChanged: The Emails settings screen is now split into two groups, emails to attendees and emails to the site admin, so it is clearer who receives what\n\nChanged: Clearer names for the ticketing emails: \"Order Receipt Email To Purchaser\" and \"Ticket Email To Attendee\"\n\nChanged: Setup Wizard improvements, including a new welcome screen in your WordPress admin\n\nFixed: The subject and message for admin notification emails now save correctly\n\nFixed: The Notify Attendees panel did not open when using the Block editor\n\nFixed: Notify Attendees emailed only the person who paid instead of every ticket holder\n\nFixed: Event Ticketing emails now show the correct event end time and use “All-day” for all-day event times\n\nFixed: Dropdowns in the event editor did not work when using the Block editor\n\nFixed: The Event List block could hide all events from visitors who were not logged in when filtering by tag\n\nFixed: Security improvements",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
@@ -657,17 +679,6 @@
     "releaseType": "fix",
     "summary": "Fixed: The First Event Creation Guide no longer blocks the event editor when using the Block editor.",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "wpforms-lite@2.0.0.2",
-    "title": "WPForms Lite 2.0.0.2",
-    "date": "2026-07-16",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Fixed: Form submissions could still be blocked by stricter web application firewall configurations that flagged the JSON structure of the Form Analytics data; the data attached to each submission is now base64-encoded\n\nFixed: A cross-site scripting vulnerability when a page combined a WPForms captcha with a specially crafted OptinMonster campaign",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
     "tags": []
   },
   {
@@ -1163,17 +1174,6 @@
     "releaseType": "feature",
     "summary": "New: Installment description format setting. Choose how recurring payment descriptions appear across your forms with three format options, configurable globally and per form\n\nNew: Per-form transaction description source. Choose what text appears in Stripe for each form's transactions, including a new \"Price Option Label\" source\n\nNew: Per-form email subject customization. Override global email subject lines on individual forms for both receipts and notifications\n\nNew: `{payment-method}` smart tag for displaying the payment method used by the customer in confirmation pages and emails\n\nUpdate: Plugin styles and scripts are now loaded only on pages that contain a payment form, while Stripe.js remains loaded site-wide for advanced fraud detection\n\nUpdate: Webhook endpoint now returns a success response for events not created by WP Simple Pay, eliminating Stripe Dashboard warnings\n\nUpdate: Improved payment charge retrieval for more reliable confirmation pages and receipts\n\nUpdate: Receipt line items now display in the same order as price options in the form editor\n\nUpdate: Subscription payment descriptions now use proper grammar for singular and plural billing intervals\n\nFix: Resolved an issue where a \"Bank\" tab appeared in the payment form when Stripe Link was enabled\n\nFix: Font size settings in the form style editor no longer override theme typography when left empty\n\nFix: Resolved a JavaScript error related to Payment Element updates",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.11.0",
-    "title": "Sugar Calendar Lite 3.11.0",
-    "date": "2026-04-01",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "fix",
-    "summary": "Added: Easily get in touch with event attendees through Email Notification for Event Attendees\n\nAdded: Support to `show_past_only` args to Event List Block\n\nAdded: WP7 admin UI compatibility\n\nChanged: Removed cap limit on the \"Events per page\" and \"Max events to show\" fields in the Events List Elementor Widget\n\nChanged: Bump minimum WP version required to v6.2\n\nFixed: Event Content from WPBakery is not saved\n\nFixed: Event Tickets can still be purchased after limit is hit\n\nFixed: Optimized how assets are loaded\n\nFixed: Edge-case in a specific non-english locale that triggers error in some admin pages\n\nFixed: Calendar date badge in Event List Block not converting to Visitor's timezone\n\nFixed: Unintended slash before the apostrophe character in the Ticket and Order receipt emails\n\nFixed: Removed Ghost events",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
   {
