@@ -1,5 +1,27 @@
 [
   {
+    "id": "wpforms-lite@2.0.2.1",
+    "title": "WPForms Lite 2.0.2.1",
+    "date": "2026-09-23",
+    "brand": "WPForms",
+    "brandSlug": "wpforms",
+    "releaseType": "fix",
+    "summary": "Changed: The Keyboard Shortcuts modal in the Form Builder was reorganized into a single two-column list that pairs related shortcuts side by side, and widened so no shortcut wraps onto a second line\n\nFixed: Values submitted to a form embedded with the WPForms block were echoed back into the re-rendered form with shortcode delimiters intact\n\nFixed: A Smart Tag placed inside an HTML attribute in a Confirmation message, a form description, a field description or a User Registration message could alter the markup around it, or turn a link into a script, once its value contained a quote or an unsafe URL",
+    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "pushengage@4.2.11",
+    "title": "PushEngage 4.2.11",
+    "date": "2026-09-23",
+    "brand": "PushEngage",
+    "brandSlug": "pushengage",
+    "releaseType": "fix",
+    "summary": "Improved: Abilities API fixes and improvements — AI assistants can now save notification drafts, target saved audience groups or segments when sending, and get clearer, more accurate error messages\n\nImproved: Minor bug fixes and enhancements",
+    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.2",
     "title": "WPForms Lite 2.0.2",
     "date": "2026-09-22",
@@ -63,6 +85,17 @@
     "releaseType": "fix",
     "summary": "New: You can now show the comment box only when specific answers are selected\n\nNew: You can now customize the low and high score labels on Net Promoter Score questions\n\nFixed: Survey widget and admin translations now reach the browser, so built-in text appears in your language\n\nFixed: The \"Show Specific Survey\" setting now explains that the Targeting addon is required instead of being silently disabled\n\nFixed: Opening a response that belongs to a different survey no longer shows a blank screen\n\nFixed: Admin screens no longer get stuck loading when a network request fails\n\nFixed: The comment box no longer appears before a question has been answered\n\nFixed: The comment box now appears on Image Radio and Icon Choice questions, where it previously never showed\n\nFixed: Choosing a score of 0 no longer hides the follow-up comment box",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@11.0.1",
+    "title": "Thrive Themes 11.0.1",
+    "date": "2026-09-15",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Theme Builder: Clean Blog Pagination URLs: Blog list pagination now produces clean page links, so search engines no longer index broken URLs that lead to 404 errors in Google Search Console\n\nThrive Leads: Mailchimp Groups Restored: Mailchimp Groups are visible and selectable again when connecting your Thrive Leads forms to Mailchimp\n\nThrive Leads: ThriveBox Menu Triggers: ThriveBoxes now open correctly when triggered from a WordPress menu item\n\nThrive Leads: Font Settings Respected: Bunny Fonts no longer load on the front end when your Thrive font settings are disabled, keeping font loading fully under your control\n\nThrive Apprentice: Accurate Member Dates: &#8220;Date started&#8221; and &#8220;Date completed&#8221; now show the correct dates for members with lesson or module activity, instead of 01.01.1970\n\nThrive Apprentice: Security Improvements: This release includes security and stability improvements to keep your site protected",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/09/11-0-1/",
     "tags": []
   },
   {
@@ -495,17 +528,6 @@
     "tags": []
   },
   {
-    "id": "wpforms-lite@2.0.0.3",
-    "title": "WPForms Lite 2.0.0.3",
-    "date": "2026-08-11",
-    "brand": "WPForms",
-    "brandSlug": "wpforms",
-    "releaseType": "fix",
-    "summary": "Added: New supported currencies\n\nFixed: Permission handling in the Export Forms tool was improved\n\nFixed: Form data handling in the Block Editor was improved",
-    "changelogUrl": "https://wordpress.org/plugins/wpforms-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "feeds-for-youtube@2.8.1",
     "title": "Smash Balloon YouTube Feed 2.8.1",
     "date": "2026-08-11",
@@ -822,17 +844,6 @@
     "releaseType": "improvement",
     "summary": "Thrive Leads: Refresh From Cloud: A new &#8220;Refresh from cloud&#8221; button lets you re-fetch opt-in form templates on demand, so newly available templates show up right away instead of waiting for the cached list to update\n\nSecurity Improvements: Security Improvements: This release includes security and stability improvements to keep your site protected",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2-1/",
-    "tags": []
-  },
-  {
-    "id": "pushengage@4.2.6",
-    "title": "PushEngage 4.2.6",
-    "date": "2026-06-24",
-    "brand": "PushEngage",
-    "brandSlug": "pushengage",
-    "releaseType": "improvement",
-    "summary": "Improved: Strengthened plugin security across onboarding, WhatsApp, and credential handling\n\nImproved: Upgraded stored WhatsApp access tokens to authenticated AES-256-GCM encryption\n\nImproved: Smarter value typing for Audience Filters — attribute filter values now keep their correct type (number, date, boolean, text), fixing a class of silent mismatches where values were sent to the backend with the wrong type\n\nNotice: PushEngage now requires PHP 7.4 or higher",
-    "changelogUrl": "https://wordpress.org/plugins/pushengage/#developers",
     "tags": []
   },
   {
@@ -1559,17 +1570,6 @@
     "releaseType": "fix",
     "summary": "The Latest And Greatest:: Lightning-Fast Checkout: We&#8217;ve brought the payment process directly onto your site. Your customers can now complete their purchase seamlessly and without leaving the page. Say goodbye to annoying redirects and hello to more completed sales!\n\nThe Latest And Greatest:: More Accurate Access Timing for WooCommerce Drip Campaigns: The drip and expiration timing for courses and products sold via WooCommerce will now start based on when the user actually receives access (e.g., upon successful completion of a bank transfer order), not just the order date. This ensures your customers always get their full access period\n\nThe Latest And Greatest:: Improved Course Progress Recalculation: Fixed a bug affecting course progress: the progress bar will now correctly recalculate if an admin changes the course content after a user had already completed the course. Progress is now always accurately reflected\n\nThe Latest And Greatest:: Video Progress Tracking: Pause When You Need To! We fixed an issue where pausing a video would mess up progress tracking. Now, you can take that much-needed coffee break—the video progress will track correctly whether it&#8217;s paused or playing\n\nThe Latest And Greatest:: Custom HTML Editor Search and Stay: Searching your code in the Custom HTML editor used to be a little&#8230; jumpy. Pressing Enter after searching (Ctrl+F/Cmd+F) would close the modal! Now you can search your code without getting kicked out. Breathe a sigh of relief, developers!\n\nThe Latest And Greatest:: Border Radius is Back in Style:Remember those images with lovely rounded corners that weren&#8217;t displaying quite right? They&#8217;ve been fixed! Your images with border radius now look perfect on every screen\n\nThe Latest And Greatest:: Sticky Buttons That Actually Stick: Sticky buttons were getting confused on different screen sizes. We&#8217;ve smoothed things out, so your sticky buttons will stay exactly where you put them across all viewports\n\nThe Latest And Greatest:: Global Elements Typography Fix: Fixed typography issues affecting global elements to ensure consistent font styling across your site\n\nThe Latest And Greatest:: X (Twitter) Links are Back on Track: We updated the Author Social Links element to correctly support both twitter.com and the newer x.com profile URLs. Connect your social presence effortlessly!\n\nThe Latest And Greatest:: Enhanced Zapier Integration: We&#8217;ve added full Zapier support for Lead Generation forms created using shortcodes, allowing you to seamlessly connect and automate your lead data workflow with third-party applications. And, Custom Fields are now properly captured when using the Zapier API\n\nThe Latest And Greatest:: Evergreen Countdown Timer Display Fix: Resolved an issue that was causing the Evergreen Countdown timer to display an incorrect amount of time remaining, ensuring your scarcity campaigns are always accurate",
     "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-2/",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.1.1",
-    "title": "Thrive Themes 10.8.1.1",
-    "date": "2025-10-28",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "Thrive Architect: The Case of the Missing Lists and Tags: We fixed an issue where available lists and tags were playing hide-and-seek when you tried to connect your forms to your email provider. They&#8217;re back, they&#8217;re accounted for, and all your existing forms will automatically work correctly without you having to lift a finger!\n\nThrive Architect: Webhook Power-Up for File Uploads: A genuine improvement this time! You can now send any files uploaded via your Thrive Architect forms straight to external services using webhooks. More flexibility for collecting all the user data you need!\n\nThrive Architect: Webhook Configuration Drama Resolved: The configuration pages for webhooks were having a moment &#8211; hiding Submit Options and Spam Prevention settings, messing up URL previews, and not resetting correctly. Everything is now displaying correctly, consistently, and reliably. Phew!\n\nThrive Architect: Sidebar Visibility: We resolved the strange bug that caused parts of the form sidebar to disappear if you weren&#8217;t using an API connection. Now, your entire form interface is always consistent and accessible, no matter how you connect it\n\nThrive Quiz Builder: Speed Optimization Plugin Peace Treaty: We fixed a critical error that popped up when Thrive Quiz Builder was running alongside some unfriendly speed optimization plugins. This fix ensures that your Quiz Builder notifications now play nicely and work perfectly, even when your site is running at warp speed!",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/10/v10-8-1-1/",
     "tags": []
   },
   {
