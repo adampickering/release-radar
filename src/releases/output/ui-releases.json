@@ -11,6 +11,28 @@
     "tags": []
   },
   {
+    "id": "all-in-one-seo-pack@5.0.2",
+    "title": "All in One SEO 5.0.2",
+    "date": "2026-09-23",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Updated: The minimum required PHP version is now 7.4\n\nUpdated: Reduced duplicate database queries on admin page loads\n\nUpdated: The mobile tabs dropdown now has a visible border, so it no longer blends into white backgrounds\n\nUpdated: The Taxonomy Name smart tag now shows a taxonomy-specific input placeholder\n\nFixed: Rating values could appear as text instead of numbers when comparing SEO Revisions\n\nFixed: An unchanged rating could lose precision when comparing SEO Revisions\n\nFixed: The SEO Revisions comparison could appear blank for a post's first revision\n\nFixed: A conflict with the AI Engine plugin that could cause the editor to reload repeatedly on pages using certain blocks\n\nFixed: The Default 404 Redirect no longer redirects plugin, theme and core asset requests when set to an external URL, which could cause errors during plugin updates\n\nFixed: The 404 log was missing requests for assets such as images, scripts and stylesheets\n\nFixed: The canonical URL and og:url could point to an incorrect address on paginated static front pages\n\nFixed: The next-page link on a paginated static front page could point to an invalid address\n\nFixed: The llms.txt file now follows the llms.txt specification more closely\n\nFixed: Special characters could appear as HTML codes in the llms.txt site title\n\nFixed: Special characters could appear as HTML codes in the llms.txt site description when the LLMs.txt Description field was empty\n\nFixed: Sitemap settings for content excluded from search results are now disabled, and explain why, instead of appearing active\n\nFixed: Taxonomies and the HTML sitemap now honour the site-wide No Index setting\n\nFixed: The llms.txt file now leaves out taxonomies set to No Index\n\nFixed: An excluded parent term with no posts of its own wasn't actually excluded from the sitemap\n\nFixed: Terms excluded under Sitemap Advanced Settings could still appear in the sitemap, along with the posts assigned to them\n\nFixed: The HTML Sitemap could show no publish date for a term, and sitemap index dates could be wrong\n\nFixed: RSS sitemap entries could be ordered incorrectly because dates were compared as text\n\nFixed: Posts using the default priority could be ordered below lower-priority posts in the sitemap\n\nFixed: Pages could be reported as not indexed in Search Statistics on sites using TranslatePress with a subdirectory on the default language\n\nFixed: Search Statistics could keep an old page path after the address changed, such as following a parent page slug change or the removal of a static front page\n\nFixed: Posts and terms could be missing from the Index Status report when they shared the same numeric ID\n\nFixed: A PHP warning that could appear when AIOSEO Lite's files were removed while still marked active\n\nFixed: TruSEO analysis in the Divi builder could include Theme Builder template content and the builder's own interface in the analysis\n\nFixed: An error and broken term links that could occur when a category or tag had a deleted parent\n\nFixed: Divi 5 front-end styling could be affected on some pages when AIOSEO generated meta descriptions automatically\n\nFixed: An error that could occur when loading robots.txt on Multisite with AIOSEO Pro network-activated\n\nFixed: Robots.txt rules set at the network level are now included in each site's robots.txt file\n\nFixed: The robots.txt file and the Robots.txt Editor could stop working when a rule had been saved in an invalid format\n\nFixed: The Robots.txt Editor could show blank rows for stored entries that aren't rules\n\nFixed: A robots.txt rule added through the AI tools with an unusable user agent is now rejected instead of stored\n\nFixed: The Regenerate TruSEO Score bulk action could clear focus and additional keyphrases\n\nFixed: The Regenerate TruSEO Score bulk action was offered in list views where the score couldn't be recalculated, leaving it at 0\n\nFixed: A subsite's Search Appearance settings could be reset when saving robots.txt settings from the Network Admin\n\nFixed: Saving network robots.txt settings could change a site's robots.txt toggle or clear its stored rules\n\nFixed: Network Tools requests could apply settings to the wrong site on Multisite\n\nFixed: Exporting another site's content could save the current site's settings into that site's database on Multisite\n\nFixed: Viewing another site in the Network Admin Robots.txt Editor could overwrite the current site's Search Appearance settings\n\nFixed: Archived, spam and deleted subsites no longer appear in the Domain Activations list or network site selectors\n\nFixed: PHP deprecation notices when searching the Domain Activations list on Multisite\n\nFixed: The AI credit balance could show as zero after generating content\n\nFixed: The Pay-As-You-Go credit breakdown could disappear from the AI credit counter after generating content\n\nFixed: The Home breadcrumb link now includes a trailing slash in both the breadcrumb trail and its schema\n\nFixed: The site SEO audit could report the sitemap as disabled while it was enabled\n\nFixed: The AI Suite MCP setup page didn't show the new Application Password in the client snippet\n\nFixed: The Block Settings panel of the AIOSEO blocks could appear empty after reopening it or switching sidebar tabs\n\nFixed: The AIOSEO button in the Thrive Architect sidebar now shows its label when the sidebar is expanded\n\nFixed: The Post Excerpt smart tag now shows the real excerpt in the Avada and WPBakery editors\n\nFixed: Archives didn't output their configured meta keywords when dynamic keyword generation returned nothing\n\nFixed: PHP warnings and a missing keywords meta tag when a keywords setting held a list of plain text values\n\nFixed: A custom title separator using < or > could appear as an HTML code\n\nFixed: Email reports showed a green up-arrow on Top Losing rows that had a positive change in clicks\n\nFixed: Errors that could occur when inserting the Local SEO and HTML Sitemap blocks in the block editor\n\nFixed: In the AIOSEO Details column quick editor, Save and Discard affected both the Title and Description instead of only the field being edited\n\nFixed: Posts and pages couldn't be removed from the Exclude Posts / Pages field when the list was taller than the browser window\n\nFixed: A link's title attribute could be applied to other links in the same paragraph in the block editor\n\nFixed: SeedProd page detection no longer treats a post as page-builder content after SeedProd is deactivated\n\nFixed: The Facebook image could appear in the Twitter preview, and vice versa, in the Social snippet preview\n\nFixed: Improved security and access protections in SEO Revisions, SEO Analysis and the SEO Preview",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.13.1",
+    "title": "Smash Balloon Instagram Feed 6.13.1",
+    "date": "2026-09-23",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "improvement",
+    "summary": "Fix - The Instagram feed block preview in the WordPress editor is styled again on WordPress 7.0 and newer, instead of showing unstyled content with oversized icons.",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
     "id": "pushengage@4.2.11",
     "title": "PushEngage 4.2.11",
     "date": "2026-09-23",
@@ -239,17 +261,6 @@
     "releaseType": "fix",
     "summary": "New - A notice now warns you when a feed has quietly been showing an older saved copy of its posts because Instagram could not be reached, so you find out before your visitors do. The notice becomes more urgent if the connection stays broken\n\nTweak - Confirmed compatibility with WordPress 7.1\n\nTweak - The weekly Feed Issue Email Report now also tells you when a feed has quietly been showing an older saved copy of its posts for days, not just when there is an outright connection error\n\nFix - Rate limits and temporary throttling from Instagram no longer make a working connection look broken or ask you to reconnect. Your feed keeps showing its saved posts and retries on its own once the limit clears\n\nFix - Repeated failures to refresh a connected account's access token are now recorded properly, so a connection that keeps failing no longer appears up to date\n\nFix - Keyboard navigation in the feed customizer no longer gets stuck: with a color picker open, Tab moves through the page normally, switching settings sections no longer pulls focus into the open picker, and tabbing no longer detours into the feed preview\n\nFix - The connection error notice no longer keeps showing an out-of-date message - including a warning that your Instagram data would be deleted within 7 days - after the problem has changed or been resolved. It now reflects the current state of your connection and clears when there is nothing wrong\n\nFix - Plugin security hardening",
     "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@5.0.1.1",
-    "title": "All in One SEO 5.0.1.1",
-    "date": "2026-08-28",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "Fixed: The link toolbar's nofollow, sponsored and UGC options were missing from the editor, and the Classic Editor's Insert/Edit Link dialog did not open\n\nFixed: The link toolbar could crash the block editor on WordPress 6.5 and older\n\nFixed: Links were saved with an empty title attribute, and the title field could be cut off in the link popover",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
   {
@@ -877,17 +888,6 @@
     "releaseType": "feature",
     "summary": "New: PIX and BLIK payment methods for forms in Brazilian Real and Polish Złoty\n\nNew: per-form setting to disable Stripe Link on Stripe Checkout (off-site) forms\n\nNew: `[simpay_manage_subscriptions]` shortcode for the customer subscription portal in the Classic Editor\n\nUpdate: BECS Direct Debit can now be used for subscriptions and recurring payments on AU/AUD forms\n\nFix: Duplicated forms no longer share the original's Stripe Product and Price IDs\n\nFix: Form-style error color now applies to validation errors and required-field highlights\n\nFix: Action Scheduler no longer creates duplicate entries when requests arrive concurrently",
     "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
-    "tags": []
-  },
-  {
-    "id": "instagram-feed@6.11.2",
-    "title": "Smash Balloon Instagram Feed 6.11.2",
-    "date": "2026-06-17",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix - Additional plugin hardening.",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
     "tags": []
   },
   {
