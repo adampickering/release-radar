@@ -1,5 +1,16 @@
 [
   {
+    "id": "stripe@4.17.4",
+    "title": "WP Simple Pay 4.17.4",
+    "date": "2026-09-24",
+    "brand": "WP Simple Pay",
+    "brandSlug": "wp-simple-pay",
+    "releaseType": "feature",
+    "summary": "New: Transactions page to browse, search, filter, and export one-time payments\n\nNew: Issue full or partial refunds from a transaction's detail view\n\nNew: Subscriptions page to browse, search, and filter recurring payments, including ones that already existed in Stripe\n\nNew: File Upload form field, with allowed file types, a maximum file size, and required validation\n\nNew: Chargebacks opened in Stripe now show on the Transactions page as disputed\n\nUpdate: Payments and subscriptions missed by a webhook are now recovered from Stripe on an hourly check\n\nFix: The form editor could fail to load after a price option was removed while per-price inventory limits were enabled\n\nFix: Admin screens could redirect to a payment form's Payment Page instead of loading\n\nFix: Improved security around the Stripe Connect flow, webhook processing, the manage subscriptions request, the receipt resend tool, and plugin installs",
+    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.2.1",
     "title": "WPForms Lite 2.0.2.1",
     "date": "2026-09-23",
@@ -1460,17 +1471,6 @@
     "releaseType": "fix",
     "summary": "Thrive Apprentice: Members List Access Display: Fixed an issue where the Members list wouldn&#8217;t display users who have access when a product isn&#8217;t restricting a course. Your member access information now appears correctly in all scenarios\n\nThrive Apprentice: Video Cover Play Button Fix: Videos with video covers now play immediately when you click the play button!\n\nThrive Apprentice: Member Import Name Splitting: When manually importing members, names are now properly split into first name and last name fields. Previously, the full name was saved only to the first name field, which could cause issues with automations. Now everything splits correctly for seamless integrations\n\nThrive Apprentice: Assessment Grading Error Fix: Resolved a fatal error that occurred when grading quiz assessments. The grading process now completes successfully and sends assessment notification emails without any issues\n\nThrive Architect: Post List Pagination Filter Fix: Resolved an issue affecting post list filters when using pagination. Your filtered post lists now work smoothly across all pages!\n\nThrive Architect: Country Field and Quiz Compatibility: Fixed a conflict that caused the country field dropdown to stop working when both a Lead Generation element with a country field and a Quiz appeared on the same page. Now they play nicely together!\n\nThrive Architect: Mega Menu Column Styling: Fixed an issue where mega menu column styles wouldn&#8217;t persist when re-editing headers. Your mega menu formatting now stays exactly as you set it, every time you edit!\n\nThrive Architect: Form Field Tooltip Error Fix: Clicking on form field info tooltips no longer triggers console errors or causes infinite loading modals. Tooltips now work seamlessly without any hiccups!\n\nThrive Architect: Query Monitor Compatibility: Fixed a 403 Forbidden error when fetching notifications with Query Monitor active. Your notifications now load properly without any conflicts!\n\nThrive Architect: Form Success Message Emoji Support: Form success messages now display emojis correctly! You can safely add personality to your confirmation messages with emojis!\n\nThrive Theme Builder: Dynamic List Icon Display Fix: The Dynamic List icon now displays correctly in templates\n\nThrive Leads: New Tab Redirect Option: You can now choose to open redirect URLs in a new window! This gives you more control over the user experience after form submission. Keep your site open while redirecting users to thank you pages or additional resources\n\nThrive Leads: Lead Shortcode Compatibility Fix: Resolved an error that occurred when adding a Lead Shortcode inside Thrive Architect\n\nThrive Quiz Builder: KlickTipp Integration Fix: Resolved an error affecting the KlickTipp integration. Your quiz results now sync smoothly with KlickTipp!\n\nThrive Quiz Builder: Post Grid Block Display: Quiz content now appears correctly in Post Grid Blocks. Your quizzes are now fully included when displaying posts in grid layouts!",
     "changelogUrl": "https://changelog.thrivethemes.com/2025/12/v10-8-4/",
-    "tags": []
-  },
-  {
-    "id": "stripe@4.16.1",
-    "title": "WP Simple Pay 4.16.1",
-    "date": "2025-12-01",
-    "brand": "WP Simple Pay",
-    "brandSlug": "wp-simple-pay",
-    "releaseType": "feature",
-    "summary": "New: Added a “Display Type” setting to switch the payment method layout between Tabs and Accordion\n\nUpdate: Added the `simpay_show_card_field_label` filter to display a label for the Card Element field\n\nFix: Ensured the email field is required on all payment forms\n\nFix: Resolved an overlay modal visibility issue on payment forms\n\nFix: Corrected label visibility for custom text fields in the form builder\n\nFix: Fixed an issue where selecting multiple line items could trigger an invoice currency error\n\nFix: Missing styles for datepicker field",
-    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
   {
