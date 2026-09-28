@@ -1,47 +1,62 @@
 {
-  "weekRange": "September 7 – 14, 2026",
-  "greeting": "Well hello there, fellow WordPress whisperers and agency alchemists!",
-  "introParagraph": "This week, the Release Radar is pinging with some seriously reimagined experiences and a few polished gems. While fixes were in short supply, the focus was firmly on enhancing user journeys and laying groundwork for future awesomeness, with one major player dropping a complete admin overhaul.",
+  "weekRange": "September 21 – 28, 2026",
+  "greeting": "Hello, Release Radars! Ready to dive into this week's plugin happenings?",
+  "introParagraph": "This week, the plugin landscape offered a nice mix, proving that even a quieter period can bring significant improvements. While fixes took center stage, we saw some exciting new features that promise to streamline workflows and enhance user experience, particularly in the realm of payments and form management. It seems developers are busy refining the tools that power our WordPress sites!",
   "stats": {
-    "releases": 6,
-    "brands": 4,
-    "features": 2,
-    "fixes": 0
+    "releases": 9,
+    "brands": 7,
+    "features": 1,
+    "fixes": 6
   },
   "highlights": [
     {
-      "title": "Thrive Themes 11.0",
+      "title": "WP Simple Pay 4.17.4",
       "type": "feature",
-      "summary": "Thrive Themes didn't just update; they 'reimagined' their entire admin experience! This massive overhaul promises a faster, sleeker, and more efficient workflow, built on a modern stack from dashboard to settings."
+      "summary": "WP Simple Pay introduced a brand new Transactions page for browsing and exporting one-time payments, alongside the much-anticipated ability to issue full or partial refunds directly from the transaction detail view. This is a game-changer for anyone managing payments, making life significantly easier for store owners."
     },
     {
-      "title": "Envira Gallery Lite 1.16.0",
-      "type": "feature",
-      "summary": "Envira Gallery Lite is giving us a peek into the Pro world with a new 'Submissions' tab. This addition cleverly showcases how visitor photo submissions work, enticing users to explore the full power of Envira Pro."
+      "title": "WPForms Lite 2.0.2",
+      "type": "fix",
+      "summary": "WPForms Lite unveiled a sleek new Dashboard, now the first page you see, offering at-a-glance form views and helpful next steps. While primarily a fix-focused release, this dashboard addition is a welcome improvement for quick form management and insights."
     },
     {
-      "title": "Smash Balloon Social Post Feed 4.13.0",
-      "type": "improvement",
-      "summary": "No more waiting a week for your social feeds to refresh! This update ensures Smash Balloon Social Post Feed now correctly honors your caching settings, keeping your content fresh and your visitors engaged."
+      "title": "Easy Digital Downloads 3.7.1",
+      "type": "fix",
+      "summary": "Easy Digital Downloads has integrated its store data with WordPress's Abilities API, empowering AI assistants to discover and interact with orders, customers, products, and discounts more effectively. This paves the way for exciting new automation and management possibilities within EDD."
     },
     {
-      "title": "PushEngage 4.2.10",
-      "type": "improvement",
-      "summary": "Mobile users rejoice! PushEngage has tidied up its Tools page, ensuring the Abilities detail drawer no longer spills off-screen, making management on the go much smoother. They've also improved documentation for MCP servers, which is always a win."
+      "title": "All in One SEO 5.0.2",
+      "type": "fix",
+      "summary": "All in One SEO has bumped its minimum required PHP version to 7.4, ensuring better performance and security. They also tackled database query optimization, which means snappier admin page loads – a win for everyone's sanity!"
     }
   ],
   "otherReleases": [
     {
-      "title": "Smash Balloon Twitter Feed 2.9.0",
-      "type": "improvement",
-      "shortSummary": "Tweak: Tested and supported on WordPress 7.1"
+      "title": "WP Simple Pay 4.17.4.1",
+      "type": "fix",
+      "shortSummary": "Fix: Stripe Connect could not complete on sites with Stripe API keys already ..."
     },
     {
-      "title": "Smash Balloon YouTube Feed 2.9.0",
+      "title": "WPForms Lite 2.0.2.1",
+      "type": "fix",
+      "shortSummary": "Changed: The Keyboard Shortcuts modal in the Form Builder was reorganized int..."
+    },
+    {
+      "title": "Smash Balloon Instagram Feed 6.13.1",
       "type": "improvement",
-      "shortSummary": "Tweak: The upgrade link in the plugin's admin menu now reads \"Upgrade to Pro\"..."
+      "shortSummary": "Fix - The Instagram feed block preview in the WordPress editor is styled agai..."
+    },
+    {
+      "title": "PushEngage 4.2.11",
+      "type": "fix",
+      "shortSummary": "Improved: Abilities API fixes and improvements — AI assistants can now save n..."
+    },
+    {
+      "title": "Uncanny LearnDash Toolkit 3.8.1",
+      "type": "improvement",
+      "shortSummary": "Front End Login - WordPress Two-Factor plugin compatibility #502"
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies! Hopefully, your week's releases are more compatible.",
-  "generatedAt": "2026-09-14T19:45:34.781Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and wasn't committing to stable releases!",
+  "generatedAt": "2026-09-28T21:06:16.587Z"
 }
