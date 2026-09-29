@@ -1,5 +1,27 @@
 [
   {
+    "id": "coming-soon@6.20.10",
+    "title": "SeedProd 6.20.10",
+    "date": "2026-09-29",
+    "brand": "SeedProd",
+    "brandSlug": "seedprod",
+    "releaseType": "fix",
+    "summary": "Fixed - A click on a Video Pop Up image overlay now starts the video\n\nFixed - The template subscribe request now checks the nonce and the user permission\n\nFixed - WP-CLI no longer stops with a \"Cannot redeclare function\" error when Lite and Pro are both active\n\nFixed - Pro: login pages that AI tools create with the save-page ability no longer return a 404",
+    "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "stripe@4.17.4.1",
+    "title": "WP Simple Pay 4.17.4.1",
+    "date": "2026-09-28",
+    "brand": "WP Simple Pay",
+    "brandSlug": "wp-simple-pay",
+    "releaseType": "fix",
+    "summary": "Fix: Stripe Connect could not complete on sites with Stripe API keys already saved, and failed without showing an error.",
+    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
+    "tags": []
+  },
+  {
     "id": "stripe@4.17.4",
     "title": "WP Simple Pay 4.17.4",
     "date": "2026-09-24",
@@ -1262,17 +1284,6 @@
     "releaseType": "feature",
     "summary": "New: We completely updated our overview screen to make it easy to filter and view your stats inside your dashboard without needing to navigate away\n\nNew: We added support for CSV and XLSX reports",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "stripe@4.17.0.2",
-    "title": "WP Simple Pay 4.17.0.2",
-    "date": "2026-03-18",
-    "brand": "WP Simple Pay",
-    "brandSlug": "wp-simple-pay",
-    "releaseType": "feature",
-    "summary": "New: Added Form Style tab with theme presets, colors, typography, and border radius options to customize payment forms\n\nNew: Added Tabs and Accordion display options for payment methods\n\nUpdate: Updated Stripe integration for improved compatibility\n\nUpdate: Updated minimum PHP version requirement\n\nFix: Fixed Stripe Connect errors in Activity Reports\n\nFix: Fixed application fee issues during subscription status checks\n\nFix: Fixed an error with ACH Debit payment method\n\nFix: Fixed an issue where the payment form could fail to load in certain conditions\n\nFix: Made email field required for overlay modal payment forms\n\nFix: Resolved an issue where fee recovery amounts were incorrectly calculated as zero when no maximum fee cap was configured\n\nFix: Fee recovery amount not included in payment total when the fee recovery toggle is set to \"on by default\"",
-    "changelogUrl": "https://wordpress.org/plugins/stripe/#developers",
     "tags": []
   },
   {
