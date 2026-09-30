@@ -1,5 +1,49 @@
 [
   {
+    "id": "wp-mail-smtp@4.10.0",
+    "title": "WP Mail SMTP 4.10.0",
+    "date": "2026-09-30",
+    "brand": "WP Mail SMTP",
+    "brandSlug": "wp-mail-smtp",
+    "releaseType": "fix",
+    "summary": "Added: New Dashboard page, now the default screen for WP Mail SMTP, with email statistics, a setup overview, connection status, and recommended next steps\n\nAdded: Setup Checklist: a new page that guides you through connecting a mailer, sending a test email, and the rest of your email setup, with progress tracked automatically\n\nAdded: Email Detective: a new tab on the Tools page that sends a test email through your primary connection and emails you a free deliverability report covering authentication, blocklists, and spam filter scoring\n\nAdded: Setup Wizard now verifies your mailer settings with your email provider before saving them, and guides you through each mailer's required settings as numbered steps\n\nChanged: Setup Wizard's email test now reports the exact sending error with the fix steps for it, names the setting at fault where it can be identified, and shows the domain checker results\n\nChanged: Updated Action Scheduler library to 4.1.0\n\nFixed: The plugin could not be activated on some sites and failed with a fatal error when its stored activation dates were saved in an unexpected format\n\nFixed: A database error was logged and the Dashboard widget's email error alert never appeared on sites whose MySQL server treats double quotes as identifiers (ANSI_QUOTES mode)\n\nFixed: The Setup Wizard's test email did not send while the \"Do Not Send\" option was enabled\n\nFixed: Hardened permission checks and request handling across several admin features to address potential security issues",
+    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-facebook-feed@4.14.0",
+    "title": "Smash Balloon Social Post Feed 4.14.0",
+    "date": "2026-09-30",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: An admin notice now warns you when a feed has been showing an old saved copy of your Facebook posts for several days because it can't fetch fresh content, and the weekly Feed Issue Email Report now covers this case too\n\nNew: Added a Debug tab in the plugin settings where you can control anonymous data sharing and in-plugin notifications. Usage data is only sent when you opt in, and onboarding now includes a consent checkbox\n\nTweak: Refreshed the About Us page\n\nFix: Facebook source errors are now reported more accurately. Rate limits no longer show a false \"Source Invalid\" or reconnect prompt, a problem on one source is still reported when another is only being rate-limited, and feeds from a Facebook Page you don't manage are flagged as invalid again in the feed builder. Facebook API errors also come with clearer guidance on what to do\n\nFix: A Facebook source that starts working again now clears its own error, so the critical-issue notice, admin menu badge, Site Health warning and weekly issue email no longer stay on for a problem that has been resolved. When the plugin does report a critical issue, the settings page now explains it\n\nFix: The \"Action Required Within 7 Days\" data-deletion warning now only appears while that deletion is actually scheduled\n\nFix: The feed builder and customizer no longer show a blank screen on PHP 8 when a connected Facebook account's data can't be read\n\nFix: Turning off Feed Issue Email Reports now actually stops the weekly report emails\n\nFix: The Smash Balloon logo is back on the left of the admin header, and the label beside it now names the current page\n\nFix: Dismissed in-plugin notifications no longer reappear after a page reload\n\nFix: The deactivation feedback survey no longer conflicts with other Smash Balloon plugins active on the same site\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "custom-twitter-feeds@2.10.0",
+    "title": "Smash Balloon Twitter Feed 2.10.0",
+    "date": "2026-09-30",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: Added a Data Sharing settings tab where you can control anonymous data sharing and in-plugin notifications. Usage data is only sent once you opt in\n\nTweak: Admin icons are now bundled with the plugin instead of loaded from a third-party CDN\n\nTweak: Refreshed the About Us page\n\nFix: The deactivation feedback survey now submits correctly when other Smash Balloon plugins are active on the same site\n\nFix: Dismissed in-plugin notifications no longer reappear\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-automator@7.7.0",
+    "title": "Uncanny Automator 7.7.0",
+    "date": "2026-09-30",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "fix",
+    "summary": "[CartFlows](https://automatorplugin.com/integration/cartflows/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7542\n\n[Eventin](https://automatorplugin.com/integration/eventin/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #8446\n\n[Loginizer](https://automatorplugin.com/integration/loginizer/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7548\n\n[Post SMTP](https://automatorplugin.com/integration/post-smtp/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7552\n\n[Smush](https://automatorplugin.com/integration/smush/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7559\n\n[Sucuri Security](https://automatorplugin.com/integration/sucuri-security/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7561\n\n[WPCafe](https://automatorplugin.com/integration/wpcafe/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #8449\n\nCartFlows - A checkout is completed in a flow #7582\n\nCartFlows - A product is purchased in a flow #7583\n\nEventin - A user purchases a ticket for an event #8445\n\nEventin - An attendee is checked in to an event #8443\n\nEventin - An attendee is registered for an event #8444\n\nEventin - An event is created #8441\n\nEventin - An event is updated #8442\n\nLoginizer - A login attempt fails #7630\n\nLoginizer - A user logs in #7629\n\nLoginizer - A user registers via social login #7628\n\nLoginizer - A login is blocked #7631\n\nPost SMTP - An email fails to send via a transport #7648\n\nPost SMTP - An email is sent via a transport #7649\n\nSmush - An image is optimized #7676\n\nSmush - An image optimization is skipped #7675\n\nWPCafe - A reservation is cancelled #8452\n\nWPCafe - A reservation is made #8454\n\nWPCafe - A reservation's status is changed to a status #8453\n\nCartFlows - Create a flow #7584\n\nCartFlows - Create a step in a flow #7585\n\nEventin - Add the user as an attendee to an event #8440\n\nEventin - Check in an attendee #8448\n\nEventin - Update the status of an order #8447\n\nLoginizer - Add an IP range to the blacklist #7627\n\nLoginizer - Add an IP range to the whitelist #7626\n\nLoginizer - Clear the failed login logs for an IP #7623\n\nLoginizer - Remove an IP address from the blacklist #7625\n\nLoginizer - Remove an IP from the whitelist #7624\n\nSmush - Optimize an image #7674\n\nSmush - Restore an image #7673\n\nSucuri Security - Apply hardening to a directory #7666\n\nSucuri Security - Log a security event #7664\n\nSucuri Security - Remove hardening from a directory #7665\n\nSucuri Security - Reset the user's password #7663\n\nSucuri Security - Run a malware scan #7667\n\nWPCafe - Create a reservation #8451\n\nWPCafe - Update the status of a reservation #8450\n\nZoom Meetings & Webinar - Allow tokens in the meeting creation actions - date & time fields. #8548\n\nGoogle Sheets - Improved error messages to provide more details when requests fail. #8550\n\nMailchimp - Create and send a campaign - Preserved HTML formatting in campaign email content. #8534\n\nUncanny Codes - Fixed code redemption triggers recording an incorrect user ID for logged-out redemptions. #8558\n\nUncanny Groups - Group key triggers now record the correct user ID for logged-out redemptions. #8560\n\nUncanny Tin Can - Module triggers now record the correct user when the learner is not the current user. #8562\n\nUncanny Tin Can - Prevented unnecessary reporting queries when a module is not selected. #8552\n\nUncanny Toolkit - User import triggers now attribute runs to the imported user instead of the importing administrator. #8564\n\nCore - Improved plugin installation checks on Windows. #8623\n\nTrigger Object - Added support for safely processing supported WordPress and WooCommerce objects in trigger loopbacks without object deserialization. #8667\n\nARMember & Formidable Forms - Updated to the latest framework. #8578 #8556",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
     "id": "coming-soon@6.20.10",
     "title": "SeedProd 6.20.10",
     "date": "2026-09-29",
@@ -8,6 +52,28 @@
     "releaseType": "fix",
     "summary": "Fixed - A click on a Video Pop Up image overlay now starts the video\n\nFixed - The template subscribe request now checks the nonce and the user permission\n\nFixed - WP-CLI no longer stops with a \"Cannot redeclare function\" error when Lite and Pro are both active\n\nFixed - Pro: login pages that AI tools create with the save-page ability no longer return a 404",
     "changelogUrl": "https://wordpress.org/plugins/coming-soon/#developers",
+    "tags": []
+  },
+  {
+    "id": "instagram-feed@6.14.0",
+    "title": "Smash Balloon Instagram Feed 6.14.0",
+    "date": "2026-09-29",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New - You can now choose whether to share anonymous usage data. The setup wizard asks for your consent, and a new Data Sharing tab under Settings lets you review or change your data-sharing and in-plugin notification preferences at any time\n\nTweak - The About Us page has been refreshed\n\nFix - Feeds on pages served from a long-lived page cache no longer show up empty, and Load More works again\n\nFix - Dismissed in-plugin notifications no longer come back after a page reload\n\nFix - Deactivation feedback is no longer lost when another Smash Balloon plugin is active",
+    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
+    "tags": []
+  },
+  {
+    "id": "feeds-for-youtube@2.10.0",
+    "title": "Smash Balloon YouTube Feed 2.10.0",
+    "date": "2026-09-29",
+    "brand": "Smash Balloon",
+    "brandSlug": "smash-balloon",
+    "releaseType": "feature",
+    "summary": "New: The setup wizard now asks whether you'd like to share usage data and receive notifications, and a new Data Sharing settings tab lets you change your choice at any time. Usage data is only sent when you have given consent\n\nNew: Redesigned the About Us page\n\nFix: Dismissed in-plugin notifications now stay dismissed, and notifications respect your Data Sharing and notification settings\n\nFix: The deactivation feedback form now works correctly when other Smash Balloon plugins are active\n\nFix: Plugin security hardening",
+    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
     "tags": []
   },
   {
@@ -261,28 +327,6 @@
     "releaseType": "fix",
     "summary": "Fixed: Deactivating the Heatmaps addon no longer causes a fatal error when UserFeedback Pro is inactive\n\nFixed: Network-activating UserFeedback Premium no longer causes a fatal error on multisite when Lite is active on individual sites\n\nFixed: The \"Disable All UserFeedback Surveys\" setting is now applied when a specific survey is selected\n\nFixed: Improved the permission checks on the survey search and logic type endpoints\n\nFixed: The Lite \"Support\" link on the Plugins screen now points to the WordPress.org support forum",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.6.1.1",
-    "title": "Uncanny Automator 7.6.1.1",
-    "date": "2026-09-03",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "LearnDash - Restored \"Any\" option handling across multiple triggers and dropdowns. #8514\n\nMemberium for Keap and SureCart - Fixed triggers and actions failing to run on frontend requests. #8523\n\nUncanny Agent and Page Builder - Improved feature availability during temporary connection issues. #8501",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.6.1",
-    "title": "Uncanny Automator 7.6.1",
-    "date": "2026-09-01",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "improvement",
-    "summary": "Fluent Forms - Added value and label tokens for choice fields, making selections more flexible. #8455\n\nFormidable Forms - Restored the shared helpers instance to keep things running smoothly. #8518\n\nFormidable Forms - Submission triggers now ignore incomplete and abandoned entries. #8509\n\nHardened PeepSo and related token processing against unsafe serialized data. #8505\n\nLearnDash - A user has completed X% of a course - Fixed \"0f\" to correctly display \"% of\". #8516\n\nPage Builder - Removed the unnecessary \"Reload editor\" option from the Uncanny Agent notice. #8506\n\nUncanny Agent - Strengthened security for legacy admin-AJAX requests. #8499\n\nWordPress - Create a post - Parent posts now appear in the dropdown instead of playing hide-and-seek. #8491\n\nCore - Removed unnecessary license API response logging for cleaner logs. #8495",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
@@ -594,17 +638,6 @@
     "tags": []
   },
   {
-    "id": "feeds-for-youtube@2.8.0",
-    "title": "Smash Balloon YouTube Feed 2.8.0",
-    "date": "2026-08-10",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Tweak: Improved accessibility of the YouTube feed to meet WCAG 2.x requirements, including screen reader landmarks and list semantics, headings for video titles, a visible keyboard focus indicator on the feed, and correct focus handling on Load More\n\nTweak: The plugin now appears as \"Smash Balloon YouTube Feed\" on the WordPress Plugins screen so all Smash Balloon plugins group together\n\nFix: Keyboard focus is now visible on all plugin admin screens, including Settings, About, and Support\n\nFix: Screen readers now announce a video's title instead of its internal post ID when reading feed video links\n\nFix: Resolved a \"translation loading was triggered too early\" notice caused by the custom cron schedule labels\n\nFix: Plugin security hardening",
-    "changelogUrl": "https://wordpress.org/plugins/feeds-for-youtube/#developers",
-    "tags": []
-  },
-  {
     "id": "searchwp-live-ajax-search@1.8.8",
     "title": "SearchWP Live Ajax Search 1.8.8",
     "date": "2026-08-08",
@@ -902,17 +935,6 @@
     "tags": []
   },
   {
-    "id": "instagram-feed@6.11.3",
-    "title": "Smash Balloon Instagram Feed 6.11.3",
-    "date": "2026-06-18",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "improvement",
-    "summary": "Fix - Notices now stay dismissed once closed, including on sites with multiple administrators.",
-    "changelogUrl": "https://wordpress.org/plugins/instagram-feed/#developers",
-    "tags": []
-  },
-  {
     "id": "stripe@4.17.3",
     "title": "WP Simple Pay 4.17.3",
     "date": "2026-06-18",
@@ -954,17 +976,6 @@
     "releaseType": "fix",
     "summary": "Fixes: Various bug fixes and updates.",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "custom-facebook-feed@4.8.1",
-    "title": "Smash Balloon Social Post Feed 4.8.1",
-    "date": "2026-06-10",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New: Added a modern Gutenberg block and Elementor widget for the Facebook feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nNew: Added a Help widget to the feed builder for in-app access to documentation and support\n\nTweak: Compatibility with WP 7\n\nTweak: Corrected typos and grammar in plugin UI strings, admin notices, and tooltips\n\nFix: Feed blocks now render a live preview correctly inside the WP 7.0+ iframed block editor\n\nFix: Corrupted onboarding data no longer causes a fatal error\n\nFix: The legacy Elementor widget is hidden from the element search, and the widget title is now translatable",
-    "changelogUrl": "https://wordpress.org/plugins/custom-facebook-feed/#developers",
     "tags": []
   },
   {
@@ -1152,17 +1163,6 @@
     "releaseType": "feature",
     "summary": "Fixed: Render same short code multiple times\n\nAdded: `webp` and `heic` image support\n\nUpdated: Header logo linked to landing page",
     "changelogUrl": "https://wordpress.org/plugins/soliloquy-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "custom-twitter-feeds@2.6.0",
-    "title": "Smash Balloon Twitter Feed 2.6.0",
-    "date": "2026-05-18",
-    "brand": "Smash Balloon",
-    "brandSlug": "smash-balloon",
-    "releaseType": "feature",
-    "summary": "New: Added a modern Gutenberg block and Elementor widget for the Twitter feed. Existing feeds using the legacy block continue to render without reconfiguration\n\nTweak: Compatibility with WP 7",
-    "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
     "tags": []
   },
   {
@@ -1636,17 +1636,6 @@
     "releaseType": "feature",
     "summary": "New: Google Spreadsheets integration! Automatically store your Survey replies in a Google Spreadsheet\n\nFixed: Minor updates and bug fixes",
     "changelogUrl": "https://wordpress.org/plugins/userfeedback-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "wp-mail-smtp@4.6.0",
-    "title": "WP Mail SMTP 4.6.0",
-    "date": "2025-08-29",
-    "brand": "WP Mail SMTP",
-    "brandSlug": "wp-mail-smtp",
-    "releaseType": "feature",
-    "summary": "Added: New transactional mailer: Mandrill integration\n\nFixed: References and In-Reply-To email headers are now correctly preserved for API-based mailers",
-    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
     "tags": []
   },
   {
