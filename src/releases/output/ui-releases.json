@@ -1,5 +1,16 @@
 [
   {
+    "id": "charitable@1.8.13",
+    "title": "Charitable 1.8.13",
+    "date": "2026-10-01",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "feature",
+    "summary": "NEW: (AI) Charitable now works with AI assistants. On WordPress 6.9 or later, connect Claude or ChatGPT using the free WPVibe plugin, or any MCP client, to build and restyle campaigns, log donations that arrived by post, and report on your fundraising. 24+ operations, all permission-checked. [More Information](https://www.wpcharitable.com/ai/)\n\nNEW: (AI) New panel at Charitable > Tools > AI MCP. Write access starts OFF, an AI Activity list records every change and every refusal, and an assistant must confirm explicitly before trashing or unpublishing a campaign that already has donations\n\nFIX: Resolved issue involving campaign progress bars showing incorrect percentages when a goal contained separators in certain scenarios\n\nFIX: Resolved issue when a campaign with a goal but no end date showed no progress bar in the Campaigns list\n\nFIX: A campaign end date entered as a plain date, for example 2027-01-31, could be mis-read and saved incorrectly in certain scenarios in admin\n\nFIX: Reports, the donations CSV export, and the Dashboard's date-range dropdown and latest-donations list could leave today's donations out for part of each day, on sites whose timezone is ahead of UTC\n\nFIX: Security: on a page using the [charitable_donate_button] shortcode without a campaign resolved issue where a crafted link could run script in a visitor's browser when they clicked the donate button under certain conditions",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "wp-mail-smtp@4.10.0",
     "title": "WP Mail SMTP 4.10.0",
     "date": "2026-09-30",
@@ -583,17 +594,6 @@
     "tags": []
   },
   {
-    "id": "charitable@1.8.12",
-    "title": "Charitable 1.8.12",
-    "date": "2026-08-13",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "NEW: Beacon (2 Columns) campaign template - includes Campaign Hero block and Mini Donation Widget (used internally)\n\nNEW: Free Site Analysis (Reports > Site Analysis). Get a free Fundraising Score across four areas (Activation, Health, Growth, and Optimization) with specific, prioritized recommendations\n\nIMPROVED: Campaign builder rows now support a `background_image` property (renders as a CSS background on the row wrapper) and a `locked` property (prevents the row and its contents from being moved or deleted in the builder)\n\nIMPROVED: Live-preview updates for campaign-hero settings — background image, logo, title, accent (theme primary), donation amounts, and donate button all reflect in the builder preview as you edit\n\nIMPROVED: Cross-tab goal sync — changing the campaign goal in the Settings tab updates the Campaign Hero raised band in the Design tab preview, even before saving\n\nFIX: Square — donations and refunds now handle zero-decimal currencies, and dashboard-initiated refunds are logged in the site currency\n\nFIX: Donation forms on block themes now honor the `amount` and `period` URL parameters\n\nFIX: Security hardening across the addon installer, campaign builder debug endpoint, and donation import/donor-lookup handling\n\nFIX: Square (Core) - unsigned webhooks are now rejected, closing a donation-status forgery on sites with no signing secret stored",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
-    "tags": []
-  },
-  {
     "id": "wpforms-lite@2.0.0.4",
     "title": "WPForms Lite 2.0.0.4",
     "date": "2026-08-12",
@@ -778,17 +778,6 @@
     "releaseType": "feature",
     "summary": "New: Introducing new AI-Powered Headline Analyser\n\nEnhancements: Various Performance Improvements and Bug Fixes",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.11.3",
-    "title": "Charitable 1.8.11.3",
-    "date": "2026-07-21",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "improvement",
-    "summary": "FIX: Hardened Square (Core) payment webhook processing.",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
