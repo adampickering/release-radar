@@ -1,62 +1,72 @@
 {
-  "weekRange": "September 21 – 28, 2026",
-  "greeting": "Hello, Release Radars! Ready to dive into this week's plugin happenings?",
-  "introParagraph": "This week, the plugin landscape offered a nice mix, proving that even a quieter period can bring significant improvements. While fixes took center stage, we saw some exciting new features that promise to streamline workflows and enhance user experience, particularly in the realm of payments and form management. It seems developers are busy refining the tools that power our WordPress sites!",
+  "weekRange": "September 28 – October 5, 2026",
+  "greeting": "Hello, fellow pixel-pushers and plugin connoisseurs!",
+  "introParagraph": "This week's Release Radar brings a solid mix of innovation and crucial fixes, proving that our favorite plugins are always working to keep our WordPress sites humming. From AI integrations to enhanced dashboard insights and much-needed stability improvements, there's plenty to unpack. Let's dive in and see what's new under the hood!",
   "stats": {
-    "releases": 9,
-    "brands": 7,
-    "features": 1,
+    "releases": 11,
+    "brands": 8,
+    "features": 5,
     "fixes": 6
   },
   "highlights": [
     {
-      "title": "WP Simple Pay 4.17.4",
+      "title": "Charitable 1.8.13",
       "type": "feature",
-      "summary": "WP Simple Pay introduced a brand new Transactions page for browsing and exporting one-time payments, alongside the much-anticipated ability to issue full or partial refunds directly from the transaction detail view. This is a game-changer for anyone managing payments, making life significantly easier for store owners."
+      "summary": "Charitable just got smarter! With new AI integration, you can now connect Claude or ChatGPT (via WPVibe or MCP) to build and restyle campaigns, making your fundraising efforts more dynamic and efficient than ever."
     },
     {
-      "title": "WPForms Lite 2.0.2",
-      "type": "fix",
-      "summary": "WPForms Lite unveiled a sleek new Dashboard, now the first page you see, offering at-a-glance form views and helpful next steps. While primarily a fix-focused release, this dashboard addition is a welcome improvement for quick form management and insights."
+      "title": "WP Mail SMTP 4.10.0",
+      "type": "feature",
+      "summary": "Say hello to your new email command center! WP Mail SMTP now boasts a sleek new Dashboard page, offering a comprehensive overview of your email statistics, connection status, and a helpful setup checklist to ensure smooth email delivery."
     },
     {
-      "title": "Easy Digital Downloads 3.7.1",
-      "type": "fix",
-      "summary": "Easy Digital Downloads has integrated its store data with WordPress's Abilities API, empowering AI assistants to discover and interact with orders, customers, products, and discounts more effectively. This paves the way for exciting new automation and management possibilities within EDD."
+      "title": "Smash Balloon Social Post Feed 4.14.0",
+      "type": "feature",
+      "summary": "No more stale feeds! Smash Balloon's Facebook plugin now provides a proactive admin notice and a weekly email report when your feed isn't fetching fresh content, ensuring your social presence always stays up-to-date and engaging."
     },
     {
-      "title": "All in One SEO 5.0.2",
+      "title": "Envira Gallery Lite 1.16.1",
       "type": "fix",
-      "summary": "All in One SEO has bumped its minimum required PHP version to 7.4, ensuring better performance and security. They also tackled database query optimization, which means snappier admin page loads – a win for everyone's sanity!"
+      "summary": "Gallery woes begone! This update fixes frustrating block editor stalls and timeouts, especially for sites using remote media storage, ensuring your image management experience is as smooth as a freshly polished lens."
     }
   ],
   "otherReleases": [
     {
+      "title": "All in One SEO 5.0.2.1",
+      "type": "fix",
+      "shortSummary": "Fixed: Improved security protections for shortcodes on search pages"
+    },
+    {
+      "title": "Smash Balloon Twitter Feed 2.10.0",
+      "type": "feature",
+      "shortSummary": "New: Added a Data Sharing settings tab where you can control anonymous data s..."
+    },
+    {
+      "title": "Uncanny Automator 7.7.0",
+      "type": "fix",
+      "shortSummary": "[CartFlows](https://automatorplugin.com/integration/cartflows/?utm_source=wp-..."
+    },
+    {
+      "title": "SeedProd 6.20.10",
+      "type": "fix",
+      "shortSummary": "Fixed - A click on a Video Pop Up image overlay now starts the video"
+    },
+    {
+      "title": "Smash Balloon Instagram Feed 6.14.0",
+      "type": "feature",
+      "shortSummary": "New - You can now choose whether to share anonymous usage data. The setup wiz..."
+    },
+    {
+      "title": "Smash Balloon YouTube Feed 2.10.0",
+      "type": "feature",
+      "shortSummary": "New: The setup wizard now asks whether you'd like to share usage data and rec..."
+    },
+    {
       "title": "WP Simple Pay 4.17.4.1",
       "type": "fix",
       "shortSummary": "Fix: Stripe Connect could not complete on sites with Stripe API keys already ..."
-    },
-    {
-      "title": "WPForms Lite 2.0.2.1",
-      "type": "fix",
-      "shortSummary": "Changed: The Keyboard Shortcuts modal in the Form Builder was reorganized int..."
-    },
-    {
-      "title": "Smash Balloon Instagram Feed 6.13.1",
-      "type": "improvement",
-      "shortSummary": "Fix - The Instagram feed block preview in the WordPress editor is styled agai..."
-    },
-    {
-      "title": "PushEngage 4.2.11",
-      "type": "fix",
-      "shortSummary": "Improved: Abilities API fixes and improvements — AI assistants can now save n..."
-    },
-    {
-      "title": "Uncanny LearnDash Toolkit 3.8.1",
-      "type": "improvement",
-      "shortSummary": "Front End Login - WordPress Two-Factor plugin compatibility #502"
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many dependencies and wasn't committing to stable releases!",
-  "generatedAt": "2026-09-28T21:06:16.587Z"
+  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies! (And frankly, it was causing too many 500 errors.)",
+  "generatedAt": "2026-10-05T21:52:12.203Z"
 }
