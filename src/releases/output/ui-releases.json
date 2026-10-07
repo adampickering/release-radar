@@ -1,5 +1,38 @@
 [
   {
+    "id": "all-in-one-seo-pack@5.0.3",
+    "title": "All in One SEO 5.0.3",
+    "date": "2026-10-07",
+    "brand": "AIOSEO",
+    "brandSlug": "aioseo",
+    "releaseType": "fix",
+    "summary": "Updated: SEO Revisions comparisons now show the current value of a smart tag when you hover over it, including Custom Field and Taxonomy Name tags\n\nUpdated: Removed unused breadcrumb schema code that ran on every page load\n\nFixed: AI features now check your available credits before sending a request, and AI schema generation always uses the schema credit cost\n\nFixed: The AI Bulk Generator and the Media Library's Generate Alt Text with AI action now tell you when generation fails, for example when you're out of AI credits\n\nFixed: Improved security and access protections in the AI Image Generator and Markdown (.md) versions of posts\n\nFixed: Regenerating an image from an earlier result in the AI Image Generator now works for everyone who can edit the post, and AI permission errors in the REST API return the correct status code\n\nFixed: The AI Suite MCP setup could show as complete on sites where another plugin bundles the MCP Adapter library\n\nFixed: The Back to Posts link in the AI Bulk Generator now returns you to the same list view, and some links in the plugin interface now open in a new tab\n\nFixed: Homepage SEO data could be incomplete or incorrect when a theme uses a custom homepage layout\n\nFixed: The AIOSEO editor now works when editing a WooCommerce product in Elementor, and the AIOSEO button no longer stays on screen when editing a theme template or Site Settings\n\nFixed: WPBakery and Avada elements could run twice on the front end and break layouts, tabs and forms\n\nFixed: Auto-generated descriptions could miss or mix up text from WPBakery and Avada elements\n\nFixed: Markdown (.md) versions of posts and llms-full.txt could show content from the wrong post, or breadcrumbs and other content from the 404 page\n\nFixed: Markdown (.md) versions of posts and llms-full.txt now keep tables and code samples, and no longer include XML declarations, embedded icon data or HTML tags\n\nFixed: Markdown (.md) URLs could return a 404 or the wrong post for posts with non-Latin slugs, on subdirectory installs, on sites with more than 50 posts, or when a post shares its slug with a custom post type item\n\nFixed: The Markdown (.md) version of a post could fail to generate when a link contained many inline SVG icons, and Divi 5 posts were processed twice\n\nFixed: llms.txt now shows the site description as a blockquote with HTML entities decoded, and descriptions from legacy Divi builder content no longer include shortcode tags or encoded characters\n\nFixed: The llms.txt and llms-full.txt files could be left behind after uninstalling AIOSEO, turning off LLMs.txt or resetting settings, and llms-full.txt could be generated again after being turned off\n\nFixed: Breadcrumb fields in the REST API now respect per-term breadcrumb settings, and a breadcrumb template with a page-number or search tag no longer causes an error\n\nFixed: The AIOSEO Breadcrumbs and Table of Contents blocks could fail to load in the Widgets and Customizer editors\n\nFixed: The Link Format options in the block editor now work on WordPress 6.5 and earlier, and typing a link title before the URL no longer stops the editor from working\n\nFixed: The Network Admin Robots.txt Editor now previews each site's own rules and sitemaps, and no longer removes a site's custom rules when you save while they're loading\n\nFixed: Managing settings backups for another site in Network Tools could affect the wrong site's settings\n\nFixed: robots.txt could return an error when a saved rule had an invalid value; that rule is now skipped\n\nFixed: The REST API now returns an error instead of silently ignoring SEO changes from users without SEO permissions, or saving \"Array\" when the legacy `_aioseop_title` and `_aioseop_description` fields get a value that isn't text\n\nFixed: Redirects created automatically for trashed or deleted posts could point to the homepage or replace a redirect you had already set up, and restoring a post from the trash could remove its redirect\n\nFixed: SEO Analysis could get stuck on, or report false issues for, pages with an empty response or no visible content\n\nFixed: Scheduled SEO Analysis scans could keep failing in the background, and scans now run on network-licensed multisites\n\nFixed: Uninstalling AIOSEO now also removes capabilities added by older versions, and deleting Lite and Pro together no longer leaves empty tables and options behind\n\nFixed: SEO Alerts no longer flags an empty sitemap, such as a News Sitemap with no recent posts, as an error, and sitemaps that don't exist, are disabled or are past their last page now return a 404\n\nFixed: Background \"Unescape data\" tasks could be cancelled on AIOSEO Lite\n\nFixed: Link Assistant domain icons now show a fallback icon instead of a broken image when a site's icon can't be loaded\n\nFixed: Display issues in the Search Statistics Index Status chart",
+    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
+    "tags": []
+  },
+  {
+    "id": "wp-mail-smtp@4.10.1",
+    "title": "WP Mail SMTP 4.10.1",
+    "date": "2026-10-07",
+    "brand": "WP Mail SMTP",
+    "brandSlug": "wp-mail-smtp",
+    "releaseType": "fix",
+    "summary": "Changed: Improved security and privacy across the plugin, including temporary file storage and requests to external services\n\nFixed: Some Setup Wizard labels and the Lite install date in Site Health could not be translated\n\nFixed: The Posts, Pages and post editor screens failed with a fatal error on hosts without the PHP intl extension when another plugin, such as All in One SEO, used the intl IDN functions while the Gmail mailer was in use",
+    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
+    "id": "thrive-themes@11.1",
+    "title": "Thrive Themes 11.1",
+    "date": "2026-10-07",
+    "brand": "Thrive Themes",
+    "brandSlug": "thrive-themes",
+    "releaseType": "improvement",
+    "summary": "Thrive Leads: Asset Group Files: Deleting or reactivating the first file in an asset group now works correctly\n\nThrive Apprentice: Incoming Webhooks: You can now connect an external checkout or CRM to Thrive Apprentice, so a purchase grants course access automatically with no code required\n\nThrive Apprentice: Automatic field matching from test webhook: Apprentice will automatically map frequently used webhook fields to Apprentice fields (e.g., email/first name/last name) when you setup external webhook\n\nThrive Apprentice: Access Actions: Choose what each webhook does when it arrives: find or create the student and grant access, grant access to an existing student only, or revoke access. Revoking keeps the student’s progress so you can restore access later\n\nThrive Apprentice: Automatic Field Matching: Email, first name and last name are matched from the incoming data for you, and you can map any other field yourself when you need to\n\nThrive Apprentice: Secure By Default: Every new webhook starts with a secret key generated for you, so course access cannot be granted by anyone who happens to find the address. Signature verification is also supported\n\nThrive Apprentice: Test Before You Go Live: Send a real test purchase and Apprentice shows you exactly what arrived, without creating a student or granting access\n\nThrive Apprentice: Delivery Logs: Every incoming request is listed with its result, so you can see what worked, what did not, and why\n\nThrive Apprentice: Security Improvements: This release includes security and stability improvements to keep your site protected",
+    "changelogUrl": "https://changelog.thrivethemes.com/2026/10/v11-1/",
+    "tags": []
+  },
+  {
     "id": "wpforms-lite@2.0.2.2",
     "title": "WPForms Lite 2.0.2.2",
     "date": "2026-10-06",
@@ -11,13 +44,24 @@
     "tags": []
   },
   {
+    "id": "easy-digital-downloads@3.7.1.1",
+    "title": "Easy Digital Downloads 3.7.1.1",
+    "date": "2026-10-06",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "improvement",
+    "summary": "Improved: Square orders are now completed only once Square confirms the payment is complete.",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@5.0.2.1",
     "title": "All in One SEO 5.0.2.1",
     "date": "2026-10-01",
     "brand": "AIOSEO",
     "brandSlug": "aioseo",
     "releaseType": "fix",
-    "summary": "Fixed: Improved security protections for shortcodes on search pages\n\nFixed: The Elementor editor could get stuck on “Loading” on some hosts when Redirects was active",
+    "summary": "Fixed: Improved security protections for shortcodes on search pages\n\nFixed: The Elementor editor could get stuck on \"Loading\" on some hosts, such as GoDaddy Managed WordPress, when Redirects was active",
     "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
@@ -426,17 +470,6 @@
     "releaseType": "fix",
     "summary": "Fix: PHP fatal error when a snippet error was logged on a frontend or REST request while the logs folder was missing\n\nFix: Snippets no longer get overwritten with visual editor content when other plugins trigger editor events in the admin\n\nFix: Library snippet previews now always start at the top of the code\n\nFix: PHP fatal error on some admin AJAX requests from the library connect notice",
     "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
-    "tags": []
-  },
-  {
-    "id": "all-in-one-seo-pack@5.0.1",
-    "title": "All in One SEO 5.0.1",
-    "date": "2026-08-26",
-    "brand": "AIOSEO",
-    "brandSlug": "aioseo",
-    "releaseType": "fix",
-    "summary": "New: TruSEO content analysis for taxonomy terms, starting with WooCommerce product categories\n\nFixed: SEO Analysis now shows a clear \"Preview unavailable\" message when a firewall blocks the homepage or competitor screenshot\n\nFixed: Sitemap image URLs being duplicated on WordPress subdirectory installations\n\nFixed: Redirects no longer create cache entries on sites that don't use the Redirects feature\n\nFixed: Overlapping redirects now apply in the correct order\n\nFixed: A textdomain loading notice that could appear when checking for addon updates on WordPress 6.7 and later\n\nFixed: Table of Contents block sometimes reset custom heading text and pointed to incorrect links\n\nFixed: Added a warning when a redirect's destination URL contains invalid characters in the domain\n\nFixed: Redirects from child pages to parent pages not working for smart 404 redirects",
-    "changelogUrl": "https://wordpress.org/plugins/all-in-one-seo-pack/#developers",
     "tags": []
   },
   {
@@ -1023,17 +1056,6 @@
     "tags": []
   },
   {
-    "id": "easy-digital-downloads@3.6.8",
-    "title": "Easy Digital Downloads 3.6.8",
-    "date": "2026-05-26",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "feature",
-    "summary": "NEW: Stripe - Added support for BLIK payments\n\nAdmin: Fixed the orders table filter by total not working with the \"greater than\" condition\n\nAdmin: Fixed manual order tax calculation requiring an address field change to trigger\n\nAdmin: Enhanced select placeholder no longer assumes the field is for downloads\n\nAdmin: Improve UX of Select input search\n\nAdmin: Added a tooltip for the Login link setting option toggle\n\nBlocks: Updated download select fields to use combobox\n\nCheckout: Prevent console warnings when telephone number field is present\n\nEmails: Fixed email log pagination not working as expected\n\nPayPal Standard: Improved IPN handling\n\nSquare: Improved reliability of connection process\n\nStripe: Fixed an uncaught IntegrationError when a 100% discount code is applied with Payment Elements",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
-    "tags": []
-  },
-  {
     "id": "insert-headers-and-footers@2.3.6",
     "title": "WPCode 2.3.6",
     "date": "2026-05-26",
@@ -1540,17 +1562,6 @@
     "tags": []
   },
   {
-    "id": "wp-mail-smtp@4.7.0",
-    "title": "WP Mail SMTP 4.7.0",
-    "date": "2025-11-12",
-    "brand": "WP Mail SMTP",
-    "brandSlug": "wp-mail-smtp",
-    "releaseType": "feature",
-    "summary": "Added: New transactional mailer: Resend integration\n\nFixed: Recurring task filling up task meta table",
-    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
-    "tags": []
-  },
-  {
     "id": "uncanny-learndash-toolkit@3.8.0",
     "title": "Uncanny LearnDash Toolkit 3.8.0",
     "date": "2025-11-11",
@@ -1559,17 +1570,6 @@
     "releaseType": "improvement",
     "summary": "Frontend Login - New \"Modern theme\" with colour selectors to customize the login form\n\nImplemented new, standardized Uncanny Owl admin UI theme\n\nImproved Melapress WP 2FA integration using the REST API #423\n\nFrontend Login - Added `login_form` action hook to login templates #458\n\nTopics Autocomplete Lessons (Legacy) - Fixed deprecated functions #429\n\nUpdated Uncanny Owl logo",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
-    "tags": []
-  },
-  {
-    "id": "thrive-themes@10.8.2",
-    "title": "Thrive Themes 10.8.2",
-    "date": "2025-11-04",
-    "brand": "Thrive Themes",
-    "brandSlug": "thrive-themes",
-    "releaseType": "fix",
-    "summary": "The Latest And Greatest:: Lightning-Fast Checkout: We&#8217;ve brought the payment process directly onto your site. Your customers can now complete their purchase seamlessly and without leaving the page. Say goodbye to annoying redirects and hello to more completed sales!\n\nThe Latest And Greatest:: More Accurate Access Timing for WooCommerce Drip Campaigns: The drip and expiration timing for courses and products sold via WooCommerce will now start based on when the user actually receives access (e.g., upon successful completion of a bank transfer order), not just the order date. This ensures your customers always get their full access period\n\nThe Latest And Greatest:: Improved Course Progress Recalculation: Fixed a bug affecting course progress: the progress bar will now correctly recalculate if an admin changes the course content after a user had already completed the course. Progress is now always accurately reflected\n\nThe Latest And Greatest:: Video Progress Tracking: Pause When You Need To! We fixed an issue where pausing a video would mess up progress tracking. Now, you can take that much-needed coffee break—the video progress will track correctly whether it&#8217;s paused or playing\n\nThe Latest And Greatest:: Custom HTML Editor Search and Stay: Searching your code in the Custom HTML editor used to be a little&#8230; jumpy. Pressing Enter after searching (Ctrl+F/Cmd+F) would close the modal! Now you can search your code without getting kicked out. Breathe a sigh of relief, developers!\n\nThe Latest And Greatest:: Border Radius is Back in Style:Remember those images with lovely rounded corners that weren&#8217;t displaying quite right? They&#8217;ve been fixed! Your images with border radius now look perfect on every screen\n\nThe Latest And Greatest:: Sticky Buttons That Actually Stick: Sticky buttons were getting confused on different screen sizes. We&#8217;ve smoothed things out, so your sticky buttons will stay exactly where you put them across all viewports\n\nThe Latest And Greatest:: Global Elements Typography Fix: Fixed typography issues affecting global elements to ensure consistent font styling across your site\n\nThe Latest And Greatest:: X (Twitter) Links are Back on Track: We updated the Author Social Links element to correctly support both twitter.com and the newer x.com profile URLs. Connect your social presence effortlessly!\n\nThe Latest And Greatest:: Enhanced Zapier Integration: We&#8217;ve added full Zapier support for Lead Generation forms created using shortcodes, allowing you to seamlessly connect and automate your lead data workflow with third-party applications. And, Custom Fields are now properly captured when using the Zapier API\n\nThe Latest And Greatest:: Evergreen Countdown Timer Display Fix: Resolved an issue that was causing the Evergreen Countdown timer to display an incorrect amount of time remaining, ensuring your scarcity campaigns are always accurate",
-    "changelogUrl": "https://changelog.thrivethemes.com/2025/11/v10-8-2/",
     "tags": []
   },
   {
