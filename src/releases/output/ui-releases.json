@@ -1,5 +1,27 @@
 [
   {
+    "id": "wp-mail-smtp@4.10.2",
+    "title": "WP Mail SMTP 4.10.2",
+    "date": "2026-10-08",
+    "brand": "WP Mail SMTP",
+    "brandSlug": "wp-mail-smtp",
+    "releaseType": "improvement",
+    "summary": "Changed: Setup Wizard now returns to the Dashboard page instead of Settings when it is finished or closed\n\nChanged: Improved translations across the admin area and the emails the plugin sends\n\nFixed: A \"Class not found\" fatal error could occur right after updating the plugin on sites with PHP OPcache enabled",
+    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
+    "id": "insert-headers-and-footers@2.4.0",
+    "title": "WPCode 2.4.0",
+    "date": "2026-10-08",
+    "brand": "WPCode",
+    "brandSlug": "wpcode",
+    "releaseType": "improvement",
+    "summary": "Fix: Improved safe mode security so only users who can manage snippets can load the site with snippets disabled.",
+    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@5.0.3",
     "title": "All in One SEO 5.0.3",
     "date": "2026-10-07",
@@ -19,6 +41,17 @@
     "releaseType": "fix",
     "summary": "Changed: Improved security and privacy across the plugin, including temporary file storage and requests to external services\n\nFixed: Some Setup Wizard labels and the Lite install date in Site Health could not be translated\n\nFixed: The Posts, Pages and post editor screens failed with a fatal error on hosts without the PHP intl extension when another plugin, such as All in One SEO, used the intl IDN functions while the Gmail mailer was in use",
     "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
+    "tags": []
+  },
+  {
+    "id": "envira-gallery-lite@1.16.2",
+    "title": "Envira Gallery Lite 1.16.2",
+    "date": "2026-10-07",
+    "brand": "Envira Gallery",
+    "brandSlug": "envira-gallery",
+    "releaseType": "fix",
+    "summary": "Fixed: The setup wizard's plugin installer now requires permission to install plugins and installs only plugins from Envira's recommended list\n\nFixed: Saving a gallery through the REST API now accepts only images the user is allowed to use, so other users' private post titles and excerpts can no longer be read back from gallery data\n\nFixed: Converting WordPress galleries to Envira galleries now requires permission to publish galleries, and the bulk converter reports refused conversions instead of reporting success\n\nFixed: New installs now apply Envira's default gallery permissions straight away, instead of leaving contributors with gallery access until Envira Settings is opened\n\nFixed: The gallery shortcode now renders a gallery by ID or slug only when the visitor is allowed to see it, so private, draft and pending galleries are no longer exposed to other visitors\n\nFixed: Images a user is not allowed to use are now refused everywhere a gallery is saved — the media picker, the REST API and the gallery converter — and skipped images are reported instead of silently dropped\n\nFixed: A gallery that cannot be converted no longer stops the remaining galleries in the same post from converting; it is skipped and counted instead\n\nUpdated: General security improvements and hardening",
+    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
     "tags": []
   },
   {
@@ -726,17 +759,6 @@
     "tags": []
   },
   {
-    "id": "envira-gallery-lite@1.14.0",
-    "title": "Envira Gallery Lite 1.14.0",
-    "date": "2026-07-28",
-    "brand": "Envira Gallery",
-    "brandSlug": "envira-gallery",
-    "releaseType": "fix",
-    "summary": "Fixed: Reduced the oversized logo in the Envira admin header to its correct size.",
-    "changelogUrl": "https://wordpress.org/plugins/envira-gallery-lite/#developers",
-    "tags": []
-  },
-  {
     "id": "easy-digital-downloads@3.6.9.1",
     "title": "Easy Digital Downloads 3.6.9.1",
     "date": "2026-07-27",
@@ -1298,17 +1320,6 @@
     "tags": []
   },
   {
-    "id": "insert-headers-and-footers@2.3.5",
-    "title": "WPCode 2.3.5",
-    "date": "2026-03-17",
-    "brand": "WPCode",
-    "brandSlug": "wpcode",
-    "releaseType": "fix",
-    "summary": "Fix: Switching a snippet from shortcode back to auto-insert mode now correctly restores the selected location\n\nFix: Changes made in the Text tab of the visual editor for text snippets are now saved correctly\n\nFix: Resolved a fatal error that could occur when the snippet library cache returns invalid data",
-    "changelogUrl": "https://wordpress.org/plugins/insert-headers-and-footers/#developers",
-    "tags": []
-  },
-  {
     "id": "userfeedback-lite@1.11.1",
     "title": "UserFeedback Lite 1.11.1",
     "date": "2026-03-12",
@@ -1504,17 +1515,6 @@
     "releaseType": "improvement",
     "summary": "Front End Login - Resolved an issue where the password field was not working properly on iPhones #464.",
     "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
-    "tags": []
-  },
-  {
-    "id": "wp-mail-smtp@4.7.1",
-    "title": "WP Mail SMTP 4.7.1",
-    "date": "2025-11-26",
-    "brand": "WP Mail SMTP",
-    "brandSlug": "wp-mail-smtp",
-    "releaseType": "improvement",
-    "summary": "Release 4.7.1.",
-    "changelogUrl": "https://wordpress.org/plugins/wp-mail-smtp/#developers",
     "tags": []
   },
   {
