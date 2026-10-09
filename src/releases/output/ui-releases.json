@@ -22,6 +22,17 @@
     "tags": []
   },
   {
+    "id": "sugar-calendar-lite@3.15.0",
+    "title": "Sugar Calendar Lite 3.15.0",
+    "date": "2026-10-08",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "feature",
+    "summary": "Added: **NEW** Gia AI assistant: describe your event in a chat and Gia creates it for you. Gia can also update your existing events and answer questions about them, like registrations or ticket sales\n\nAdded: Setup Checklist: a new Sugar Calendar → Setup Checklist page lists the steps to get your calendar running, like creating your first event, adding a calendar to a page and connecting Stripe. Each step is ticked off when you complete it\n\nFixed: Events with the same start time could be skipped or shown twice in paginated event lists\n\nFixed: The Event List block's Days of the Week and Time of Day filters missed matching events on later pages",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "all-in-one-seo-pack@5.0.3",
     "title": "All in One SEO 5.0.3",
     "date": "2026-10-07",
@@ -1130,17 +1141,6 @@
     "releaseType": "improvement",
     "summary": "All Thrive Themes Products: License related enhancements and fix.",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/05/v10-9-1-1/",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.11.1",
-    "title": "Sugar Calendar Lite 3.11.1",
-    "date": "2026-05-21",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "fix",
-    "summary": "Fixed: PHP 8 type error when the filter `wp_insert_post_empty_content` is used with type hinting\n\nFixed: PHP 8.1+ PHP warning logs\n\nFixed: Security improvements\n\nChanged: Google Maps integration optimization",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
   {
