@@ -1,72 +1,67 @@
 {
-  "weekRange": "September 28 – October 5, 2026",
-  "greeting": "Hello, fellow pixel-pushers and plugin connoisseurs!",
-  "introParagraph": "This week's Release Radar brings a solid mix of innovation and crucial fixes, proving that our favorite plugins are always working to keep our WordPress sites humming. From AI integrations to enhanced dashboard insights and much-needed stability improvements, there's plenty to unpack. Let's dive in and see what's new under the hood!",
+  "weekRange": "October 5 – 12, 2026",
+  "greeting": "Well hello there, fellow pixel-pusher and code conjurer!",
+  "introParagraph": "This week's 'Release Radar' is pinging with a mix of thoughtful accessibility improvements, crucial security patches, and even a dash of AI magic. While the fixes kept things stable, a certain calendar plugin decided to make things *really* interesting, proving that even a quiet week can have its standout stars. Let's dive into what's keeping our WordPress ecosystems humming (and sometimes, thinking for themselves!).",
   "stats": {
-    "releases": 11,
-    "brands": 8,
-    "features": 5,
-    "fixes": 6
+    "releases": 10,
+    "brands": 9,
+    "features": 1,
+    "fixes": 4
   },
   "highlights": [
     {
-      "title": "Charitable 1.8.13",
+      "title": "Sugar Calendar Lite 3.15.0",
       "type": "feature",
-      "summary": "Charitable just got smarter! With new AI integration, you can now connect Claude or ChatGPT (via WPVibe or MCP) to build and restyle campaigns, making your fundraising efforts more dynamic and efficient than ever."
+      "summary": "Hold onto your event hats! Sugar Calendar just dropped 'Gia AI assistant,' letting you describe and create events via chat. It can also update existing events and answer questions about registrations and sales, making event management smarter and way more conversational."
     },
     {
-      "title": "WP Mail SMTP 4.10.0",
-      "type": "feature",
-      "summary": "Say hello to your new email command center! WP Mail SMTP now boasts a sleek new Dashboard page, offering a comprehensive overview of your email statistics, connection status, and a helpful setup checklist to ensure smooth email delivery."
+      "title": "Charitable 1.8.13.1",
+      "type": "improvement",
+      "summary": "Kudos to Charitable for baking in significant accessibility improvements across their donation forms, from better field labelling to visible keyboard focus indicators. This release ensures that giving back is easier and more inclusive for everyone, which is always a win in our book."
     },
     {
-      "title": "Smash Balloon Social Post Feed 4.14.0",
-      "type": "feature",
-      "summary": "No more stale feeds! Smash Balloon's Facebook plugin now provides a proactive admin notice and a weekly email report when your feed isn't fetching fresh content, ensuring your social presence always stays up-to-date and engaging."
+      "title": "WPCode 2.4.0",
+      "type": "improvement",
+      "summary": "WPCode tightened up its safe mode security, ensuring that only users with snippet management capabilities can load the site with snippets disabled. This is a subtle but important tweak that enhances control and prevents unauthorized tampering, keeping your custom code safer."
     },
     {
-      "title": "Envira Gallery Lite 1.16.1",
-      "type": "fix",
-      "summary": "Gallery woes begone! This update fixes frustrating block editor stalls and timeouts, especially for sites using remote media storage, ensuring your image management experience is as smooth as a freshly polished lens."
+      "title": "Easy Digital Downloads 3.7.1.1",
+      "type": "improvement",
+      "summary": "EDD refined its Square integration, now completing orders only after Square confirms the payment is fully processed. This robust improvement ensures greater transactional accuracy and reliability for your digital product sales."
     }
   ],
   "otherReleases": [
     {
-      "title": "All in One SEO 5.0.2.1",
+      "title": "WP Mail SMTP 4.10.2",
+      "type": "improvement",
+      "shortSummary": "Changed: Setup Wizard now returns to the Dashboard page instead of Settings w..."
+    },
+    {
+      "title": "All in One SEO 5.0.3",
       "type": "fix",
-      "shortSummary": "Fixed: Improved security protections for shortcodes on search pages"
+      "shortSummary": "Updated: SEO Revisions comparisons now show the current value of a smart tag ..."
     },
     {
-      "title": "Smash Balloon Twitter Feed 2.10.0",
-      "type": "feature",
-      "shortSummary": "New: Added a Data Sharing settings tab where you can control anonymous data s..."
-    },
-    {
-      "title": "Uncanny Automator 7.7.0",
+      "title": "WP Mail SMTP 4.10.1",
       "type": "fix",
-      "shortSummary": "[CartFlows](https://automatorplugin.com/integration/cartflows/?utm_source=wp-..."
+      "shortSummary": "Changed: Improved security and privacy across the plugin, including temporary..."
     },
     {
-      "title": "SeedProd 6.20.10",
+      "title": "Envira Gallery Lite 1.16.2",
       "type": "fix",
-      "shortSummary": "Fixed - A click on a Video Pop Up image overlay now starts the video"
+      "shortSummary": "Fixed: The setup wizard's plugin installer now requires permission to install..."
     },
     {
-      "title": "Smash Balloon Instagram Feed 6.14.0",
-      "type": "feature",
-      "shortSummary": "New - You can now choose whether to share anonymous usage data. The setup wiz..."
+      "title": "Thrive Themes 11.1",
+      "type": "improvement",
+      "shortSummary": "Thrive Leads: Asset Group Files: Deleting or reactivating the first file in a..."
     },
     {
-      "title": "Smash Balloon YouTube Feed 2.10.0",
-      "type": "feature",
-      "shortSummary": "New: The setup wizard now asks whether you'd like to share usage data and rec..."
-    },
-    {
-      "title": "WP Simple Pay 4.17.4.1",
+      "title": "WPForms Lite 2.0.2.2",
       "type": "fix",
-      "shortSummary": "Fix: Stripe Connect could not complete on sites with Stripe API keys already ..."
+      "shortSummary": "Added: Support for the Nigerian Naira (NGN), Ghanaian Cedi (GHS), and Kenyan ..."
     }
   ],
-  "closingJoke": "Why did the WordPress developer break up with the plugin? Because it had too many unresolved dependencies! (And frankly, it was causing too many 500 errors.)",
-  "generatedAt": "2026-10-05T21:52:12.203Z"
+  "closingJoke": "Why did the WordPress plugin break up with its theme? Because it felt too 'constrained' by its parent directory! Always remember to commit, folks.",
+  "generatedAt": "2026-10-12T22:24:29.574Z"
 }
