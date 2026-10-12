@@ -1,5 +1,16 @@
 [
   {
+    "id": "charitable@1.8.13.1",
+    "title": "Charitable 1.8.13.1",
+    "date": "2026-10-12",
+    "brand": "Charitable",
+    "brandSlug": "charitable",
+    "releaseType": "improvement",
+    "summary": "IMPROVED: Accessibility improvements across the donation form, covering field labelling, autocomplete hints, grouped donation amounts and visible keyboard focus indicators\n\nFIX: Privacy improvements, reducing any unneeded external requests, and adding more control over the Share Usage Data setting\n\nFIX: Hardening across the campaign builder, including permission and security-token checks on several internal requests\n\nFIX: Minor improvements to Addons screen and setup wizard welcome screen\n\nFIX: Improvements for zero-decimal currencies, mostly on reports and dashboard pages\n\nFIX: Donation form errors are now announced to screen readers and take keyboard focus\n\nFIX: Donation form improvements related to Google reCAPTCHA and errors related to Stripe when confirming card details\n\nFIX: Donate button on a campaign page now carries the donation amount already highlighted\n\nFIX: Campaign templates now show a consistent campaign description in the builder preview and on the published page",
+    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
+    "tags": []
+  },
+  {
     "id": "wp-mail-smtp@4.10.2",
     "title": "WP Mail SMTP 4.10.2",
     "date": "2026-10-08",
@@ -116,7 +127,7 @@
     "brand": "Charitable",
     "brandSlug": "charitable",
     "releaseType": "feature",
-    "summary": "NEW: (AI) Charitable now works with AI assistants. On WordPress 6.9 or later, connect Claude or ChatGPT using the free WPVibe plugin, or any MCP client, to build and restyle campaigns, log donations that arrived by post, and report on your fundraising. 24+ operations, all permission-checked. [More Information](https://www.wpcharitable.com/ai/)\n\nNEW: (AI) New panel at Charitable > Tools > AI MCP. Write access starts OFF, an AI Activity list records every change and every refusal, and an assistant must confirm explicitly before trashing or unpublishing a campaign that already has donations\n\nFIX: Resolved issue involving campaign progress bars showing incorrect percentages when a goal contained separators in certain scenarios\n\nFIX: Resolved issue when a campaign with a goal but no end date showed no progress bar in the Campaigns list\n\nFIX: A campaign end date entered as a plain date, for example 2027-01-31, could be mis-read and saved incorrectly in certain scenarios in admin\n\nFIX: Reports, the donations CSV export, and the Dashboard's date-range dropdown and latest-donations list could leave today's donations out for part of each day, on sites whose timezone is ahead of UTC\n\nFIX: Security: on a page using the [charitable_donate_button] shortcode without a campaign resolved issue where a crafted link could run script in a visitor's browser when they clicked the donate button under certain conditions",
+    "summary": "NEW: Charitable now works with AI assistants. On WordPress 6.9 or later, connect Claude or ChatGPT using the free WPVibe plugin, or any MCP client, to build and restyle campaigns, log donations that arrived by post, and report on your fundraising. Twenty-four operations, all permission-checked. [More Information](https://www.wpcharitable.com/ai/)\n\nNEW: Control it all at Charitable > Tools > AI MCP. Write access starts OFF, an AI Activity list records every change and every refusal, and an assistant must confirm explicitly before trashing or unpublishing a campaign that already has donations\n\nFIX: Campaign progress bars could show wildly wrong percentages when a goal contained separators. A goal saved as \"1,000.00\" was read as 1, reporting 30000% instead of 30%. On sites using a comma decimal separator, goals with cents read a hundred times too large. GiveWP imports were most affected\n\nFIX: Resolved issue when a campaign with a goal but no end date showed no progress bar in the Campaigns list\n\nFIX: A campaign end date entered as a plain date, for example 2027-01-31, could be mis-read and saved incorrectly in certain scenarios in admin\n\nFIX: Reports, the donations CSV export, and the Dashboard's date-range dropdown and latest-donations list could leave today's donations out for part of each day, on sites whose timezone is ahead of UTC\n\nFIX: Security: on a page using the [charitable_donate_button] shortcode without a campaign resolved issue where a crafted link could run script in a visitor's browser when they clicked the donate button under certain conditions",
     "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
@@ -613,17 +624,6 @@
     "releaseType": "fix",
     "summary": "WP 7.1: Popular Posts blocks work in the iframed block editor\n\nFixes: Report tables show row numbers again and the expand arrow is back on the right side\n\nFixes: Report table empty and loading states are centered again\n\nFixes: Older report links no longer land on a blank screen\n\nFixes: Headline Analyzer no longer crashes synced patterns in the block editor\n\nFixes: Setup wizard no longer lands on another plugin's onboarding screen\n\nFixes: Security hardening for license actions and credential handling\n\nFixes: Various bug fixes and updates",
     "changelogUrl": "https://wordpress.org/plugins/google-analytics-for-wordpress/#developers",
-    "tags": []
-  },
-  {
-    "id": "charitable@1.8.12.1",
-    "title": "Charitable 1.8.12.1",
-    "date": "2026-08-19",
-    "brand": "Charitable",
-    "brandSlug": "charitable",
-    "releaseType": "feature",
-    "summary": "NEW: Added a `charitable_campaign_description_limit` filter so developers can change the word limit on the campaign description shown on the campaign page\n\nIMPROVED: More consistent brand colors in admin UI\n\nFIX: The 24-hour limit on re-running Site Analysis is no longer reset by clearing Charitable's cache from Settings > Advanced, or by changing a setting, a campaign, or an add-on\n\nFIX: Site Analysis now tells you that you have reached the analysis limit when the service is rate-limiting your site, instead of reporting that the service is unavailable and inviting a retry that keeps the limit in place\n\nFIX: Security: links on Site Analysis recommendations are now restricted to standard web addresses, so a spoofed or compromised response cannot place a script link on the screen\n\nFIX: Donation CSV export no longer shows inflated \"Donation Total\" and \"Donation Subtotal\" amounts (such as 10 178,00 instead of 101,78) on sites that use a comma as the decimal separator\n\nFIX: Campaign Hero background images now appear on the front end for every campaign template\n\nFIX: Campaigns created with a duplicate title now have the campaign ID appended, so the two can be told apart\n\nFIX: Removed PHP warnings logged the first time a campaign containing a Progress Bar block was saved\n\nFIX: The fundraising progress bar now displays correctly with themes that apply their own global progress bar styles (for example Avada)\n\nFIX: The login prompt on the donation form now returns a failed login to your custom Charitable login page instead of the default WordPress login screen",
-    "changelogUrl": "https://wordpress.org/plugins/charitable/#developers",
     "tags": []
   },
   {
