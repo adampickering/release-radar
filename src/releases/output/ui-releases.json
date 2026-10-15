@@ -1,5 +1,16 @@
 [
   {
+    "id": "easy-digital-downloads@3.7.2",
+    "title": "Easy Digital Downloads 3.7.2",
+    "date": "2026-10-14",
+    "brand": "Easy Digital Downloads",
+    "brandSlug": "easy-digital-downloads",
+    "releaseType": "fix",
+    "summary": "Security: Fixed a missing authorization check when sending a test Email Summary\n\nSecurity: Discount codes with a maximum number of uses are now reserved when checkout starts, so customers checking out at the same time can no longer redeem a code past its limit\n\nCheckout: Fixed the Log in and Register forms not showing on a checkout page built from the Checkout block with no inner blocks\n\nCheckout: Improved order completion speed by deferring total store earnings calculations until after checkout has completed\n\nDatabase: Database events can now be triggered only by the operations that create them\n\nDiscounts: Discount uses held by unpaid pending orders are now given back sooner, so abandoned checkouts no longer block other customers from using a limited code\n\nDiscounts: A paid order whose discount code has no uses left is now placed On Hold for review instead of completing\n\nEmails: Fixed a fatal error with Cart Recovery enabled that could stop all site emails from sending when another mail plugin is active\n\nEmails: Fixed sending a test email or previewing a custom Cart Recovery email\n\nEmails: The new user email can now be sent only by user registration\n\nOrders: Fixed order status changes running pending order processing for statuses other than pending and processing\n\nOrders: Fixed PHP warnings on the order screens when an order has no IP address\n\nPayPal: Fixed partial refunds failing for amounts of 1,000 or more, or on stores that use a comma as the decimal separator\n\nReports: Fixed the customers export shifting every column after the ID when filtered by a download category or tag\n\nReports: Fixed the Export screen running out of memory on stores with many categorized downloads\n\nReports: An export the current user isn't allowed to run now shows an error instead of running forever\n\nStripe: Improved checkout speed on stores with many orders\n\nTools: The Tools screen now shows the default tab when it's asked for a tab that doesn't exist",
+    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
+    "tags": []
+  },
+  {
     "id": "charitable@1.8.13.1",
     "title": "Charitable 1.8.13.1",
     "date": "2026-10-12",
@@ -976,17 +987,6 @@
     "releaseType": "improvement",
     "summary": "Thrive Leads: Refresh From Cloud: A new &#8220;Refresh from cloud&#8221; button lets you re-fetch opt-in form templates on demand, so newly available templates show up right away instead of waiting for the cached list to update\n\nSecurity Improvements: Security Improvements: This release includes security and stability improvements to keep your site protected",
     "changelogUrl": "https://changelog.thrivethemes.com/2026/06/v10-9-2-1/",
-    "tags": []
-  },
-  {
-    "id": "easy-digital-downloads@3.6.9",
-    "title": "Easy Digital Downloads 3.6.9",
-    "date": "2026-06-18",
-    "brand": "Easy Digital Downloads",
-    "brandSlug": "easy-digital-downloads",
-    "releaseType": "feature",
-    "summary": "NEW: PayPal - Added support for Fastlane and additional payment methods for newly connected stores\n\nAdmin: Improved notice compatibility\n\nAdmin: Hardened sanitization of the banned emails setting\n\nAdmin: Sorted Checkout fields were not persisting their order in the admin UI\n\nCart: Improved the Cart Preview compatibility with caching layers\n\nCompatibility: Fixed an issue that could cause conflicts with forms added to the homepage of a site\n\nEmails: The email for the one-time login link could be stuck in a disabled state\n\nImports: Improved parsing of import files\n\nStripe: Card Elements was incorrectly adding the new Company field to the legacy Card Elements",
-    "changelogUrl": "https://wordpress.org/plugins/easy-digital-downloads/#developers",
     "tags": []
   },
   {
