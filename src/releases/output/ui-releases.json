@@ -1,5 +1,16 @@
 [
   {
+    "id": "sugar-calendar-lite@3.16.0",
+    "title": "Sugar Calendar Lite 3.16.0",
+    "date": "2026-10-15",
+    "brand": "Sugar Calendar",
+    "brandSlug": "sugar-calendar",
+    "releaseType": "feature",
+    "summary": "Added: **NEW** Google Calendar integration: sync events to and from your Google calendar\n\nAdded: **NEW** Google Meet integration: add a Google Meet link to any online event with a click of a button\n\nFixed: The Setup Checklist no longer queries database tables before they are created",
+    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
+    "tags": []
+  },
+  {
     "id": "easy-digital-downloads@3.7.2",
     "title": "Easy Digital Downloads 3.7.2",
     "date": "2026-10-14",
@@ -876,17 +887,6 @@
     "brandSlug": "sugar-calendar",
     "releaseType": "fix",
     "summary": "Fixed: The First Event Creation Guide no longer blocks the event editor when using the Block editor.",
-    "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
-    "tags": []
-  },
-  {
-    "id": "sugar-calendar-lite@3.12.0",
-    "title": "Sugar Calendar Lite 3.12.0",
-    "date": "2026-07-16",
-    "brand": "Sugar Calendar",
-    "brandSlug": "sugar-calendar",
-    "releaseType": "feature",
-    "summary": "Added: **NEW** Online Meetings: connect your Zoom account with a guided one-click setup and add a Zoom meeting to any event, right from the event editor\n\nAdded: **NEW** AI-ready events: AI assistants and automation tools can now work with your events (via the WordPress Abilities API)\n\nAdded: Redesigned Integrations settings area that shows all your connections in one place\n\nAdded: New License & Usage tab: see your license details and integration usage at a glance\n\nAdded: Unified Location tab in the event editor: set the venue address, the online meeting, or both in one place\n\nAdded: Online events now include structured data, so Google can display them properly in search results\n\nAdded: Visitors can now click \"Register Now\" or \"Buy Tickets\" directly in the calendar popup\n\nAdded: Event images in the Event List and Event Calendar blocks now load faster and look sharper on any screen size\n\nAdded: New developer actions and filters for Event Ticketing\n\nChanged: Events spanning multiple hours now show their real length in the Calendar block week view\n\nChanged: Design consistency and quality-of-life improvements across the admin\n\nFixed: Compatibility issues with the WPML translation plugin\n\nFixed: Links were being removed from the Email Message field\n\nFixed: Deleted events no longer leave \"ghost\" entries behind\n\nFixed: Checkout with multiple tickets could fail at the payment step\n\nFixed: Error when opening the admin Day view with an invalid date in the link\n\nFixed: All-day events now display correctly in the Calendar block week and day views\n\nFixed: Restored the missing \"Edit Tag\" link on the Events list view\n\nFixed: PHP warning that could appear in event blocks when an event had no tag\n\nFixed: Security improvements",
     "changelogUrl": "https://wordpress.org/plugins/sugar-calendar-lite/#developers",
     "tags": []
   },
