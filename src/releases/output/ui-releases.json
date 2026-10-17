@@ -1,5 +1,27 @@
 [
   {
+    "id": "uncanny-automator@7.7.1",
+    "title": "Uncanny Automator 7.7.1",
+    "date": "2026-10-16",
+    "brand": "Uncanny Automator",
+    "brandSlug": "uncanny-automator",
+    "releaseType": "improvement",
+    "summary": "Easy Digital Downloads - Resolved an issue where purchase and subscription triggers failed to run during checkout or webhook processing. #8864\n\nMailPoet - Add a subscriber to a list - Resolved an issue where the action could remain stuck on Waiting and fail to add subscribers to lists. #8846\n\nMailchimp - Add the user to an audience - Selected groups are not applied to a new contact. #8844\n\nMemberPress - Resolved an issue where triggers failed to run when initiated by payment gateway webhooks or signup forms. #8854\n\nCore - Triggers can now declare their dispatcher to start before init, so events from plugins that finish and exit early are no longer missed. #8863",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
+    "tags": []
+  },
+  {
+    "id": "uncanny-learndash-toolkit@3.8.2",
+    "title": "Uncanny LearnDash Toolkit 3.8.2",
+    "date": "2026-10-16",
+    "brand": "Uncanny Owl",
+    "brandSlug": "uncanny-owl",
+    "releaseType": "improvement",
+    "summary": "Front End Login - Strengthened password reset security by requiring a valid reset session and token, preventing cross-site requests from changing passwords during an active reset process #557\n\nFront End Login - Prevented Turnstile from blocking logins through WooCommerce checkout and other login forms #549\n\nFront End Login - Resolved WP 2FA login failures caused by page caching and email verification codes #555\n\nManual User Verification - Restricted bulk user verification to super admins on multisite networks while preserving single-site administrator access #560",
+    "changelogUrl": "https://wordpress.org/plugins/uncanny-learndash-toolkit/#developers",
+    "tags": []
+  },
+  {
     "id": "sugar-calendar-lite@3.16.0",
     "title": "Sugar Calendar Lite 3.16.0",
     "date": "2026-10-15",
@@ -195,17 +217,6 @@
     "releaseType": "feature",
     "summary": "New: Added a Data Sharing settings tab where you can control anonymous data sharing and in-plugin notifications. Usage data is only sent once you opt in\n\nTweak: Admin icons are now bundled with the plugin instead of loaded from a third-party CDN\n\nTweak: Refreshed the About Us page\n\nFix: The deactivation feedback survey now submits correctly when other Smash Balloon plugins are active on the same site\n\nFix: Dismissed in-plugin notifications no longer reappear\n\nFix: Plugin security hardening",
     "changelogUrl": "https://wordpress.org/plugins/custom-twitter-feeds/#developers",
-    "tags": []
-  },
-  {
-    "id": "uncanny-automator@7.7.0",
-    "title": "Uncanny Automator 7.7.0",
-    "date": "2026-09-30",
-    "brand": "Uncanny Automator",
-    "brandSlug": "uncanny-automator",
-    "releaseType": "fix",
-    "summary": "[CartFlows](https://automatorplugin.com/integration/cartflows/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7542\n\n[Eventin](https://automatorplugin.com/integration/eventin/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #8446\n\n[Loginizer](https://automatorplugin.com/integration/loginizer/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7548\n\n[Post SMTP](https://automatorplugin.com/integration/post-smtp/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7552\n\n[Smush](https://automatorplugin.com/integration/smush/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7559\n\n[Sucuri Security](https://automatorplugin.com/integration/sucuri-security/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #7561\n\n[WPCafe](https://automatorplugin.com/integration/wpcafe/?utm_source=wp-repo&utm_medium=readme&utm_content=changelog) #8449\n\nCartFlows - A checkout is completed in a flow #7582\n\nCartFlows - A product is purchased in a flow #7583\n\nEventin - A user purchases a ticket for an event #8445\n\nEventin - An attendee is checked in to an event #8443\n\nEventin - An attendee is registered for an event #8444\n\nEventin - An event is created #8441\n\nEventin - An event is updated #8442\n\nLoginizer - A login attempt fails #7630\n\nLoginizer - A user logs in #7629\n\nLoginizer - A user registers via social login #7628\n\nLoginizer - A login is blocked #7631\n\nPost SMTP - An email fails to send via a transport #7648\n\nPost SMTP - An email is sent via a transport #7649\n\nSmush - An image is optimized #7676\n\nSmush - An image optimization is skipped #7675\n\nWPCafe - A reservation is cancelled #8452\n\nWPCafe - A reservation is made #8454\n\nWPCafe - A reservation's status is changed to a status #8453\n\nCartFlows - Create a flow #7584\n\nCartFlows - Create a step in a flow #7585\n\nEventin - Add the user as an attendee to an event #8440\n\nEventin - Check in an attendee #8448\n\nEventin - Update the status of an order #8447\n\nLoginizer - Add an IP range to the blacklist #7627\n\nLoginizer - Add an IP range to the whitelist #7626\n\nLoginizer - Clear the failed login logs for an IP #7623\n\nLoginizer - Remove an IP address from the blacklist #7625\n\nLoginizer - Remove an IP from the whitelist #7624\n\nSmush - Optimize an image #7674\n\nSmush - Restore an image #7673\n\nSucuri Security - Apply hardening to a directory #7666\n\nSucuri Security - Log a security event #7664\n\nSucuri Security - Remove hardening from a directory #7665\n\nSucuri Security - Reset the user's password #7663\n\nSucuri Security - Run a malware scan #7667\n\nWPCafe - Create a reservation #8451\n\nWPCafe - Update the status of a reservation #8450\n\nZoom Meetings & Webinar - Allow tokens in the meeting creation actions - date & time fields. #8548\n\nGoogle Sheets - Improved error messages to provide more details when requests fail. #8550\n\nMailchimp - Create and send a campaign - Preserved HTML formatting in campaign email content. #8534\n\nUncanny Codes - Fixed code redemption triggers recording an incorrect user ID for logged-out redemptions. #8558\n\nUncanny Groups - Group key triggers now record the correct user ID for logged-out redemptions. #8560\n\nUncanny Tin Can - Module triggers now record the correct user when the learner is not the current user. #8562\n\nUncanny Tin Can - Prevented unnecessary reporting queries when a module is not selected. #8552\n\nUncanny Toolkit - User import triggers now attribute runs to the imported user instead of the importing administrator. #8564\n\nCore - Improved plugin installation checks on Windows. #8623\n\nTrigger Object - Added support for safely processing supported WordPress and WooCommerce objects in trigger loopbacks without object deserialization. #8667\n\nARMember & Formidable Forms - Updated to the latest framework. #8578 #8556",
-    "changelogUrl": "https://wordpress.org/plugins/uncanny-automator/#developers",
     "tags": []
   },
   {
